@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="60dip"
+    android:layout_height="50dip"
+    >
+    <LinearLayout
+        android:id="@+id/small_window_layout"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_small">
+
+        <TextView
+            android:id="@+id/percent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="#ffffff"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/rocket_image"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:src="@drawable/launch_image"
+        android:visibility="gone"/>
+
+</LinearLayout>

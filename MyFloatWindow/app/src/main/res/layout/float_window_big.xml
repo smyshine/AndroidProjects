@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/big_window_layout"
+    android:layout_width="180dip"
+    android:layout_height="160dip"
+    android:background="@drawable/bg_small"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/close"
+        android:layout_width="100dip"
+        android:layout_height="40dip"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:text="close Float window"/>
+
+    <Button
+        android:id="@+id/back"
+        android:layout_marginTop="20dp"
+        android:layout_width="100dip"
+        android:layout_height="40dip"
+        android:layout_gravity="center_horizontal"
+        android:text="go back"/>
+
+</LinearLayout>
