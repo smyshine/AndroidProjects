@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="auto_play" format="boolean"/>
+
+    <declare-styleable name="AutoSlidingSwitcherView">
+        <attr name="auto_play"/>
+    </declare-styleable>
+
+</resources>

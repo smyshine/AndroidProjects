@@ -8,22 +8,18 @@ import android.view.VelocityTracker;
 import android.view.View;
 import android.view.ViewConfiguration;
 import android.view.WindowManager;
-import android.widget.FrameLayout;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-import android.widget.TableLayout;
 
 /**
  * Created by SMY on 2016/6/9.
  */
-public class SlideLayout extends LinearLayout implements View.OnTouchListener {
+public class SlideLayout extends RelativeLayout implements View.OnTouchListener {
 
     public static final int SNAP_VELOCITY = 200;
 
     private int screenWidth;
     private int leftEdge = 0;
     private int rightEdge = 0;
-    private int leftLayoutPadding = 80;
 	private int touchSlop;
 
     private float xDown;
@@ -60,12 +56,12 @@ public class SlideLayout extends LinearLayout implements View.OnTouchListener {
 
     public void scrollToLeftLayout()
     {
-        new ScrollTask().execute(30);
+        new ScrollTask().execute(-30);
     }
 
     public void scrollToRightLayout()
     {
-        new ScrollTask().execute(-30);
+        new ScrollTask().execute(30);
     }
 
     public boolean isLeftLayoutVisible()
@@ -81,10 +77,10 @@ public class SlideLayout extends LinearLayout implements View.OnTouchListener {
         {
             leftLayout = getChildAt(0);
             leftLayoutParams = (MarginLayoutParams) leftLayout.getLayoutParams();
-            //leftLayoutParams.width = screenWidth - leftLayoutPadding;
+            leftLayoutParams.width = screenWidth - 80;
             rightEdge = -leftLayoutParams.width;
-            //leftLayoutParams.leftMargin = leftEdge;
-            //leftLayout.setLayoutParams(leftLayoutParams);
+            leftLayoutParams.leftMargin = leftEdge;
+            leftLayout.setLayoutParams(leftLayoutParams);
 
             rightLayout = getChildAt(1);
             rightLayoutParams = (MarginLayoutParams) rightLayout.getLayoutParams();
@@ -129,8 +125,9 @@ public class SlideLayout extends LinearLayout implements View.OnTouchListener {
                     {
 					    rightLayoutParams.rightMargin = rightEdge;
 				    }
-				rightLayout.setLayoutParams(rightLayoutParams);
+                    rightLayout.setLayoutParams(rightLayoutParams);
 			    }
+                rightLayout.setLayoutParams(rightLayoutParams);
                 break;
             case MotionEvent.ACTION_UP:
                 xUp = event.getRawX();
