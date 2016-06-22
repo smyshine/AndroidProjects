@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.smy.bidirsliding.BidirSlidingLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/bidir_sliding_layout">
+
+    <RelativeLayout
+        android:id="@+id/left_menu"
+        android:layout_width="270dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:background="#00ccff"
+        android:visibility="invisible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="This is left menu"
+            android:textSize="28sp"
+            android:textColor="#000000"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/right_menu"
+        android:layout_width="270dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="#00ffcc"
+        android:visibility="invisible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="This is right menu"
+            android:textSize="28sp"
+            android:textColor="#000000"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="320dp"
+        android:layout_height="match_parent"
+        android:background="#e9e9e9">
+
+        <ListView
+            android:id="@+id/content_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:cacheColorHint="#00000000">
+        </ListView>
+
+    </LinearLayout>
+
+</com.example.smy.bidirsliding.BidirSlidingLayout>

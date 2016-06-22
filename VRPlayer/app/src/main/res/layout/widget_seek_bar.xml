@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:id="@+id/rlLayout"
+    android:background="#4c000000">
+
+    <ImageView
+        android:id="@+id/imgPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        android:padding="7dp"
+        android:src="@drawable/custom_player_portrait"/>
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:layout_toRightOf="@+id/imgPlay"
+        android:text="00:00/00:00"
+        android:textColor="#7FFFFFFF"
+        android:textSize="11sp"/>
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/llScale"
+        android:layout_toRightOf="@+id/tvTime"
+        android:maxHeight="50dp"
+        android:progressDrawable="@drawable/progress_holo_light"
+        android:thumb="@drawable/ic_small_schedule_ball"
+        android:thumbOffset="7dp"
+        android:visibility="visible"/>
+
+    <LinearLayout
+        android:id="@+id/llScale"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/imgScale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="12dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/ic_scale_open_all_screen"/>
+    </LinearLayout>
+
+</RelativeLayout>

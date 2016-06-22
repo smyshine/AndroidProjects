@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PWFalls</string>
+
+    <string name="border_top">Border Top</string>
+    <string name="border_bottom">Border Bottom</string>
+    <string name="image_url">Image URL</string>
+</resources>
