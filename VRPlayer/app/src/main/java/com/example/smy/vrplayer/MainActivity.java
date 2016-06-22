@@ -26,8 +26,8 @@ public class MainActivity extends Activity {
     {
         String path = edtPath.getText().toString();
         Toast.makeText(getApplicationContext(), path, Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(MainActivity.this, VRPlayerView.class);
-        intent.putExtra(VRPlayerView.VIDEO_PATH, path);
+        Intent intent = new Intent(MainActivity.this, VRPlayerActivity.class);
+        intent.putExtra(VRPlayerActivity.VIDEO_PATH, path);
         startActivity(intent);
     }
 

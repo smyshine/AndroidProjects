@@ -73,14 +73,14 @@ public class VideoSeekBar extends FrameLayout implements SeekBar.OnSeekBarChange
         rlLayout.setBackgroundColor(color);
     }
 
-    public void setCompundEnable(boolean enable)
+    public void setCompoundEnabled(boolean enable)
     {
         seekBar.setEnabled(enable);
         imgPlay.setEnabled(enable);
         llScale.setEnabled(enable);
     }
 
-    public void setPlayBackfround(Drawable drawable)
+    public void setPlayBackground(Drawable drawable)
     {
         imgPlay.setImageDrawable(drawable);
     }
@@ -100,7 +100,7 @@ public class VideoSeekBar extends FrameLayout implements SeekBar.OnSeekBarChange
         imgScale.setImageDrawable(drawable);
     }
 
-    public void setOnSeekBarChangeListener(OnSeekBarChangedListener seekBarChangeListener)
+    public void setOnSeekBarChangedListener(OnSeekBarChangedListener seekBarChangeListener)
     {
         this.onSeekBarChangeListener = seekBarChangeListener;
     }
@@ -126,20 +126,18 @@ public class VideoSeekBar extends FrameLayout implements SeekBar.OnSeekBarChange
     @Override
     public void onClick(View v)
     {
-        switch (v.getId())
+        if (v.getId() == R.id.imgPlay){
+            if (onSeekBarChangeListener != null)
+            {
+                onSeekBarChangeListener.onPlayClick();
+            }
+        }
+        else if (v.getId() == R.id.llScale)
         {
-            case R.id.imgPlay:
-                if (onSeekBarChangeListener != null)
-                {
-                    onSeekBarChangeListener.onPlayClick();
-                }
-                break;
-            case R.id.llScale:
-                if (onSeekBarChangeListener != null)
-                {
-                    onSeekBarChangeListener.onScaleClick();
-                }
-                break;
+            if (onSeekBarChangeListener != null)
+            {
+                onSeekBarChangeListener.onScaleClick();
+            }
         }
     }
 
