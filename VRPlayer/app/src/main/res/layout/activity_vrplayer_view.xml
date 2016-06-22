@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customSeek="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -18,18 +19,6 @@
             android:background="@drawable/btn_back"/>
 
         <ImageButton
-            android:id="@+id/vrFormatBtn"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:background="@drawable/vr_sensor_open"
-            android:scaleType="fitXY"
-            android:layout_toLeftOf="@+id/vrBtn"
-            android:layout_toStartOf="@+id/vrBtn"
-            android:layout_marginEnd="5dp"
-            android:layout_marginRight="5dp"
-            android:onClick="showFormatPopup"/>
-
-        <ImageButton
             android:id="@+id/vrBtn"
             android:layout_width="40dp"
             android:layout_height="40dp"
@@ -38,6 +27,18 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"/>
 
+        <ImageButton
+            android:id="@+id/vrFormatBtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/vr_sensor_open"
+            android:scaleType="fitXY"
+            android:layout_toLeftOf="@id/vrBtn"
+            android:layout_toStartOf="@id/vrBtn"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:onClick="showFormatPopup"/>
+
     </RelativeLayout>
 
     <FrameLayout
@@ -45,7 +46,7 @@
         android:layout_height="match_parent"
         android:layout_weight="1">
         <LinearLayout
-            android:id="@+id/ll_loadViewo"
+            android:id="@+id/ll_loadVideo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -73,17 +74,13 @@
         android:orientation="horizontal"
         android:background="#4c000000">
 
-        <!--
         <com.example.smy.vrplayer.VideoSeekBar
             android:id="@+id/seekBar"
             android:layout_width="wrap_content"
             android:layout_height="33dp"
             android:layout_weight="1"
-            android:layout_gravity="center_vertical"
-            customSeek:playSrc="@drawable/ic_scp_pause_nor"
-            customSeek:scaleSrc="@drawable/ic_scale_open_all_screen"
-            customSeek:seekSrc="@drawable/ic_small_schedule_ball"/>
-            -->
+            android:layout_gravity="center_vertical" />
+
 
         <LinearLayout
             android:id="@+id/ll_ResetOrientation"

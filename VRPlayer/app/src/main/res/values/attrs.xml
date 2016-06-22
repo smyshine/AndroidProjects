@@ -1,13 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <declare-styleable name="CustomPlayerView">
-        <attr name="playSrc" format="reference" />
-        <attr name="seekSrc" format="reference" />
-        <attr name="scaleSrc" format="reference" />
-        <attr name="controlBarHeight" format="dimension" />
-        <attr name="isNeedScale" format="boolean" />
-        <attr name="style" format="integer" />
-    </declare-styleable>
-
 </resources>

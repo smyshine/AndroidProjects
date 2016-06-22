@@ -20,7 +20,6 @@ public class VRPlayerActivity extends VRActivity implements VRPlayListener, View
         VRFORMAT_2D,
         VRFORMAT_3D_LEFT_RIGHT,
         VRFORMAT_3D_UP_DOWN,
-
     };
     private VRVideoRender mRenderer;
     private View barLayout;
@@ -38,7 +37,7 @@ public class VRPlayerActivity extends VRActivity implements VRPlayListener, View
     private int mVideoLength;
     private int mCurrentPlayTime;
 
-    //private VideoSeekBar mSeekBar;
+    private VideoSeekBar mSeekBar;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -93,7 +92,7 @@ public class VRPlayerActivity extends VRActivity implements VRPlayListener, View
     public void onVideoInit(int length) {
         mVideoLength = length;
         mCurrentPlayTime = 0;
-        //mSeekBar.setVideoLength(length, 0);
+        mSeekBar.setVideoLength(length, 0);
     }
 
     @Override
@@ -102,7 +101,7 @@ public class VRPlayerActivity extends VRActivity implements VRPlayListener, View
             @Override
             public void run() {
                 mCurrentPlayTime = time;
-                //mSeekBar.setProgress(time);
+                mSeekBar.setProgress(time);
             }
         });
     }
@@ -110,7 +109,7 @@ public class VRPlayerActivity extends VRActivity implements VRPlayListener, View
     @Override
     public void onVideoStartPlay() {
         handler.postDelayed(hideBarLayout, HIDDEN_BAR_TIME);
-        //mLoadLayout.setVisibility(View.INVISIBLE);
+        mLoadLayout.setVisibility(View.INVISIBLE);
     }
 
     @Override
@@ -122,11 +121,11 @@ public class VRPlayerActivity extends VRActivity implements VRPlayListener, View
     @Override
     public void onBufferingUpdate(int percent) {
         int currentBufferTime = mVideoLength * percent / 100;
-        //mSeekBar.setSecondaryProgress(currentBufferTime);
+        mSeekBar.setSecondaryProgress(currentBufferTime);
         if(mCurrentPlayTime < currentBufferTime){
-            //mLoadLayout.setVisibility(View.INVISIBLE);
+            mLoadLayout.setVisibility(View.INVISIBLE);
         } else {
-            //mLoadLayout.setVisibility(View.VISIBLE);
+            mLoadLayout.setVisibility(View.VISIBLE);
         }
     }
 
@@ -161,9 +160,9 @@ public class VRPlayerActivity extends VRActivity implements VRPlayListener, View
         backButton = (ImageButton) findViewById(R.id.backBtn);
         vrButton = (ImageButton) findViewById(R.id.vrBtn);
         vrFormatButton = (ImageButton) findViewById(R.id.vrFormatBtn);
-        //mSeekBar = (VideoSeekBar) findViewById(R.id.cusSeekBar);
-        //mSeekBar.hideScaleBtn();
-        //mSeekBar.setBackgroundColor(getResources().getColor(R.color.transparent));
+        mSeekBar = (VideoSeekBar) findViewById(R.id.seekBar);
+        mSeekBar.hideScaleBtn();
+        mSeekBar.setBackgroundColor(getResources().getColor(R.color.transparent));
 
         mLoadLayout = (LinearLayout)findViewById(R.id.ll_loadVideo);
         findViewById(R.id.ll_ResetOrientation).setOnClickListener(this);
@@ -183,7 +182,7 @@ public class VRPlayerActivity extends VRActivity implements VRPlayListener, View
             }
         });
 
-        //mSeekBar.setOnSeekBarChangedListener(this);
+        mSeekBar.setOnSeekBarChangedListener(this);
     }
 
 
@@ -191,7 +190,7 @@ public class VRPlayerActivity extends VRActivity implements VRPlayListener, View
     @Override
     public void onSeekBarChanged(int progress) {
         mRenderer.setMediaPlayerSeekTo(progress);
-        //mSeekBar.setProgress(progress);
+        mSeekBar.setProgress(progress);
     }
 
     @Override
@@ -210,13 +209,13 @@ public class VRPlayerActivity extends VRActivity implements VRPlayListener, View
 
 
     private void handlePlayRestart(){
-        //mSeekBar.setPlayBackground(R.drawable.ic_scp_pause_nor);
+        mSeekBar.setPlayBackground(R.drawable.ic_scp_pause_nor);
         mRenderer.onResume();
         handler.postDelayed(hideBarLayout,HIDDEN_BAR_TIME);
     }
 
     private void handlePlayPause(){
-        //mSeekBar.setPlayBackground(R.drawable.ic_scp_play_nor);
+        mSeekBar.setPlayBackground(R.drawable.ic_scp_play_nor);
         handler.removeCallbacks(hideBarLayout);
         mRenderer.onPause();
     }
@@ -253,14 +252,12 @@ public class VRPlayerActivity extends VRActivity implements VRPlayListener, View
         public void onZoomGesture(View v, float newDist, float oldDist) {
             if(!getSurfaceView().getVRMode()){
                 mRenderer.onZoomGesture(newDist,oldDist);
-                //Log.e("hzb","onZoomGesture newDist = " + newDist + " and oldDist = " + oldDist);
             }
         }
 
         @Override
         public void onMoveGesture(View v, MotionEvent currentMoveEvent, float mTouchStartX, float mTouchStartY) {
             if(!getSurfaceView().getVRMode()){
-                //Log.e("hzb","onMoveGesture mTouchStartY = " + mTouchStartY + " and mTouchStartX = " + mTouchStartX);
                 mRenderer.addGestureRotateAngle(
                         ScreenUtils.rawY2Angle(VRPlayerActivity.this, currentMoveEvent.getRawY() - mTouchStartY),
                         ScreenUtils.rawX2Angle(VRPlayerActivity.this, currentMoveEvent.getRawX() - mTouchStartX)

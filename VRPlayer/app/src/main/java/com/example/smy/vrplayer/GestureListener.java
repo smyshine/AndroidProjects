@@ -173,20 +173,20 @@ public class GestureListener implements View.OnTouchListener {
     }
 
     public interface OnEventGesture {
-        public void onZoomGesture(View v, float newDist, float oldDist);
+        void onZoomGesture(View v, float newDist, float oldDist);
 
-        public void onMoveGesture(View v, MotionEvent currentMoveEvent,
+        void onMoveGesture(View v, MotionEvent currentMoveEvent,
                                   float mTouchStartX, float mTouchStartY);
 
-        public void onClick(View v, MotionEvent currentMoveEvent);
+        void onClick(View v, MotionEvent currentMoveEvent);
 
-        public void onLeftRightGesture(View v, MotionEvent currentEventm,
+        void onLeftRightGesture(View v, MotionEvent currentEventm,
                                        float startx, float starty, GestureState state);
 
-        public void onUpDownLeftGesture(View v, MotionEvent currentEventm,
+        void onUpDownLeftGesture(View v, MotionEvent currentEventm,
                                         float startx, float starty, GestureState state);
 
-        public void onUpDownRightGesture(View v, MotionEvent currentEventm,
+        void onUpDownRightGesture(View v, MotionEvent currentEventm,
                                          float startx, float starty, GestureState state);
     }
 }
