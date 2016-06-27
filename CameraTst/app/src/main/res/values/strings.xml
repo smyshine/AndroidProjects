@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">CameraTst</string>
+    <string name="xyz_rotate">XYZ Rotate(单位:角度，范围:0~360)</string>
+    <string name="xy_lean">XY轴倾斜</string>
+    <string name="xzz_zoom">XYZ轴缩放</string>
+</resources>

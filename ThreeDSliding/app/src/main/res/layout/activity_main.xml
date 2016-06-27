@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.smy.threedsliding.ThreeDSlidingLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/slidingLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/menu"
+        android:layout_width="270dip"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:background="#00ccff"
+        android:visibility="invisible" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="This is menu"
+                android:textColor="#000000"
+                android:textSize="28sp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Test Button" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="320dip"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:background="#e9e9e9"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <Button
+            android:id="@+id/menuButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Menu" />
+
+        <ListView
+            android:id="@+id/contentList"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="#00000000" >
+        </ListView>
+    </LinearLayout>
+
+    <com.example.smy.threedsliding.Image3dView
+        android:id="@+id/image_3d_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:visibility="invisible" />
+
+</com.example.smy.threedsliding.ThreeDSlidingLayout>

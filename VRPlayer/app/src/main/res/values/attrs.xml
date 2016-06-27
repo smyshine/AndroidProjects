@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <declare-styleable name="CustomVRPlayerView">
+        <attr name="videoType" format="boolean" />
+        <attr name="useSensor" format="boolean" />
+        <attr name="useVRMode" format="boolean" />
+        <attr name="displayController" format="boolean" />
+    </declare-styleable>
+
 </resources>

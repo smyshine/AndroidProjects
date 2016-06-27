@@ -162,6 +162,12 @@ public class ZoomImageView extends View {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
+        if (initRatio == totalRatio) {
+            getParent().requestDisallowInterceptTouchEvent(false);
+        } else {
+            getParent().requestDisallowInterceptTouchEvent(true);
+        }
+
         switch (event.getActionMasked()) {
             case MotionEvent.ACTION_POINTER_DOWN:
                 if (event.getPointerCount() == 2) {

@@ -81,6 +81,7 @@ public class VRVideoRender extends BaseVRRender implements MediaPlayer.OnPrepare
         Log.i("Media Player Status", "Completed");
         mp.stop();
         mp.release();
+        mp = null;
     }
 
     @Override
@@ -123,7 +124,7 @@ public class VRVideoRender extends BaseVRRender implements MediaPlayer.OnPrepare
     public void setVideoPath(String videoPath)
     {
         this.videoPath = videoPath;
-        /*if(mSphere != null && !mMediaPlayer.isPlaying())*/{
+        if(mSphere != null && !mMediaPlayer.isPlaying()){
             initMediaPlayer(Uri.parse(videoPath));
         }
     }

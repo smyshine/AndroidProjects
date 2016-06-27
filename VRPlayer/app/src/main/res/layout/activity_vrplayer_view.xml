@@ -1,104 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:customSeek="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:weightSum="1"
-    >
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#4c000000">
-
-        <ImageButton
-            android:id="@+id/backBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/btn_back"/>
-
-        <ImageButton
-            android:id="@+id/vrBtn"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:background="@drawable/vr_screen_on"
-            android:scaleType="fitXY"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"/>
-
-        <ImageButton
-            android:id="@+id/vrFormatBtn"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:background="@drawable/vr_sensor_open"
-            android:scaleType="fitXY"
-            android:layout_toLeftOf="@id/vrBtn"
-            android:layout_toStartOf="@id/vrBtn"
-            android:layout_marginEnd="5dp"
-            android:layout_marginRight="5dp"
-            android:onClick="showFormatPopup"/>
-
-    </RelativeLayout>
-
-    <FrameLayout
+    <com.example.smy.vrplayer.CustomVRPlayerView
+        android:id="@+id/playerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1">
-        <LinearLayout
-            android:id="@+id/ll_loadVideo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:orientation="vertical">
+        app:useSensor="true"
+        app:useVRMode="true"
+        app:displayController="true"
+        app:videoType="true"/>
 
-            <ProgressBar
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Loading..."
-                android:textColor="#E5FFFFFF"
-                android:textSize="12sp"/>
-
-        </LinearLayout>
-
-    </FrameLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="#4c000000">
-
-        <com.example.smy.vrplayer.VideoSeekBar
-            android:id="@+id/seekBar"
-            android:layout_width="wrap_content"
-            android:layout_height="33dp"
-            android:layout_weight="1"
-            android:layout_gravity="center_vertical" />
-
-
-        <LinearLayout
-            android:id="@+id/ll_ResetOrientation"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:gravity="center">
-
-            <ImageButton
-                android:id="@+id/imgResetOrientation"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginRight="12dp"
-                android:layout_marginEnd="12dp"
-                android:src="@drawable/vr_reset_camera_orientation"/>
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-</LinearLayout>
+</FrameLayout>

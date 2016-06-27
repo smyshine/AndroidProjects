@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">WebChat</string>
+
+    <string name="action_search">搜索</string>
+    <string name="action_plus">功能</string>
+    <string name="action_album">我的相册</string>
+    <string name="action_collection">我的收藏</string>
+    <string name="action_card">我的银行卡</string>
+    <string name="action_settings">设置</string>
+    <string name="action_feed">意见反馈</string>
+    <string name="plus_group_chat">发起群聊</string>
+    <string name="plus_add_friend">添加朋友</string>
+    <string name="plus_video_chat">视频聊天</string>
+    <string name="plus_scan">扫一扫</string>
+    <string name="plus_take_photo">拍照分享</string>
+
+</resources>

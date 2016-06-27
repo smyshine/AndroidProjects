@@ -191,6 +191,55 @@ public class MyScrollView extends ScrollView implements View.OnTouchListener {
             int startIndex = page * PAGE_SIZE;
             int endIndex = page * PAGE_SIZE + PAGE_SIZE;
             if (startIndex < Images.imageUrls.length) {
+                Toast.makeText(getContext(), "正在加载...", Toast.LENGTH_SHORT).show();
+                if (endIndex > Images.imageUrls.length) {
+                    endIndex = Images.imageUrls.length;
+                }
+                for (int i = startIndex; i < endIndex; i++) {
+                    LoadImageTask task = new LoadImageTask();
+                    taskCollection.add(task);
+                    task.execute(i);
+                }
+                page++;
+            } else {
+                Toast.makeText(getContext(), "已没有更多图片", Toast.LENGTH_SHORT).show();
+            }
+        } else {
+            Toast.makeText(getContext(), "未发现SD卡", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    /**
+     * 遍历imageViewList中的每张图片，对图片的可见性进行检查，如果图片已经离开屏幕可见范围，则将图片替换成一张空图。
+     */
+    public void checkVisibility() {
+        for (int i = 0; i < imageViewList.size(); i++) {
+            ImageView imageView = imageViewList.get(i);
+            int borderTop = (Integer) imageView.getTag(R.string.border_top);
+            int borderBottom = (Integer) imageView.getTag(R.string.border_bottom);
+            if (borderBottom > getScrollY() && borderTop < getScrollY() + scrollViewHeight) {
+                String imageUrl = (String) imageView.getTag(R.string.image_url);
+                Bitmap bitmap = imageLoader.getBitmapFromMemoryCache(imageUrl);
+                if (bitmap != null) {
+                    imageView.setImageBitmap(bitmap);
+                } else {
+                    LoadImageTask task = new LoadImageTask(imageView);
+                    task.execute(i);
+                }
+            } else {
+                imageView.setImageResource(R.drawable.empty_photo);
+            }
+        }
+    }
+
+    /**
+     * 开始加载下一页的图片，每张图片都会开启一个异步线程去下载。
+     */
+    /*public void loadMoreImages() {
+        if (hasSDCard()) {
+            int startIndex = page * PAGE_SIZE;
+            int endIndex = page * PAGE_SIZE + PAGE_SIZE;
+            if (startIndex < Images.imageUrls.length) {
                 Toast.makeText(getContext(), "正在加载...", Toast.LENGTH_SHORT)
                         .show();
                 if (endIndex > Images.imageUrls.length) {
@@ -210,11 +259,11 @@ public class MyScrollView extends ScrollView implements View.OnTouchListener {
             Toast.makeText(getContext(), "未发现SD卡", Toast.LENGTH_SHORT).show();
         }
     }
-
+*/
     /**
      * 遍历imageViewList中的每张图片，对图片的可见性进行检查，如果图片已经离开屏幕可见范围，则将图片替换成一张空图。
      */
-    public void checkVisibility() {
+    /*public void checkVisibility() {
         for (int i = 0; i < imageViewList.size(); i++) {
             ImageView imageView = imageViewList.get(i);
             int borderTop = (Integer) imageView.getTag(R.string.border_top);
@@ -234,7 +283,7 @@ public class MyScrollView extends ScrollView implements View.OnTouchListener {
                 imageView.setImageResource(R.drawable.empty_photo);
             }
         }
-    }
+    }*/
 
     /**
      * 判断手机是否有SD卡。
@@ -251,7 +300,12 @@ public class MyScrollView extends ScrollView implements View.OnTouchListener {
      *
      * @author guolin
      */
-    class LoadImageTask extends AsyncTask<String, Void, Bitmap> {
+    class LoadImageTask extends AsyncTask<Integer, Void, Bitmap> {
+
+        /**
+         * 记录每个图片对应的位置
+         */
+        private int mItemPosition;
 
         /**
          * 图片的URL地址
@@ -276,10 +330,10 @@ public class MyScrollView extends ScrollView implements View.OnTouchListener {
         }
 
         @Override
-        protected Bitmap doInBackground(String... params) {
-            mImageUrl = params[0];
-            Bitmap imageBitmap = imageLoader
-                    .getBitmapFromMemoryCache(mImageUrl);
+        protected Bitmap doInBackground(Integer... params) {
+            mItemPosition = params[0];
+            mImageUrl = Images.imageUrls[mItemPosition];
+            Bitmap imageBitmap = imageLoader.getBitmapFromMemoryCache(mImageUrl);
             if (imageBitmap == null) {
                 imageBitmap = loadImage(mImageUrl);
             }
@@ -345,13 +399,48 @@ public class MyScrollView extends ScrollView implements View.OnTouchListener {
                     @Override
                     public void onClick(View v) {
                         Intent intent = new Intent(getContext(), ImageDetailsActivity.class);
-                        intent.putExtra("image_path", getImagePath(mImageUrl));
+                        intent.putExtra("image_position", mItemPosition);
                         getContext().startActivity(intent);
                     }
                 });
                 findColumnToAdd(imageView, imageHeight).addView(imageView);
                 imageViewList.add(imageView);
             }
+        }
+
+        /**
+         * 向ImageView中添加一张图片
+         *
+         * @param bitmap
+         *            待添加的图片
+         * @param imageWidth
+         *            图片的宽度
+         * @param imageHeight
+         *            图片的高度
+         */
+        /*private void addImage(Bitmap bitmap, int imageWidth, int imageHeight) {
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(imageWidth,
+                    imageHeight);
+            if (mImageView != null) {
+                mImageView.setImageBitmap(bitmap);
+            } else {
+                ImageView imageView = new ImageView(getContext());
+                imageView.setLayoutParams(params);
+                imageView.setImageBitmap(bitmap);
+                imageView.setScaleType(ImageView.ScaleType.FIT_XY);
+                imageView.setPadding(5, 5, 5, 5);
+                imageView.setTag(R.string.image_url, mImageUrl);
+                imageView.setOnClickListener(new OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(getContext(), ImageDetailsActivity.class);
+                        intent.putExtra("image_path", getImagePath(mImageUrl));
+                        getContext().startActivity(intent);
+                    }
+                });
+                findColumnToAdd(imageView, imageHeight).addView(imageView);
+                imageViewList.add(imageView);
+            }*/
             /*
             LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
                     imageWidth, imageHeight);
@@ -479,6 +568,5 @@ public class MyScrollView extends ScrollView implements View.OnTouchListener {
             String imagePath = imageDir + imageName;
             return imagePath;
         }
-    }
-
 }
+
