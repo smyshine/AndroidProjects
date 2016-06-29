@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 
+import butterknife.ButterKnife;
+
 public class MainActivity extends Activity {
 
     @Override
@@ -13,6 +15,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
     }
 
     public void onClickSingleAnimation(View v)
