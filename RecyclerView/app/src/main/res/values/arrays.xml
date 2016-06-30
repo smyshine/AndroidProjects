@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="titles">
+        <item>Android wow o wow</item>
+        <item>Windows</item>
+        <item>Linux</item>
+        <item>IOS</item>
+        <item>Unix</item>
+        <item>Ubuntu Just to Make Long</item>
+        <item>Glasses</item>
+        <item>Dragon</item>
+        <item>Dragon Glassed All Gone</item>
+        <item>Smy</item>
+        <item>Cherry</item>
+        <item>Unbelievable</item>
+    </string-array>
+
+</resources>
