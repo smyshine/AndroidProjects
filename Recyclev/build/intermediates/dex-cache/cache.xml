@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\SMY\AndroidStudioProjects\Recyclev\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="39ae02ce40c3ac828abbf780ce0ff5d7a28b7d6a">
+        <dex dex="C:\Users\SMY\AndroidStudioProjects\Recyclev\app\build\intermediates\pre-dexed\debug\classes-4e9e5b919f5ddd6e1a54d6591dd315fca6bc6959.jar" />
+    </item>
+    <item
+        jar="C:\Users\SMY\AndroidStudioProjects\Recyclev\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d4c936aa8c7d2522c82e3f1829c791d9e367f009">
+        <dex dex="C:\Users\SMY\AndroidStudioProjects\Recyclev\app\build\intermediates\pre-dexed\debug\classes-88216825be9adfb148ce5a72da081b9a86934d63.jar" />
+    </item>
+    <item
+        jar="C:\Users\SMY\AndroidStudioProjects\Recyclev\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="C:\Users\SMY\AndroidStudioProjects\Recyclev\app\build\intermediates\pre-dexed\debug\classes-3daf56279f95c93296802b2605058c17ac1e6f5e.jar" />
+    </item>
+    <item
+        jar="C:\Users\SMY\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife\7.0.1\d5d13ea991eab0252e3710e5df3d6a9d4b21d461\butterknife-7.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
+        <dex dex="C:\Users\SMY\AndroidStudioProjects\Recyclev\app\build\intermediates\pre-dexed\debug\butterknife-7.0.1-81989c9d96ab0e3d904f235a29f88236469de9f5.jar" />
+    </item>
+    <item
+        jar="C:\Users\SMY\AndroidStudioProjects\Recyclev\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e5f32fa48a3eb2de0c987025c11b6e3864b634d9">
+        <dex dex="C:\Users\SMY\AndroidStudioProjects\Recyclev\app\build\intermediates\pre-dexed\debug\classes-64f1bf39c609997993d8ae02d667c135683f1794.jar" />
+    </item>
+    <item
+        jar="C:\Users\SMY\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.2.0\support-annotations-23.2.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c5bf571bb10462bd90e5419ade67793f71acbc87">
+        <dex dex="C:\Users\SMY\AndroidStudioProjects\Recyclev\app\build\intermediates\pre-dexed\debug\support-annotations-23.2.0-7c0aab4a73694e0d90105ea4d9c2fbfcd54962f0.jar" />
+    </item>
+    <item
+        jar="C:\Users\SMY\AndroidStudioProjects\Recyclev\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\jars\libs\internal_impl-23.2.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="6e239441500605809818997dd63b62a947195f8c">
+        <dex dex="C:\Users\SMY\AndroidStudioProjects\Recyclev\app\build\intermediates\pre-dexed\debug\internal_impl-23.2.0-1af1ccddb3b7565a0bad11ff1e077fdc032b8d28.jar" />
+    </item>
+
+</items>
