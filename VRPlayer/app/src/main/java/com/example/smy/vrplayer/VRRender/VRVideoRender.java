@@ -1,4 +1,4 @@
-package com.example.smy.vrplayer;
+package com.example.smy.vrplayer.VRRender;
 
 import android.content.Context;
 import android.graphics.SurfaceTexture;
@@ -8,6 +8,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.MotionEvent;
 
+import com.example.smy.vrplayer.VRListener.VRPlayListener;
 import com.google.vrtoolkit.cardboard.HeadTransform;
 
 import org.rajawali3d.materials.Material;

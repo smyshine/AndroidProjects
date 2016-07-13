@@ -8,6 +8,10 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.smy.vrplayer.VRActivity.MultiPlayerActivity;
+import com.example.smy.vrplayer.VRActivity.VRPictureShowActivity;
+import com.example.smy.vrplayer.VRActivity.VRPlayerActivity;
+
 import java.io.File;
 import java.net.URI;
 

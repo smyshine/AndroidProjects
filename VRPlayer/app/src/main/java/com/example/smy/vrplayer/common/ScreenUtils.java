@@ -1,4 +1,4 @@
-package com.example.smy.vrplayer;
+package com.example.smy.vrplayer.common;
 
 import android.app.Activity;
 import android.graphics.Point;

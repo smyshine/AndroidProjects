@@ -1,4 +1,4 @@
-package com.example.smy.vrplayer;
+package com.example.smy.vrplayer.VRRender;
 
 import android.content.Context;
 import android.graphics.Bitmap;

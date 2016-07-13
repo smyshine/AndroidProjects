@@ -1,4 +1,4 @@
-package com.example.smy.vrplayer;
+package com.example.smy.vrplayer.common;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
@@ -12,6 +12,8 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
+
+import com.example.smy.vrplayer.R;
 
 /**
  * Created by SMY on 2016/6/16.

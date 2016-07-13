@@ -1,4 +1,4 @@
-package com.example.smy.vrplayer;
+package com.example.smy.vrplayer.VRListener;
 
 /**
  * Created by SMY on 2016/6/22.

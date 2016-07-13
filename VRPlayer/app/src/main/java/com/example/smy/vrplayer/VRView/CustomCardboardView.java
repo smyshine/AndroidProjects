@@ -1,4 +1,4 @@
-package com.example.smy.vrplayer;
+package com.example.smy.vrplayer.VRView;
 
 import android.app.Activity;
 import android.content.Context;
@@ -6,6 +6,13 @@ import android.graphics.Bitmap;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
+
+import com.example.smy.vrplayer.VRRender.BaseVRRender;
+import com.example.smy.vrplayer.VRListener.GestureListener;
+import com.example.smy.vrplayer.common.ScreenUtils;
+import com.example.smy.vrplayer.VRRender.VRPictureRender;
+import com.example.smy.vrplayer.VRListener.VRPlayListener;
+import com.example.smy.vrplayer.VRRender.VRVideoRender;
 
 import org.rajawali3d.vr.surface.VRSurfaceView;
 

@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
-        <com.example.smy.vrplayer.VRSettingView
+        <com.example.smy.vrplayer.VRView.VRSettingView
             android:id="@+id/pictureView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
-        <com.example.smy.vrplayer.CustomVRPlayerView
+        <com.example.smy.vrplayer.VRView.CustomVRPlayerView
             android:id="@+id/playerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

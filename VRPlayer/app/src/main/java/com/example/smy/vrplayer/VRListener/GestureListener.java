@@ -1,4 +1,4 @@
-package com.example.smy.vrplayer;
+package com.example.smy.vrplayer.VRListener;
 
 import android.view.MotionEvent;
 import android.view.View;

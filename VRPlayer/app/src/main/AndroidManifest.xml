@@ -20,14 +20,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".VRPlayerActivity"
+            android:name=".VRActivity.VRPlayerActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".VRPictureShowActivity"
+            android:name=".VRActivity.VRPictureShowActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="landscape" />
-        <activity android:name=".MultiPlayerActivity"
+        <activity android:name=".VRActivity.MultiPlayerActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="landscape"></activity>
     </application>

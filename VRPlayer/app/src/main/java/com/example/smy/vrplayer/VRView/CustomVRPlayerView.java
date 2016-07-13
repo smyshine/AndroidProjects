@@ -1,4 +1,4 @@
-package com.example.smy.vrplayer;
+package com.example.smy.vrplayer.VRView;
 
 import android.app.Activity;
 import android.content.Context;
@@ -18,6 +18,10 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import com.example.smy.vrplayer.R;
+import com.example.smy.vrplayer.VRListener.VRPlayListener;
+import com.example.smy.vrplayer.common.VideoSeekBar;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
@@ -27,7 +31,7 @@ import java.net.URLConnection;
  * Created by SMY on 2016/6/22.
  */
 public class CustomVRPlayerView extends FrameLayout implements VRPlayListener, View.OnClickListener,
-        VideoSeekBar.OnSeekBarChangedListener, CustomCardboardView.OnCardboardViewClickListener{
+        VideoSeekBar.OnSeekBarChangedListener, CustomCardboardView.OnCardboardViewClickListener {
 
     public static final String url = "rtsp://192.168.42.1/live";
 

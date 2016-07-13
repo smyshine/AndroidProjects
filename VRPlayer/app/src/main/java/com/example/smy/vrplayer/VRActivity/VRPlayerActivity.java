@@ -1,8 +1,11 @@
-package com.example.smy.vrplayer;
+package com.example.smy.vrplayer.VRActivity;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Window;
+
+import com.example.smy.vrplayer.R;
+import com.example.smy.vrplayer.VRView.CustomVRPlayerView;
 
 
 public class VRPlayerActivity extends Activity {

@@ -4,9 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.example.smy.vrplayer.VRPictureShowActivity">
+    tools:context=".VRActivity.VRPictureShowActivity">
 
-    <com.example.smy.vrplayer.CustomVRPlayerView
+    <com.example.smy.vrplayer.VRView.CustomVRPlayerView
         android:id="@+id/playerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
