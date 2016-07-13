@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.smy.vrplayer.VRPictureShowActivity">
+
+    <com.example.smy.vrplayer.CustomVRPlayerView
+        android:id="@+id/playerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:useSensor="true"
+        app:useVRMode="false"
+        app:displayController="true"
+        app:videoType="false"/>
+
+</LinearLayout>

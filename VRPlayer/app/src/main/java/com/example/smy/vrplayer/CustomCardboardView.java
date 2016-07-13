@@ -47,7 +47,7 @@ public class CustomCardboardView extends VRSurfaceView {
         if(videoRender) {
             mRenderer = new VRVideoRender(getContext());
         } else {
-            //mRenderer = new VRPictureRender(getContext());
+            mRenderer = new VRPictureRender(getContext());
         }
         setRenderer(mRenderer);
     }
@@ -60,9 +60,9 @@ public class CustomCardboardView extends VRSurfaceView {
     }
 
     public void setDataSource(Bitmap bitmap){
-        //if(mRenderer instanceof VRPictureRender){
-        //    ((VRPictureRender)mRenderer).initBitmap(bitmap);
-        //}
+        if(mRenderer instanceof VRPictureRender){
+            ((VRPictureRender)mRenderer).initBitmap(bitmap);
+        }
     }
 
     public void setCardboardViewClickListener(OnCardboardViewClickListener listener)
@@ -76,9 +76,9 @@ public class CustomCardboardView extends VRSurfaceView {
         super.onDetachedFromWindow();
         if(mRenderer instanceof VRVideoRender) {
             ((VRVideoRender) mRenderer).onDestroy();
-        } //else if(mRenderer instanceof VRPictureRender){
-            //((VRPictureRender) mRenderer).onDestroy();
-        //}
+        } else if(mRenderer instanceof VRPictureRender){
+            ((VRPictureRender) mRenderer).onDestroy();
+        }
     }
 
     private GestureListener.OnEventGesture mOnEventGesture = new GestureListener.OnEventGesture() {

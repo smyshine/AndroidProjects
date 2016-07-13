@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:visibility="invisible">
+    </LinearLayout>
+
+    <LinearLayout
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp"
+        android:paddingLeft="1dp"
+        android:paddingRight="1dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white_30_percent"
+        android:layout_gravity="center"
+        >
+
+        <ImageView
+            android:id="@+id/setting1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/vr_screen_on"
+            android:scaleType="fitCenter"/>
+
+        <ImageView
+            android:id="@+id/setting2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/vr_screen_off"
+            android:scaleType="fitXY"/>
+
+        <ImageView
+            android:id="@+id/setting3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/vr_sensor_open"
+            android:scaleType="fitCenter"/>
+
+        <ImageView
+            android:id="@+id/setting4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/vr_sensor_close"
+            android:scaleType="fitCenter"/>
+
+        <ImageView
+            android:id="@+id/setting5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_scale_close_all_screen"
+            android:scaleType="fitCenter"/>
+
+        <ImageView
+            android:id="@+id/setting6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_scale_open_all_screen"
+            android:scaleType="fitCenter"/>
+
+        <ImageView
+            android:id="@+id/setting7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_scp_pause_nor"
+            android:scaleType="fitCenter"/>
+
+        <ImageView
+            android:id="@+id/setting8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_scp_play_nor"
+            android:scaleType="fitCenter"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:visibility="invisible">
+    </LinearLayout>
+
+</LinearLayout>

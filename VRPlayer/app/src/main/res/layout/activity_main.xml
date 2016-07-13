@@ -19,7 +19,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:editable="false"
-            android:layout_weight="4"/>
+            android:layout_weight="4"
+            android:text="/storage/emulated/0/smy/test.mp4"/>
 
         <Button
             android:id="@+id/choose"
@@ -39,6 +40,47 @@
         android:paddingBottom="10dp"
         android:text="Play"
         android:onClick="onPlayClick"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="Picture"
+        android:onClick="onPictureClick"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="Multi Player"
+        android:onClick="onMultiPlayClick"/>
+
+    <FrameLayout
+        android:layout_marginTop="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\ntiger"
+            android:background="@color/colorAccent"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="lion\nlion"
+            android:background="@color/transparent"/>
+
+    </FrameLayout>
 
 
 </LinearLayout>

@@ -31,6 +31,19 @@ public class MainActivity extends Activity {
         startActivity(intent);
     }
 
+    public void onPictureClick(View v){
+        Intent intent = new Intent(MainActivity.this, VRPictureShowActivity.class);
+        startActivity(intent);
+    }
+
+    public void onMultiPlayClick(View v){
+        String path = edtPath.getText().toString();
+        Toast.makeText(getApplicationContext(), path, Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(MainActivity.this, MultiPlayerActivity.class);
+        intent.putExtra(MultiPlayerActivity.VIDEO_PATH, path);
+        startActivity(intent);
+    }
+
     public void onBtnChooseFileClick(View v)
     {
         showFileChooser();
