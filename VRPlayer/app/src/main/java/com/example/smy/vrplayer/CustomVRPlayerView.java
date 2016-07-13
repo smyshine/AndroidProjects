@@ -2,7 +2,6 @@ package com.example.smy.vrplayer;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
@@ -114,11 +113,12 @@ public class CustomVRPlayerView extends FrameLayout implements VRPlayListener, V
         {
             case R.id.backBtn:
                 if (getContext() instanceof Activity) {
-                    if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE && isVideo) {
+                    ((Activity) getContext()).finish();
+                   /* if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE && isVideo) {
                         ((Activity) getContext()).setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
                     } else {
                         ((Activity) getContext()).finish();
-                    }
+                    }*/
                 }
                 break;
             case R.id.llResetOrientation:
@@ -294,7 +294,7 @@ public class CustomVRPlayerView extends FrameLayout implements VRPlayListener, V
     @Override
     public void onScaleClick()
     {
-        if(getContext() instanceof Activity)
+    /*    if(getContext() instanceof Activity)
         {
             Activity activity = (Activity)getContext();
             if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE)
@@ -305,7 +305,7 @@ public class CustomVRPlayerView extends FrameLayout implements VRPlayListener, V
             {
                 activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
             }
-        }
+        }*/
     }
 
     @Override
