@@ -4,32 +4,12 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <FrameLayout
-        android:id="@+id/picture"
+    <com.example.smy.vrplayer.VRView.CustomMultiPlayView
+        android:id="@+id/playerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        >
-        <com.example.smy.vrplayer.VRView.VRSettingView
-            android:id="@+id/pictureView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            />
-    </FrameLayout>
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
-        <com.example.smy.vrplayer.VRView.CustomVRPlayerView
-            android:id="@+id/playerView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:useSensor="true"
-            app:useVRMode="true"
-            app:displayController="true"
-            app:videoType="true"
-            />
-    </FrameLayout>
-
+        app:useSensor="true"
+        app:useVRMode="true"
+        app:displayController="true"/>
 
 </FrameLayout>

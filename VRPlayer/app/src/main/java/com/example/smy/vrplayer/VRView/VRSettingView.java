@@ -40,15 +40,22 @@ public class VRSettingView extends FrameLayout{
     public VRSettingView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         view = LayoutInflater.from(getContext()).inflate(R.layout.widget_vr_setting, null);
-        mSurfaceView = (CustomCardboardView) view.findViewById(R.id.surfaceView);
+        mSurfaceView = (CustomCardboardView) view.findViewById(R.id.setSurfaceView);
         mSurfaceView.setTransparent(true);
 
         mSurfaceView.initRender(false);
         mSurfaceView.setUseSensor(true);
         mSurfaceView.setVRModeEnabled(true);
 
-        mSurfaceView.setRenderListener(null);
-        addView(view, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.MATCH_PARENT));
+        addView(view, new FrameLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.MATCH_PARENT));
+    }
+
+    public CustomCardboardView getSurfaceView(){
+        return mSurfaceView;
+    }
+
+    public void setScale(int width, int height){
+        mSurfaceView.setScale(width, height);
     }
 
     public void setDataSource(String url)

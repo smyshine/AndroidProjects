@@ -30,7 +30,7 @@ public class VRPictureShowActivity extends Activity {
         //mVRPlayerView.setDataSource("/storage/emulated/0/smy/tempImage.jpg");
         //mVRPlayerView.setDataSource("http://cdn.fds.api.xiaomi.com/sportscamera/20160614/1/2_071752439_media.jpg");
         //View settings = getLayoutInflater().inflate(R.layout.picture_setting_float, null);
-        saveBitmapToFile(convertLayoutToBitmap(), "/storage/emulated/0/smy/tempImage.jpg");
+        //saveBitmapToFile(convertLayoutToBitmap(), "/storage/emulated/0/smy/tempImage.jpg");
         mVRPlayerView.setDataSource(convertLayoutToBitmap());
 
         int uiFlags = View.SYSTEM_UI_FLAG_LAYOUT_STABLE

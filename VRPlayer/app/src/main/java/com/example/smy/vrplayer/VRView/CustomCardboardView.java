@@ -3,16 +3,20 @@ package com.example.smy.vrplayer.VRView;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
+import android.view.SurfaceHolder;
 import android.view.View;
 
-import com.example.smy.vrplayer.VRRender.BaseVRRender;
 import com.example.smy.vrplayer.VRListener.GestureListener;
-import com.example.smy.vrplayer.common.ScreenUtils;
-import com.example.smy.vrplayer.VRRender.VRPictureRender;
 import com.example.smy.vrplayer.VRListener.VRPlayListener;
+import com.example.smy.vrplayer.VRRender.BaseVRRender;
+import com.example.smy.vrplayer.VRRender.VRPictureRender;
 import com.example.smy.vrplayer.VRRender.VRVideoRender;
+import com.example.smy.vrplayer.common.ScreenUtils;
 
 import org.rajawali3d.vr.surface.VRSurfaceView;
 
@@ -86,6 +90,39 @@ public class CustomCardboardView extends VRSurfaceView {
         } else if(mRenderer instanceof VRPictureRender){
             ((VRPictureRender) mRenderer).onDestroy();
         }
+    }
+
+    private int mWidth;
+    private int mHeight;
+
+    public void setScale(int width, int height){
+        mWidth = width;
+        mHeight = height;
+    }
+
+    public void drawPoint(){
+        SurfaceHolder holder = getHolder();
+        Canvas canvas = holder.lockCanvas();
+        Paint p = new Paint();
+        p.setAntiAlias(true);
+        p.setColor(Color.WHITE);
+        canvas.drawCircle(mWidth/2 - mWidth/6, mHeight-mHeight/4, 4.0f, p);
+        canvas.drawCircle(mWidth   - mWidth/6, mHeight-mHeight/4, 4.0f, p);
+        holder.unlockCanvasAndPost(canvas);
+    }
+
+    public void drawPointCircle(){
+        SurfaceHolder holder = getHolder();
+        Canvas canvas = holder.lockCanvas();
+        canvas.drawColor(Color.TRANSPARENT);
+        Paint p = new Paint();
+        p.setAntiAlias(true);
+        p.setColor(Color.WHITE);
+        p.setStyle(Paint.Style.STROKE);
+        //
+        canvas.drawCircle(mWidth/2 - mWidth/6, mHeight-mHeight/4, 8.0f, p);
+        canvas.drawCircle(mWidth   - mWidth/6, mHeight-mHeight/4, 8.0f, p);
+        holder.unlockCanvasAndPost(canvas);
     }
 
     private GestureListener.OnEventGesture mOnEventGesture = new GestureListener.OnEventGesture() {
