@@ -3,6 +3,7 @@ package com.example.smy.vrplayer.VRView;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Handler;
 import android.os.Message;
@@ -41,7 +42,9 @@ public class VRSettingView extends FrameLayout{
         super(context, attrs, defStyleAttr);
         view = LayoutInflater.from(getContext()).inflate(R.layout.widget_vr_setting, null);
         mSurfaceView = (CustomCardboardView) view.findViewById(R.id.setSurfaceView);
+        //mSurfaceView.setZOrderOnTop(true);
         mSurfaceView.setTransparent(true);
+        //mSurfaceView.getHolder().setFormat(PixelFormat.TRANSLUCENT);
         //mSurfaceView.setAntiAliasingMode(ISurface.ANTI_ALIASING_CONFIG.MULTISAMPLING);
         //mSurfaceView.setSampleCount(2);
 
@@ -50,6 +53,10 @@ public class VRSettingView extends FrameLayout{
         mSurfaceView.setVRModeEnabled(true);
 
         addView(view, new FrameLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.MATCH_PARENT));
+    }
+
+    public Bitmap getmPicture(){
+        return mPicture;
     }
 
     public CustomCardboardView getSurfaceView(){
@@ -68,6 +75,8 @@ public class VRSettingView extends FrameLayout{
     public void setDataSource(Bitmap bitmap)
     {
         mSurfaceView.setDataSource(bitmap);
+        Drawable drawable = new BitmapDrawable(bitmap);
+        mSurfaceView.setBackground(drawable);
     }
 
     private Handler handler = new Handler() {

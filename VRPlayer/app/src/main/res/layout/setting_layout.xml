@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingTop="1dp"
+    android:paddingBottom="1dp"
+    android:paddingLeft="1dp"
+    android:paddingRight="1dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white_30_percent">
+
+    <ImageButton
+        android:id="@+id/setting1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/vr_screen_on"
+        android:scaleType="fitCenter"/>
+
+    <ImageButton
+        android:id="@+id/setting2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/vr_screen_off"
+        android:scaleType="fitXY"/>
+
+    <ImageButton
+        android:id="@+id/setting3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/vr_sensor_open"
+        android:scaleType="fitCenter"/>
+
+    <ImageButton
+        android:id="@+id/setting4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/vr_sensor_close"
+        android:scaleType="fitCenter"/>
+
+    <ImageButton
+        android:id="@+id/setting5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_scale_close_all_screen"
+        android:scaleType="fitCenter"/>
+
+    <ImageButton
+        android:id="@+id/setting6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_scale_open_all_screen"
+        android:scaleType="fitCenter"/>
+
+    <ImageButton
+        android:id="@+id/setting7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_scp_pause_nor"
+        android:scaleType="fitCenter"/>
+
+    <ImageButton
+        android:id="@+id/setting8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_scp_play_nor"
+        android:scaleType="fitCenter"/>
+
+</LinearLayout>

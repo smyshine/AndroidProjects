@@ -50,6 +50,10 @@ public class MainActivity extends Activity {
         startActivity(intent);
     }
 
+    public void onSurfaceViewClick(View v){
+        startActivity(new Intent(MainActivity.this, SurfaceViewTest.class));
+    }
+
     public void onBtnChooseFileClick(View v)
     {
         showFileChooser();

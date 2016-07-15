@@ -262,6 +262,7 @@ public class CustomMultiPlayView extends FrameLayout implements VRPlayListener, 
         mSurfaceView.setDataSource(url);
         //saveBitmapToFile(convertLayoutToBitmap(), "/storage/emulated/0/smy/tmp.png");
         mSettingView.setDataSource(convertLayoutToBitmap());
+        //mSettingView.setDataSource(((BitmapDrawable)getResources().getDrawable(R.drawable.vr_reset_camera_orientation)).getBitmap());
     }
 
     public void saveBitmapToFile(Bitmap bmp, String filename){
