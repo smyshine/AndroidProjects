@@ -78,6 +78,8 @@ public class CustomMultiPlayView extends FrameLayout implements VRPlayListener, 
         mSurfaceView.initRender(true);
         mSurfaceView.setUseSensor(useSensor);
         mSurfaceView.setVRModeEnabled(useVRMode);
+        //mSurfaceView.setSettingsButtonEnabled(true);眼睛中间线条下方设置按钮，reset cardboard的
+        //mSurfaceView.setSampleCount(2);
 
         typedArray.recycle();
         mSeekBar = (VideoSeekBar) view.findViewById(R.id.seekBar);
@@ -104,6 +106,7 @@ public class CustomMultiPlayView extends FrameLayout implements VRPlayListener, 
         mSurfaceView.setCardboardViewClickListener(this);
         mSettingView.getSurfaceView().setCardboardViewClickListener(this);
         mSettingView.setVisibility(VISIBLE);
+        //mSettingView.getSurfaceView().setSettingsButtonEnabled(true);
 
         view.findViewById(R.id.llResetOrientation).setOnClickListener(this);
         addView(view, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.MATCH_PARENT));
@@ -179,8 +182,6 @@ public class CustomMultiPlayView extends FrameLayout implements VRPlayListener, 
         display.getSize(size);
         int width = size.x;
         int height = size.y;
-        mSurfaceView.setScale(width, height);
-        mSettingView.setScale(width, height);
 
         Log.d("SDBG","get measure : " + width + " ;  " + height);
         int widthSpec = View.MeasureSpec.makeMeasureSpec(width, View.MeasureSpec.EXACTLY);

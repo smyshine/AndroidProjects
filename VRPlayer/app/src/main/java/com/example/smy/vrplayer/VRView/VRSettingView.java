@@ -42,6 +42,8 @@ public class VRSettingView extends FrameLayout{
         view = LayoutInflater.from(getContext()).inflate(R.layout.widget_vr_setting, null);
         mSurfaceView = (CustomCardboardView) view.findViewById(R.id.setSurfaceView);
         mSurfaceView.setTransparent(true);
+        //mSurfaceView.setAntiAliasingMode(ISurface.ANTI_ALIASING_CONFIG.MULTISAMPLING);
+        //mSurfaceView.setSampleCount(2);
 
         mSurfaceView.initRender(false);
         mSurfaceView.setUseSensor(true);
