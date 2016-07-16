@@ -37,7 +37,7 @@ public class VRPictureRender extends BaseVRRender{
 
     public void initBitmap(Bitmap bitmap){
         mPicture = bitmap;
-        if(mSphere != null){
+/*        if(mSphere != null){
             if(mSphere.getMaterial() == null){
                 initScene();
                 return;
@@ -48,7 +48,7 @@ public class VRPictureRender extends BaseVRRender{
                     e.printStackTrace();
                 }
             }
-        }
+        }*/
     }
 
     @Override

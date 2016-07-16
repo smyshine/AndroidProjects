@@ -4,15 +4,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".VRActivity.VRPictureShowActivity">
+    tools:context=".VRActivity.VRPictureShowActivity"
+    android:background="@color/colorAccent">
 
     <com.example.smy.vrplayer.VRView.CustomVRPlayerView
         android:id="@+id/playerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/black_30_percent"
         app:useSensor="true"
         app:useVRMode="false"
         app:displayController="true"
-        app:videoType="false"/>
+        app:videoType="false"
+        app:isTransparent="true"/>
 
 </LinearLayout>

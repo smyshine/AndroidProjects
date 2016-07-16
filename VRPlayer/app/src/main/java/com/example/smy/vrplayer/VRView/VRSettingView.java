@@ -43,14 +43,14 @@ public class VRSettingView extends FrameLayout{
         view = LayoutInflater.from(getContext()).inflate(R.layout.widget_vr_setting, null);
         mSurfaceView = (CustomCardboardView) view.findViewById(R.id.setSurfaceView);
         //mSurfaceView.setZOrderOnTop(true);
-        mSurfaceView.setTransparent(true);
+        //mSurfaceView.setTransparent(true);
         //mSurfaceView.getHolder().setFormat(PixelFormat.TRANSLUCENT);
         //mSurfaceView.setAntiAliasingMode(ISurface.ANTI_ALIASING_CONFIG.MULTISAMPLING);
         //mSurfaceView.setSampleCount(2);
 
-        mSurfaceView.initRender(false);
-        mSurfaceView.setUseSensor(true);
-        mSurfaceView.setVRModeEnabled(true);
+        //mSurfaceView.initRender(false);
+        //mSurfaceView.setUseSensor(true);
+        //mSurfaceView.setVRModeEnabled(true);
 
         addView(view, new FrameLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.MATCH_PARENT));
     }
