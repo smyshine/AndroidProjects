@@ -15,6 +15,7 @@ import com.google.vrtoolkit.cardboard.HeadTransform;
 import org.rajawali3d.materials.Material;
 import org.rajawali3d.materials.textures.ATexture;
 import org.rajawali3d.materials.textures.StreamingTexture;
+import org.rajawali3d.materials.textures.Texture;
 
 import java.io.IOException;
 
@@ -116,16 +117,17 @@ public class VRMultiRender extends BaseVRRender implements MediaPlayer.OnPrepare
         mVideoTexture.enableOffset(true);
 
         //initMediaPlayer(Uri.parse("/storage/emulated/0/smy/xiaomi.mp4"));
-        mSettingTexture = new StreamingTexture("video", mMediaPlayer);
-        mSettingTexture.setWrapType(StreamingTexture.WrapType.REPEAT);
-        mSettingTexture.enableOffset(true);
+        //mSettingTexture = new StreamingTexture("video", mMediaPlayer);
+        //mSettingTexture.setWrapType(StreamingTexture.WrapType.REPEAT);
+        //mSettingTexture.enableOffset(true);
 
         Material material = new Material();
         material.setColorInfluence(0);
         try {
             //DiffuseTextureFragmentShaderFragment.java 添加texture时，相同type的才行，不同type的在watchType发生变化时会导致数组溢出---
-            material.addTexture(mVideoTexture);
-            //material.addTexture(mSettingTexture);
+            //material.addTexture(mVideoTexture);
+            //material.addTexture(new Texture("photo", mPicture));
+            material.addTexture(new Texture("setting", resourceId));
         } catch (ATexture.TextureException e) {
             e.printStackTrace();
         }
@@ -139,11 +141,17 @@ public class VRMultiRender extends BaseVRRender implements MediaPlayer.OnPrepare
         mPicture = bitmap;
     }
 
+    private int resourceId;
+
+    public void setResourceId(int id){
+        resourceId = id;
+    }
+
     public void setVideoPath(String videoPath)
     {
         this.videoPath = videoPath;
         if(mSphere != null && !mMediaPlayer.isPlaying()){
-            //initMediaPlayer(Uri.parse(videoPath));
+            initMediaPlayer(Uri.parse(videoPath));
         }
     }
 

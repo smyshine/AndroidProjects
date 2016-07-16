@@ -56,6 +56,7 @@ public class CustomMultiPlayView extends FrameLayout implements VRPlayListener, 
         super(context, attrs, defStyleAttr);
         view = LayoutInflater.from(getContext()).inflate(R.layout.widget_multi_player, null);
         mSurfaceView = (CustomMultiCardboardView) view.findViewById(R.id.surfaceView);
+        mSurfaceView.setRestoreGLStateEnabled(false);
         mSurfaceView.setSampleCount(2);
         mSurfaceView.setTransparent(true);
 
@@ -170,6 +171,7 @@ public class CustomMultiPlayView extends FrameLayout implements VRPlayListener, 
     {
         mSurfaceView.setDataSource(url);
         mSurfaceView.setDataSource(convertLayoutToBitmap());
+        mSurfaceView.setDataSource(R.id.ll_setting);
     }
 
     private Handler handler = new Handler();

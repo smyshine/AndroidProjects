@@ -62,6 +62,10 @@ public class CustomMultiCardboardView extends VRSurfaceView {
         mRenderer.setBitmap(bitmap);
     }
 
+    public void setDataSource(int rid){
+        mRenderer.setResourceId(rid);
+    }
+
     public void setCardboardViewClickListener(OnCardboardViewClickListener listener)
     {
         mCardboardViewClickListener = listener;
