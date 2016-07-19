@@ -5,14 +5,10 @@ import android.content.Context;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
-import android.graphics.Point;
 import android.os.Handler;
 import android.util.AttributeSet;
-import android.util.Log;
-import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
@@ -144,22 +140,9 @@ public class CustomMultiPlayView extends FrameLayout implements VRPlayListener, 
     }
 
     public Bitmap convertLayoutToBitmap(){
-        LayoutInflater inflater = LayoutInflater.from(getContext());
-        View view = inflater.inflate(R.layout.setting_layout, null);
-        //View view = inflater.inflate(R.layout.picture_setting_float, null);
-        WindowManager manager = (WindowManager) getContext().getSystemService(Context.WINDOW_SERVICE);
-        Display display = manager.getDefaultDisplay();
-        Point size = new Point();
-        display.getSize(size);
-        int width = size.x;
-        int height = size.y;
-
-        Log.d("SDBG","get measure : " + width + " ;  " + height);
-        int widthSpec = View.MeasureSpec.makeMeasureSpec(width, View.MeasureSpec.EXACTLY);
-        int heightSpec = View.MeasureSpec.makeMeasureSpec(height, View.MeasureSpec.EXACTLY);
-        view.measure(widthSpec, heightSpec);
-        view.layout(0, 0, width, height);
-
+        View view = LayoutInflater.from(getContext()).inflate(R.layout.setting_layout, null);
+        view.measure(MeasureSpec.makeMeasureSpec(0, MeasureSpec.UNSPECIFIED), MeasureSpec.makeMeasureSpec(0, MeasureSpec.UNSPECIFIED));
+        view.layout(0, 0, view.getMeasuredWidth(), view.getMeasuredHeight());
         view.setDrawingCacheEnabled(true);
         view.buildDrawingCache();
         Bitmap bitmap = view.getDrawingCache();
@@ -171,7 +154,7 @@ public class CustomMultiPlayView extends FrameLayout implements VRPlayListener, 
     {
         mSurfaceView.setDataSource(url);
         mSurfaceView.setDataSource(convertLayoutToBitmap());
-        mSurfaceView.setDataSource(R.id.ll_setting);
+        mSurfaceView.setDataSource(R.drawable.play);
     }
 
     private Handler handler = new Handler();

@@ -6,9 +6,12 @@ import android.view.MotionEvent;
 import com.google.vrtoolkit.cardboard.Eye;
 
 import org.rajawali3d.materials.Material;
+import org.rajawali3d.materials.textures.ATexture;
+import org.rajawali3d.materials.textures.Texture;
 import org.rajawali3d.math.Matrix4;
 import org.rajawali3d.math.Quaternion;
 import org.rajawali3d.math.vector.Vector3;
+import org.rajawali3d.primitives.Plane;
 import org.rajawali3d.primitives.Sphere;
 import org.rajawali3d.vr.renderer.VRRenderer;
 
@@ -19,6 +22,7 @@ public class BaseVRRender extends VRRenderer {
 
     public boolean mUseSensor = true;
     public Sphere mSphere;
+    public Plane mPlane;
 
     private float mGestureXAngle = 0;
     private float mGestureYAngle = 0;
@@ -58,6 +62,51 @@ public class BaseVRRender extends VRRenderer {
         getCurrentCamera().setFieldOfView(INIT_FIELD_VIEW);
 
         getCurrentCamera().setPosition(Vector3.ZERO);
+    }
+
+    public void initScene(Texture texture){
+        mPlane = createSettingPlane(texture);//new Texture("playBtn", R.drawable.play)
+        getCurrentScene().addChild(mPlane);
+    }
+
+    private static Sphere createPhotoSphereWithTexture(ATexture texture) {
+
+        Material material = new Material();
+        material.setColor(0);
+
+        try {
+            material.addTexture(texture);
+        } catch (ATexture.TextureException e) {
+            throw new RuntimeException(e);
+        }
+
+        Sphere sphere = new Sphere(50, 64, 32);
+        sphere.setScaleX(-1);
+        sphere.setMaterial(material);
+
+        return sphere;
+    }
+
+    private static Plane createSettingPlane(ATexture texture){
+        Material playBtnM = new Material();
+        playBtnM.setColorInfluence(0);
+        try {
+            //place the button picture in "res/drawable-nodpi/"
+            playBtnM.addTexture(texture);
+        } catch(ATexture.TextureException e) {
+            e.printStackTrace();
+        }
+
+        Plane playBtn;
+        playBtn = new Plane(2, 0.4f, 8, 1);
+        //playBtn.setRotZ(90.0);
+        playBtn.setScale(-1);
+        playBtn.setMaterial(playBtnM);
+        playBtn.setPosition(1, -2, -2);
+        playBtn.setAlpha(0);
+
+        // getCurrentScene().addChild(playBtn);
+        return playBtn;
     }
 
     @Override
