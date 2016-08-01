@@ -12,7 +12,6 @@ import android.net.wifi.p2p.WifiP2pDevice;
 import android.net.wifi.p2p.WifiP2pDeviceList;
 import android.net.wifi.p2p.WifiP2pInfo;
 import android.net.wifi.p2p.WifiP2pManager;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -24,8 +23,6 @@ import android.view.Window;
 import android.widget.TextView;
 
 import com.example.smy.wifip2p.BroadcastReceiver.WiFiDirectBroadcastReceiver;
-import com.example.smy.wifip2p.Service.DataTransferService;
-import com.example.smy.wifip2p.Task.DataServerAsyncTask;
 import com.example.smy.wifip2p.Task.FileServerAsyncTask;
 
 import java.util.ArrayList;
@@ -51,8 +48,9 @@ public class MainActivity extends Activity {
     private StringBuffer mStringBuffer = new StringBuffer();
     TextView tvLog;
 
-    private FileServerAsyncTask mFileServerTask;
-    private DataServerAsyncTask mDataServerTask;
+    private FileServerAsyncTask mFileServerTask = null;
+
+    SocketConnection socketDataConnection = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,19 +94,24 @@ public class MainActivity extends Activity {
             public void onConnectionInfoAvailable(WifiP2pInfo winfo) {
                 info = winfo;
                 showlog("Connection info available");
+                if (socketDataConnection == null){
+                    socketDataConnection = new SocketConnection(MainActivity.this);
+                }
+                showlog("start socket.");
+
                 if (info.groupFormed && info.isGroupOwner) {
                     showlog("I'm group owner.");
-
+                    socketDataConnection.start("", 7878, true);
+                }else{
+                    socketDataConnection.start(info.groupOwnerAddress.getHostAddress(), 7878, false);
+                }
+                /*if (mFileServerTask == null){
                     mFileServerTask = new FileServerAsyncTask(MainActivity.this);
                     mFileServerTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+                }*/
 
-                    mDataServerTask = new DataServerAsyncTask(MainActivity.this);
-                    mDataServerTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
-
-                    findViewById(R.id.ll_send_file).setVisibility(View.INVISIBLE);
-                } else if (info.groupFormed) {
-                    findViewById(R.id.ll_send_file).setVisibility(View.VISIBLE);
-                }
+                findViewById(R.id.recyclerView).setVisibility(View.GONE);
+                findViewById(R.id.ll_send_file).setVisibility(View.VISIBLE);
             }
         };
         receiver = new WiFiDirectBroadcastReceiver(manager, channel, this, peerListListener, connectionInfoListener);
@@ -134,6 +137,20 @@ public class MainActivity extends Activity {
                 tvLog.setText(mStringBuffer.toString());
             }
         });
+    }
+
+    public void onDeviceConnected(){
+        findViewById(R.id.ll_connect).setEnabled(false);
+    }
+
+    public void onDeviceDisconnected(){
+        findViewById(R.id.ll_connect).setEnabled(true);
+        findViewById(R.id.ll_send_file).setVisibility(View.INVISIBLE);
+        findViewById(R.id.recyclerView).setVisibility(View.VISIBLE);
+        if(socketDataConnection != null){
+            socketDataConnection.stop();
+            socketDataConnection = null;
+        }
     }
 
     public boolean isScanning = false;
@@ -193,6 +210,7 @@ public class MainActivity extends Activity {
 
             }
         });
+        findViewById(R.id.ll_send_file).setVisibility(View.INVISIBLE);
     }
 
     private void BeGroupOwener(){
@@ -209,19 +227,21 @@ public class MainActivity extends Activity {
         });
     }
 
+    private String connectPeerAddress;
     private void connectPeer(final String address, final String name) {
+        connectPeerAddress = address;
         WifiP2pConfig config = new WifiP2pConfig();
         config.deviceAddress = address;
         config.wps.setup = WpsInfo.PBC;
         manager.connect(channel, config, new WifiP2pManager.ActionListener() {
             @Override
             public void onSuccess() {
-                showlog("Connect peer success(" + address + ":" + name + ").");
+                showlog("Connect peer invite success(" + address + ":" + name + ").");
             }
 
             @Override
             public void onFailure(int reason) {
-                showlog("Connect peer fail(" + address + ":" + name + ").");
+                showlog("Connect peer invite fail(" + address + ":" + name + ").");
             }
         });
     }
@@ -237,29 +257,38 @@ public class MainActivity extends Activity {
 
     public void onClickSendData(View v){
         showlog("Send data click.");
-
-        Intent serviceIntent = new Intent(MainActivity.this, DataTransferService.class);
-
-        serviceIntent.setAction(DataTransferService.ACTION_SEND_DATA);
-        serviceIntent.putExtra(DataTransferService.EXTRA_GROUP_OWNER_ADDRESS, info.groupOwnerAddress.getHostAddress());
-        serviceIntent.putExtra(DataTransferService.EXTRA_GROUP_OWNER_PORT, 8888);
-        serviceIntent.putExtra(DataTransferService.EXTRA_DATA_MESSAGE, "Hello world!");
-
-        MainActivity.this.startService(serviceIntent);
+        socketDataConnection.sendMessage("Hello World");
     }
 
+    public void onReceiveMessage(String message){
+        showlog("receive message : " + message);
+        if(message.equals("FILE")){
+            socketDataConnection.receiveFile();
+            socketDataConnection.sendMessage("FILE_OK");
+        }else if (message.equals("FILE_OK")){
+            showlog("send file start : " + uri.toString());
+            socketDataConnection.sendFile(info.groupOwnerAddress.getHostAddress(), 8787, uri.toString());
+        }
+    }
+
+    Intent serviceIntent = null;
+    Uri uri = null;
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == SEND_PICTURE_PICK) {
+        if (requestCode == SEND_PICTURE_PICK && resultCode == RESULT_OK) {
             super.onActivityResult(requestCode, resultCode, data);
-            Uri uri = data.getData();
-            showlog("Pick file " + uri + ".");
-            Intent serviceIntent = new Intent(MainActivity.this, DataTransferService.class);
-            serviceIntent.setAction(DataTransferService.ACTION_SEND_FILE);
+            /*if (serviceIntent == null){
+                serviceIntent = new Intent(MainActivity.this, DataTransferService.class);
+            }*/
+            uri = data.getData();
+            //showlog("Pick file " + uri + ".");
+            socketDataConnection.sendMessage("FILE");
+            //socketDataConnection.sendFile(info.groupOwnerAddress.getHostAddress(), 8787, uri.toString());
+            /*serviceIntent.setAction(DataTransferService.ACTION_SEND_FILE);
             serviceIntent.putExtra(DataTransferService.EXTRA_GROUP_OWNER_ADDRESS, info.groupOwnerAddress.getHostAddress());
             serviceIntent.putExtra(DataTransferService.EXTRA_GROUP_OWNER_PORT, 8988);
             serviceIntent.putExtra(DataTransferService.EXTRA_DATA_MESSAGE, uri.toString());
-            MainActivity.this.startService(serviceIntent);
+            MainActivity.this.startService(serviceIntent);*/
         }
     }
 
@@ -267,6 +296,9 @@ public class MainActivity extends Activity {
     protected void onDestroy() {
         super.onDestroy();
         unregisterReceiver(receiver);
+        if (serviceIntent != null) {
+            MainActivity.this.stopService(serviceIntent);
+        }
     }
 
     public interface OnWifiItemClickListener {

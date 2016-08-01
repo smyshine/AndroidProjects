@@ -63,8 +63,10 @@ public class WiFiDirectBroadcastReceiver extends BroadcastReceiver{
             if (networkInfo.isConnected()) {
                 activity.showlog("Connected.");
                 manager.requestConnectionInfo(channel, connectionInfoListener);
+                activity.onDeviceConnected();
             } else {
                 activity.showlog("Disconnected.");
+                activity.onDeviceDisconnected();
                 return;
             }
         } else if (WifiP2pManager.WIFI_P2P_THIS_DEVICE_CHANGED_ACTION.equals(action)){

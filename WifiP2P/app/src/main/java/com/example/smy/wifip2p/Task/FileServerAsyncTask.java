@@ -1,7 +1,5 @@
 package com.example.smy.wifip2p.Task;
 
-import android.content.Intent;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Environment;
 
@@ -46,6 +44,7 @@ public class FileServerAsyncTask extends AsyncTask<Void, Void, String> {
             InputStream inputstream = client.getInputStream();
             copyFile(inputstream, new FileOutputStream(f));
             serverSocket.close();
+            client.close();
             return f.getAbsolutePath();
 
         } catch (IOException e) {
@@ -60,10 +59,10 @@ public class FileServerAsyncTask extends AsyncTask<Void, Void, String> {
 
         if (result != null) {
             activity.showlog("File copied - " + result);
-            Intent intent = new Intent();
-            intent.setAction(Intent.ACTION_VIEW);
-            intent.setDataAndType(Uri.parse("file://" + result), "*/*");
-            activity.startActivity(intent);
+            //Intent intent = new Intent();
+            //intent.setAction(Intent.ACTION_VIEW);
+            //intent.setDataAndType(Uri.parse("file://" + result), "*/*");
+            //activity.startActivity(intent);
         }
     }
 

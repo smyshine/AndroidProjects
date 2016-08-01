@@ -46,6 +46,7 @@ public class DataTransferService extends IntentService {
         }
     }
 
+
     private void handleActionSendData(String host, int port, String message) {
         Socket socket = new Socket();
         try {
