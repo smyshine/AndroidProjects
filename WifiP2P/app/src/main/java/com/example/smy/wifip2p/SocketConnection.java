@@ -18,9 +18,7 @@ import java.io.StringWriter;
 import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.net.SocketException;
 import java.net.SocketTimeoutException;
-import java.net.UnknownHostException;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.TimeUnit;
 
@@ -44,12 +42,6 @@ public class SocketConnection {
         this.activity = activity;
     }
 
-    /**
-     * 消息处理线程
-     *
-     * @author Administrator
-     *
-     */
     private class MessageHandleThread extends Thread {
         private boolean stop;
         private char[] cbuf;
@@ -117,19 +109,13 @@ public class SocketConnection {
             if (socket != null) {
                 try {
                     socket.close();
+                    socket = null;
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
             }
         }
 
-        /**
-         * 初始化消息处理线程
-         *
-         * @throws UnknownHostException
-         * @throws IOException
-         * @throws SocketException
-         */
         private boolean initialize(boolean isServer){
             for (int count = 2; count >= 0; count--) {
                 if (stop) {
@@ -150,7 +136,6 @@ public class SocketConnection {
                     sender = new OutputStreamWriter(socket.getOutputStream(), "UTF-8");
                     cbuf = new char[BUFFER_SIZE];
                     activity.showlog("start socket success .");
-
                     return true;
                 } catch (SocketTimeoutException e) {
                     e.printStackTrace();
@@ -180,9 +165,6 @@ public class SocketConnection {
             }
         }
 
-        /**
-         * 接受消息
-         */
         private String receiveMessage() {
             try {
                 if (receiver.ready()) {
@@ -207,9 +189,6 @@ public class SocketConnection {
             return null;
         }
 
-        /**
-         * 发送消息
-         */
         private void sendMessage(String message) {
             try {
                 activity.showlog("send message " + message);
@@ -227,20 +206,8 @@ public class SocketConnection {
         }
     }
 
-    /**
-     * 添加消息到消息队列
-     *
-     * @param message
-     */
     private void addMessage(String message) {
-        //activity.showlog("message queue add " + message );
         mMessageQueue.add(message);
-    }
-
-    void clearMessageQueue() {
-        if (mMessageQueue != null) {
-            mMessageQueue.clear();
-        }
     }
 
     void sendMessage(String message) {
@@ -280,7 +247,6 @@ public class SocketConnection {
         fileHandleThread.start();
     }
 
-    boolean isStart = false;
     boolean isServer = false;
     void start(String host, int port, boolean isServer) {
         this.isServer = isServer;
@@ -290,8 +256,6 @@ public class SocketConnection {
         if (mMessageQueue == null) {
             mMessageQueue = new LinkedBlockingQueue<String>();
         }
-
-        isStart = true;
 
         if (mMessageHandlerThread == null || !mMessageHandlerThread.isAlive()) {
             mMessageHandlerThread = new MessageHandleThread(host,port, isServer);
@@ -321,15 +285,10 @@ public class SocketConnection {
             }
             fileHandleThread = null;
         }
-        isStart = false;
     }
 
     public void stop() {
         close();
-    }
-
-    public boolean isStart(){
-        return isStart;
     }
 
 
@@ -379,8 +338,6 @@ public class SocketConnection {
                     }
                 }
             }
-
-
 
             if(isSend){
                 sendFile(socket, uri.toString());
@@ -477,8 +434,5 @@ public class SocketConnection {
             }
             return true;
         }
-
-
     }
-
 }
