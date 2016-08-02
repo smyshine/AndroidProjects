@@ -38,9 +38,93 @@ public class SocketConnection {
     private static final int SOCKET_TIMEOUT = 10000;
     private static final long SLEEP_TIMEOUT = 50L;
 
+    private boolean isServer = false;
+
     SocketConnection(MainActivity activity) {
         this.activity = activity;
     }
+
+    private void addMessage(String message) {
+        mMessageQueue.add(message);
+    }
+
+    void sendMessage(String message) {
+        if (mMessageQueue != null) {
+            addMessage(message);
+        }
+    }
+
+    FileHandleThread fileHandleThread = null;
+    void receiveFile(String host, int port){
+        if(fileHandleThread != null){
+            fileHandleThread.interrupt();
+            try {
+                fileHandleThread.join(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            fileHandleThread = null;
+        }
+
+        fileHandleThread = new FileHandleThread(host, port, null, isServer, false);
+        fileHandleThread.start();
+    }
+
+    void sendFile(String host, int port, String uri){
+        if(fileHandleThread != null){
+            fileHandleThread.interrupt();
+            try {
+                fileHandleThread.join(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            fileHandleThread = null;
+        }
+
+        fileHandleThread = new FileHandleThread(host, port, uri, isServer, true);
+        fileHandleThread.start();
+    }
+
+
+    void start(String host, int port, boolean isServer) {
+        this.isServer = isServer;
+
+        stop();
+
+        if (mMessageQueue == null) {
+            mMessageQueue = new LinkedBlockingQueue<String>();
+        }
+
+        if (mMessageHandlerThread == null || !mMessageHandlerThread.isAlive()) {
+            mMessageHandlerThread = new MessageHandleThread(host,port, isServer);
+            mMessageHandlerThread.start();
+        }
+    }
+
+    public void stop() {
+        if (mMessageHandlerThread != null) {
+            mMessageHandlerThread.stop = true;
+            mMessageHandlerThread.closeSocket();
+            mMessageHandlerThread.interrupt();
+            try {
+                mMessageHandlerThread.join(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            mMessageHandlerThread = null;
+        }
+
+        if(fileHandleThread != null){
+            fileHandleThread.interrupt();
+            try {
+                fileHandleThread.join(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            fileHandleThread = null;
+        }
+    }
+
 
     private class MessageHandleThread extends Thread {
         private boolean stop;
@@ -204,91 +288,6 @@ public class SocketConnection {
                 e.printStackTrace();
             }
         }
-    }
-
-    private void addMessage(String message) {
-        mMessageQueue.add(message);
-    }
-
-    void sendMessage(String message) {
-        if (mMessageQueue != null) {
-            addMessage(message);
-        }
-    }
-
-    FileHandleThread fileHandleThread = null;
-    void receiveFile(String host, int port){
-        if(fileHandleThread != null){
-            fileHandleThread.interrupt();
-            try {
-                fileHandleThread.join(100);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            fileHandleThread = null;
-        }
-
-        fileHandleThread = new FileHandleThread(host, port, null, isServer, false);
-        fileHandleThread.start();
-    }
-
-    void sendFile(String host, int port, String uri){
-        if(fileHandleThread != null){
-            fileHandleThread.interrupt();
-            try {
-                fileHandleThread.join(100);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            fileHandleThread = null;
-        }
-
-        fileHandleThread = new FileHandleThread(host, port, uri, isServer, true);
-        fileHandleThread.start();
-    }
-
-    boolean isServer = false;
-    void start(String host, int port, boolean isServer) {
-        this.isServer = isServer;
-
-        close();
-
-        if (mMessageQueue == null) {
-            mMessageQueue = new LinkedBlockingQueue<String>();
-        }
-
-        if (mMessageHandlerThread == null || !mMessageHandlerThread.isAlive()) {
-            mMessageHandlerThread = new MessageHandleThread(host,port, isServer);
-            mMessageHandlerThread.start();
-        }
-    }
-
-    private void close() {
-        if (mMessageHandlerThread != null) {
-            mMessageHandlerThread.stop = true;
-            mMessageHandlerThread.closeSocket();
-            mMessageHandlerThread.interrupt();
-            try {
-                mMessageHandlerThread.join(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            mMessageHandlerThread = null;
-        }
-
-        if(fileHandleThread != null){
-            fileHandleThread.interrupt();
-            try {
-                fileHandleThread.join(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            fileHandleThread = null;
-        }
-    }
-
-    public void stop() {
-        close();
     }
 
 

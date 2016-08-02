@@ -33,24 +33,24 @@ import java.util.List;
 
 public class MainActivity extends Activity {
 
-    WifiP2pManager manager;
-    WifiP2pManager.Channel channel;
-    BroadcastReceiver receiver;
-    IntentFilter intentFilter;
-    WifiP2pManager.PeerListListener peerListListener;
-    WifiP2pManager.ConnectionInfoListener connectionInfoListener;
+    private WifiP2pManager manager;
+    private WifiP2pManager.Channel channel;
+    private BroadcastReceiver receiver;
+    private IntentFilter intentFilter;
+    private WifiP2pManager.PeerListListener peerListListener;
+    private WifiP2pManager.ConnectionInfoListener connectionInfoListener;
     private String groupOwnerAddress;
 
-    RecyclerView recyclerView;
-    WifiResultAdapter adapter;
+    private RecyclerView recyclerView;
+    private WifiResultAdapter adapter;
     private List peers = new ArrayList();
     private List<HashMap<String, String>> peersshow = new ArrayList();
 
-    TextView tvLog;
+    private TextView tvLog;
 
-    SocketConnection socketDataConnection = null;
+    private SocketConnection socketDataConnection = null;
 
-    WebView webView;
+    private WebView webView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
