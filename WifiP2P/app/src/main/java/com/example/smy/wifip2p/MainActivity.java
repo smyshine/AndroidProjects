@@ -39,14 +39,13 @@ public class MainActivity extends Activity {
     IntentFilter intentFilter;
     WifiP2pManager.PeerListListener peerListListener;
     WifiP2pManager.ConnectionInfoListener connectionInfoListener;
-    private WifiP2pInfo info;
+    private String groupOwnerAddress;
 
     RecyclerView recyclerView;
     WifiResultAdapter adapter;
     private List peers = new ArrayList();
     private List<HashMap<String, String>> peersshow = new ArrayList();
 
-    private StringBuffer mStringBuffer = new StringBuffer();
     TextView tvLog;
 
     SocketConnection socketDataConnection = null;
@@ -124,20 +123,21 @@ public class MainActivity extends Activity {
         connectionInfoListener = new WifiP2pManager.ConnectionInfoListener() {
             @Override
             public void onConnectionInfoAvailable(WifiP2pInfo winfo) {
-                info = winfo;
+                if(winfo == null){return;}
+                groupOwnerAddress = winfo.groupOwnerAddress.getHostAddress();
                 showlog("Connection info available");
                 if (socketDataConnection == null){
                     socketDataConnection = new SocketConnection(MainActivity.this);
                 }
                 showlog("start socket.");
+                showlog("Owner addr: " + groupOwnerAddress);
 
-                if (info.groupFormed && info.isGroupOwner) {
+                if (winfo.groupFormed && winfo.isGroupOwner) {
                     showlog("I'm group owner.");
-                    socketDataConnection.start("", 7878, true);
+                    socketDataConnection.start(groupOwnerAddress, 7878, true);
                 }else{
-                    socketDataConnection.start(info.groupOwnerAddress.getHostAddress(), 7878, false);
+                    socketDataConnection.start(groupOwnerAddress, 7878, false);
                 }
-                showlog("Owener addr: " + info.groupOwnerAddress.getHostAddress());
 
                 recyclerView.setVisibility(View.GONE);
                 findViewById(R.id.ll_send_file).setVisibility(View.VISIBLE);
@@ -159,9 +159,12 @@ public class MainActivity extends Activity {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                mStringBuffer.append(s);
-                mStringBuffer.append("\n");
-                tvLog.setText(mStringBuffer.toString());
+                tvLog.append(s);
+                tvLog.append("\n");
+                int offset = tvLog.getLineCount() * tvLog.getLineHeight();
+                if (offset > tvLog.getHeight() ){
+                    tvLog.scrollTo(0,offset-tvLog.getHeight());
+                }
             }
         });
     }
@@ -287,10 +290,10 @@ public class MainActivity extends Activity {
         showlog("receive message : " + message);
         if(message.equals("FILE")){
             socketDataConnection.sendMessage("FILE_OK");
-            socketDataConnection.receiveFile(info.groupOwnerAddress.getHostAddress(), 8787);
+            socketDataConnection.receiveFile(groupOwnerAddress, 8787);
         }else if (message.equals("FILE_OK") && uri != null){
             showlog("send file start : " + uri.toString());
-            socketDataConnection.sendFile(info.groupOwnerAddress.getHostAddress(), 8787, uri.toString());
+            socketDataConnection.sendFile(groupOwnerAddress, 8787, uri.toString());
         }
     }
 
@@ -416,7 +419,6 @@ public class MainActivity extends Activity {
                     activity.showlog("Wlan direct is enabled.");
                 } else {
                     activity.showlog("Wlan direct is disabled.");
-                    //wifi direct is disabled
                 }
             } else if (WifiP2pManager.WIFI_P2P_DISCOVERY_CHANGED_ACTION.equals(action)){
                 int State = intent.getIntExtra(WifiP2pManager.EXTRA_DISCOVERY_STATE, -1);
