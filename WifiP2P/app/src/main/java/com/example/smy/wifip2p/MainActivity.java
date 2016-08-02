@@ -105,10 +105,6 @@ public class MainActivity extends Activity {
                 }else{
                     socketDataConnection.start(info.groupOwnerAddress.getHostAddress(), 7878, false);
                 }
-                /*if (mFileServerTask == null){
-                    mFileServerTask = new FileServerAsyncTask(MainActivity.this);
-                    mFileServerTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
-                }*/
 
                 findViewById(R.id.recyclerView).setVisibility(View.GONE);
                 findViewById(R.id.ll_send_file).setVisibility(View.VISIBLE);
@@ -249,46 +245,34 @@ public class MainActivity extends Activity {
 
     public static final int SEND_PICTURE_PICK = 92;
     public void onClickSendPicture(View v){
-        showlog("Send file click.");
         Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
         intent.setType("*/*");
         startActivityForResult(intent, SEND_PICTURE_PICK);
     }
 
     public void onClickSendData(View v){
-        showlog("Send data click.");
         socketDataConnection.sendMessage("Hello World");
     }
 
     public void onReceiveMessage(String message){
         showlog("receive message : " + message);
         if(message.equals("FILE")){
-            socketDataConnection.receiveFile();
+            socketDataConnection.receiveFile(info.groupOwnerAddress.getHostAddress(), 8787);
             socketDataConnection.sendMessage("FILE_OK");
-        }else if (message.equals("FILE_OK")){
+        }else if (message.equals("FILE_OK") && uri != null){
             showlog("send file start : " + uri.toString());
             socketDataConnection.sendFile(info.groupOwnerAddress.getHostAddress(), 8787, uri.toString());
         }
     }
 
-    Intent serviceIntent = null;
     Uri uri = null;
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == SEND_PICTURE_PICK && resultCode == RESULT_OK) {
             super.onActivityResult(requestCode, resultCode, data);
-            /*if (serviceIntent == null){
-                serviceIntent = new Intent(MainActivity.this, DataTransferService.class);
-            }*/
             uri = data.getData();
             //showlog("Pick file " + uri + ".");
             socketDataConnection.sendMessage("FILE");
-            //socketDataConnection.sendFile(info.groupOwnerAddress.getHostAddress(), 8787, uri.toString());
-            /*serviceIntent.setAction(DataTransferService.ACTION_SEND_FILE);
-            serviceIntent.putExtra(DataTransferService.EXTRA_GROUP_OWNER_ADDRESS, info.groupOwnerAddress.getHostAddress());
-            serviceIntent.putExtra(DataTransferService.EXTRA_GROUP_OWNER_PORT, 8988);
-            serviceIntent.putExtra(DataTransferService.EXTRA_DATA_MESSAGE, uri.toString());
-            MainActivity.this.startService(serviceIntent);*/
         }
     }
 
@@ -296,8 +280,9 @@ public class MainActivity extends Activity {
     protected void onDestroy() {
         super.onDestroy();
         unregisterReceiver(receiver);
-        if (serviceIntent != null) {
-            MainActivity.this.stopService(serviceIntent);
+        if(socketDataConnection != null){
+            socketDataConnection.stop();
+            socketDataConnection = null;
         }
     }
 

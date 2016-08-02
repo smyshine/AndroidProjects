@@ -79,7 +79,7 @@ public class SocketConnection {
                         sendMessage(mCurrentMessage);
                     } else {
                         String msg = receiveMessage();
-                        if (!TextUtils.isEmpty(msg)){
+                        if (!TextUtils.isEmpty(msg) && activity != null){
                             activity.onReceiveMessage(msg);
                         }
                     }
@@ -246,18 +246,13 @@ public class SocketConnection {
         }
     }
 
-    boolean isReadyToSendFile = false;
-    void setSendFileOK(){
-        isReadyToSendFile = true;
-    }
-
-    void receiveFile(){
-        FileHandleThread thread = new FileHandleThread(null, 8787, null, true);
+    void receiveFile(String host, int port){
+        FileHandleThread thread = new FileHandleThread(host, port, null, isServer, false);
         thread.start();
     }
 
     void sendFile(String host, int port, String uri){
-        FileHandleThread thread = new FileHandleThread(host, port, uri, false);
+        FileHandleThread thread = new FileHandleThread(host, port, uri, isServer, true);
         thread.start();
     }
 
@@ -309,35 +304,56 @@ public class SocketConnection {
         private int  port;
         private boolean isFileServer;
         private String uri;
+        private boolean isSend;
 
-        FileHandleThread(String host, int port, String uri, boolean server){
+        FileHandleThread(String host, int port, String uri, boolean server, boolean send){
             this.host = host;
             this.port = port;
             this.uri = uri;
             this.isFileServer = server;
+            this.isSend = send;
         }
 
         @Override
         public void run() {
             super.run();
 
-            if(isFileServer){
-                receiveFile(port);
+            Socket socket = null;
+            ServerSocket serverSocket = null;
+            try {
+                if (isFileServer){
+                    serverSocket = new ServerSocket(port);
+                    socket = serverSocket.accept();
+                }else{
+                    socket = new Socket();
+                    Log.d("xyz", "Opening client socket - ");
+                    socket.bind(null);
+                    socket.connect((new InetSocketAddress(host, port)), SOCKET_TIMEOUT);
+                }
+            }catch (Exception e){
+                activity.showlog("Exception: " + e.getMessage());
+                e.printStackTrace();
+            }
+
+
+            if(isSend){
+                sendFile(socket, uri.toString());
             }else{
-                sendFile(host, port, uri.toString());
+                receiveFile(socket);
+            }
+
+            if(serverSocket != null){
+                try {
+                    serverSocket.close();
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
             }
 
         }
 
-        void sendFile(String host, int port, String fileUri){
-            Socket socket = new Socket();
+        void sendFile(Socket socket, String fileUri){
             try {
-                Log.d("xyz", "Opening client socket - ");
-                socket.bind(null);
-                socket.connect((new InetSocketAddress(host, port)), SOCKET_TIMEOUT);
-
-                Log.d("xyz", "Client socket - " + socket.isConnected());
-
                 OutputStream stream = socket.getOutputStream();
                 ContentResolver cr = activity.getContentResolver();
                 InputStream is = null;
@@ -365,21 +381,8 @@ public class SocketConnection {
             }
         }
 
-        void receiveFile(int port){
-            ServerSocket serverSocket = null;
-            Socket client = null;
+        void receiveFile(Socket client){
             try {
-                activity.showlog("receive file start.");
-                serverSocket = new ServerSocket(port);
-                /*while(client == null){
-                    try {
-                        client = serverSocket.accept();
-                    } catch (Exception e){
-                        client = null;
-                        e.printStackTrace();
-                    }
-                }*/
-                client = serverSocket.accept();
                 final File f = new File(
                         Environment.getExternalStorageDirectory() + "/"
                                 + "smy" + "/wifip2pshared-"
@@ -394,19 +397,12 @@ public class SocketConnection {
                 InputStream inputstream = client.getInputStream();
                 copyFile(inputstream, new FileOutputStream(f));
                 activity.showlog("File copied - " + f.getAbsolutePath());
-            } catch (IOException e) {
-                activity.showlog("IOException, " + e.getMessage());
+            } catch (Exception e) {
+                activity.showlog("Exception, " + e.getMessage());
             }finally {
                 if (client != null) {
                     try {
                         client.close();
-                    }catch (Exception e){
-                        e.printStackTrace();
-                    }
-                }
-                if(serverSocket != null){
-                    try {
-                        serverSocket.close();
                     }catch (Exception e){
                         e.printStackTrace();
                     }
