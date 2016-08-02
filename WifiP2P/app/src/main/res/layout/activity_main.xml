@@ -79,19 +79,32 @@
 
     </LinearLayout>
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerView"
+    <WebView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_weight="3"/>
+        android:layout_weight="1"
+        android:id="@+id/webview"/>
 
-    <TextView
-        android:id="@+id/tvLog"
+    <LinearLayout
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
-        android:layout_weight="2"
         android:layout_height="0dp"
-        android:scrollbars="vertical"/>
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tvLog"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            />
+
+    </LinearLayout>
 
 </LinearLayout>

@@ -159,7 +159,10 @@ public class SocketConnection {
                     try {
                         TimeUnit.MILLISECONDS.sleep(1000L);
                     } catch (InterruptedException e1) {
+                        Thread.currentThread().interrupt();
                         e1.printStackTrace();
+                    } catch (Exception ei){
+                        ei.printStackTrace();
                     }
                 }
             }
@@ -192,13 +195,13 @@ public class SocketConnection {
                         }
                     }
                 } else {
-                    TimeUnit.MILLISECONDS.sleep(SLEEP_TIMEOUT);
+                    Thread.sleep(SLEEP_TIMEOUT);
                 }
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
-                e.printStackTrace();
+            }catch(InterruptedException e) {
+                // Restore the interrupted status
+                Thread.currentThread().interrupt();
             } catch (Exception e) {
+                activity.showlog("recv msg exception: " + e.getMessage());
                 e.printStackTrace();
             }
             return null;
@@ -246,14 +249,35 @@ public class SocketConnection {
         }
     }
 
+    FileHandleThread fileHandleThread = null;
     void receiveFile(String host, int port){
-        FileHandleThread thread = new FileHandleThread(host, port, null, isServer, false);
-        thread.start();
+        if(fileHandleThread != null){
+            fileHandleThread.interrupt();
+            try {
+                fileHandleThread.join(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            fileHandleThread = null;
+        }
+
+        fileHandleThread = new FileHandleThread(host, port, null, isServer, false);
+        fileHandleThread.start();
     }
 
     void sendFile(String host, int port, String uri){
-        FileHandleThread thread = new FileHandleThread(host, port, uri, isServer, true);
-        thread.start();
+        if(fileHandleThread != null){
+            fileHandleThread.interrupt();
+            try {
+                fileHandleThread.join(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            fileHandleThread = null;
+        }
+
+        fileHandleThread = new FileHandleThread(host, port, uri, isServer, true);
+        fileHandleThread.start();
     }
 
     boolean isStart = false;
@@ -286,6 +310,16 @@ public class SocketConnection {
                 e.printStackTrace();
             }
             mMessageHandlerThread = null;
+        }
+
+        if(fileHandleThread != null){
+            fileHandleThread.interrupt();
+            try {
+                fileHandleThread.join(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            fileHandleThread = null;
         }
         isStart = false;
     }
@@ -320,20 +354,32 @@ public class SocketConnection {
 
             Socket socket = null;
             ServerSocket serverSocket = null;
-            try {
-                if (isFileServer){
-                    serverSocket = new ServerSocket(port);
-                    socket = serverSocket.accept();
-                }else{
-                    socket = new Socket();
-                    Log.d("xyz", "Opening client socket - ");
-                    socket.bind(null);
-                    socket.connect((new InetSocketAddress(host, port)), SOCKET_TIMEOUT);
+            for(int i = 0; i < 3; ++i){
+                try {
+                    if (isFileServer){
+                        serverSocket = new ServerSocket(port);
+                        socket = serverSocket.accept();
+                    }else{
+                        socket = new Socket();
+                        Log.d("xyz", "Opening client socket - ");
+                        socket.bind(null);
+                        socket.connect((new InetSocketAddress(host, port)), SOCKET_TIMEOUT);
+                    }
+                    break;
+                }catch (Exception e){
+                    activity.showlog("Exception: " + e.getMessage());
+                    e.printStackTrace();
+                    try {
+                        Thread.sleep(500L);
+                    }catch (InterruptedException ei){
+                        ei.printStackTrace();
+                        Thread.currentThread().interrupt();
+                    } catch (Exception eii){
+                        eii.printStackTrace();
+                    }
                 }
-            }catch (Exception e){
-                activity.showlog("Exception: " + e.getMessage());
-                e.printStackTrace();
             }
+
 
 
             if(isSend){
@@ -349,7 +395,13 @@ public class SocketConnection {
                     e.printStackTrace();
                 }
             }
-
+            if (socket != null){
+                try {
+                    socket.close();
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+            }
         }
 
         void sendFile(Socket socket, String fileUri){

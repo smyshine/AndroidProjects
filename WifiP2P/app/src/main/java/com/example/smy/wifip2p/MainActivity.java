@@ -5,6 +5,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.net.wifi.WpsInfo;
 import android.net.wifi.p2p.WifiP2pConfig;
@@ -16,14 +17,14 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.method.ScrollingMovementMethod;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.TextView;
-
-import com.example.smy.wifip2p.BroadcastReceiver.WiFiDirectBroadcastReceiver;
-import com.example.smy.wifip2p.Task.FileServerAsyncTask;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -48,9 +49,9 @@ public class MainActivity extends Activity {
     private StringBuffer mStringBuffer = new StringBuffer();
     TextView tvLog;
 
-    private FileServerAsyncTask mFileServerTask = null;
-
     SocketConnection socketDataConnection = null;
+
+    WebView webView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +62,36 @@ public class MainActivity extends Activity {
         tvLog = (TextView) findViewById(R.id.tvLog);
         tvLog.setMovementMethod(new ScrollingMovementMethod());
 
+        initWebView();
+
+        initWlanDirectManager();
+
+        if (intentFilter == null){
+            intentFilter = new IntentFilter();
+            intentFilter.addAction(WifiP2pManager.WIFI_P2P_STATE_CHANGED_ACTION);
+            intentFilter.addAction(WifiP2pManager.WIFI_P2P_PEERS_CHANGED_ACTION);
+            intentFilter.addAction(WifiP2pManager.WIFI_P2P_DISCOVERY_CHANGED_ACTION);
+            intentFilter.addAction(WifiP2pManager.WIFI_P2P_CONNECTION_CHANGED_ACTION);
+            intentFilter.addAction(WifiP2pManager.WIFI_P2P_THIS_DEVICE_CHANGED_ACTION);
+            registerReceiver(receiver, intentFilter);
+        }
+    }
+
+    private void initWebView(){
+        webView = (WebView) findViewById(R.id.webview);
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.getSettings().setBuiltInZoomControls(true);
+        webView.loadUrl("http://www.baidu.com");
+        webView.setWebViewClient(new WebViewClient(){
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView webView, String url){
+                webView.loadUrl(url);
+                return true;
+            }
+        });
+    }
+
+    private void initWlanDirectManager(){
         manager = (WifiP2pManager) getSystemService(Context.WIFI_P2P_SERVICE);
         channel = manager.initialize(this, getMainLooper(), null);
         peerListListener = new WifiP2pManager.PeerListListener() {
@@ -78,6 +109,7 @@ public class MainActivity extends Activity {
                     map.put("address", a.deviceAddress);
                     peersshow.add(map);
                 }
+                recyclerView.setVisibility(View.VISIBLE);
                 adapter = new WifiResultAdapter(peersshow);
                 recyclerView.setAdapter(adapter);
                 recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
@@ -105,23 +137,22 @@ public class MainActivity extends Activity {
                 }else{
                     socketDataConnection.start(info.groupOwnerAddress.getHostAddress(), 7878, false);
                 }
+                showlog("Owener addr: " + info.groupOwnerAddress.getHostAddress());
 
-                findViewById(R.id.recyclerView).setVisibility(View.GONE);
+                recyclerView.setVisibility(View.GONE);
                 findViewById(R.id.ll_send_file).setVisibility(View.VISIBLE);
             }
         };
         receiver = new WiFiDirectBroadcastReceiver(manager, channel, this, peerListListener, connectionInfoListener);
+    }
 
-        if (intentFilter == null){
-            intentFilter = new IntentFilter();
-            intentFilter.addAction(WifiP2pManager.WIFI_P2P_STATE_CHANGED_ACTION);
-            intentFilter.addAction(WifiP2pManager.WIFI_P2P_PEERS_CHANGED_ACTION);
-            intentFilter.addAction(WifiP2pManager.WIFI_P2P_DISCOVERY_CHANGED_ACTION);
-            intentFilter.addAction(WifiP2pManager.WIFI_P2P_CONNECTION_CHANGED_ACTION);
-            intentFilter.addAction(WifiP2pManager.WIFI_P2P_THIS_DEVICE_CHANGED_ACTION);
-            registerReceiver(receiver, intentFilter);
+    @Override   //默认点回退键，会退出Activity，需监听按键操作，使回退在WebView内发生
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if ((keyCode == KeyEvent.KEYCODE_BACK) && webView.canGoBack()) {
+            webView.goBack();
+            return true;
         }
-
+        return super.onKeyDown(keyCode, event);
     }
 
     public void showlog(final String s){
@@ -137,12 +168,12 @@ public class MainActivity extends Activity {
 
     public void onDeviceConnected(){
         findViewById(R.id.ll_connect).setEnabled(false);
+        recyclerView.setVisibility(View.GONE);
     }
 
     public void onDeviceDisconnected(){
         findViewById(R.id.ll_connect).setEnabled(true);
         findViewById(R.id.ll_send_file).setVisibility(View.INVISIBLE);
-        findViewById(R.id.recyclerView).setVisibility(View.VISIBLE);
         if(socketDataConnection != null){
             socketDataConnection.stop();
             socketDataConnection = null;
@@ -223,9 +254,7 @@ public class MainActivity extends Activity {
         });
     }
 
-    private String connectPeerAddress;
     private void connectPeer(final String address, final String name) {
-        connectPeerAddress = address;
         WifiP2pConfig config = new WifiP2pConfig();
         config.deviceAddress = address;
         config.wps.setup = WpsInfo.PBC;
@@ -243,11 +272,11 @@ public class MainActivity extends Activity {
     }
 
 
-    public static final int SEND_PICTURE_PICK = 92;
+    public static final int SEND_FILE_PICK = 92;
     public void onClickSendPicture(View v){
         Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
         intent.setType("*/*");
-        startActivityForResult(intent, SEND_PICTURE_PICK);
+        startActivityForResult(intent, SEND_FILE_PICK);
     }
 
     public void onClickSendData(View v){
@@ -257,8 +286,8 @@ public class MainActivity extends Activity {
     public void onReceiveMessage(String message){
         showlog("receive message : " + message);
         if(message.equals("FILE")){
-            socketDataConnection.receiveFile(info.groupOwnerAddress.getHostAddress(), 8787);
             socketDataConnection.sendMessage("FILE_OK");
+            socketDataConnection.receiveFile(info.groupOwnerAddress.getHostAddress(), 8787);
         }else if (message.equals("FILE_OK") && uri != null){
             showlog("send file start : " + uri.toString());
             socketDataConnection.sendFile(info.groupOwnerAddress.getHostAddress(), 8787, uri.toString());
@@ -268,11 +297,13 @@ public class MainActivity extends Activity {
     Uri uri = null;
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == SEND_PICTURE_PICK && resultCode == RESULT_OK) {
+        if (requestCode == SEND_FILE_PICK && resultCode == RESULT_OK) {
             super.onActivityResult(requestCode, resultCode, data);
             uri = data.getData();
             //showlog("Pick file " + uri + ".");
-            socketDataConnection.sendMessage("FILE");
+            if(socketDataConnection != null){
+                socketDataConnection.sendMessage("FILE");
+            }
         }
     }
 
@@ -286,9 +317,11 @@ public class MainActivity extends Activity {
         }
     }
 
+
     public interface OnWifiItemClickListener {
         void OnItemClick(View view, int position);
     }
+
 
     public class WifiResultAdapter extends RecyclerView.Adapter<WifiResultAdapter.ItemHolder> {
 
@@ -347,6 +380,74 @@ public class MainActivity extends Activity {
                 super(View);
                 tvname = (TextView) View.findViewById(R.id.tv_name);
                 tvaddress = (TextView) View.findViewById(R.id.tv_address);
+            }
+        }
+    }
+
+
+    /**
+     * Created by SMY on 2016/7/29.
+     */
+    public static class WiFiDirectBroadcastReceiver extends BroadcastReceiver{
+        private WifiP2pManager manager;
+        private WifiP2pManager.Channel channel;
+        private MainActivity activity;
+        WifiP2pManager.PeerListListener peerListListener;
+        WifiP2pManager.ConnectionInfoListener connectionInfoListener;
+
+        public WiFiDirectBroadcastReceiver(WifiP2pManager manager, WifiP2pManager.Channel channel, MainActivity activity,
+                                           WifiP2pManager.PeerListListener listListener,
+                                           WifiP2pManager.ConnectionInfoListener infoListener){
+            super();
+            this.manager = manager;
+            this.channel = channel;
+            this.activity = activity;
+            this.peerListListener = listListener;
+            this.connectionInfoListener = infoListener;
+        }
+
+        @Override
+        public void onReceive(Context context, Intent intent){
+            String action = intent.getAction();
+
+            if (WifiP2pManager.WIFI_P2P_STATE_CHANGED_ACTION.equals(action)){
+                int state = intent.getIntExtra(WifiP2pManager.EXTRA_WIFI_STATE, -1);
+                if (state == WifiP2pManager.WIFI_P2P_STATE_ENABLED){
+                    activity.showlog("Wlan direct is enabled.");
+                } else {
+                    activity.showlog("Wlan direct is disabled.");
+                    //wifi direct is disabled
+                }
+            } else if (WifiP2pManager.WIFI_P2P_DISCOVERY_CHANGED_ACTION.equals(action)){
+                int State = intent.getIntExtra(WifiP2pManager.EXTRA_DISCOVERY_STATE, -1);
+                if (State == WifiP2pManager.WIFI_P2P_DISCOVERY_STARTED){
+                    activity.showlog("Scan start.");
+                    activity.isScanning = true;
+                }
+                else if (State == WifiP2pManager.WIFI_P2P_DISCOVERY_STOPPED){
+                    activity.showlog("Scan stop.");
+                    activity.isScanning = false;
+                }
+            }else if (WifiP2pManager.WIFI_P2P_PEERS_CHANGED_ACTION.equals(action)){
+                if (manager != null){
+                    manager.requestPeers(channel, peerListListener);
+                }
+            } else if (WifiP2pManager.WIFI_P2P_CONNECTION_CHANGED_ACTION.equals(action)){
+                if (manager == null) {
+                    return;
+                }
+                NetworkInfo networkInfo = (NetworkInfo) intent.getParcelableExtra(WifiP2pManager.EXTRA_NETWORK_INFO);
+                if (networkInfo.isConnected()) {
+                    activity.showlog("Connected.");
+                    manager.requestConnectionInfo(channel, connectionInfoListener);
+                    activity.onDeviceConnected();
+                } else {
+                    activity.showlog("Disconnected.");
+                    activity.onDeviceDisconnected();
+                    return;
+                }
+            } else if (WifiP2pManager.WIFI_P2P_THIS_DEVICE_CHANGED_ACTION.equals(action)){
+
             }
         }
     }
