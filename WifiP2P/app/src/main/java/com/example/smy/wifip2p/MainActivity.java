@@ -10,7 +10,6 @@ import android.net.Uri;
 import android.net.wifi.WpsInfo;
 import android.net.wifi.p2p.WifiP2pConfig;
 import android.net.wifi.p2p.WifiP2pDevice;
-import android.net.wifi.p2p.WifiP2pInfo;
 import android.net.wifi.p2p.WifiP2pManager;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -128,6 +127,8 @@ public class MainActivity extends Activity {
                 socketDataConnection.start(groupOwnerAddress, 7878, false);
             }
 
+            adapter.clearData();
+            adapter.notifyDataSetChanged();
             recyclerView.setVisibility(View.GONE);
             findViewById(R.id.ll_send_file).setVisibility(View.VISIBLE);
         });
@@ -156,6 +157,8 @@ public class MainActivity extends Activity {
 
     public void onDeviceConnected(){
         findViewById(R.id.ll_connect).setEnabled(false);
+        adapter.clearData();
+        adapter.notifyDataSetChanged();
         recyclerView.setVisibility(View.GONE);
     }
 
@@ -316,6 +319,10 @@ public class MainActivity extends Activity {
         public WifiResultAdapter(List<HashMap<String, String>> list) {
             super();
             this.mList = list;
+        }
+
+        public void clearData(){
+            mList.clear();
         }
 
         public OnWifiItemClickListener mOnItemClickListener;
