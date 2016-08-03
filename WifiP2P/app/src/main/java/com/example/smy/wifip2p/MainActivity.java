@@ -10,12 +10,12 @@ import android.net.Uri;
 import android.net.wifi.WpsInfo;
 import android.net.wifi.p2p.WifiP2pConfig;
 import android.net.wifi.p2p.WifiP2pDevice;
+import android.net.wifi.p2p.WifiP2pInfo;
 import android.net.wifi.p2p.WifiP2pManager;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.method.ScrollingMovementMethod;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -73,8 +73,6 @@ public class MainActivity extends Activity {
             intentFilter.addAction(WifiP2pManager.WIFI_P2P_THIS_DEVICE_CHANGED_ACTION);
             registerReceiver(receiver, intentFilter);
         }
-
-        new Thread(()-> Log.i("LOGS", "lambda in thread")).start();
     }
 
     private void initWebView(){
@@ -345,7 +343,6 @@ public class MainActivity extends Activity {
             if (mOnItemClickListener != null) {
                 holder.itemView.setOnClickListener((v) -> mOnItemClickListener.OnItemClick(holder.itemView, position) );
             }
-
         }
 
         @Override
