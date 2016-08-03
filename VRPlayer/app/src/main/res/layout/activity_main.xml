@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -7,38 +7,94 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="#aaa"
-    android:orientation="vertical">
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <EditText
-            android:id="@+id/edt_path"
-            android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:editable="false"
-            android:layout_weight="4"/>
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/edt_path"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:layout_weight="4"
+                android:text="/storage/emulated/0/smy/test.mp4"/>
+
+            <Button
+                android:id="@+id/choose"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="..."
+                android:onClick="onBtnChooseFileClick"/>
+
+        </LinearLayout>
 
         <Button
-            android:id="@+id/choose"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="..."
-            android:onClick="onBtnChooseFileClick"/>
+            android:layout_marginTop="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="Play"
+            android:onClick="onPlayClick"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="Picture"
+            android:onClick="onPictureClick"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="Multi Player"
+            android:onClick="onMultiPlayClick"/>
+
+        <FrameLayout
+            android:layout_marginTop="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="\ntiger"
+                android:background="@color/colorAccent"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="lion\nlion"
+                android:background="@color/black_30_percent"/>
+
+        </FrameLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="SurfaceView"
+            android:onClick="onSurfaceViewClick"/>
 
     </LinearLayout>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:text="Play"
-        android:onClick="onPlayClick"/>
-
-
-</LinearLayout>
+</ScrollView>

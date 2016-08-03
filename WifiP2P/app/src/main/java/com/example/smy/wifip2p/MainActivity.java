@@ -10,13 +10,12 @@ import android.net.Uri;
 import android.net.wifi.WpsInfo;
 import android.net.wifi.p2p.WifiP2pConfig;
 import android.net.wifi.p2p.WifiP2pDevice;
-import android.net.wifi.p2p.WifiP2pDeviceList;
-import android.net.wifi.p2p.WifiP2pInfo;
 import android.net.wifi.p2p.WifiP2pManager;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.method.ScrollingMovementMethod;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -74,6 +73,8 @@ public class MainActivity extends Activity {
             intentFilter.addAction(WifiP2pManager.WIFI_P2P_THIS_DEVICE_CHANGED_ACTION);
             registerReceiver(receiver, intentFilter);
         }
+
+        new Thread(()-> Log.i("LOGS", "lambda in thread")).start();
     }
 
     private void initWebView(){
@@ -93,56 +94,45 @@ public class MainActivity extends Activity {
     private void initWlanDirectManager(){
         manager = (WifiP2pManager) getSystemService(Context.WIFI_P2P_SERVICE);
         channel = manager.initialize(this, getMainLooper(), null);
-        peerListListener = new WifiP2pManager.PeerListListener() {
-            @Override
-            public void onPeersAvailable(WifiP2pDeviceList listPeers) {
-                peers.clear();
-                peersshow.clear();
-                Collection<WifiP2pDevice> aList = listPeers.getDeviceList();
-                peers.addAll(aList);
+        peerListListener = ((listPeers) -> {
+            peers.clear();
+            peersshow.clear();
+            Collection<WifiP2pDevice> aList = listPeers.getDeviceList();
+            peers.addAll(aList);
 
-                for (int i = 0; i < aList.size(); i++) {
-                    WifiP2pDevice a = (WifiP2pDevice) peers.get(i);
-                    HashMap<String, String> map = new HashMap<String, String>();
-                    map.put("name", a.deviceName);
-                    map.put("address", a.deviceAddress);
-                    peersshow.add(map);
-                }
-                recyclerView.setVisibility(View.VISIBLE);
-                adapter = new WifiResultAdapter(peersshow);
-                recyclerView.setAdapter(adapter);
-                recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
-                adapter.SetOnItemClickListener(new OnWifiItemClickListener() {
-                    @Override
-                    public void OnItemClick(View view, int position) {
-                        connectPeer(peersshow.get(position).get("address"), peersshow.get(position).get("name"));
-                    }
-                });
+            for (int i = 0; i < aList.size(); i++) {
+                WifiP2pDevice a = (WifiP2pDevice) peers.get(i);
+                HashMap<String, String> map = new HashMap<String, String>();
+                map.put("name", a.deviceName);
+                map.put("address", a.deviceAddress);
+                peersshow.add(map);
             }
-        };
-        connectionInfoListener = new WifiP2pManager.ConnectionInfoListener() {
-            @Override
-            public void onConnectionInfoAvailable(WifiP2pInfo winfo) {
-                if(winfo == null){return;}
-                groupOwnerAddress = winfo.groupOwnerAddress.getHostAddress();
-                showlog("Connection info available");
-                if (socketDataConnection == null){
-                    socketDataConnection = new SocketConnection(MainActivity.this);
-                }
-                showlog("start socket.");
-                showlog("Owner addr: " + groupOwnerAddress);
-
-                if (winfo.groupFormed && winfo.isGroupOwner) {
-                    showlog("I'm group owner.");
-                    socketDataConnection.start(groupOwnerAddress, 7878, true);
-                }else{
-                    socketDataConnection.start(groupOwnerAddress, 7878, false);
-                }
-
-                recyclerView.setVisibility(View.GONE);
-                findViewById(R.id.ll_send_file).setVisibility(View.VISIBLE);
+            recyclerView.setVisibility(View.VISIBLE);
+            adapter = new WifiResultAdapter(peersshow);
+            recyclerView.setAdapter(adapter);
+            recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
+            adapter.SetOnItemClickListener((view, position) -> connectPeer(peersshow.get(position).get("address"), peersshow.get(position).get("name")));
+        });
+        connectionInfoListener = ((info) -> {
+            if(info == null){return;}
+            groupOwnerAddress = info.groupOwnerAddress.getHostAddress();
+            showlog("Connection info available");
+            if (socketDataConnection == null){
+                socketDataConnection = new SocketConnection(MainActivity.this);
             }
-        };
+            showlog("start socket.");
+            showlog("Owner addr: " + groupOwnerAddress);
+
+            if (info.groupFormed && info.isGroupOwner) {
+                showlog("I'm group owner.");
+                socketDataConnection.start(groupOwnerAddress, 7878, true);
+            }else{
+                socketDataConnection.start(groupOwnerAddress, 7878, false);
+            }
+
+            recyclerView.setVisibility(View.GONE);
+            findViewById(R.id.ll_send_file).setVisibility(View.VISIBLE);
+        });
         receiver = new WiFiDirectBroadcastReceiver(manager, channel, this, peerListListener, connectionInfoListener);
     }
 
@@ -156,15 +146,12 @@ public class MainActivity extends Activity {
     }
 
     public void showlog(final String s){
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                tvLog.append(s);
-                tvLog.append("\n");
-                int offset = tvLog.getLineCount() * tvLog.getLineHeight();
-                if (offset > tvLog.getHeight() ){
-                    tvLog.scrollTo(0,offset-tvLog.getHeight());
-                }
+        runOnUiThread(()->{
+            tvLog.append(s);
+            tvLog.append("\n");
+            int offset = tvLog.getLineCount() * tvLog.getLineHeight();
+            if (offset > tvLog.getHeight() ){
+                tvLog.scrollTo(0,offset-tvLog.getHeight());
             }
         });
     }
@@ -320,11 +307,9 @@ public class MainActivity extends Activity {
         }
     }
 
-
     public interface OnWifiItemClickListener {
         void OnItemClick(View view, int position);
     }
-
 
     public class WifiResultAdapter extends RecyclerView.Adapter<WifiResultAdapter.ItemHolder> {
 
@@ -358,13 +343,7 @@ public class MainActivity extends Activity {
             holder.tvaddress.setText(mList.get(position).get("address"));
 
             if (mOnItemClickListener != null) {
-                holder.itemView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        mOnItemClickListener.OnItemClick(holder.itemView, position);
-                    }
-
-                });
+                holder.itemView.setOnClickListener((v) -> mOnItemClickListener.OnItemClick(holder.itemView, position) );
             }
 
         }
@@ -453,5 +432,4 @@ public class MainActivity extends Activity {
             }
         }
     }
-
 }

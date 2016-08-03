@@ -5,8 +5,13 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.smy.vrplayer.VRActivity.MultiPlayerActivity;
+import com.example.smy.vrplayer.VRActivity.VRPictureShowActivity;
+import com.example.smy.vrplayer.VRActivity.VRPlayerActivity;
 
 import java.io.File;
 import java.net.URI;
@@ -18,6 +23,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
         edtPath = (EditText)findViewById(R.id.edt_path);
     }
@@ -29,6 +35,23 @@ public class MainActivity extends Activity {
         Intent intent = new Intent(MainActivity.this, VRPlayerActivity.class);
         intent.putExtra(VRPlayerActivity.VIDEO_PATH, path);
         startActivity(intent);
+    }
+
+    public void onPictureClick(View v){
+        Intent intent = new Intent(MainActivity.this, VRPictureShowActivity.class);
+        startActivity(intent);
+    }
+
+    public void onMultiPlayClick(View v){
+        String path = edtPath.getText().toString();
+        Toast.makeText(getApplicationContext(), path, Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(MainActivity.this, MultiPlayerActivity.class);
+        intent.putExtra(MultiPlayerActivity.VIDEO_PATH, path);
+        startActivity(intent);
+    }
+
+    public void onSurfaceViewClick(View v){
+        startActivity(new Intent(MainActivity.this, SurfaceViewTest.class));
     }
 
     public void onBtnChooseFileClick(View v)

@@ -56,40 +56,23 @@ public class SocketConnection {
 
     FileHandleThread fileHandleThread = null;
     void receiveFile(String host, int port){
-        if(fileHandleThread != null){
-            fileHandleThread.interrupt();
-            try {
-                fileHandleThread.join(100);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            fileHandleThread = null;
-        }
+        stopFileHandlerThread();
 
         fileHandleThread = new FileHandleThread(host, port, null, isServer, false);
         fileHandleThread.start();
     }
 
     void sendFile(String host, int port, String uri){
-        if(fileHandleThread != null){
-            fileHandleThread.interrupt();
-            try {
-                fileHandleThread.join(100);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            fileHandleThread = null;
-        }
+        stopFileHandlerThread();
 
         fileHandleThread = new FileHandleThread(host, port, uri, isServer, true);
         fileHandleThread.start();
     }
 
-
     void start(String host, int port, boolean isServer) {
         this.isServer = isServer;
 
-        stop();
+        stopMessageHandlerThread();
 
         if (mMessageQueue == null) {
             mMessageQueue = new LinkedBlockingQueue<String>();
@@ -101,7 +84,7 @@ public class SocketConnection {
         }
     }
 
-    public void stop() {
+    private void stopMessageHandlerThread(){
         if (mMessageHandlerThread != null) {
             mMessageHandlerThread.stop = true;
             mMessageHandlerThread.closeSocket();
@@ -113,11 +96,13 @@ public class SocketConnection {
             }
             mMessageHandlerThread = null;
         }
+    }
 
+    private void stopFileHandlerThread(){
         if(fileHandleThread != null){
             fileHandleThread.interrupt();
             try {
-                fileHandleThread.join(1000);
+                fileHandleThread.join(100);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -125,6 +110,11 @@ public class SocketConnection {
         }
     }
 
+    public void stop() {
+        stopMessageHandlerThread();
+
+        stopFileHandlerThread();
+    }
 
     private class MessageHandleThread extends Thread {
         private boolean stop;
