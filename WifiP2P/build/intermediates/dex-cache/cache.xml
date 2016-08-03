@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\SMY\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="D:\MyProject\AndroidStudioProjects\WifiP2P\app\build\intermediates\pre-dexed\debug\support-annotations-23.4.0_5cc76b0c2b10f0392591c6e177a50da38a6f3dec.jar" />
+    </item>
+    <item
+        jar="D:\MyProject\AndroidStudioProjects\WifiP2P\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="D:\MyProject\AndroidStudioProjects\WifiP2P\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-23.4.0_bfd4ca89ef131c9c04720017c23dbf98aad69dcd.jar" />
+    </item>
+    <item
+        jar="D:\MyProject\AndroidStudioProjects\WifiP2P\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="D:\MyProject\AndroidStudioProjects\WifiP2P\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.4.0_b7fda5a142df31b79a0e34c78d2fada324e51a79.jar" />
+    </item>
+    <item
+        jar="D:\MyProject\AndroidStudioProjects\WifiP2P\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="3fdf954f888fcd0f5f9bb6b8edf0f58f0a0a656e">
+        <dex dex="D:\MyProject\AndroidStudioProjects\WifiP2P\app\build\intermediates\pre-dexed\debug\instant-run_0f96a0e3ea42b92dfc44f353a6226d55bae01fe3.jar" />
+    </item>
+    <item
+        jar="D:\MyProject\AndroidStudioProjects\WifiP2P\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="D:\MyProject\AndroidStudioProjects\WifiP2P\app\build\intermediates\pre-dexed\debug\internal_impl-23.4.0_3e51667a3712d7c2210bda38f58f3dbb7fc7c9c0.jar" />
+    </item>
+    <item
+        jar="D:\MyProject\AndroidStudioProjects\WifiP2P\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="D:\MyProject\AndroidStudioProjects\WifiP2P\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-23.4.0_1dadeb110d3fcabba821db6f20692f5181011fc8.jar" />
+    </item>
+    <item
+        jar="D:\MyProject\AndroidStudioProjects\WifiP2P\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="D:\MyProject\AndroidStudioProjects\WifiP2P\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-23.4.0_fe674492966b7c720ed278e2842bd7002c188e3d.jar" />
+    </item>
+    <item
+        jar="D:\MyProject\AndroidStudioProjects\WifiP2P\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="D:\MyProject\AndroidStudioProjects\WifiP2P\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.4.0_d84dc6971f2c7145c29da9fd15fcc256c32e4f82.jar" />
+    </item>
+    <item
+        jar="D:\MyProject\AndroidStudioProjects\WifiP2P\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="902070a74b2c173e35d389c8859d3d04ea6e2f31">
+        <dex dex="D:\MyProject\AndroidStudioProjects\WifiP2P\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_145ebef6006176e3c8b35a9a196ce57429db1cbf.jar" />
+    </item>
+    <item
+        jar="D:\MyProject\AndroidStudioProjects\WifiP2P\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="d9ecde39b460470e655de6e47c05573d2d5a8bfb">
+        <dex dex="D:\MyProject\AndroidStudioProjects\WifiP2P\app\build\intermediates\pre-dexed\debug\com.android.support-cardview-v7-23.4.0_909d74fd409f076a397d5e3a724281e5f0fb1f05.jar" />
+    </item>
+
+</items>

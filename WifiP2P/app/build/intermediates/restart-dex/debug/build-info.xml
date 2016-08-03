@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="armeabi-v7a,armeabi"
+    api-level="19"
+    density="xxhdpi"
+    format="7"
+    timestamp="22703977911604"
+    token="1833548248462964843" >
+
+    <task
+        name="javac"
+        duration="105" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="59" />
+    <task
+        name="verifier"
+        duration="31" />
+
+    <artifact
+        location="D:\MyProject\AndroidStudioProjects\WifiP2P\app\build\outputs\apk\app-debug.apk"
+        type="MAIN" />
+
+    <build timestamp="22703977911604" >
+        <artifact
+            location="D:\MyProject\AndroidStudioProjects\WifiP2P\app\build\outputs\apk\app-debug.apk"
+            type="MAIN" />
+    </build>
+
+</instant-run>
