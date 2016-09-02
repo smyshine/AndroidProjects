@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer name="video_duration_textview_key">10002</integer>
+
+</resources>

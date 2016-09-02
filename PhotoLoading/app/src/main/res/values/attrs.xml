@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="SingleButtonMenu">
+        <attr name="buttonSrc" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="DoubleButtonMenu">
+        <attr name="leftSrc" format="reference" />
+        <attr name="rightSrc" format="reference" />
+        <attr name="leftText" format="string" />
+        <attr name="rightText" format="string" />
+    </declare-styleable>
+
+</resources>

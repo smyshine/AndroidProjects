@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">PhotoLoading</string>
+
+    <string name="album_today">Today</string>
+    <string name="album_yesterday">Yesterday</string>
+
+    <string name="a_moment_ago">a moment ago</string>
+    <string name="minutes_ago">minutes ago</string>
+    <string name="hours_ago">hours ago</string>
+    <string name="days_ago">days ago</string>
+    <string name="months_ago">months ago</string>
+    <string name="second">sec</string>
+    <string name="minute">min</string>
+    <string name="hour">hr</string>
+    <string name="day">d</string>
+
+</resources>
