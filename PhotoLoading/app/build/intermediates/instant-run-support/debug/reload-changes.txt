@@ -1,0 +1,2 @@
+CHANGED,D:\MyProject\AndroidStudioProjects\PhotoLoading\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\smy\photoloading\MainActivity$override.class
+CHANGED,D:\MyProject\AndroidStudioProjects\PhotoLoading\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\android\tools\fd\runtime\AppPatchesLoaderImpl.class

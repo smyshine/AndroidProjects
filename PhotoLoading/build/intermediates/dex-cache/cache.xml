@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="D:\MyProject\AndroidStudioProjects\PhotoLoading\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="7e58de9b5c90a77122a18df2336e1e92d408324f">
+        <dex dex="D:\MyProject\AndroidStudioProjects\PhotoLoading\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_e99d726afdefecdb1c411e83948f70c2cfb6d9c9\classes.dex" />
+    </item>
+
+</items>

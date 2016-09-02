@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\SMY\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="D:\MyProject\AndroidStudioProjects\gpuImageEdit\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.4.0_5cc76b0c2b10f0392591c6e177a50da38a6f3dec\classes.dex" />
+    </item>
+    <item
+        jar="D:\MyProject\AndroidStudioProjects\gpuImageEdit\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="D:\MyProject\AndroidStudioProjects\gpuImageEdit\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-23.4.0_38e98f45c3055f09cff09bf7e007882684953bd1\classes.dex" />
+    </item>
+    <item
+        jar="D:\MyProject\AndroidStudioProjects\gpuImageEdit\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="dc8768666317d2c4b3f988f907e0f4bf79e4c3e0">
+        <dex dex="D:\MyProject\AndroidStudioProjects\gpuImageEdit\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_6dd6e7cdd15e8a6515dbffce88c7af8e1dc6ebc0\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\SMY\.gradle\caches\modules-2\files-2.1\jp.co.cyberagent.android.gpuimage\gpuimage-library\1.3.0\e2e1ca1fbb73283fbc84a0d0b0e3e982d288c658\gpuimage-library-1.3.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="e2e1ca1fbb73283fbc84a0d0b0e3e982d288c658">
+        <dex dex="D:\MyProject\AndroidStudioProjects\gpuImageEdit\app\build\intermediates\transforms\dex\debug\folders\1000\10\gpuimage-library-1.3.0_93802e643654c3f4be688d209eef94cef8e4b7de\classes.dex" />
+    </item>
+    <item
+        jar="D:\MyProject\AndroidStudioProjects\gpuImageEdit\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="D:\MyProject\AndroidStudioProjects\gpuImageEdit\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.4.0_2d5c56e7cca88ce285189bab1bd139aa6887718b\classes.dex" />
+    </item>
+    <item
+        jar="D:\MyProject\AndroidStudioProjects\gpuImageEdit\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="D:\MyProject\AndroidStudioProjects\gpuImageEdit\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.4.0_96dae0aba04baf49b1078f90f355eadafc17b9c7\classes.dex" />
+    </item>
+    <item
+        jar="D:\MyProject\AndroidStudioProjects\gpuImageEdit\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="D:\MyProject\AndroidStudioProjects\gpuImageEdit\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.4.0_f4624a69f30248021914a7d3b8a38d223f3a2e3b\classes.dex" />
+    </item>
+    <item
+        jar="D:\MyProject\AndroidStudioProjects\gpuImageEdit\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="D:\MyProject\AndroidStudioProjects\gpuImageEdit\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-23.4.0_9c7bb7fb84733967589898d4a567591a49d4aee2\classes.dex" />
+    </item>
+    <item
+        jar="D:\MyProject\AndroidStudioProjects\gpuImageEdit\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="3cf6c6a26ea9c0d02e698410455a55a43e48b06e">
+        <dex dex="D:\MyProject\AndroidStudioProjects\gpuImageEdit\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_2b602ffb68997a0b78c71dde1459cd257df7fdf2\classes.dex" />
+    </item>
+
+</items>
