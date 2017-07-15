@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/13/trunk/libs/armeabi-v7a
+END
+gdb.setup
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/13/trunk/libs/armeabi-v7a/gdb.setup
+END
+gdbserver
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/13/trunk/libs/armeabi-v7a/gdbserver
+END

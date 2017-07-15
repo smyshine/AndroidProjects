@@ -1,10 +1,13 @@
 package com.example.smy.vrplayer.VRActivity;
 
 import android.app.Activity;
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.Point;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.Display;
 import android.view.View;
@@ -17,6 +20,9 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class VRPictureShowActivity extends Activity {
+
+    public static final String PICTURE_PATH = "vrpicturepath";
+
     CustomVRPlayerView mVRPlayerView;
 
     @Override
@@ -26,12 +32,12 @@ public class VRPictureShowActivity extends Activity {
         setContentView(R.layout.activity_vrpicture_show);
         mVRPlayerView = (CustomVRPlayerView) findViewById(R.id.playerView);
 
-        //mVRPlayerView.setDataSource(getIntent().getStringExtra(IMAGE_URL));
+        mVRPlayerView.setDataSource(getIntent().getStringExtra(PICTURE_PATH));
         //mVRPlayerView.setDataSource("/storage/emulated/0/smy/tempImage.jpg");
         //mVRPlayerView.setDataSource("http://cdn.fds.api.xiaomi.com/sportscamera/20160614/1/2_071752439_media.jpg");
         //View settings = getLayoutInflater().inflate(R.layout.picture_setting_float, null);
         //saveBitmapToFile(convertLayoutToBitmap(), "/storage/emulated/0/smy/tempImage.jpg");
-        mVRPlayerView.setDataSource(convertLayoutToBitmap());
+        //mVRPlayerView.setDataSource(convertLayoutToBitmap());
 
         int uiFlags = View.SYSTEM_UI_FLAG_LAYOUT_STABLE
                 | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
@@ -42,6 +48,19 @@ public class VRPictureShowActivity extends Activity {
             uiFlags |= View.SYSTEM_UI_FLAG_IMMERSIVE;
         }
         mVRPlayerView.setSystemUiVisibility(uiFlags);
+    }
+
+    private String getImagePath(Uri uri, String selection) {
+        String path = null;
+        Cursor cursor = getContentResolver().query(uri, null, selection, null, null);
+        if (cursor != null) {
+            if (cursor.moveToFirst()) {
+                path = cursor.getString(cursor.getColumnIndex(MediaStore.Images.Media.DATA));
+            }
+
+            cursor.close();
+        }
+        return path;
     }
 
     public Bitmap convertLayoutToBitmap(){

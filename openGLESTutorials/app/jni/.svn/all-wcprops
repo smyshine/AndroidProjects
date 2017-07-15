@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 26
+/svn/!svn/ver/13/trunk/jni
+END
+Application.mk
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/13/trunk/jni/Application.mk
+END
+AndroidGL20.h
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/9/trunk/jni/AndroidGL20.h
+END
+AndroidGL20.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/11/trunk/jni/AndroidGL20.cpp
+END
+Android.mk
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/!svn/ver/5/trunk/jni/Android.mk
+END

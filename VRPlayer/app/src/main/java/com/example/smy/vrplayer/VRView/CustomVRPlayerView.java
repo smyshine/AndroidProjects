@@ -22,6 +22,8 @@ import com.example.smy.vrplayer.R;
 import com.example.smy.vrplayer.VRListener.VRPlayListener;
 import com.example.smy.vrplayer.common.VideoSeekBar;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
@@ -229,6 +231,40 @@ public class CustomVRPlayerView extends FrameLayout implements VRPlayListener, V
         BitmapFactory.Options options = new BitmapFactory.Options();
         options.inPreferredConfig = Bitmap.Config.ARGB_8888;
         Bitmap bitmap = BitmapFactory.decodeFile(path, options);
+        return bitmap;
+    }
+
+    public Bitmap getBitmapFromPath(String path) {
+
+        if (!new File(path).exists()) {
+            System.err.println("getBitmapFromPath: file not exists");
+            return null;
+        }
+        // Bitmap bitmap = Bitmap.createBitmap(1366, 768, Config.ARGB_8888);
+        // Canvas canvas = new Canvas(bitmap);
+        // Movie movie = Movie.decodeFile(path);
+        // movie.draw(canvas, 0, 0);
+        //
+        // return bitmap;
+
+        byte[] buf = new byte[1024 * 1024];// 1M
+        Bitmap bitmap = null;
+
+        try {
+
+            FileInputStream fis = new FileInputStream(path);
+            int len = fis.read(buf, 0, buf.length);
+            bitmap = BitmapFactory.decodeByteArray(buf, 0, len);
+            if (bitmap == null) {
+                System.out.println("len= " + len);
+                System.err
+                        .println("path: " + path + "  could not be decode!!!");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+
+        }
+
         return bitmap;
     }
 

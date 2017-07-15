@@ -2,8 +2,10 @@ package com.example.smy.vrplayer;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.View;
 import android.view.Window;
 import android.widget.EditText;
@@ -38,7 +40,9 @@ public class MainActivity extends Activity {
     }
 
     public void onPictureClick(View v){
+        String path = edtPath.getText().toString();
         Intent intent = new Intent(MainActivity.this, VRPictureShowActivity.class);
+        intent.putExtra(VRPictureShowActivity.PICTURE_PATH, path);
         startActivity(intent);
     }
 
@@ -86,6 +90,8 @@ public class MainActivity extends Activity {
                     {
                         // Selected file/directory path is below
                         path = (new File(URI.create(path))).getAbsolutePath();
+                    } else {
+                        path = getImagePath(uri, null);
                     }
                     edtPath.setText(path);
                 }
@@ -93,5 +99,18 @@ public class MainActivity extends Activity {
         }
 
         super.onActivityResult(requestCode, resultCode, data);
+    }
+
+    private String getImagePath(Uri uri, String selection) {
+        String path = null;
+        Cursor cursor = getContentResolver().query(uri, null, selection, null, null);
+        if (cursor != null) {
+            if (cursor.moveToFirst()) {
+                path = cursor.getString(cursor.getColumnIndex(MediaStore.Images.Media.DATA));
+            }
+
+            cursor.close();
+        }
+        return path;
     }
 }

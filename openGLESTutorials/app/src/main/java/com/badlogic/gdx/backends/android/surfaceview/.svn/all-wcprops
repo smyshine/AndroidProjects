@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/5/trunk/src/com/badlogic/gdx/backends/android/surfaceview
+END
+GLSurfaceView20.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/5/trunk/src/com/badlogic/gdx/backends/android/surfaceview/GLSurfaceView20.java
+END
+GLDebugHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/5/trunk/src/com/badlogic/gdx/backends/android/surfaceview/GLDebugHelper.java
+END
+EGLLogWrapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/5/trunk/src/com/badlogic/gdx/backends/android/surfaceview/EGLLogWrapper.java
+END
+GLErrorWrapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/5/trunk/src/com/badlogic/gdx/backends/android/surfaceview/GLErrorWrapper.java
+END
+GLWrapperBase.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/5/trunk/src/com/badlogic/gdx/backends/android/surfaceview/GLWrapperBase.java
+END
+GLException.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/5/trunk/src/com/badlogic/gdx/backends/android/surfaceview/GLException.java
+END
+GLLogWrapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/5/trunk/src/com/badlogic/gdx/backends/android/surfaceview/GLLogWrapper.java
+END
+GLSurfaceView.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/5/trunk/src/com/badlogic/gdx/backends/android/surfaceview/GLSurfaceView.java
+END
