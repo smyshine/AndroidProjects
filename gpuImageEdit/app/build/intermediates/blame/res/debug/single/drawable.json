@@ -12,12 +12,12 @@
         "source": "D:\\MyProject\\AndroidStudioProjects\\gpuImageEdit\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_switch_thumb_material.xml"
     },
     {
-        "merged": "D:\\MyProject\\AndroidStudioProjects\\gpuImageEdit\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_track_material.xml",
-        "source": "D:\\MyProject\\AndroidStudioProjects\\gpuImageEdit\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_seekbar_track_material.xml"
-    },
-    {
         "merged": "D:\\MyProject\\AndroidStudioProjects\\gpuImageEdit\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
         "source": "D:\\MyProject\\AndroidStudioProjects\\gpuImageEdit\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "D:\\MyProject\\AndroidStudioProjects\\gpuImageEdit\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_track_material.xml",
+        "source": "D:\\MyProject\\AndroidStudioProjects\\gpuImageEdit\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_seekbar_track_material.xml"
     },
     {
         "merged": "D:\\MyProject\\AndroidStudioProjects\\gpuImageEdit\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_small_material.xml",

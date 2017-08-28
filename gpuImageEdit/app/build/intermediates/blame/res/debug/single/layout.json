@@ -8,16 +8,16 @@
         "source": "D:\\MyProject\\AndroidStudioProjects\\gpuImageEdit\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_mode_close_item_material.xml"
     },
     {
-        "merged": "D:\\MyProject\\AndroidStudioProjects\\gpuImageEdit\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
-        "source": "D:\\MyProject\\AndroidStudioProjects\\gpuImageEdit\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\select_dialog_item_material.xml"
+        "merged": "D:\\MyProject\\AndroidStudioProjects\\gpuImageEdit\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
+        "source": "D:\\MyProject\\AndroidStudioProjects\\gpuImageEdit\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_list_menu_item_layout.xml"
     },
     {
         "merged": "D:\\MyProject\\AndroidStudioProjects\\gpuImageEdit\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
         "source": "D:\\MyProject\\AndroidStudioProjects\\gpuImageEdit\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
     },
     {
-        "merged": "D:\\MyProject\\AndroidStudioProjects\\gpuImageEdit\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
-        "source": "D:\\MyProject\\AndroidStudioProjects\\gpuImageEdit\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_list_menu_item_layout.xml"
+        "merged": "D:\\MyProject\\AndroidStudioProjects\\gpuImageEdit\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
+        "source": "D:\\MyProject\\AndroidStudioProjects\\gpuImageEdit\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\select_dialog_item_material.xml"
     },
     {
         "merged": "D:\\MyProject\\AndroidStudioProjects\\gpuImageEdit\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
