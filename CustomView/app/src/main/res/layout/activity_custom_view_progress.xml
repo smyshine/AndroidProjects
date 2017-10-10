@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.customview.CustomViewProgressActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="size 100, circle width 10, speed 20"/>
+
+    <com.customview.view.CustomViewProgress
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="20dp"
+        app:firstColor="#aa1111"
+        app:secondColor="#ccffbb"
+        app:speed="20"
+        app:circleWidth="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="size 160, circle width 10, speed 10"/>
+
+    <com.customview.view.CustomViewProgress
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_margin="20dp"
+        app:firstColor="#123456"
+        app:secondColor="#ffff21"
+        app:speed="10"
+        app:circleWidth="10dp"/>
+
+</LinearLayout>

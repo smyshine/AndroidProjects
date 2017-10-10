@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="titleText" format="string"/>
+    <attr name="titleTextColor" format="color"/>
+    <attr name="titleTextSize" format="dimension"/>
+    <attr name="image" format="reference"/>
+    <attr name="imageScaleType">
+        <enum name="fitXY" value="0"/>
+        <enum name="center" value="1"/>
+    </attr>
+
+    <declare-styleable name="CustomViewText">
+        <attr name="titleText"/>
+        <attr name="titleTextColor"/>
+        <attr name="titleTextSize"/>
+    </declare-styleable>
+
+    <declare-styleable name="CustomViewImage">
+        <attr name="titleText"/>
+        <attr name="titleTextColor"/>
+        <attr name="titleTextSize"/>
+        <attr name="image"/>
+        <attr name="imageScaleType"/>
+    </declare-styleable>
+
+    <attr name="firstColor" format="color"/>
+    <attr name="secondColor" format="color"/>
+    <attr name="circleWidth" format="dimension"/>
+    <attr name="speed" format="integer"/>
+
+    <declare-styleable name="CustomViewProgress">
+        <attr name="firstColor"/>
+        <attr name="secondColor"/>
+        <attr name="circleWidth"/>
+        <attr name="speed"/>
+    </declare-styleable>
+
+    <attr name="dotCount" format="integer"/>
+    <attr name="splitSize" format="integer"/>
+    <attr name="bg" format="reference"/>
+
+    <declare-styleable name="CustomViewVolume">
+        <attr name="firstColor"/>
+        <attr name="secondColor"/>
+        <attr name="circleWidth"/>
+        <attr name="dotCount"/>
+        <attr name="splitSize"/>
+        <attr name="bg"/>
+    </declare-styleable>
+
+</resources>

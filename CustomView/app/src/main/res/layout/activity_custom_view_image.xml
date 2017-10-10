@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.customview.CustomViewImageActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.customview.view.CustomViewImage
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            app:image="@drawable/icon_facebook_login"
+            app:imageScaleType="center"
+            app:titleText="center"
+            app:titleTextColor="#ff00ff"
+            app:titleTextSize="20sp"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="1dp"/>
+
+        <com.customview.view.CustomViewImage
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            app:image="@drawable/icon_facebook_login"
+            app:imageScaleType="fitXY"
+            app:titleText="fitxy"
+            app:titleTextColor="#ff00ff"
+            app:titleTextSize="20sp"/>
+
+    </LinearLayout>
+
+    <com.customview.view.CustomViewImage
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        app:image="@drawable/icon_facebook_login"
+        app:imageScaleType="fitXY"
+        app:titleText="fitxy and length very very very very long"
+        app:titleTextColor="#ff00ff"
+        app:titleTextSize="20sp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.customview.view.CustomViewImage
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            app:image="@drawable/preview_mode_panorama"
+            app:imageScaleType="center"
+            app:titleText="center?"
+            app:titleTextColor="#110000"
+            app:titleTextSize="20sp"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="1dp"/>
+
+        <com.customview.view.CustomViewImage
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            app:image="@drawable/preview_mode_panorama"
+            app:imageScaleType="fitXY"
+            app:titleText="fitxy"
+            app:titleTextColor="#110000"
+            app:titleTextSize="20sp"/>
+
+    </LinearLayout>
+
+    <com.customview.view.CustomViewImage
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        app:image="@drawable/preview_mode_panorama"
+        app:imageScaleType="fitXY"
+        app:titleText="fitxy and very very very very very long"
+        app:titleTextColor="#110000"
+        app:titleTextSize="20sp"/>
+
+
+</LinearLayout>

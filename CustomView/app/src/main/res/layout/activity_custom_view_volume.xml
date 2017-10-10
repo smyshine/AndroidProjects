@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.customview.CustomViewVolumeActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="size 160, circle width 10, dot count 20, split size 10"/>
+
+    <com.customview.view.CustomViewVolume
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        app:firstColor="#ffffff"
+        app:secondColor="#ddff00"
+        app:circleWidth="10dp"
+        app:dotCount="20"
+        app:splitSize="10"
+        app:bg="@drawable/preview_mode_panorama"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="size 100, circle width 6, dot count 12, split size 14"/>
+
+    <com.customview.view.CustomViewVolume
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="50dp"
+        app:firstColor="#ffffff"
+        app:secondColor="#ffcbab"
+        app:circleWidth="6dp"
+        app:dotCount="12"
+        app:splitSize="14"
+        app:bg="@drawable/default_no_network"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="size 100, circle width 12, dot count 8, split size 28"/>
+
+    <com.customview.view.CustomViewVolume
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="50dp"
+        app:firstColor="#ffffff"
+        app:secondColor="#aabfbb"
+        app:circleWidth="12dp"
+        app:dotCount="8"
+        app:splitSize="28"
+        app:bg="@drawable/default_no_network"/>
+
+</LinearLayout>
