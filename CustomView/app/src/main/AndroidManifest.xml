@@ -21,7 +21,8 @@
         <activity android:name=".CustomViewProgressActivity" />
         <activity android:name=".CustomViewVolumeActivity" />
         <activity android:name=".CustomViewGroupActivity" />
-        <activity android:name=".CustomViewDragActivity"></activity>
+        <activity android:name=".CustomViewDragActivity" />
+        <activity android:name=".CustomDrawerViewActivity"></activity>
     </application>
 
 </manifest>

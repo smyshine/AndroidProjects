@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.customview.view.CustomLeftDrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.customview.CustomDrawerViewActivity"
+    android:id="@+id/drawer">
+
+    <!--content-->
+    <TextView
+        android:id="@+id/tvContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#44ff0000"
+        android:gravity="center"
+        android:text="Hello world"
+        android:textSize="40sp"/>
+
+    <!--menu-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        android:background="#af00ff00"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvMenu1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:text="Item1"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/tvMenu2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:text="This is item 2"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/tvMenu3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:text="Item3"
+            android:textSize="20sp"/>
+
+
+    </LinearLayout>
+
+</com.customview.view.CustomLeftDrawerLayout>
