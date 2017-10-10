@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.tvCustomProgress).setOnClickListener(this);
         findViewById(R.id.tvCustomVolume).setOnClickListener(this);
         findViewById(R.id.tvCustomGroup).setOnClickListener(this);
+        findViewById(R.id.tvCustomDrag).setOnClickListener(this);
     }
 
     @Override
@@ -36,6 +37,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.tvCustomGroup:
                 startActivity(new Intent(MainActivity.this, CustomViewGroupActivity.class));
+                break;
+            case R.id.tvCustomDrag:
+                startActivity(new Intent(MainActivity.this, CustomViewDragActivity.class));
                 break;
         }
     }

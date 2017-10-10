@@ -44,4 +44,12 @@
         android:padding="5dp"
         android:layout_margin="5dp"/>
 
+    <TextView
+        android:id="@+id/tvCustomDrag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CustomView Drag   > "
+        android:padding="5dp"
+        android:layout_margin="5dp"/>
+
 </LinearLayout>
