@@ -22,7 +22,8 @@
         <activity android:name=".CustomViewVolumeActivity" />
         <activity android:name=".CustomViewGroupActivity" />
         <activity android:name=".CustomViewDragActivity" />
-        <activity android:name=".CustomDrawerViewActivity"></activity>
+        <activity android:name=".CustomDrawerViewActivity" />
+        <activity android:name=".CustomViewChangeColorActivity"></activity>
     </application>
 
 </manifest>

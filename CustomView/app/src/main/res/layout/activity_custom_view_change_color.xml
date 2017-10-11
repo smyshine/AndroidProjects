@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.customview.CustomViewChangeColorActivity"
+    android:orientation="vertical">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#ffffe0">
+
+        <com.customview.view.CustomViewChangeColorIcon
+            android:id="@+id/ccHome"
+            android:layout_width="0dp"
+            android:layout_weight="1.0"
+            android:layout_height="match_parent"
+            android:padding="6dp"
+            app:icon="@drawable/community_home_nor"
+            app:color="#2abbcc"
+            app:text="Home"
+            app:text_size="12sp" />
+
+        <com.customview.view.CustomViewChangeColorIcon
+            android:id="@+id/ccAlbum"
+            android:layout_width="0dp"
+            android:layout_weight="1.0"
+            android:layout_height="match_parent"
+            android:padding="6dp"
+            app:icon="@drawable/community_album_nor"
+            app:color="#fabbcc"
+            app:text="Album"
+            app:text_size="12sp" />
+
+        <com.customview.view.CustomViewChangeColorIcon
+            android:id="@+id/ccSetting"
+            android:layout_width="0dp"
+            android:layout_weight="1.0"
+            android:layout_height="match_parent"
+            android:padding="6dp"
+            app:icon="@drawable/album_item_delete_nor"
+            app:text="Setting"
+            app:text_size="12sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
