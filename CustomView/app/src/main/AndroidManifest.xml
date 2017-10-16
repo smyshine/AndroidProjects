@@ -25,7 +25,8 @@
         <activity android:name=".CustomDrawerViewActivity" />
         <activity android:name=".CustomViewChangeColorActivity" />
         <activity android:name=".CustomViewRoundImageActivity" />
-        <activity android:name=".CustomViewSlideDeleteActivity"/>
+        <activity android:name=".CustomViewSlideDeleteActivity" />
+        <activity android:name=".CustomViewGestureLockActivity"></activity>
     </application>
 
 </manifest>

@@ -73,4 +73,20 @@
         <attr name="type"/>
     </declare-styleable>
 
+    <attr name="color_inner_circle" format="color"/>
+    <attr name="color_outer_circle" format="color"/>
+    <attr name="color_finger_on" format="color"/>
+    <attr name="color_finger_up" format="color"/>
+    <attr name="count" format="integer"/>
+    <attr name="tryCount" format="integer"/>
+
+    <declare-styleable name="CustomGestureLockViewGroup">
+        <attr name="color_inner_circle"/>
+        <attr name="color_outer_circle"/>
+        <attr name="color_finger_on"/>
+        <attr name="color_finger_up"/>
+        <attr name="count"/>
+        <attr name="tryCount"/>
+    </declare-styleable>
+
 </resources>

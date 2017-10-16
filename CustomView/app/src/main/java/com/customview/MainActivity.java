@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.tvCustomChangeColor).setOnClickListener(this);
         findViewById(R.id.tvCustomRoundImage).setOnClickListener(this);
         findViewById(R.id.tvCustomSlideDelete).setOnClickListener(this);
+        findViewById(R.id.tvCustomGestureLock).setOnClickListener(this);
     }
 
     @Override
@@ -56,6 +57,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.tvCustomSlideDelete:
                 startActivity(new Intent(MainActivity.this, CustomViewSlideDeleteActivity.class));
+                break;
+            case R.id.tvCustomGestureLock:
+                startActivity(new Intent(MainActivity.this, CustomViewGestureLockActivity.class));
                 break;
         }
     }
