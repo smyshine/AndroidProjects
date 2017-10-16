@@ -62,4 +62,15 @@
         <attr name="text_size"/>
     </declare-styleable>
 
+    <attr name="radius" format="dimension"/>
+    <attr name="type" >
+        <enum name="circle" value="0"/>
+        <enum name="round" value="1"/>
+    </attr>
+
+    <declare-styleable name="CustomViewRoundImage">
+        <attr name="radius"/>
+        <attr name="type"/>
+    </declare-styleable>
+
 </resources>

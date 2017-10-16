@@ -23,7 +23,9 @@
         <activity android:name=".CustomViewGroupActivity" />
         <activity android:name=".CustomViewDragActivity" />
         <activity android:name=".CustomDrawerViewActivity" />
-        <activity android:name=".CustomViewChangeColorActivity"></activity>
+        <activity android:name=".CustomViewChangeColorActivity" />
+        <activity android:name=".CustomViewRoundImageActivity" />
+        <activity android:name=".CustomViewSlideDeleteActivity"/>
     </application>
 
 </manifest>

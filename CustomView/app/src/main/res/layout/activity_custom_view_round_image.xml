@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.customview.CustomViewRoundImageActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="size 100*100 , type and radius default"/>
+
+        <com.customview.view.CustomViewRoundImage
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/live_tutorial_bg"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:text="size wrap , type round and radius 30"/>
+
+        <com.customview.view.CustomViewRoundImage
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/live_tutorial_bg"
+            app:type="round"
+            app:radius="30dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:text="size 300*160 , type round and radius 20"/>
+
+        <com.customview.view.CustomViewRoundImage
+            android:layout_width="300dp"
+            android:layout_height="160dp"
+            android:src="@drawable/live_tutorial_bg"
+            app:type="round"
+            app:radius="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:text="size wrap, type and radius default"/>
+
+        <com.customview.view.CustomViewRoundImage
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/firmware_upgrade_pic"
+            app:type="circle"/>
+
+    </LinearLayout>
+
+</ScrollView>

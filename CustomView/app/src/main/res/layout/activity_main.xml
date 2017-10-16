@@ -68,4 +68,20 @@
         android:padding="5dp"
         android:layout_margin="5dp"/>
 
+    <TextView
+        android:id="@+id/tvCustomRoundImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CustomView Round Image   > "
+        android:padding="5dp"
+        android:layout_margin="5dp"/>
+
+    <TextView
+        android:id="@+id/tvCustomSlideDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CustomView Slide Delete   > "
+        android:padding="5dp"
+        android:layout_margin="5dp"/>
+
 </LinearLayout>
