@@ -92,4 +92,12 @@
         android:padding="5dp"
         android:layout_margin="5dp"/>
 
+    <TextView
+        android:id="@+id/tvCustomArcMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CustomView Arc Menu   > "
+        android:padding="5dp"
+        android:layout_margin="5dp"/>
+
 </LinearLayout>

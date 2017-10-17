@@ -26,7 +26,8 @@
         <activity android:name=".CustomViewChangeColorActivity" />
         <activity android:name=".CustomViewRoundImageActivity" />
         <activity android:name=".CustomViewSlideDeleteActivity" />
-        <activity android:name=".CustomViewGestureLockActivity"></activity>
+        <activity android:name=".CustomViewGestureLockActivity" />
+        <activity android:name=".CustomViewArcMenuActivity"></activity>
     </application>
 
 </manifest>

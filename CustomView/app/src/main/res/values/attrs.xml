@@ -89,4 +89,16 @@
         <attr name="tryCount"/>
     </declare-styleable>
 
+    <attr name="position">
+        <enum name="left_top" value="0"/>
+        <enum name="right_top" value="1"/>
+        <enum name="left_bottom" value="2"/>
+        <enum name="right_bottom" value="3"/>
+    </attr>
+
+    <declare-styleable name="CustomViewArcMenu">
+        <attr name="position"/>
+        <attr name="radius"/>
+    </declare-styleable>
+
 </resources>
