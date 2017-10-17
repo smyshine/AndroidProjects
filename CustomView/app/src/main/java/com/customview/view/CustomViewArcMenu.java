@@ -220,6 +220,7 @@ public class CustomViewArcMenu extends ViewGroup implements View.OnClickListener
                 }
             });
         }
+
         changeStatus();
     }
 
