@@ -10,6 +10,7 @@ import com.customview.activity.CustomRoundImageShaderActivity;
 import com.customview.activity.CustomViewArcMenuActivity;
 import com.customview.activity.CustomViewChangeColorActivity;
 import com.customview.activity.CustomViewDragActivity;
+import com.customview.activity.CustomViewDrawableRoundActivity;
 import com.customview.activity.CustomViewGestureLockActivity;
 import com.customview.activity.CustomViewGroupActivity;
 import com.customview.activity.CustomViewImageActivity;
@@ -39,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.tvCustomGestureLock).setOnClickListener(this);
         findViewById(R.id.tvCustomArcMenu).setOnClickListener(this);
         findViewById(R.id.tvCustomShaderRound).setOnClickListener(this);
+        findViewById(R.id.tvCustomDrawableRound).setOnClickListener(this);
     }
 
     @Override
@@ -82,6 +84,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.tvCustomShaderRound:
                 startActivity(new Intent(MainActivity.this, CustomRoundImageShaderActivity.class));
+                break;
+            case R.id.tvCustomDrawableRound:
+                startActivity(new Intent(MainActivity.this, CustomViewDrawableRoundActivity.class));
                 break;
         }
     }
