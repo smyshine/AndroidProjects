@@ -1,10 +1,11 @@
-package com.customview;
+package com.customview.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.customview.R;
 import com.customview.view.CustomLeftDrawerLayout;
 
 public class CustomDrawerViewActivity extends Activity implements View.OnClickListener {

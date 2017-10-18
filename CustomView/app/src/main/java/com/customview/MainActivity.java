@@ -5,6 +5,20 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.customview.activity.CustomDrawerViewActivity;
+import com.customview.activity.CustomRoundImageShaderActivity;
+import com.customview.activity.CustomViewArcMenuActivity;
+import com.customview.activity.CustomViewChangeColorActivity;
+import com.customview.activity.CustomViewDragActivity;
+import com.customview.activity.CustomViewGestureLockActivity;
+import com.customview.activity.CustomViewGroupActivity;
+import com.customview.activity.CustomViewImageActivity;
+import com.customview.activity.CustomViewProgressActivity;
+import com.customview.activity.CustomViewRoundImageActivity;
+import com.customview.activity.CustomViewSlideDeleteActivity;
+import com.customview.activity.CustomViewTextActivity;
+import com.customview.activity.CustomViewVolumeActivity;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
@@ -24,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.tvCustomSlideDelete).setOnClickListener(this);
         findViewById(R.id.tvCustomGestureLock).setOnClickListener(this);
         findViewById(R.id.tvCustomArcMenu).setOnClickListener(this);
+        findViewById(R.id.tvCustomShaderRound).setOnClickListener(this);
     }
 
     @Override
@@ -64,6 +79,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.tvCustomArcMenu:
                 startActivity(new Intent(MainActivity.this, CustomViewArcMenuActivity.class));
+                break;
+            case R.id.tvCustomShaderRound:
+                startActivity(new Intent(MainActivity.this, CustomRoundImageShaderActivity.class));
                 break;
         }
     }

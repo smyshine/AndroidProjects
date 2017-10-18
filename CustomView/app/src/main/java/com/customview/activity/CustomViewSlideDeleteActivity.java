@@ -1,4 +1,4 @@
-package com.customview;
+package com.customview.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -7,6 +7,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
+import com.customview.R;
 import com.customview.view.CustomViewSlideDelete;
 
 import java.util.ArrayList;

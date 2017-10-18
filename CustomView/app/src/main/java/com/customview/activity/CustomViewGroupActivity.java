@@ -1,13 +1,15 @@
-package com.customview;
+package com.customview.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
 
-public class CustomViewProgressActivity extends Activity {
+import com.customview.R;
+
+public class CustomViewGroupActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_custom_view_progress);
+        setContentView(R.layout.activity_custom_view_group);
     }
 }

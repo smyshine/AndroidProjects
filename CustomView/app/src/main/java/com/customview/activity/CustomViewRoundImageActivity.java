@@ -1,7 +1,9 @@
-package com.customview;
+package com.customview.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
+
+import com.customview.R;
 
 public class CustomViewRoundImageActivity extends Activity {
 

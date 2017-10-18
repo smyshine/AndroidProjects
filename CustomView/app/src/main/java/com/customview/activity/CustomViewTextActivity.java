@@ -1,13 +1,15 @@
-package com.customview;
+package com.customview.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
 
-public class CustomViewGroupActivity extends Activity {
+import com.customview.R;
+
+public class CustomViewTextActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_custom_view_group);
+        setContentView(R.layout.activity_custom_view_text);
     }
 }

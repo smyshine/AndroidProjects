@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.customview.activity.CustomViewRoundImageActivity">
+    tools:context="com.customview.activity.CustomRoundImageShaderActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,11 +15,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="size 100*100 , type and radius default"/>
+            android:text="size wrap , type and radius default"/>
 
-        <com.customview.view.CustomViewRoundImage
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+        <com.customview.view.CustomViewShaderRoundImage
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:src="@drawable/live_tutorial_bg"/>
 
         <TextView
@@ -29,7 +29,7 @@
             android:padding="5dp"
             android:text="size wrap , type round and radius 30"/>
 
-        <com.customview.view.CustomViewRoundImage
+        <com.customview.view.CustomViewShaderRoundImage
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/live_tutorial_bg"
@@ -41,14 +41,14 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:padding="5dp"
-            android:text="size 300*160 , type round and radius 20"/>
+            android:text="size wrap , type round and radius 90"/>
 
-        <com.customview.view.CustomViewRoundImage
-            android:layout_width="300dp"
-            android:layout_height="160dp"
+        <com.customview.view.CustomViewShaderRoundImage
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:src="@drawable/live_tutorial_bg"
             app:type="round"
-            app:radius="20dp"/>
+            app:radius="90dp"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -57,7 +57,7 @@
             android:padding="5dp"
             android:text="size wrap, type and radius default"/>
 
-        <com.customview.view.CustomViewRoundImage
+        <com.customview.view.CustomViewShaderRoundImage
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/firmware_upgrade_pic"

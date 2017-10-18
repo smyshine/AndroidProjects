@@ -1,4 +1,4 @@
-package com.customview;
+package com.customview.activity;
 
 import android.graphics.Color;
 import android.os.Bundle;

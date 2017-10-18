@@ -1,13 +1,15 @@
-package com.customview;
+package com.customview.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
 
-public class CustomViewImageActivity extends Activity {
+import com.customview.R;
+
+public class CustomViewVolumeActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_custom_view_image);
+        setContentView(R.layout.activity_custom_view_volume);
     }
 }

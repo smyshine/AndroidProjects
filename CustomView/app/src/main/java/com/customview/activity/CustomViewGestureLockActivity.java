@@ -1,9 +1,10 @@
-package com.customview;
+package com.customview.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.customview.R;
 import com.customview.view.CustomViewGroupGestureLock;
 
 public class CustomViewGestureLockActivity extends Activity {

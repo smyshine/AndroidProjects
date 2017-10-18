@@ -16,18 +16,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CustomViewTextActivity" />
-        <activity android:name=".CustomViewImageActivity" />
-        <activity android:name=".CustomViewProgressActivity" />
-        <activity android:name=".CustomViewVolumeActivity" />
-        <activity android:name=".CustomViewGroupActivity" />
-        <activity android:name=".CustomViewDragActivity" />
-        <activity android:name=".CustomDrawerViewActivity" />
-        <activity android:name=".CustomViewChangeColorActivity" />
-        <activity android:name=".CustomViewRoundImageActivity" />
-        <activity android:name=".CustomViewSlideDeleteActivity" />
-        <activity android:name=".CustomViewGestureLockActivity" />
-        <activity android:name=".CustomViewArcMenuActivity"></activity>
+        <activity android:name=".activity.CustomViewTextActivity" />
+        <activity android:name=".activity.CustomViewImageActivity" />
+        <activity android:name=".activity.CustomViewProgressActivity" />
+        <activity android:name=".activity.CustomViewVolumeActivity" />
+        <activity android:name=".activity.CustomViewGroupActivity" />
+        <activity android:name=".activity.CustomViewDragActivity" />
+        <activity android:name=".activity.CustomDrawerViewActivity" />
+        <activity android:name=".activity.CustomViewChangeColorActivity" />
+        <activity android:name=".activity.CustomViewRoundImageActivity" />
+        <activity android:name=".activity.CustomViewSlideDeleteActivity" />
+        <activity android:name=".activity.CustomViewGestureLockActivity" />
+        <activity android:name=".activity.CustomViewArcMenuActivity" />
+        <activity android:name=".activity.CustomRoundImageShaderActivity"></activity>
     </application>
 
 </manifest>

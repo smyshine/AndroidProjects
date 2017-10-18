@@ -1,10 +1,11 @@
-package com.customview;
+package com.customview.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.customview.R;
 import com.customview.view.CustomViewArcMenu;
 
 public class CustomViewArcMenuActivity extends Activity {

@@ -100,4 +100,12 @@
         android:padding="5dp"
         android:layout_margin="5dp"/>
 
+    <TextView
+        android:id="@+id/tvCustomShaderRound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CustomView Round Image of Shader Bitmap   > "
+        android:padding="5dp"
+        android:layout_margin="5dp"/>
+
 </LinearLayout>
