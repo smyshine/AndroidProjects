@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.customview.view.CustomMessageListItem xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@drawable/message_item_bg"
+    tools:context="com.customview.activity.CustomDrawableStateActivity">
+
+    <ImageView
+        android:id="@+id/idMsgItemIcon"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"/>
+
+    <TextView
+        android:id="@+id/idMsgItemText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/idMsgItemIcon"/>
+
+</com.customview.view.CustomMessageListItem>

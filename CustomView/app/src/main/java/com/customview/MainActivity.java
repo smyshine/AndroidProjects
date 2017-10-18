@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.customview.activity.CustomDrawableStateActivity;
 import com.customview.activity.CustomDrawerViewActivity;
 import com.customview.activity.CustomRoundImageShaderActivity;
 import com.customview.activity.CustomViewArcMenuActivity;
@@ -41,6 +42,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.tvCustomArcMenu).setOnClickListener(this);
         findViewById(R.id.tvCustomShaderRound).setOnClickListener(this);
         findViewById(R.id.tvCustomDrawableRound).setOnClickListener(this);
+        findViewById(R.id.tvCustomDrawableState).setOnClickListener(this);
     }
 
     @Override
@@ -87,6 +89,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.tvCustomDrawableRound:
                 startActivity(new Intent(MainActivity.this, CustomViewDrawableRoundActivity.class));
+                break;
+            case R.id.tvCustomDrawableState:
+                startActivity(new Intent(MainActivity.this, CustomDrawableStateActivity.class));
                 break;
         }
     }

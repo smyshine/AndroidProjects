@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:example="http://schemas.android.com/apk/res-auto">
+    <item android:state_pressed="true"
+        android:drawable="@android:color/transparent" />
+
+    <item android:state_focused="true"
+        android:drawable="@android:color/transparent" />
+
+    <item example:status_message_readed="false"
+        android:drawable="@color/colorAccent" />
+
+    <item example:status_message_readed="true"
+        android:drawable="@color/colorUnreaded" />
+</selector>

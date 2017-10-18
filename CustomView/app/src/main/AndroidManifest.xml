@@ -29,7 +29,8 @@
         <activity android:name=".activity.CustomViewGestureLockActivity" />
         <activity android:name=".activity.CustomViewArcMenuActivity" />
         <activity android:name=".activity.CustomRoundImageShaderActivity" />
-        <activity android:name=".activity.CustomViewDrawableRoundActivity"></activity>
+        <activity android:name=".activity.CustomViewDrawableRoundActivity" />
+        <activity android:name=".activity.CustomDrawableStateActivity"></activity>
     </application>
 
 </manifest>

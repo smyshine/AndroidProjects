@@ -101,4 +101,8 @@
         <attr name="radius"/>
     </declare-styleable>
 
+    <declare-styleable name="MessageStatus">
+        <attr name="status_message_readed" format="boolean"/>
+    </declare-styleable>
+
 </resources>

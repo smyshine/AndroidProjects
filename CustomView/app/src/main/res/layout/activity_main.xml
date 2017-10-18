@@ -11,115 +11,78 @@
 
         <TextView
             android:id="@+id/tvCustomText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="CustomView Text   > "
-            android:padding="5dp"
-            android:layout_margin="5dp"/>
+            android:text=" Text   > "
+            style="@style/MainTextStyle"/>
 
         <TextView
             android:id="@+id/tvCustomImage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="CustomView Image   > "
-            android:padding="5dp"
-            android:layout_margin="5dp"/>
+            android:text=" Image   > "
+            style="@style/MainTextStyle"/>
 
         <TextView
             android:id="@+id/tvCustomProgress"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="CustomView Progress   > "
-            android:padding="5dp"
-            android:layout_margin="5dp"/>
+            android:text=" Progress   > "
+            style="@style/MainTextStyle"/>
 
         <TextView
             android:id="@+id/tvCustomVolume"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="CustomView Volume   > "
-            android:padding="5dp"
-            android:layout_margin="5dp"/>
+            android:text=" Volume   > "
+            style="@style/MainTextStyle"/>
 
         <TextView
             android:id="@+id/tvCustomGroup"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="CustomView Group   > "
-            android:padding="5dp"
-            android:layout_margin="5dp"/>
+            android:text=" ViewGroup   > "
+            style="@style/MainTextStyle"/>
 
         <TextView
             android:id="@+id/tvCustomDrag"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="CustomView Drag   > "
-            android:padding="5dp"
-            android:layout_margin="5dp"/>
+            android:text=" Drag   > "
+            style="@style/MainTextStyle"/>
 
         <TextView
             android:id="@+id/tvCustomDrawer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="CustomView Drawer   > "
-            android:padding="5dp"
-            android:layout_margin="5dp"/>
+            android:text=" Drawer   > "
+            style="@style/MainTextStyle"/>
 
         <TextView
             android:id="@+id/tvCustomChangeColor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="CustomView Change Color   > "
-            android:padding="5dp"
-            android:layout_margin="5dp"/>
-
-        <TextView
-            android:id="@+id/tvCustomRoundImage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="CustomView Round Image   > "
-            android:padding="5dp"
-            android:layout_margin="5dp"/>
+            android:text=" Change Color   > "
+            style="@style/MainTextStyle"/>
 
         <TextView
             android:id="@+id/tvCustomSlideDelete"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="CustomView Slide Delete   > "
-            android:padding="5dp"
-            android:layout_margin="5dp"/>
+            android:text=" Slide Delete   > "
+            style="@style/MainTextStyle"/>
 
         <TextView
             android:id="@+id/tvCustomGestureLock"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="CustomView Gesture Lock   > "
-            android:padding="5dp"
-            android:layout_margin="5dp"/>
+            android:text=" Gesture Lock   > "
+            style="@style/MainTextStyle"/>
 
         <TextView
             android:id="@+id/tvCustomArcMenu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="CustomView Arc Menu   > "
-            android:padding="5dp"
-            android:layout_margin="5dp"/>
+            android:text=" Arc Menu   > "
+            style="@style/MainTextStyle"/>
+
+        <TextView
+            android:id="@+id/tvCustomRoundImage"
+            android:text=" Round Image   > "
+            style="@style/MainTextStyle"/>
 
         <TextView
             android:id="@+id/tvCustomShaderRound"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="CustomView Round Image of Shader Bitmap   > "
-            android:padding="5dp"
-            android:layout_margin="5dp"/>
+            android:text=" Round Image of Shader Bitmap   > "
+            style="@style/MainTextStyle"/>
 
         <TextView
             android:id="@+id/tvCustomDrawableRound"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="CustomView Round Image of Drawable   > "
-            android:padding="5dp"
-            android:layout_margin="5dp"/>
+            android:text=" Round Image of Drawable   > "
+            style="@style/MainTextStyle"/>
+
+        <TextView
+            android:id="@+id/tvCustomDrawableState"
+            android:text=" Drawable State  > "
+            style="@style/MainTextStyle"/>
 
     </LinearLayout>
 
