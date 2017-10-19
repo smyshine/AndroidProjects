@@ -84,6 +84,11 @@
             android:text=" Drawable State  > "
             style="@style/MainTextStyle"/>
 
+        <TextView
+            android:id="@+id/tvCustomCircleMenu"
+            android:text=" Circle Menu  > "
+            style="@style/MainTextStyle"/>
+
     </LinearLayout>
 
 </ScrollView>

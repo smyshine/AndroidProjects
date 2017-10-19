@@ -30,7 +30,8 @@
         <activity android:name=".activity.CustomViewArcMenuActivity" />
         <activity android:name=".activity.CustomRoundImageShaderActivity" />
         <activity android:name=".activity.CustomViewDrawableRoundActivity" />
-        <activity android:name=".activity.CustomDrawableStateActivity"></activity>
+        <activity android:name=".activity.CustomDrawableStateActivity" />
+        <activity android:name=".activity.CustomCircleMenuActivity"/>
     </application>
 
 </manifest>
