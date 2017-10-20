@@ -32,7 +32,8 @@
         <activity android:name=".activity.CustomViewDrawableRoundActivity" />
         <activity android:name=".activity.CustomDrawableStateActivity" />
         <activity android:name=".activity.CustomCircleMenuActivity" />
-        <activity android:name=".activity.CustomFlabbyBirdActivity"></activity>
+        <activity android:name=".activity.CustomFlabbyBirdActivity" />
+        <activity android:name=".activity.CustomLuckyPlateActivity"></activity>
     </application>
 
 </manifest>

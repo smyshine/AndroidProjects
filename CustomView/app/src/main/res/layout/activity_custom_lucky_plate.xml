@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.customview.activity.CustomLuckyPlateActivity">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="Click to start Lucky draw"
+        android:textSize="15sp"
+        android:textColor="#333333"
+        android:layout_marginBottom="20dp"
+        android:layout_above="@+id/luckPlate"/>
+
+    <com.customview.view.CustomLuckyPlateView
+        android:id="@+id/luckPlate"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true" />
+
+    <ImageView
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_require"
+        android:layout_centerInParent="true"
+        android:scaleType="centerInside"
+        android:padding="30dp"/>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:textColor="#333333"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/luckPlate"/>
+
+</RelativeLayout>

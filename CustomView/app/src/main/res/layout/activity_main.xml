@@ -94,6 +94,11 @@
             android:text=" Flabby Bird  > "
             style="@style/MainTextStyle"/>
 
+        <TextView
+            android:id="@+id/tvCustomLuckyPlate"
+            android:text=" Lucky Plate  > "
+            style="@style/MainTextStyle"/>
+
     </LinearLayout>
 
 </ScrollView>
