@@ -89,6 +89,11 @@
             android:text=" Circle Menu  > "
             style="@style/MainTextStyle"/>
 
+        <TextView
+            android:id="@+id/tvCustomFlabbyBird"
+            android:text=" Flabby Bird  > "
+            style="@style/MainTextStyle"/>
+
     </LinearLayout>
 
 </ScrollView>

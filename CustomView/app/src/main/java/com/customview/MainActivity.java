@@ -8,6 +8,7 @@ import android.view.View;
 import com.customview.activity.CustomCircleMenuActivity;
 import com.customview.activity.CustomDrawableStateActivity;
 import com.customview.activity.CustomDrawerViewActivity;
+import com.customview.activity.CustomFlabbyBirdActivity;
 import com.customview.activity.CustomRoundImageShaderActivity;
 import com.customview.activity.CustomViewArcMenuActivity;
 import com.customview.activity.CustomViewChangeColorActivity;
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.tvCustomDrawableRound).setOnClickListener(this);
         findViewById(R.id.tvCustomDrawableState).setOnClickListener(this);
         findViewById(R.id.tvCustomCircleMenu).setOnClickListener(this);
+        findViewById(R.id.tvCustomFlabbyBird).setOnClickListener(this);
     }
 
     @Override
@@ -97,6 +99,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.tvCustomCircleMenu:
                 startActivity(new Intent(MainActivity.this, CustomCircleMenuActivity.class));
+                break;
+            case R.id.tvCustomFlabbyBird:
+                startActivity(new Intent(MainActivity.this, CustomFlabbyBirdActivity.class));
                 break;
         }
     }
