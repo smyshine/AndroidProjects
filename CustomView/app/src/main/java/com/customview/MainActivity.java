@@ -23,6 +23,7 @@ import com.customview.activity.CustomViewRoundImageActivity;
 import com.customview.activity.CustomViewSlideDeleteActivity;
 import com.customview.activity.CustomViewTextActivity;
 import com.customview.activity.CustomViewVolumeActivity;
+import com.customview.activity.Game2048Activity;
 import com.customview.activity.GamePuzzleActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -51,6 +52,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.tvCustomFlabbyBird).setOnClickListener(this);
         findViewById(R.id.tvCustomLuckyPlate).setOnClickListener(this);
         findViewById(R.id.tvCustomGamePuzzle).setOnClickListener(this);
+        findViewById(R.id.tvCustomGame2048).setOnClickListener(this);
     }
 
     @Override
@@ -112,6 +114,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.tvCustomGamePuzzle:
                 jump2Activity(GamePuzzleActivity.class);
+                break;
+            case R.id.tvCustomGame2048:
+                jump2Activity(Game2048Activity.class);
                 break;
         }
     }

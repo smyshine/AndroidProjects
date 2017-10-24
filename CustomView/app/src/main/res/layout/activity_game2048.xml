@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.customview.activity.Game2048Activity">
+
+    <com.customview.view.game2048.Game2048Layout
+        android:id="@+id/game2048"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="#ffffff"
+        android:padding="10dp"></com.customview.view.game2048.Game2048Layout>
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_above="@+id/game2048"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#eee4da"
+        android:padding="4dp"
+        android:text="0"
+        android:textSize="20sp"
+        android:textColor="#e21856"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/levelUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/levelDown"
+        android:padding="4dp"
+        android:textSize="20sp"
+        android:textColor="#2fa056"
+        android:textStyle="bold"
+        android:layout_alignParentRight="true"
+        android:text="Level Up"/>
+
+    <TextView
+        android:id="@+id/levelDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/game2048"
+        android:padding="4dp"
+        android:textSize="20sp"
+        android:textColor="#2fa056"
+        android:textStyle="bold"
+        android:layout_alignParentRight="true"
+        android:text="Level Down"/>
+
+</RelativeLayout>

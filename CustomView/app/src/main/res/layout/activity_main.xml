@@ -104,6 +104,11 @@
             android:text=" Game Puzzle  > "
             style="@style/MainTextStyle"/>
 
+        <TextView
+            android:id="@+id/tvCustomGame2048"
+            android:text=" Game 2048  > "
+            style="@style/MainTextStyle"/>
+
     </LinearLayout>
 
 </ScrollView>

@@ -34,7 +34,8 @@
         <activity android:name=".activity.CustomCircleMenuActivity" />
         <activity android:name=".activity.CustomFlabbyBirdActivity" />
         <activity android:name=".activity.CustomLuckyPlateActivity" />
-        <activity android:name=".activity.GamePuzzleActivity"></activity>
+        <activity android:name=".activity.GamePuzzleActivity" />
+        <activity android:name=".activity.Game2048Activity"></activity>
     </application>
 
 </manifest>
