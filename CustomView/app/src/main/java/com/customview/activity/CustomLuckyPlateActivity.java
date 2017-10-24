@@ -24,11 +24,9 @@ public class CustomLuckyPlateActivity extends Activity {
             @Override
             public void onClick(View v) {
                 if (!luckyPlateView.isStart()){
-                    //start.setImageResource(R.drawable.default_no_network);
                     hintText.setText("Click to stop rotating and generate result");
                     luckyPlateView.luckyStart(1);
                 } else if (!luckyPlateView.isShouldEnd()){
-                    //start.setImageResource(R.drawable.icon_share);
                     hintText.setText("Click to Luck draw again");
                     luckyPlateView.luckyEnd();
                 }

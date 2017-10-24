@@ -23,6 +23,7 @@ import com.customview.activity.CustomViewRoundImageActivity;
 import com.customview.activity.CustomViewSlideDeleteActivity;
 import com.customview.activity.CustomViewTextActivity;
 import com.customview.activity.CustomViewVolumeActivity;
+import com.customview.activity.GamePuzzleActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -49,65 +50,73 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.tvCustomCircleMenu).setOnClickListener(this);
         findViewById(R.id.tvCustomFlabbyBird).setOnClickListener(this);
         findViewById(R.id.tvCustomLuckyPlate).setOnClickListener(this);
+        findViewById(R.id.tvCustomGamePuzzle).setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.tvCustomText:
-                startActivity(new Intent(MainActivity.this, CustomViewTextActivity.class));
+                jump2Activity(CustomViewTextActivity.class);
                 break;
             case R.id.tvCustomImage:
-                startActivity(new Intent(MainActivity.this, CustomViewImageActivity.class));
+                jump2Activity(CustomViewImageActivity.class);
                 break;
             case R.id.tvCustomProgress:
-                startActivity(new Intent(MainActivity.this, CustomViewProgressActivity.class));
+                jump2Activity(CustomViewProgressActivity.class);
                 break;
             case R.id.tvCustomVolume:
-                startActivity(new Intent(MainActivity.this, CustomViewVolumeActivity.class));
+                jump2Activity(CustomViewVolumeActivity.class);
                 break;
             case R.id.tvCustomGroup:
-                startActivity(new Intent(MainActivity.this, CustomViewGroupActivity.class));
+                jump2Activity(CustomViewGroupActivity.class);
                 break;
             case R.id.tvCustomDrag:
-                startActivity(new Intent(MainActivity.this, CustomViewDragActivity.class));
+                jump2Activity(CustomViewDragActivity.class);
                 break;
             case R.id.tvCustomDrawer:
-                startActivity(new Intent(MainActivity.this, CustomDrawerViewActivity.class));
+                jump2Activity(CustomDrawerViewActivity.class);
                 break;
             case R.id.tvCustomChangeColor:
-                startActivity(new Intent(MainActivity.this, CustomViewChangeColorActivity.class));
+                jump2Activity(CustomViewChangeColorActivity.class);
                 break;
             case R.id.tvCustomRoundImage:
-                startActivity(new Intent(MainActivity.this, CustomViewRoundImageActivity.class));
+                jump2Activity(CustomViewRoundImageActivity.class);
                 break;
             case R.id.tvCustomSlideDelete:
-                startActivity(new Intent(MainActivity.this, CustomViewSlideDeleteActivity.class));
+                jump2Activity(CustomViewSlideDeleteActivity.class);
                 break;
             case R.id.tvCustomGestureLock:
-                startActivity(new Intent(MainActivity.this, CustomViewGestureLockActivity.class));
+                jump2Activity(CustomViewGestureLockActivity.class);
                 break;
             case R.id.tvCustomArcMenu:
-                startActivity(new Intent(MainActivity.this, CustomViewArcMenuActivity.class));
+                jump2Activity(CustomViewArcMenuActivity.class);
                 break;
             case R.id.tvCustomShaderRound:
-                startActivity(new Intent(MainActivity.this, CustomRoundImageShaderActivity.class));
+                jump2Activity(CustomRoundImageShaderActivity.class);
                 break;
             case R.id.tvCustomDrawableRound:
-                startActivity(new Intent(MainActivity.this, CustomViewDrawableRoundActivity.class));
+                jump2Activity(CustomViewDrawableRoundActivity.class);
                 break;
             case R.id.tvCustomDrawableState:
-                startActivity(new Intent(MainActivity.this, CustomDrawableStateActivity.class));
+                jump2Activity(CustomDrawableStateActivity.class);
                 break;
             case R.id.tvCustomCircleMenu:
-                startActivity(new Intent(MainActivity.this, CustomCircleMenuActivity.class));
+                jump2Activity(CustomCircleMenuActivity.class);
                 break;
             case R.id.tvCustomFlabbyBird:
-                startActivity(new Intent(MainActivity.this, CustomFlabbyBirdActivity.class));
+                jump2Activity(CustomFlabbyBirdActivity.class);
                 break;
             case R.id.tvCustomLuckyPlate:
-                startActivity(new Intent(MainActivity.this, CustomLuckyPlateActivity.class));
+                jump2Activity(CustomLuckyPlateActivity.class);
+                break;
+            case R.id.tvCustomGamePuzzle:
+                jump2Activity(GamePuzzleActivity.class);
                 break;
         }
+    }
+
+    private void jump2Activity(Class activity){
+        startActivity(new Intent(MainActivity.this, activity));
     }
 }

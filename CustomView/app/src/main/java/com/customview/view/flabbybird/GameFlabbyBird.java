@@ -196,7 +196,7 @@ public class GameFlabbyBird extends SurfaceView implements SurfaceHolder.Callbac
 
     private void initBitmaps(){
         mBackground = loadImageByResId(R.drawable.profile_bg);
-        mBirdBitmap = loadImageByResId(R.drawable.community_like_hl);
+        mBirdBitmap = loadImageByResId(R.drawable.bird);
         mFloorBitmap = loadImageByResId(R.drawable.floor);
         mPipeTop = loadImageByResId(R.drawable.icon_privacy_bg);
         mPipeBottom = loadImageByResId(R.drawable.icon_privacy_bg);
