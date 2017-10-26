@@ -262,6 +262,7 @@ public class Game2048Layout extends RelativeLayout {
         }
         once = false;
         isMergeHappen = isMoveHappen = true;
+        mScore = 0;
         invalidate();
     }
 
@@ -271,6 +272,7 @@ public class Game2048Layout extends RelativeLayout {
         ++mColumn;
         once = false;
         isMergeHappen = isMoveHappen = true;
+        mScore = 0;
         invalidate();
     }
 
@@ -280,6 +282,7 @@ public class Game2048Layout extends RelativeLayout {
         --mColumn;
         once = false;
         isMergeHappen = isMoveHappen = true;
+        mScore = 0;
         invalidate();
     }
 }
