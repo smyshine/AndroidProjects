@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.customview.activity.ClipImageActivity;
 import com.customview.activity.CustomCircleMenuActivity;
 import com.customview.activity.CustomDrawableStateActivity;
 import com.customview.activity.CustomDrawerViewActivity;
@@ -26,98 +27,57 @@ import com.customview.activity.CustomViewVolumeActivity;
 import com.customview.activity.Game2048Activity;
 import com.customview.activity.GamePuzzleActivity;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity {
+
+    private enum Item{
+        CustomText(R.id.tvCustomText, CustomViewTextActivity.class),
+        CustomImage(R.id.tvCustomImage, CustomViewImageActivity.class),
+        CustomProgress(R.id.tvCustomProgress, CustomViewProgressActivity.class),
+        CustomVolume(R.id.tvCustomVolume, CustomViewVolumeActivity.class),
+        CustomGroup(R.id.tvCustomGroup, CustomViewGroupActivity.class),
+        CustomDrag(R.id.tvCustomDrag, CustomViewDragActivity.class),
+        CustomDrawer(R.id.tvCustomDrawer, CustomDrawerViewActivity.class),
+        CustomChangeColor(R.id.tvCustomChangeColor, CustomViewChangeColorActivity.class),
+        CustomRoundImage(R.id.tvCustomRoundImage, CustomViewRoundImageActivity.class),
+        CustomSlideDelete(R.id.tvCustomSlideDelete, CustomViewSlideDeleteActivity.class),
+        CustomGestureLock(R.id.tvCustomGestureLock, CustomViewGestureLockActivity.class),
+        ArcMenu(R.id.tvCustomArcMenu, CustomViewArcMenuActivity.class),
+        ShaderRoundImage(R.id.tvCustomShaderRound, CustomRoundImageShaderActivity.class),
+        DrawableRoundImage(R.id.tvCustomDrawableRound, CustomViewDrawableRoundActivity.class),
+        DrawableState(R.id.tvCustomDrawableState, CustomDrawableStateActivity.class),
+        CircleMenu(R.id.tvCustomCircleMenu, CustomCircleMenuActivity.class),
+        FlabbyBird(R.id.tvCustomFlabbyBird, CustomFlabbyBirdActivity.class),
+        LuckyPlate(R.id.tvCustomLuckyPlate, CustomLuckyPlateActivity.class),
+        Puzzle(R.id.tvCustomGamePuzzle, GamePuzzleActivity.class),
+        Game2018(R.id.tvCustomGame2048, Game2048Activity.class),
+        ClipImage(R.id.tvClipImage, ClipImageActivity.class),
+        ;
+
+        int id;
+        Class activity;
+
+        Item(int id, Class activity) {
+            this.id = id;
+            this.activity = activity;
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        findViewById(R.id.tvCustomText).setOnClickListener(this);
-        findViewById(R.id.tvCustomImage).setOnClickListener(this);
-        findViewById(R.id.tvCustomProgress).setOnClickListener(this);
-        findViewById(R.id.tvCustomVolume).setOnClickListener(this);
-        findViewById(R.id.tvCustomGroup).setOnClickListener(this);
-        findViewById(R.id.tvCustomDrag).setOnClickListener(this);
-        findViewById(R.id.tvCustomDrawer).setOnClickListener(this);
-        findViewById(R.id.tvCustomChangeColor).setOnClickListener(this);
-        findViewById(R.id.tvCustomRoundImage).setOnClickListener(this);
-        findViewById(R.id.tvCustomSlideDelete).setOnClickListener(this);
-        findViewById(R.id.tvCustomGestureLock).setOnClickListener(this);
-        findViewById(R.id.tvCustomArcMenu).setOnClickListener(this);
-        findViewById(R.id.tvCustomShaderRound).setOnClickListener(this);
-        findViewById(R.id.tvCustomDrawableRound).setOnClickListener(this);
-        findViewById(R.id.tvCustomDrawableState).setOnClickListener(this);
-        findViewById(R.id.tvCustomCircleMenu).setOnClickListener(this);
-        findViewById(R.id.tvCustomFlabbyBird).setOnClickListener(this);
-        findViewById(R.id.tvCustomLuckyPlate).setOnClickListener(this);
-        findViewById(R.id.tvCustomGamePuzzle).setOnClickListener(this);
-        findViewById(R.id.tvCustomGame2048).setOnClickListener(this);
+        setClickListener(Item.values());
     }
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.tvCustomText:
-                jump2Activity(CustomViewTextActivity.class);
-                break;
-            case R.id.tvCustomImage:
-                jump2Activity(CustomViewImageActivity.class);
-                break;
-            case R.id.tvCustomProgress:
-                jump2Activity(CustomViewProgressActivity.class);
-                break;
-            case R.id.tvCustomVolume:
-                jump2Activity(CustomViewVolumeActivity.class);
-                break;
-            case R.id.tvCustomGroup:
-                jump2Activity(CustomViewGroupActivity.class);
-                break;
-            case R.id.tvCustomDrag:
-                jump2Activity(CustomViewDragActivity.class);
-                break;
-            case R.id.tvCustomDrawer:
-                jump2Activity(CustomDrawerViewActivity.class);
-                break;
-            case R.id.tvCustomChangeColor:
-                jump2Activity(CustomViewChangeColorActivity.class);
-                break;
-            case R.id.tvCustomRoundImage:
-                jump2Activity(CustomViewRoundImageActivity.class);
-                break;
-            case R.id.tvCustomSlideDelete:
-                jump2Activity(CustomViewSlideDeleteActivity.class);
-                break;
-            case R.id.tvCustomGestureLock:
-                jump2Activity(CustomViewGestureLockActivity.class);
-                break;
-            case R.id.tvCustomArcMenu:
-                jump2Activity(CustomViewArcMenuActivity.class);
-                break;
-            case R.id.tvCustomShaderRound:
-                jump2Activity(CustomRoundImageShaderActivity.class);
-                break;
-            case R.id.tvCustomDrawableRound:
-                jump2Activity(CustomViewDrawableRoundActivity.class);
-                break;
-            case R.id.tvCustomDrawableState:
-                jump2Activity(CustomDrawableStateActivity.class);
-                break;
-            case R.id.tvCustomCircleMenu:
-                jump2Activity(CustomCircleMenuActivity.class);
-                break;
-            case R.id.tvCustomFlabbyBird:
-                jump2Activity(CustomFlabbyBirdActivity.class);
-                break;
-            case R.id.tvCustomLuckyPlate:
-                jump2Activity(CustomLuckyPlateActivity.class);
-                break;
-            case R.id.tvCustomGamePuzzle:
-                jump2Activity(GamePuzzleActivity.class);
-                break;
-            case R.id.tvCustomGame2048:
-                jump2Activity(Game2048Activity.class);
-                break;
+    private void setClickListener(final Item... items){
+        for (final Item item : items){
+            findViewById(item.id).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    jump2Activity(item.activity);
+                }
+            });
         }
     }
 

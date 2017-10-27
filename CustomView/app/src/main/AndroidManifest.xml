@@ -35,7 +35,8 @@
         <activity android:name=".activity.CustomFlabbyBirdActivity" />
         <activity android:name=".activity.CustomLuckyPlateActivity" />
         <activity android:name=".activity.GamePuzzleActivity" />
-        <activity android:name=".activity.Game2048Activity"></activity>
+        <activity android:name=".activity.Game2048Activity" />
+        <activity android:name=".activity.ClipImageActivity"></activity>
     </application>
 
 </manifest>

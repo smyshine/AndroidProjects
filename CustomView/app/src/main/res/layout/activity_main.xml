@@ -109,6 +109,11 @@
             android:text=" Game 2048  > "
             style="@style/MainTextStyle"/>
 
+        <TextView
+            android:id="@+id/tvClipImage"
+            android:text=" Clip Image > "
+            style="@style/MainTextStyle"/>
+
     </LinearLayout>
 
 </ScrollView>
