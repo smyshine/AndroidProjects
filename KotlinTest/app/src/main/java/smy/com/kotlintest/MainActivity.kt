@@ -4,9 +4,11 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
+import java.net.URL
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         var listView = findViewById<RecyclerView>(R.id.listView)
         listView.layoutManager = LinearLayoutManager(this)
         listView.adapter = TestListAdapter(mItems)
-        toast("smy")
+        //toast("smy")
     }
 
     fun toast(message: String,
@@ -26,11 +28,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private val mItems = listOf<String>(
-            "It's Monday, and it's sleepy",
-            "It's Tuesday, and it's busy",
-            "It's Wednesday, and it's happy",
-            "It's Thursday, and it's ppy",
-            "It's Friday, and it's slow"
+            "Who am I",
+            "Where am I",
+            "What am I doing",
+            "Who are you",
+            "Where are you",
+            "what are you doing"
     );
 
     class TestListAdapter(val items: List<String>) : RecyclerView.Adapter<TestListAdapter.ViewHolder>(){
@@ -47,4 +50,12 @@ class MainActivity : AppCompatActivity() {
 
         class ViewHolder(var textView : TextView) : RecyclerView.ViewHolder(textView)
     }
+
+    class Request(val url: String){
+        fun run(){
+            val jsonStr = URL(url).readText()
+            Log.d(javaClass.simpleName, jsonStr)
+        }
+    }
+
 }
