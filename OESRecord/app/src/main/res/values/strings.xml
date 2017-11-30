@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">OESRecord</string>
+
+    <string name="render_mode_sphere">Sphere</string>
+    <string name="render_mode_planet">Planet</string>
+    <string name="render_mode_plane">Plane</string>
+    <string name="render_mode_overall">Overall</string>
+    <string name="render_mode_vr">VR</string>
+
+    <string name="enable_sensor">Use sensor</string>
+    <string name="disable_sensor">Disable sensor</string>
+</resources>

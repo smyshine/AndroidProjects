@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#aaa">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="samples : "/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:background="@color/alignment_marker_color">
+
+            <TextView
+                android:id="@+id/panoVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="pano video"
+                android:padding="10dp"
+                android:onClick="onExampleClick"/>
+
+            <TextView
+                android:id="@+id/dualVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="dual video"
+                android:padding="10dp"
+                android:onClick="onExampleClick"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:background="@color/alignment_marker_color">
+
+            <TextView
+                android:id="@+id/panoPicture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="pano picture"
+                android:padding="10dp"
+                android:onClick="onExampleClick"/>
+
+            <TextView
+                android:id="@+id/dualPicture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="dual picture"
+                android:padding="10dp"
+                android:onClick="onExampleClick"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <EditText
+                android:id="@+id/edt_path"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:layout_weight="4"/>
+
+            <Button
+                android:id="@+id/choose"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="..."
+                android:onClick="onBtnChooseFileClick"/>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="As Pano Video"
+            android:textAllCaps="false"
+            android:onClick="onPanoVideoClick"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="As Dual Video"
+            android:textAllCaps="false"
+            android:onClick="onDualVideoClick"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="As Picture"
+            android:textAllCaps="false"
+            android:onClick="onPictureClick"/>
+
+        <CheckBox
+            android:id="@+id/cbPlayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="Use IjkPlayer" />
+
+    </LinearLayout>
+
+</FrameLayout>
