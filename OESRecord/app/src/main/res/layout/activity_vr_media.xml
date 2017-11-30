@@ -11,6 +11,43 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/shot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shot"
+            android:padding="10dp"
+            android:textColor="#ffffff"
+            android:background="#33000000"/>
+
+        <TextView
+            android:id="@+id/recordControl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Record"
+            android:padding="10dp"
+            android:layout_marginLeft="50dp"
+            android:textColor="#ffffff"
+            android:background="#33000000"/>
+
+        <TextView
+            android:id="@+id/recordComplete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Complete"
+            android:padding="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#ffffff"
+            android:background="#33000000"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="bottom">
 
         <TextView

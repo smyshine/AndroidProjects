@@ -299,4 +299,10 @@ public class CustomCardboardView extends GvrView implements
             mViewDirectionListener.onViewDirection(direction);
         }
     }
+
+    public void doScreenShot(String path, AbstractRenderer.screenShotListener listener){
+        if (mVRRenderer != null){
+            mVRRenderer.startScreenShot(path, listener);
+        }
+    }
 }

@@ -5,19 +5,26 @@ import android.content.Context
 import android.content.pm.ActivityInfo
 import android.content.res.Configuration
 import android.os.Bundle
+import android.os.Environment
 import android.view.OrientationEventListener
 import android.view.Surface
 import android.view.Window
 import android.view.WindowManager
 import android.widget.TextView
+import android.widget.Toast
 import smy.com.vrplayer.common.VrConstant
+import smy.com.vrplayer.render.AbstractRenderer
 import smy.com.vrplayer.view.CustomCardboardView
+import java.io.File
 
 
 /**
  * Created by SMY on 2017/11/30.
  */
 abstract class AbstractPlayerActivity : Activity() {
+    var SDCARD_ROOT = Environment.getExternalStorageDirectory().absolutePath
+    var APP_DIR = SDCARD_ROOT + "/smy/"
+
     internal lateinit var mVRPlayerView : CustomCardboardView
     internal lateinit var tvMode : TextView
     internal lateinit var tvSensor : TextView
@@ -41,7 +48,20 @@ abstract class AbstractPlayerActivity : Activity() {
                 getString(R.string.render_mode_overall)->changeMode(VrConstant.RENDER_MODE_SPHERE)
             }
         }
+
         findViewById<TextView>(R.id.vr).setOnClickListener { changeMode(VrConstant.RENDER_MODE_VR) }
+        findViewById<TextView>(R.id.shot).setOnClickListener {
+            val dir = File(APP_DIR)
+            if (!dir.exists()) {
+                dir.mkdirs()
+            }
+            mVRPlayerView.doScreenShot(APP_DIR + System.currentTimeMillis() + ".jpg",
+                    AbstractRenderer.screenShotListener { result, path ->
+                        runOnUiThread {
+                            Toast.makeText(this@AbstractPlayerActivity, "shot result:" + result + ", " + path, Toast.LENGTH_LONG).show()
+                    } })
+        }
+
         tvSensor = findViewById<TextView>(R.id.sensor) as TextView
         tvSensor.setOnClickListener {
             when(tvSensor.text){
