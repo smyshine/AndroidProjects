@@ -79,7 +79,7 @@ int fisheyePanoStitcherComp::setFisheyePanoParams(fisheyePanoParams *pFisheyePan
 int fisheyePanoStitcherComp::setWorkParams(complexLevel ComplexLevel)
 {// set camera and pano parameters from fisheyePanoParams
  // especially the camera extrinsic parameters will be convert into different orientation
-    
+
     memcpy(&mFisheyePanoParamsCore, &mFisheyePanoParams.stFisheyePanoParamsCore, sizeof(fisheyePanoParamsCore));
     mCameraMetadata[0].setFromFisheyePanoParams(&mFisheyePanoParams, 0);
     mCameraMetadata[1].setFromFisheyePanoParams(&mFisheyePanoParams, 1);
@@ -138,7 +138,7 @@ int fisheyePanoStitcherComp::setWarpers()       // check warp device and generat
 //         // for mask generating only
 //         mImageWarperB[2].init(projImgW, projImgH, vertAngleUp, vertAngleDown, horiAngleLeft, horiAngleRight, false, stepX, stepY, false);
 //         mImageWarperB[2].setWarpDevice(useSoftware);
-// 
+//
 // #endif
 
 		break;
@@ -153,7 +153,7 @@ int fisheyePanoStitcherComp::setWarpers()       // check warp device and generat
 		mImageWarperB[4 + i].genWarperCam(&mCameraMetadata[1], mFisheyePanoParamsCore.sphereRadius);
 
 	}
-	
+
 	// set roi in source image
 	mImageWarperB[0].setSrcRoi(0.0, 0.0, 1.0, 0.6); //now 0 & 1 use the same TOP half source image and 2 & 3 use BOTTOM half source image;
 	mImageWarperB[1].setSrcRoi(0.0, 0.0, 1.0, 0.6); //this will be set in future to decrease the size of source image, as well as  4,5,6,7;
@@ -177,7 +177,7 @@ int fisheyePanoStitcherComp::initBlender(ImageBlender *pImageBlender, int sizeW,
 {
 	pImageBlender->mSizeW = sizeW;
 	pImageBlender->mSizeH = sizeH;
-	
+
 	pImageBlender->uvMaskValid = false;
 	pImageBlender->pMaskY = new unsigned char[sizeW * sizeH];
 
@@ -207,7 +207,7 @@ int fisheyePanoStitcherComp::setBlendMask(ImageBlender *pImageBlender, char *mas
 		pMask[2] += pImageBlender[0].mSizeW;
 		pMask[3] += pImageBlender[0].mSizeW;
 	}
-	
+
 	fclose(fp);
 
 	return 0;
@@ -456,7 +456,7 @@ int fisheyePanoStitcherComp::initWarpGL(ImageWarper *pImageWarper, DescriptorGL 
 
 	pDescriptorGL->heightSrc = pImageWarper->mSrcImageH;
 	pDescriptorGL->widthSrc = pImageWarper->mSrcImageW;
-	
+
 	pDescriptorGL->heightDst = pImageWarper[0].mWarpImageH;
 	pDescriptorGL->widthDst = pImageWarper[0].mWarpImageW;
 	pDescriptorGL->attachmentpoints = GL_COLOR_ATTACHMENT0;
@@ -555,7 +555,7 @@ int fisheyePanoStitcherComp::initWarpGL(ImageWarper *pImageWarper, DescriptorGL 
 	/*glBindBuffer(GL_PIXEL_PACK_BUFFER, pDescriptorGL->pixelBuffer);
 	glBufferData(GL_PIXEL_PACK_BUFFER, (GLuint)pDescriptorGL->heightDst * (GLuint)pDescriptorGL->widthDst * 3 * sizeof(GL_UNSIGNED_BYTE), NULL, GL_STREAM_READ);
 	glBindBuffer(GL_PIXEL_PACK_BUFFER, 0);*/
-	
+
 	glBindFramebuffer(GL_FRAMEBUFFER, 0);
 
 
@@ -571,7 +571,7 @@ int fisheyePanoStitcherComp::deinitWarpGL(DescriptorGL *pDescriptorGL)
 	glDeleteBuffers(1, &pDescriptorGL->VBO);
 	//delete ebo, element array buffer;
 	glDeleteBuffers(1, &pDescriptorGL->EBO);
-	
+
 	return 0;
 }
 
@@ -666,7 +666,7 @@ int fisheyePanoStitcherComp::deInitWarpVerticesGL(DescriptorGL *pDescriptorGL)
 	glDeleteBuffers(1, &pDescriptorGL->VBO);
 	glDeleteBuffers(1, &pDescriptorGL->EBO);
 	glDeleteVertexArrays(1, &pDescriptorGL->VAO);
-	
+
 	return 0;
 }
 
@@ -675,7 +675,7 @@ int fisheyePanoStitcherComp::warpImageGL(ImageWarper *pImageWarper, DescriptorGL
 
 	// vertices process, include VAO
 	initWarpVerticesGL(pImageWarper, pDescriptorGL);
-	
+
 	// bind framebuffer
 	glBindFramebuffer(GL_FRAMEBUFFER, pDescriptorGL->framebuffer);
 
@@ -683,11 +683,11 @@ int fisheyePanoStitcherComp::warpImageGL(ImageWarper *pImageWarper, DescriptorGL
 	glClear(GL_COLOR_BUFFER_BIT);
 
 	glViewport(0, 0, pDescriptorGL->widthDst, pDescriptorGL->heightDst);
-	
+
 	// load image data from render to GPU;
 	glBindTexture(GL_TEXTURE_2D, pDescriptorGL->texture);
 	glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, pImageWarper->mSrcImageRoi.roiW, pImageWarper->mSrcImageRoi.roiH, GL_RGB, GL_UNSIGNED_BYTE, srcImage->plane[0] + pImageWarper->mSrcImageRoi.roiY * srcImage->strides[0] + pImageWarper->mSrcImageRoi.roiX * 3);
-	
+
 	// shader;
 	pDescriptorGL->shaderWarp.Use();
 
@@ -697,7 +697,7 @@ int fisheyePanoStitcherComp::warpImageGL(ImageWarper *pImageWarper, DescriptorGL
 	// render
 	//glDrawBuffer(GL_COLOR_ATTACHMENT0);
 	glDrawElements(GL_TRIANGLES, pDescriptorGL->indicesAmount, GL_UNSIGNED_INT, 0);
-	
+
 	// deattach VAO;
 	glBindVertexArray(0);
 	// deattach image;
@@ -877,8 +877,8 @@ int fisheyePanoStitcherComp::colorAdjustRGBChnScanlineGL(imageFrame *pImageFrame
 	//glDrawBuffer(GL_COLOR_ATTACHMENT0);
 	glDrawArrays(GL_TRIANGLES, 0, 6);
 	glBindVertexArray(0);
-	
-	
+
+
 	// read pixel data
 	glReadBuffer(GL_COLOR_ATTACHMENT0);
 	if (pColorAdjPair->mAdjustIdx == 0) //here store the render result in the 4~8 warpedImage, then restore in 0 ~ 3 warpedImage which is the panoImage;
@@ -888,7 +888,7 @@ int fisheyePanoStitcherComp::colorAdjustRGBChnScanlineGL(imageFrame *pImageFrame
 
 	deInitColorAdjCoefGL(pDescriptorGL);
 
-	
+
 	//SOIL_save_image("BLENDER.bmp", SOIL_SAVE_TYPE_BMP, pImageFrame->imageW, pImageFrame->imageH, 3, pImageFrame->plane[0]);
 
 	return 0;
@@ -911,9 +911,9 @@ int fisheyePanoStitcherComp::storePanoImage(imageFrame *renderResult, imageFrame
 			memcpy(panoQuaImage[k], renderedImage[k], sizeof(unsigned char) * renderResult->strides[0]);
 			renderedImage[k] += renderResult->strides[0];
 			panoQuaImage[k] += panoImage->strides[0];
-		}	
+		}
 	}
-	
+
 	return 0;
 }
 
@@ -931,14 +931,14 @@ int fisheyePanoStitcherComp::imageStitch(imageFrame fisheyeImage[2], imageFrame 
 	warpImageGL(&mImageWarperB[1], &mDescriptorGL, &fisheyeImage[0], &warpedImageB[1]);
 	warpImageGL(&mImageWarperB[2], &mDescriptorGL, &fisheyeImage[0], &warpedImageB[2]);
 	warpImageGL(&mImageWarperB[3], &mDescriptorGL, &fisheyeImage[0], &warpedImageB[3]);
-												  					
+
 	warpImageGL(&mImageWarperB[4], &mDescriptorGL, &fisheyeImage[1], &warpedImageB[4]);
 	warpImageGL(&mImageWarperB[5], &mDescriptorGL, &fisheyeImage[1], &warpedImageB[5]);
 	warpImageGL(&mImageWarperB[6], &mDescriptorGL, &fisheyeImage[1], &warpedImageB[6]);
 	warpImageGL(&mImageWarperB[7], &mDescriptorGL, &fisheyeImage[1], &warpedImageB[7]);
 
 	deinitWarpGL(&mDescriptorGL);
-	
+
 	// calculate color adjust coefficients;
 	mColorAdjusterPair.colorCoeffs();
 
