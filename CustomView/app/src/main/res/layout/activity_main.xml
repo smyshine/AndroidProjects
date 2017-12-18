@@ -11,108 +11,114 @@
 
         <TextView
             android:id="@+id/tvCustomText"
-            android:text=" Text   > "
-            style="@style/MainTextStyle"/>
+            style="@style/MainTextStyle"
+            android:text=" Text   > " />
 
         <TextView
             android:id="@+id/tvCustomImage"
-            android:text=" Image   > "
-            style="@style/MainTextStyle"/>
+            style="@style/MainTextStyle"
+            android:text=" Image   > " />
 
         <TextView
             android:id="@+id/tvCustomProgress"
-            android:text=" Progress   > "
-            style="@style/MainTextStyle"/>
+            style="@style/MainTextStyle"
+            android:text=" Progress   > " />
 
         <TextView
             android:id="@+id/tvCustomVolume"
-            android:text=" Volume   > "
-            style="@style/MainTextStyle"/>
+            style="@style/MainTextStyle"
+            android:text=" Volume   > " />
 
         <TextView
             android:id="@+id/tvCustomGroup"
-            android:text=" ViewGroup   > "
-            style="@style/MainTextStyle"/>
+            style="@style/MainTextStyle"
+            android:layout_width="wrap_content"
+            android:text=" ViewGroup   > " />
 
         <TextView
             android:id="@+id/tvCustomDrag"
-            android:text=" Drag   > "
-            style="@style/MainTextStyle"/>
+            style="@style/MainTextStyle"
+            android:text=" Drag   > " />
 
         <TextView
             android:id="@+id/tvCustomDrawer"
-            android:text=" Drawer   > "
-            style="@style/MainTextStyle"/>
+            style="@style/MainTextStyle"
+            android:text=" Drawer   > " />
 
         <TextView
             android:id="@+id/tvCustomChangeColor"
-            android:text=" Change Color   > "
-            style="@style/MainTextStyle"/>
+            style="@style/MainTextStyle"
+            android:text=" Change Color   > " />
 
         <TextView
             android:id="@+id/tvCustomSlideDelete"
-            android:text=" Slide Delete   > "
-            style="@style/MainTextStyle"/>
+            style="@style/MainTextStyle"
+            android:text=" Slide Delete   > " />
 
         <TextView
             android:id="@+id/tvCustomGestureLock"
-            android:text=" Gesture Lock   > "
-            style="@style/MainTextStyle"/>
+            style="@style/MainTextStyle"
+            android:text=" Gesture Lock   > " />
 
         <TextView
             android:id="@+id/tvCustomArcMenu"
-            android:text=" Arc Menu   > "
-            style="@style/MainTextStyle"/>
+            style="@style/MainTextStyle"
+            android:text=" Arc Menu   > " />
 
         <TextView
             android:id="@+id/tvCustomRoundImage"
-            android:text=" Round Image   > "
-            style="@style/MainTextStyle"/>
+            style="@style/MainTextStyle"
+            android:text=" Round Image   > " />
 
         <TextView
             android:id="@+id/tvCustomShaderRound"
-            android:text=" Round Image of Shader Bitmap   > "
-            style="@style/MainTextStyle"/>
+            style="@style/MainTextStyle"
+            android:text=" Round Image of Shader Bitmap   > " />
 
         <TextView
             android:id="@+id/tvCustomDrawableRound"
-            android:text=" Round Image of Drawable   > "
-            style="@style/MainTextStyle"/>
+            style="@style/MainTextStyle"
+            android:text=" Round Image of Drawable   > " />
 
         <TextView
             android:id="@+id/tvCustomDrawableState"
-            android:text=" Drawable State  > "
-            style="@style/MainTextStyle"/>
+            style="@style/MainTextStyle"
+            android:text=" Drawable State  > " />
 
         <TextView
             android:id="@+id/tvCustomCircleMenu"
-            android:text=" Circle Menu  > "
-            style="@style/MainTextStyle"/>
+            style="@style/MainTextStyle"
+            android:text=" Circle Menu  > " />
 
         <TextView
             android:id="@+id/tvCustomFlabbyBird"
-            android:text=" Flabby Bird  > "
-            style="@style/MainTextStyle"/>
+            style="@style/MainTextStyle"
+            android:text=" Flabby Bird  > " />
 
         <TextView
             android:id="@+id/tvCustomLuckyPlate"
-            android:text=" Lucky Plate  > "
-            style="@style/MainTextStyle"/>
+            style="@style/MainTextStyle"
+            android:text=" Lucky Plate  > " />
 
         <TextView
             android:id="@+id/tvCustomGamePuzzle"
-            android:text=" Game Puzzle  > "
-            style="@style/MainTextStyle"/>
+            style="@style/MainTextStyle"
+            android:text=" Game Puzzle  > " />
 
         <TextView
             android:id="@+id/tvCustomGame2048"
-            android:text=" Game 2048  > "
-            style="@style/MainTextStyle"/>
+            style="@style/MainTextStyle"
+            android:text=" Game 2048  > " />
 
         <TextView
             android:id="@+id/tvClipImage"
-            android:text=" Clip Image > "
-            style="@style/MainTextStyle"/>
+            style="@style/MainTextStyle"
+            android:text=" Clip Image > " />
+
+        <TextView
+            android:id="@+id/tvNestedScroll"
+            style="@style/MainTextStyle"
+            android:text=" Nested Scroll Layout > " />
 
     </LinearLayout>
 

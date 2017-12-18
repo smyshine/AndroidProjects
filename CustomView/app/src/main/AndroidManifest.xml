@@ -36,7 +36,8 @@
         <activity android:name=".activity.CustomLuckyPlateActivity" />
         <activity android:name=".activity.GamePuzzleActivity" />
         <activity android:name=".activity.Game2048Activity" />
-        <activity android:name=".activity.ClipImageActivity"></activity>
+        <activity android:name=".activity.ClipImageActivity" />
+        <activity android:name=".activity.NestedScrollActivity"></activity>
     </application>
 
 </manifest>

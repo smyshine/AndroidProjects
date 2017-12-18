@@ -26,6 +26,7 @@ import com.customview.activity.CustomViewTextActivity;
 import com.customview.activity.CustomViewVolumeActivity;
 import com.customview.activity.Game2048Activity;
 import com.customview.activity.GamePuzzleActivity;
+import com.customview.activity.NestedScrollActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -51,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         Puzzle(R.id.tvCustomGamePuzzle, GamePuzzleActivity.class),
         Game2018(R.id.tvCustomGame2048, Game2048Activity.class),
         ClipImage(R.id.tvClipImage, ClipImageActivity.class),
+        NestedScrollView(R.id.tvNestedScroll, NestedScrollActivity.class),
         ;
 
         int id;
