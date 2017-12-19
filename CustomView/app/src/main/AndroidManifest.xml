@@ -37,7 +37,9 @@
         <activity android:name=".activity.GamePuzzleActivity" />
         <activity android:name=".activity.Game2048Activity" />
         <activity android:name=".activity.ClipImageActivity" />
-        <activity android:name=".activity.NestedScrollActivity"></activity>
+        <activity android:name=".activity.NestedScrollActivity" />
+        <activity android:name=".activity.CollapseLayoutActivity" />
+        <activity android:name=".activity.ViewPagerActivity"></activity>
     </application>
 
 </manifest>

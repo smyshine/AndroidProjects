@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.customview.activity.ClipImageActivity;
+import com.customview.activity.CollapseLayoutActivity;
 import com.customview.activity.CustomCircleMenuActivity;
 import com.customview.activity.CustomDrawableStateActivity;
 import com.customview.activity.CustomDrawerViewActivity;
@@ -27,6 +28,7 @@ import com.customview.activity.CustomViewVolumeActivity;
 import com.customview.activity.Game2048Activity;
 import com.customview.activity.GamePuzzleActivity;
 import com.customview.activity.NestedScrollActivity;
+import com.customview.activity.ViewPagerActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -53,6 +55,8 @@ public class MainActivity extends AppCompatActivity {
         Game2018(R.id.tvCustomGame2048, Game2048Activity.class),
         ClipImage(R.id.tvClipImage, ClipImageActivity.class),
         NestedScrollView(R.id.tvNestedScroll, NestedScrollActivity.class),
+        CollapsingView(R.id.tvCollapsing, CollapseLayoutActivity.class),
+        ViewPager(R.id.tvPager, ViewPagerActivity.class),
         ;
 
         int id;

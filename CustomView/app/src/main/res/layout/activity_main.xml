@@ -120,6 +120,16 @@
             style="@style/MainTextStyle"
             android:text=" Nested Scroll Layout > " />
 
+        <TextView
+            android:id="@+id/tvCollapsing"
+            style="@style/MainTextStyle"
+            android:text=" Collapsing Layout > " />
+
+        <TextView
+            android:id="@+id/tvPager"
+            style="@style/MainTextStyle"
+            android:text=" View Pager > " />
+
     </LinearLayout>
 
 </ScrollView>
