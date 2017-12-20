@@ -11,6 +11,8 @@ import java.util.List;
 
 public class TransformerHelper {
 
+    public static final int VERTICAL_PAGER_INDEX = 9;
+
     public static List<String> getTransformerList(){
         List<String> list = new ArrayList<>();
         list.add("Card Flip over");//1
@@ -22,6 +24,7 @@ public class TransformerHelper {
         list.add("Depth Card");//7
         list.add("Cubes");//8
         list.add("Zoom in");//9
+        list.add("Vertical ");//10
         return list;
     }
 
@@ -43,6 +46,8 @@ public class TransformerHelper {
                 return new CubesPagesTransformer();
             case 9:
                 return new ZoomInPageTransformer();
+            case 10:
+                return new VerticalDefaultPageTransformer();
             default:
                 return new CardFlipoverPageTransformer();
         }

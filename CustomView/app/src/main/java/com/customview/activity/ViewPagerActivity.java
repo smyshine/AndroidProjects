@@ -16,6 +16,7 @@ import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
 
 import com.customview.R;
+import com.customview.VerticalViewPager;
 import com.customview.activity.transformer.TransformerHelper;
 import com.zhy.base.adapter.ViewHolder;
 import com.zhy.base.adapter.recyclerview.CommonAdapter;
@@ -29,6 +30,7 @@ public class ViewPagerActivity extends AppCompatActivity {
     private static final String TAG = "ViewPagerActivity";
 
     public static final String EFFECT_TYPE = "effect";
+    private static final String VERTICAL_PAGER = "vertical";
 
     int[] mColor = {R.color.a, R.color.b, R.color.c, R.color.d, R.color.e, R.color.f, R.color.g,
             R.color.a, R.color.b, R.color.c, R.color.d, R.color.e, R.color.f, R.color.g};
@@ -42,10 +44,18 @@ public class ViewPagerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_view_pager);
 
         int effect = getIntent().getIntExtra(EFFECT_TYPE, 0);
+        boolean vertical = getIntent().getBooleanExtra(VERTICAL_PAGER, false);
 
         initMenu();
 
-        ViewPager viewPager = (ViewPager) findViewById(R.id.viewPager);
+        ViewPager viewPager;
+        if (vertical){
+            viewPager = (VerticalViewPager) findViewById(R.id.verticalViewPager);
+            viewPager.setOverScrollMode(View.OVER_SCROLL_NEVER);
+        } else {
+            viewPager = (ViewPager) findViewById(R.id.viewPager);
+        }
+        viewPager.setVisibility(View.VISIBLE);
         viewPager.setPageMargin(1);
         viewPager.setOffscreenPageLimit(5);
 
@@ -127,6 +137,7 @@ public class ViewPagerActivity extends AppCompatActivity {
             public void onItemClick(ViewGroup parent, View view, Object o, int position) {
                 Intent intent = new Intent(ViewPagerActivity.this, ViewPagerActivity.class);
                 intent.putExtra(EFFECT_TYPE, position + 1);
+                intent.putExtra(VERTICAL_PAGER, position == TransformerHelper.VERTICAL_PAGER_INDEX);
                 startActivity(intent);
                 finish();
             }
