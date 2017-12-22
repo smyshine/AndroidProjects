@@ -1,4 +1,4 @@
-package com.customview;
+package com.customview.activity;
 
 import android.content.Context;
 import android.support.v4.view.ViewPager;

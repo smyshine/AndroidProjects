@@ -21,7 +21,7 @@
             android:layout_margin="50dp"
             android:visibility="gone"/>
 
-        <com.customview.VerticalViewPager
+        <com.customview.activity.VerticalViewPager
             android:id="@+id/verticalViewPager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

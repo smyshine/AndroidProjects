@@ -130,6 +130,13 @@
             style="@style/MainTextStyle"
             android:text=" View Pager > " />
 
+        <TextView
+            android:id="@+id/tvRecycler"
+            style="@style/MainTextStyle"
+            android:text=" Recycler View > " />
+
+
+
     </LinearLayout>
 
 </ScrollView>

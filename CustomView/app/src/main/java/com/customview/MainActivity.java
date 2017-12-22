@@ -28,6 +28,7 @@ import com.customview.activity.CustomViewVolumeActivity;
 import com.customview.activity.Game2048Activity;
 import com.customview.activity.GamePuzzleActivity;
 import com.customview.activity.NestedScrollActivity;
+import com.customview.activity.RecyclerActivity;
 import com.customview.activity.ViewPagerActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -57,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
         NestedScrollView(R.id.tvNestedScroll, NestedScrollActivity.class),
         CollapsingView(R.id.tvCollapsing, CollapseLayoutActivity.class),
         ViewPager(R.id.tvPager, ViewPagerActivity.class),
+        RecyclerView(R.id.tvRecycler, RecyclerActivity.class),
         ;
 
         int id;

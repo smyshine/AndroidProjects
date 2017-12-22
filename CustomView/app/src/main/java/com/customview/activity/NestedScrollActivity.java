@@ -7,7 +7,6 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 
 import com.customview.R;
-import com.customview.TabsFragment;
 import com.customview.view.SimpleViewPagerIndicator;
 
 public class NestedScrollActivity extends AppCompatActivity {

@@ -16,7 +16,6 @@ import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
 
 import com.customview.R;
-import com.customview.VerticalViewPager;
 import com.customview.activity.transformer.TransformerHelper;
 import com.zhy.base.adapter.ViewHolder;
 import com.zhy.base.adapter.recyclerview.CommonAdapter;
