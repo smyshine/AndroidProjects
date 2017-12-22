@@ -13,6 +13,11 @@
 #include "ImageColorAdjuster.h"
 #include "ImageBlender.h"
 
+//OpenGLES
+#include <egl/egl.h>
+#include <egl/eglext.h>
+#include <GLES3/gl3.h>
+
 //#define STITCH_EDGE
 
 namespace YiPanorama {
@@ -39,8 +44,16 @@ enum extParamType
 
 
 // OpenGL rendering (reserved)
-struct DescriptorGL
+struct DescriptorGLES
 {
+	// opengles context
+	GLboolean isInitialized;
+	EGLDisplay eglDisplay;
+	EGLint majorVersion, minorVersion;
+	EGLConfig eglConfig;
+	EGLSurface eglSurface;
+	EGLContext eglContext;
+
 	GLint heightSrc, widthSrc; // image frame width, height;
 	GLint heightDst, widthDst;
 	GLchar *vertexShaderWarpSrc;
@@ -87,7 +100,7 @@ public:
 
     // choose to initialize from default file or media file metadata
     //int init(char *filePath, complexLevel ComplexLevel, int panoW, int panoH);
-    int init(fisheyePanoParams *pFisheyePanoParams, complexLevel ComplexLevel, int panoW, int panoH);
+    int init(fisheyePanoParams *pFisheyePanoParams, complexLevel ComplexLevel, int panoW, int panoH, const char* dat);
 
     int updateFisheyePanoParams(fisheyePanoParams *pFisheyePanoParams);
     int updateFisheyeCenters(fisheyePanoParams *pFisheyePanoParams);
@@ -113,24 +126,24 @@ private:
     int setWorkParams(complexLevel ComplexLevel);    // fisheyePanoParamsCore and cameraMetadatas
     int setWarpers();       // check warp device and generate warp tables
 	int initBlender(ImageBlender *pImageBlender, int sizeW, int sizeH); // initial imageBlender;
-	int setBlendMask(ImageBlender *pImageBlender, char *maskFilePath, int panoW, int panoH); // load mask for imageBlender;
-    int setWorkMems();      // image and roi memories
+	int setBlendMask(ImageBlender *pImageBlender, const char *maskFilePath, int panoW, int panoH); // load mask for imageBlender;
+    int setWorkMems(const char* dat);      // image and roi memories
 
     int clean();
 
     int visualizeTable(char *filePath, int srcImgW, int srcImgH);
     int drawStitchingEdge(imageFrame panoImage);    // for test only
 
-	int initWarpVerticesGL(ImageWarper *pImageWarper, DescriptorGL *pDescriptorGL); // produce vertices data and VAO / VBO / EBO
-	int deInitWarpVerticesGL(DescriptorGL *pDescriptorGL);
-	int initWarpGL(ImageWarper *pImageWarper, DescriptorGL *pDescirptorGL);
-	int warpImageGL(ImageWarper *pImageWarper, DescriptorGL *pDescirptorGL, imageFrame *srcImage, imageFrame *proImage);
-	int initColAdjBlendGL(DescriptorGL *pDescriptorGL);
-	int deInitColAdjBlendGL(DescriptorGL *pDescriptorGL);
-	int initColorAdjCoefGL(colorAdjustTarget *pColorAdjTarget, ImageBlender *pImageBlender, DescriptorGL *pDescriptorGL);
-	int deInitColorAdjCoefGL(DescriptorGL *pDescriptorGL);
-	int colorAdjustRGBChnScanlineGL(imageFrame *pImageFrame, colorAdjustTarget *pColorAdjTarget, colorAdjusterPair *pColorAdjPair, ImageBlender *pImageBlender, DescriptorGL *pDescriptorGL);
-	int deinitWarpGL(DescriptorGL *pDescirptorGL);
+	int initWarpVerticesGLES(ImageWarper *pImageWarper, DescriptorGLES *pDescriptorGLES); // produce vertices data and VAO / VBO / EBO
+	int deInitWarpVerticesGLES(DescriptorGLES *pDescriptorGLES);
+	int initWarpGLES(ImageWarper *pImageWarper, DescriptorGLES *pDescirptorGL);
+	int warpImageGLES(ImageWarper *pImageWarper, DescriptorGLES *pDescirptorGL, imageFrame *srcImage, imageFrame *proImage);
+	int initColAdjBlendGLES(DescriptorGLES *pDescriptorGLES);
+	int deInitColAdjBlendGLES(DescriptorGLES *pDescriptorGLES);
+	int initColorAdjCoefGLES(colorAdjustTarget *pColorAdjTarget, ImageBlender *pImageBlender, DescriptorGLES *pDescriptorGLES);
+	int deInitColorAdjCoefGLES(DescriptorGLES *pDescriptorGLES);
+	int colorAdjustRGBChnScanlineGLES(imageFrame *pImageFrame, colorAdjustTarget *pColorAdjTarget, colorAdjusterPair *pColorAdjPair, ImageBlender *pImageBlender, DescriptorGLES *pDescriptorGLES);
+	int deinitWarpGLES(DescriptorGLES *pDescirptorGL);
 	int storePanoImage(imageFrame *renderResult, imageFrame *panoImage);
     // params from metadata
     fisheyePanoParams mFisheyePanoParams;   // this struct only for initialize from metadata/default file
@@ -164,7 +177,7 @@ private:
 
 	// device for opengl, for stitch / color adjust / blend
 	bool openGLStitch;
-	DescriptorGL mDescriptorGL;
+	DescriptorGLES mDescriptorGL;
 };
 
 

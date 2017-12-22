@@ -20,7 +20,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Stitcher.getInstance().imageStitch("/storage/emulated/0/vrsmy/stitch-in.jpg",
                         "/storage/emulated/0/vrsmy/stitch-out.jpg",
-                        "/storage/emulated/0/vrsmy/stitch.txt"
+                        "/storage/emulated/0/vrsmy/stitch.txt",
+                        "/storage/emulated/0/vrsmy/normal_blend_mask.dat"
                 );
             }
         });

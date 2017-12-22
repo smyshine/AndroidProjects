@@ -37,10 +37,11 @@ void saveRGBImage(const char* path, imageFrame panoImage){
 extern "C"
 JNIEXPORT void JNICALL
 Java_com_panostitch_Stitcher_imageStitch(JNIEnv *env, jobject instance, jstring src_,
-                                             jstring dst_, jstring params_) {
+                                             jstring dst_, jstring params_, jstring datPath_) {
     const char *src = env->GetStringUTFChars(src_, 0);
     const char *dst = env->GetStringUTFChars(dst_, 0);
     const char *par = env->GetStringUTFChars(params_, 0);
+    const char *datPath = env->GetStringUTFChars(datPath_, 0);
 
     LOGEE("image stitch start");
 
@@ -56,7 +57,7 @@ Java_com_panostitch_Stitcher_imageStitch(JNIEnv *env, jobject instance, jstring 
     int panoHeight = stParams.stFisheyePanoParamsCore.panoImgH;
 
     LOGEE("image stitch init comp");
-    stStitherComp.init(&stParams, normal, panoWidth, panoHeight);
+    stStitherComp.init(&stParams, normal, panoWidth, panoHeight, datPath);
 
     LOGEE("image stitch init frame");
     initImageFrame(&panoImage, panoWidth, panoHeight, PIXELCOLORSPACE_RGB);
@@ -91,4 +92,5 @@ Java_com_panostitch_Stitcher_imageStitch(JNIEnv *env, jobject instance, jstring 
 
     env->ReleaseStringUTFChars(src_, src);
     env->ReleaseStringUTFChars(dst_, dst);
+    env->ReleaseStringUTFChars(datPath_, datPath);
 }
