@@ -36,6 +36,62 @@ public class RecyclerActivity extends AppCompatActivity implements
         scrollRecyclerView.addScrollStateChangeListener(this);
         scrollRecyclerView.scrollToPosition(0);
         scrollRecyclerView.setItemTransitionTimeMillis(50);
+
+
+        /**
+         *
+          //实现平滑滑动还有最新简单的方法，不会让选中的显示在center位置
+         1.create a layout manager class
+         public class SmoothLinearLayoutManager extends LinearLayoutManager {
+
+         private Context context;
+         private static final float SPEED = 200f;
+
+         public SmoothLinearLayoutManager(Context context) {
+         super(context);
+         this.context = context;
+         }
+
+         @Override
+         public void smoothScrollToPosition(RecyclerView recyclerView, RecyclerView.State state, int position) {
+         LinearSmoothScroller scroller = new LinearSmoothScroller(context) {
+
+         @Override
+         protected float calculateSpeedPerPixel(DisplayMetrics displayMetrics) {
+         return SPEED / displayMetrics.densityDpi;
+         }
+         };
+
+         scroller.setTargetPosition(position);
+         startSmoothScroll(scroller);
+         }
+         }
+
+         2.save parent recycler view in adapter
+         @Override
+         public void onAttachedToRecyclerView(RecyclerView recyclerView) {
+         super.onAttachedToRecyclerView(recyclerView);
+         parentRecycler = recyclerView;
+         }
+
+         3.call smooth scroll when onclik in adapter's viewHolder
+         @Override
+         public void onClick(View v) {
+         parentRecycler.smoothScrollToPosition(getAdapterPosition());
+         }
+
+         4.recycler view set layout manager and adapter above
+         mRecyclerView = (RecyclerView) findViewById(R.id.rv_filter);
+         LinearLayoutManager linearLayoutManager = new SmoothLinearLayoutManager(this);
+         linearLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
+         mRecyclerView.setLayoutManager(linearLayoutManager);
+         mAdapter = new FilterAdapter(this);
+         mRecyclerView.setAdapter(mAdapter);
+
+
+         *
+         * */
+
     }
 
 
