@@ -141,8 +141,6 @@ private:
 	int warpImageGLES(ImageWarper *pImageWarper, DescriptorGLES *pDescirptorGL, imageFrame *srcImage, int idx);
 	int initColAdjBlendGLES(DescriptorGLES *pDescriptorGLES);
 	int deInitColAdjBlendGLES(DescriptorGLES *pDescriptorGLES);
-	int initColorAdjCoefGLES(colorAdjustTarget *pColorAdjTarget, ImageBlender *pImageBlender, DescriptorGLES *pDescriptorGLES);
-	int deInitColorAdjCoefGLES(DescriptorGLES *pDescriptorGLES);
 	int colorAdjustRGBChnScanlineGLES(/*imageFrame *pImageFrame, colorAdjustTarget *pColorAdjTarget, colorAdjusterPair *pColorAdjPair,*/ ImageBlender *pImageBlender, DescriptorGLES *pDescriptorGLES, int idx);
 	int deinitWarpGLES(DescriptorGLES *pDescirptorGL);
 	int storePanoImagePBO(imageFrame *panoImage, DescriptorGLES *pDescirptorGL);

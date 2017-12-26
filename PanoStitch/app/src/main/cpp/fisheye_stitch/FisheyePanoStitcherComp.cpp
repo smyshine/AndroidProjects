@@ -5,10 +5,6 @@
 
 #include "ImageIOConverter.h"
 
-//#include <glm/glm.hpp>
-//#include <glm/gtc/matrix_transform.hpp>
-//#include <glm/gtc/type_ptr.hpp>
-
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -19,27 +15,13 @@
 namespace YiPanorama {
 namespace fisheyePano {
 
-#define SIGMA 4
 #define SPARSE_STEP 40
-#define PYRA_BRICK_CONST 16
-#define PI_HALF_ANGLE   90.0
 #define PI_ANGLE        180.0
 #define PI_2_ANGLE      360.0
-#define MATCH_POINT_DIST_THRES 30
 #define M_PI       3.14159265358979323846   // pi
 
 #define GEN_NORMAL_BLEND_MASK 0
 
-//#define TMP_IMG_SAVE
-
-
-#ifdef TMP_IMG_SAVE
-    //char folder[512] = { "E:\\Solutions\\Repo_root\\VR_Algo\\Stitching\\VR_Camera\\testdata\\2880" };
-    char folder[512] = { "E:\\Solutions\\Repo_root\\VR_Algo\\Stitching\\VR_Camera\\testdata\\V10" };
-    char fileName[512];
-    FILE *fp = NULL;
-
-#endif
 	int rgba2rgb(const GLubyte* rgbaSrc, GLubyte *rgbDst, const int width, const int height)
 	{
 		if (rgbaSrc == NULL || rgbDst == NULL || width < 0 || height < 0)
@@ -154,13 +136,6 @@ int fisheyePanoStitcherComp::setWarpers()       // check warp device and generat
 			mImageWarperB[i].init(projImgW, projImgH, vertPixelUp[i % 4], vertPixelDown[i % 4], horiPixelLeft[i % 4], horiPixelRight[i % 4], true, stepX, stepY, false);
 			mImageWarperB[i].setWarpDevice(useOpengl);
 		}
-
-// #if GEN_NORMAL_BLEND_MASK
-//         // for mask generating only
-//         mImageWarperB[2].init(projImgW, projImgH, vertAngleUp, vertAngleDown, horiAngleLeft, horiAngleRight, false, stepX, stepY, false);
-//         mImageWarperB[2].setWarpDevice(useSoftware);
-//
-// #endif
 
 		break;
     default:
@@ -345,7 +320,7 @@ int fisheyePanoStitcherComp::setWorkMems(const char* dat)      // image and roi 
 		{
 			mImageBlender[i].init(mImageWarperB[0].mWarpImageW, mImageWarperB[0].mWarpImageH);
 		}
-        setBlendMask(mImageBlender, dat/*".\\normal_blend_mask.dat"*/, 5760, 2880);
+        setBlendMask(mImageBlender, dat, 5760, 2880);
 
 #endif
 
@@ -354,38 +329,6 @@ int fisheyePanoStitcherComp::setWorkMems(const char* dat)      // image and roi 
     default:
         break;
     }
-//
-//#ifdef STITCH_EDGE
-//    unsigned char *pTmpMask = NULL;
-//    if (simple != mComplexLevel)
-//    {
-//        tmpMask = new unsigned char[mImageWarper[2].mWarpImageW * mImageWarper[2].mWarpImageH];
-//        memset(tmpMask, 0, mImageWarperB[2].mWarpImageW * mImageWarperB[2].mWarpImageH);
-//
-//        pTmpMask = tmpMask + mImageWarperB[2].mWarpImageW * (mImageWarperB[2].mWarpImageH - mSeamWidth) / 2;
-//        memset(pTmpMask, 255, mImageWarperB[2].mWarpImageW);
-//        pTmpMask += mImageWarperB[2].mWarpImageW * mSeamWidth;
-//        memset(pTmpMask, 255, mImageWarperB[2].mWarpImageW);
-//        mImageBlender.pMaskStitchEdge = new unsigned char[mImageWarper[2].mWarpImageW * mImageWarper[2].mWarpImageH];
-//        mImageWarperB[2].warpImageSoftFullWithoutVCSingleChn(tmpMask, mImageBlender.pMaskStitchEdge);
-//
-//        delete[] tmpMask;
-//        tmpMask = NULL;
-//    }
-//    //else
-//    //{
-//    //    mImageBlender.pMaskStitchEdge = new unsigned char[pSeamRois[0].roiW, pSeamRois[0].roiH];
-//    //    memset(mImageBlender.pMaskStitchEdge, 0, pSeamRois[0].roiW * pSeamRois[0].roiH);
-//    //    pTmpMask = mImageBlender.pMaskStitchEdge;
-//    //    int gap = pSeamRois[0].roiW - 1;
-//    //    for (int k = 0; k < pSeamRois[0].roiH; k++)
-//    //    {
-//    //        *pTmpMask = 255;
-//    //        *(pTmpMask + gap) = 255;
-//    //        pTmpMask += pSeamRois[0].roiW;
-//    //    }
-//    //}
-//#endif
 
     return 0;
 }
@@ -415,7 +358,6 @@ int fisheyePanoStitcherComp::clean()
     mColorAdjusterPair.dinit();
 	for (int i = 0; i != 4; ++i)
 		mImageBlender[i].dinit();
-   // mOptFlow.dinit();
     return 0;
 }
 
@@ -583,11 +525,6 @@ int fisheyePanoStitcherComp::initWarpGLES(ImageWarper *pImageWarper, DescriptorG
 
 		"void main()\n"
 		"{\n"
-		//"vec4 adjTarColor = texture(ourtexture1, TexCoords);\n"
-		//"float Y = adjTarColor.r * 0.229 + adjTarColor.g * 0.587 + adjTarColor.b * 0.114;\n"
-		//"vec3 cof = 1.0 + ((texture(adjCof, vec2(1.0, TexCoords.y)) - 1.0) * exploreWeight[int(255.0 * Y)]).rgb;\n"
-		//"adjTarColor = vec4(adjTarColor.rgb * cof, 1.0);\n"
-		//"color = mix(texture(ourtexture0, TexCoords), adjTarColor, 1.0 - texture(ourMask, TexCoords).r);\n"
 		"color = mix(texture(ourtexture0, TexCoords), texture(ourtexture1, TexCoords), 1.0 - texture(ourMask, TexCoords).r);\n"
 		"}";
 
@@ -630,9 +567,6 @@ int fisheyePanoStitcherComp::initWarpGLES(ImageWarper *pImageWarper, DescriptorG
 	glGetIntegerv(GL_MAX_COLOR_ATTACHMENTS, &maxAttachment);
 
 	glBindFramebuffer(GL_FRAMEBUFFER, 0);
-	//glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_RENDERBUFFER, pDescriptorGLES->textureColorBuffer);
-	//if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE)
-	//	std::cout << "ERROR::FRAMEBUFFER:: Framebuffer is not complete!" << std::endl;
 
 	glGenBuffers(4, pDescriptorGLES->pixelBuffer);
 	for (int i = 0; i != 4; ++i)
@@ -792,22 +726,11 @@ int fisheyePanoStitcherComp::warpImageGLES(ImageWarper *pImageWarper, Descriptor
 	glBindVertexArray(0);
 	// deattach image;
 	glBindTexture(GL_TEXTURE_2D, 0);
-
-	//glReadBuffer(pDescriptorGLES->attachmentpoints[idx % 4]);
 	if (GL_NO_ERROR != glGetError())
 	{
 		std::cout << "ERROR::3" << std::endl;
 	}
 
-	// can not readpixel in GL_RGB format, so read rgba and transform to rgb;
-	//GLubyte *tempImage = new GLubyte[pDescriptorGLES->widthDst * pDescriptorGLES->heightDst * 4];
-	//memset(tempImage, 128, sizeof(GLubyte) * pDescriptorGLES->widthDst * pDescriptorGLES->heightDst * 4);
-	//glReadPixels(0, 0, (GLuint)pDescriptorGLES->widthDst, (GLuint)pDescriptorGLES->heightDst, GL_RGBA, GL_UNSIGNED_BYTE, tempImage);
-	//rgba2rgb(tempImage, proImage->plane[0], pDescriptorGLES->widthDst, pDescriptorGLES->heightDst);
-	//delete[] tempImage;
-	//glFlush();
-
-	//SOIL_save_image("Yresult.bmp", SOIL_SAVE_TYPE_BMP, pDescriptorGLES->widthDst, pDescriptorGLES->heightDst, 3, proImage->plane[0]);
 	// deattach framebuffer;
 	glBindFramebuffer(GL_FRAMEBUFFER, 0);
 
@@ -818,21 +741,6 @@ int fisheyePanoStitcherComp::warpImageGLES(ImageWarper *pImageWarper, Descriptor
 
 int fisheyePanoStitcherComp::initColAdjBlendGLES(DescriptorGLES *pDescriptorGLES)
 {
-	//// Texture 1
-	//glGenTextures(1, &pDescriptorGLES->texture);
-	//glBindTexture(GL_TEXTURE_2D, pDescriptorGLES->texture);
-	//glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB8, pDescriptorGLES->widthDst, pDescriptorGLES->heightDst, 0, GL_RGB, GL_UNSIGNED_BYTE, NULL);
-	//glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-	//glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-	//glBindTexture(GL_TEXTURE_2D, 0);
-	//// texture 2
-	//glGenTextures(1, &pDescriptorGLES->texture1);
-	//glBindTexture(GL_TEXTURE_2D, pDescriptorGLES->texture1);
-	//glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB8, pDescriptorGLES->widthDst, pDescriptorGLES->heightDst, 0, GL_RGB, GL_UNSIGNED_BYTE, NULL);
-	//glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-	//glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-	//glBindTexture(GL_TEXTURE_2D, 0);
-
 	// texture Mask
 	glGenTextures(1, &pDescriptorGLES->textureMask);
 	glBindTexture(GL_TEXTURE_2D, pDescriptorGLES->textureMask);
@@ -875,10 +783,8 @@ int fisheyePanoStitcherComp::initColAdjBlendGLES(DescriptorGLES *pDescriptorGLES
 }
 
 int fisheyePanoStitcherComp::deInitColAdjBlendGLES(DescriptorGLES *pDescriptorGLES)
-{//  delete textures
-	//glDeleteTextures(1, &pDescriptorGLES->texture);
-	//glDeleteTextures(1, &pDescriptorGLES->texture1);
-
+{
+	//delete textures
 	glDeleteTextures(8, pDescriptorGLES->textureColorBuffers);
 	glDeleteTextures(1, &pDescriptorGLES->textureAdjCoef);
 	glDeleteTextures(1, &pDescriptorGLES->textureMask);
@@ -903,32 +809,6 @@ int fisheyePanoStitcherComp::deInitColAdjBlendGLES(DescriptorGLES *pDescriptorGL
 	return 0;
 }
 
-int fisheyePanoStitcherComp::initColorAdjCoefGLES(colorAdjustTarget *pColorAdjTarget, ImageBlender *pImageBlender, DescriptorGLES *pDescriptorGLES)
-{// initial data for color adjust and blend, include explore weight, color coefficient, blend mask;
-
-	//process the color coefficient;
-	int coefLen = pColorAdjTarget->coeffsLen[0];
-	pDescriptorGLES->coefRGB = new float[coefLen * 3]; // for R,G,B three channel;
-	float *coefR = pColorAdjTarget->coeffs[0];
-	float *coefG = pColorAdjTarget->coeffs[1];
-	float *coefB = pColorAdjTarget->coeffs[2];
-
-	for (int i = 0; i != coefLen; ++i)
-	{
-		pDescriptorGLES->coefRGB[3 * i + 0] = coefR[i];
-		pDescriptorGLES->coefRGB[3 * i + 1] = coefG[i];
-		pDescriptorGLES->coefRGB[3 * i + 2] = coefB[i];
-	}
-
-	return 0;
-}
-
-int fisheyePanoStitcherComp::deInitColorAdjCoefGLES(DescriptorGLES *pDescriptorGLES)
-{
-	delete[] pDescriptorGLES->coefRGB;
-	return 0;
-}
-
 int fisheyePanoStitcherComp::colorAdjustRGBChnScanlineGLES(/*imageFrame *pImageFrame, colorAdjustTarget *pColorAdjTarget, colorAdjusterPair *pColorAdjPair,*/ ImageBlender *pImageBlender, DescriptorGLES *pDescriptorGLES, int idx)
 {// adjust the image between borders using the coefficients which has same length of the image
  // and the weights is the exposure curbs
@@ -938,10 +818,6 @@ int fisheyePanoStitcherComp::colorAdjustRGBChnScanlineGLES(/*imageFrame *pImageF
 	glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, pDescriptorGLES->widthDst, pDescriptorGLES->heightDst,
 		GL_RED, GL_UNSIGNED_BYTE, pImageBlender->pMaskY);
 	glBindTexture(GL_TEXTURE_2D, 0);
-	// texture coefficient
-	//glBindTexture(GL_TEXTURE_2D, pDescriptorGLES->textureAdjCoef);
-	//glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, 1, pDescriptorGLES->heightDst, GL_RGB, GL_FLOAT, pDescriptorGLES->coefRGB);
-	//glBindTexture(GL_TEXTURE_2D, 0);
 
 	//bind framebuffer
 	glBindFramebuffer(GL_FRAMEBUFFER, pDescriptorGLES->framebuffer);
@@ -976,23 +852,10 @@ int fisheyePanoStitcherComp::colorAdjustRGBChnScanlineGLES(/*imageFrame *pImageF
 		glBindTexture(GL_TEXTURE_2D, pDescriptorGLES->textureColorBuffers[idx - 4]);
 		glUniform1i(glGetUniformLocation(pDescriptorGLES->shaderColorAdj.Program, "ourtexture1"), 1);
 	}
-	/*glActiveTexture(GL_TEXTURE0);
-	glBindTexture(GL_TEXTURE_2D, pDescriptorGLES->texture);
-	glUniform1i(glGetUniformLocation(pDescriptorGLES->shaderColorAdj.Program, "ourtexture0"), 0);
-
-	glActiveTexture(GL_TEXTURE1);
-	glBindTexture(GL_TEXTURE_2D, pDescriptorGLES->texture1);
-	glUniform1i(glGetUniformLocation(pDescriptorGLES->shaderColorAdj.Program, "ourtexture1"), 1);*/
 
 	glActiveTexture(GL_TEXTURE2);
 	glBindTexture(GL_TEXTURE_2D, pDescriptorGLES->textureMask);
 	glUniform1i(glGetUniformLocation(pDescriptorGLES->shaderColorAdj.Program, "ourMask"), 2);
-
-	//glActiveTexture(GL_TEXTURE3);
-	//glBindTexture(GL_TEXTURE_2D, pDescriptorGLES->textureAdjCoef);
-	//glUniform1i(glGetUniformLocation(pDescriptorGLES->shaderColorAdj.Program, "adjCof"), 3);
-
-	//glUniform1fv(glGetUniformLocation(pDescriptorGLES->shaderColorAdj.Program, "exploreWeight"), 256, pColorAdjPair->mExpoCurbWeights);
 
 	// bind VAO
 	glBindVertexArray(pDescriptorGLES->VAO);
@@ -1009,30 +872,13 @@ int fisheyePanoStitcherComp::colorAdjustRGBChnScanlineGLES(/*imageFrame *pImageF
 	// can not read pixels in rgb format , so read rgba and transform to rgb;
 	glReadPixels(0, 0, pDescriptorGLES->widthDst, pDescriptorGLES->heightDst, GL_RGBA, GL_UNSIGNED_BYTE, NULL);
 	glFinish();
-	//glBindBuffer(GL_PIXEL_PACK_BUFFER, 0);
 	glBindFramebuffer(GL_FRAMEBUFFER, 0);
-
-	//deInitColorAdjCoefGLES(pDescriptorGLES);
-
-	
-	//SOIL_save_image("BLENDER.bmp", SOIL_SAVE_TYPE_BMP, pImageFrame->imageW, pImageFrame->imageH, 3, pImageFrame->plane[0]);
 
 	return 0;
 }
 
 int fisheyePanoStitcherComp::storePanoImagePBO(imageFrame *panoImage, DescriptorGLES *pDescirptorGL)
 {// NOT SAVE RGB BUT RGBA IN THE PANOIMAGE, BECAUSE RGBA2RGB IS TOO SLOW;
-//#define RGBA
-#ifdef RGBA
-	GLint strideQuaRGBA = pDescirptorGL->widthDst * 4; // stride of quarter image;
-	GLint stridePanoRGBA = panoImage->imageW * 4;
-	unsigned char *panoQuaImageRGBA[4]; // pointer to address of 4 quarter image;
-	panoQuaImageRGBA[0] = panoImage->plane[0];
-	panoQuaImageRGBA[1] = panoQuaImageRGBA[0] + stridePanoRGBA / 2;
-	panoQuaImageRGBA[2] = panoQuaImageRGBA[0] + stridePanoRGBA * panoImage->imageH / 2;
-	panoQuaImageRGBA[3] = panoQuaImageRGBA[2] + stridePanoRGBA / 2;
-	
-#else
 	unsigned char *renderedImage[4] = { warpedImageB[4].plane[0], warpedImageB[5].plane[0], warpedImageB[6].plane[0], warpedImageB[7].plane[0] };
 	unsigned char *panoQuaImage[4]; // pointer to address of 4 quarter image;
 	panoQuaImage[0] = panoImage->plane[0];
@@ -1040,8 +886,7 @@ int fisheyePanoStitcherComp::storePanoImagePBO(imageFrame *panoImage, Descriptor
 	panoQuaImage[2] = panoQuaImage[0] + panoImage->strides[0] * panoImage->imageH / 2;
 	panoQuaImage[3] = panoQuaImage[2] + panoImage->strides[0] / 2;
 	GLint strideQuaRGB = pDescirptorGL->widthDst * 3; // stride of quarter image;
-#endif // RGBA
-	
+
 	GLubyte *pRGBQua[4] = { NULL };
 
 	for (int i = 0; i != 4; ++i)
@@ -1050,14 +895,6 @@ int fisheyePanoStitcherComp::storePanoImagePBO(imageFrame *panoImage, Descriptor
 		pRGBQua[i] = (GLubyte*)glMapBufferRange(GL_PIXEL_PACK_BUFFER, NULL, pDescirptorGL->widthDst * pDescirptorGL->heightDst * sizeof(GLubyte) * 4, GL_MAP_READ_BIT);
 		if (pRGBQua[i] != NULL)
 		{
-#ifdef RGBA
-			for (int h = 0; h != pDescirptorGL->heightDst; ++h)
-			{
-				memcpy(panoQuaImageRGBA[i], pRGBQua[i], sizeof(unsigned char) * strideQuaRGBA);
-				pRGBQua[i] += strideQuaRGBA;
-				panoQuaImageRGBA[i] += stridePanoRGBA;
-			}
-#else
 			rgba2rgb(pRGBQua[i], renderedImage[i], pDescirptorGL->widthDst, pDescirptorGL->heightDst);
 			for (int h = 0; h != pDescirptorGL->heightDst; ++h)
 			{
@@ -1065,13 +902,10 @@ int fisheyePanoStitcherComp::storePanoImagePBO(imageFrame *panoImage, Descriptor
 				renderedImage[i] += strideQuaRGB;
 				panoQuaImage[i] += panoImage->strides[0];
 			}
-#endif // RGBA
-			
-		}	
-		else
+
+		} else
 		{
-			std::cout << "glMapBuffer failed" << std::endl;
-			GLuint error = glGetError();
+			__android_log_print(ANDROID_LOG_ERROR,"libstitch","glMapBuffer failed");
 		}
 		glUnmapBuffer(GL_PIXEL_PACK_BUFFER);
 	}
@@ -1082,10 +916,6 @@ int fisheyePanoStitcherComp::storePanoImagePBO(imageFrame *panoImage, Descriptor
 
 int fisheyePanoStitcherComp::imageStitch(imageFrame fisheyeImage[2], imageFrame panoImage)  // warping, color adjusting, blending, extra warping
 {
-    unsigned char *ptrSeamL = NULL;
-    unsigned char *ptrSeamR = NULL;
-    int gap;
-
     __android_log_print(ANDROID_LOG_ERROR,"libstitch","init warp gles");
 
     // image warping
@@ -1107,38 +937,22 @@ int fisheyePanoStitcherComp::imageStitch(imageFrame fisheyeImage[2], imageFrame 
 
     deinitWarpGLES(&mDescriptorGL);
 
-    __android_log_print(ANDROID_LOG_ERROR,"libstitch","color coeffs");
-
-    // calculate color adjust coefficients;
-	//mColorAdjusterPair.colorCoeffs();
-
     __android_log_print(ANDROID_LOG_ERROR,"libstitch","init color adj blend gles");
 
     // color adjust and blending;
 	initColAdjBlendGLES(&mDescriptorGL);
 
     __android_log_print(ANDROID_LOG_ERROR,"libstitch","color adjust rgb chn scanline gles");
-	if (/*mColorAdjusterPair.mAdjustIdx == 0*/true)
-	{//adjust target is first image;
-		colorAdjustRGBChnScanlineGLES(&mImageBlender[0], &mDescriptorGL, 4);
-		colorAdjustRGBChnScanlineGLES(&mImageBlender[1], &mDescriptorGL, 5);
-		colorAdjustRGBChnScanlineGLES(&mImageBlender[2], &mDescriptorGL, 6);
-		colorAdjustRGBChnScanlineGLES(&mImageBlender[3], &mDescriptorGL, 7);
-	}
-	else
-	{// adjust target is second image;
-		colorAdjustRGBChnScanlineGLES(&mImageBlender[0], &mDescriptorGL, 0);
-		colorAdjustRGBChnScanlineGLES(&mImageBlender[1], &mDescriptorGL, 1);
-		colorAdjustRGBChnScanlineGLES(&mImageBlender[2], &mDescriptorGL, 2);
-		colorAdjustRGBChnScanlineGLES(&mImageBlender[3], &mDescriptorGL, 3);
-	}
+	colorAdjustRGBChnScanlineGLES(&mImageBlender[0], &mDescriptorGL, 4);
+	colorAdjustRGBChnScanlineGLES(&mImageBlender[1], &mDescriptorGL, 5);
+	colorAdjustRGBChnScanlineGLES(&mImageBlender[2], &mDescriptorGL, 6);
+	colorAdjustRGBChnScanlineGLES(&mImageBlender[3], &mDescriptorGL, 7);
 
     __android_log_print(ANDROID_LOG_ERROR,"libstitch","store pano image");
-storePanoImagePBO(&panoImage, &mDescriptorGL);
+	storePanoImagePBO(&panoImage, &mDescriptorGL);
+
     __android_log_print(ANDROID_LOG_ERROR,"libstitch","d init col adj blend gles");
-
     deInitColAdjBlendGLES(&mDescriptorGL);
-
 
     return 0;
 }
