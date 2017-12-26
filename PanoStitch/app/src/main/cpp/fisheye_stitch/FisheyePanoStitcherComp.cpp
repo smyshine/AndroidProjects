@@ -43,7 +43,8 @@ namespace fisheyePano {
 		return 0;
 	}
 
-    fisheyePanoStitcherComp::fisheyePanoStitcherComp()
+    fisheyePanoStitcherComp::fisheyePanoStitcherComp():
+		pProjImgData(NULL), pSeamImgData(NULL)
     {
 		mDescriptorGL.isInitialized = GL_FALSE;
     }
@@ -188,20 +189,25 @@ int fisheyePanoStitcherComp::setBlendMask(ImageBlender *pImageBlender, const cha
 	{
 		return -1;
 	}
-	unsigned char *pMask[4] = { pImageBlender[0].pMaskY, pImageBlender[1].pMaskY, pImageBlender[2].pMaskY, pImageBlender[3].pMaskY };
+	
+	unsigned char *pMask[4] = 
+	{ 
+		pImageBlender[0].pMaskY, // point to first row
+		pImageBlender[1].pMaskY,  //point to first row
+		pImageBlender[2].pMaskY + (pImageBlender[2].mSizeH - 1) * pImageBlender[2].mSizeW, // point to last row
+		pImageBlender[3].pMaskY + (pImageBlender[3].mSizeH - 1) * pImageBlender[3].mSizeW // point to last row
+	};
 	for (int h = 0; h != pImageBlender[0].mSizeH; ++h)
 	{
 		fread(pMask[0], 1, sizeof(unsigned char) * pImageBlender[0].mSizeW, fp);
 		fread(pMask[1], 1, sizeof(unsigned char) * pImageBlender[0].mSizeW, fp);
+		memcpy(pMask[2], pMask[0], sizeof(unsigned char) * pImageBlender[0].mSizeW);
+		memcpy(pMask[3], pMask[1], sizeof(unsigned char) * pImageBlender[0].mSizeW);
+		
 		pMask[0] += pImageBlender[0].mSizeW;
 		pMask[1] += pImageBlender[0].mSizeW;
-	}
-	for (int h = 0; h != pImageBlender[0].mSizeH; ++h)
-	{
-		fread(pMask[2], 1, sizeof(unsigned char) * pImageBlender[0].mSizeW, fp);
-		fread(pMask[3], 1, sizeof(unsigned char) * pImageBlender[0].mSizeW, fp);
-		pMask[2] += pImageBlender[0].mSizeW;
-		pMask[3] += pImageBlender[0].mSizeW;
+		pMask[2] -= pImageBlender[0].mSizeW;
+		pMask[3] -= pImageBlender[0].mSizeW;
 	}
 
 	fclose(fp);
@@ -236,10 +242,10 @@ int fisheyePanoStitcherComp::setWorkMems(const char* dat)      // image and roi 
     }
 
     // warp image memories ------------------------------------------------------
-    int singleChnProjImgSizeA = mImageWarperB[0].mWarpImageW * mImageWarperB[0].mWarpImageH;
+    /*int singleChnProjImgSizeA = mImageWarperB[0].mWarpImageW * mImageWarperB[0].mWarpImageH;
 	int singleChnProjImgSizeB = singleChnProjImgSizeA;
     pProjImgData = new unsigned char[singleChnProjImgSizeA * 3 * 4 + singleChnProjImgSizeB * 3 * 4];// for 2 projected images in RGB, each pano image is divided in 4 subimage;
-    memset(pProjImgData, 128, singleChnProjImgSizeA * 3 * 4 + singleChnProjImgSizeB * 3 * 4);
+    memset(pProjImgData, 128, singleChnProjImgSizeA * 3 * 4 + singleChnProjImgSizeB * 3 * 4);*/
 
 	for (int i = 0; i != 8; ++i)
 	{
@@ -258,7 +264,7 @@ int fisheyePanoStitcherComp::setWorkMems(const char* dat)      // image and roi 
     pPanoImage.strides[1] = 0;
     pPanoImage.strides[2] = 0;
 
-	for (int i = 0; i != 8; ++i)
+	/*for (int i = 0; i != 8; ++i)
 	{
 		warpedImageB[i].plane[0] = pProjImgData + i * singleChnProjImgSizeA * 3;
 		warpedImageB[i].plane[1] = NULL;
@@ -267,14 +273,14 @@ int fisheyePanoStitcherComp::setWorkMems(const char* dat)      // image and roi 
 
     pPanoImage.plane[0] = pProjImgData;
     pPanoImage.plane[1] = NULL;
-    pPanoImage.plane[2] = NULL;
+    pPanoImage.plane[2] = NULL;*/
 
     // seam image memories blending
-    int singleChnSeamImgSize = pSeamRois[0].roiW * pSeamRois[0].roiH;
+    /*int singleChnSeamImgSize = pSeamRois[0].roiW * pSeamRois[0].roiH;
     pSeamImgData = new unsigned char[mSeamRoisNum * singleChnSeamImgSize * 3]; // R, G, B three channels;
-    memset(pSeamImgData, 128, mSeamRoisNum * singleChnSeamImgSize * 3);
+    memset(pSeamImgData, 128, mSeamRoisNum * singleChnSeamImgSize * 3);*/
 
-    for (int k = 0; k < mSeamRoisNum; k++)
+    /*for (int k = 0; k < mSeamRoisNum; k++)
     {
         pSeamImages[k].imageW = pSeamRois[k].roiW;
         pSeamImages[k].imageH = pSeamRois[k].roiH;
@@ -286,10 +292,10 @@ int fisheyePanoStitcherComp::setWorkMems(const char* dat)      // image and roi 
         pSeamImages[k].plane[0] = pSeamImgData + k * singleChnSeamImgSize * 3;
         pSeamImages[k].plane[1] = NULL;
         pSeamImages[k].plane[2] = NULL;
-    }
+    }*/
 
     // color adjuster
-    switch (mComplexLevel)
+    /*switch (mComplexLevel)
     {
     case normal:
         mColorAdjusterPair.init(8, warpedImageB, 1, pSeamRois, 1, vertical, interleaved);
@@ -297,7 +303,7 @@ int fisheyePanoStitcherComp::setWorkMems(const char* dat)      // image and roi 
 
     default:
         break;
-    }
+    }*/
 
     // image blender
     unsigned char *tmpMask = NULL;
@@ -317,10 +323,11 @@ int fisheyePanoStitcherComp::setWorkMems(const char* dat)      // image and roi 
 
 #else   // load the pre-generated mask
 		for (int i = 0; i != 4; ++i)
-		{
-			mImageBlender[i].init(mImageWarperB[0].mWarpImageW, mImageWarperB[0].mWarpImageH);
+		{ // Blender mask is not need have same size of image in opengl;
+			mImageBlender[i].init(1440 / 2, 720 / 2);
 		}
-        setBlendMask(mImageBlender, dat, 5760, 2880);
+
+        setBlendMask(mImageBlender, dat, 1440, 360);
 
 #endif
 
@@ -329,6 +336,38 @@ int fisheyePanoStitcherComp::setWorkMems(const char* dat)      // image and roi 
     default:
         break;
     }
+//
+//#ifdef STITCH_EDGE
+//    unsigned char *pTmpMask = NULL;
+//    if (simple != mComplexLevel)
+//    {
+//        tmpMask = new unsigned char[mImageWarper[2].mWarpImageW * mImageWarper[2].mWarpImageH];
+//        memset(tmpMask, 0, mImageWarperB[2].mWarpImageW * mImageWarperB[2].mWarpImageH);
+//
+//        pTmpMask = tmpMask + mImageWarperB[2].mWarpImageW * (mImageWarperB[2].mWarpImageH - mSeamWidth) / 2;
+//        memset(pTmpMask, 255, mImageWarperB[2].mWarpImageW);
+//        pTmpMask += mImageWarperB[2].mWarpImageW * mSeamWidth;
+//        memset(pTmpMask, 255, mImageWarperB[2].mWarpImageW);
+//        mImageBlender.pMaskStitchEdge = new unsigned char[mImageWarper[2].mWarpImageW * mImageWarper[2].mWarpImageH];
+//        mImageWarperB[2].warpImageSoftFullWithoutVCSingleChn(tmpMask, mImageBlender.pMaskStitchEdge);
+//
+//        delete[] tmpMask;
+//        tmpMask = NULL;
+//    }
+//    //else
+//    //{
+//    //    mImageBlender.pMaskStitchEdge = new unsigned char[pSeamRois[0].roiW, pSeamRois[0].roiH];
+//    //    memset(mImageBlender.pMaskStitchEdge, 0, pSeamRois[0].roiW * pSeamRois[0].roiH);
+//    //    pTmpMask = mImageBlender.pMaskStitchEdge;
+//    //    int gap = pSeamRois[0].roiW - 1;
+//    //    for (int k = 0; k < pSeamRois[0].roiH; k++)
+//    //    {
+//    //        *pTmpMask = 255;
+//    //        *(pTmpMask + gap) = 255;
+//    //        pTmpMask += pSeamRois[0].roiW;
+//    //    }
+//    //}
+//#endif
 
     return 0;
 }
@@ -358,6 +397,7 @@ int fisheyePanoStitcherComp::clean()
     mColorAdjusterPair.dinit();
 	for (int i = 0; i != 4; ++i)
 		mImageBlender[i].dinit();
+   // mOptFlow.dinit();
     return 0;
 }
 
@@ -525,11 +565,16 @@ int fisheyePanoStitcherComp::initWarpGLES(ImageWarper *pImageWarper, DescriptorG
 
 		"void main()\n"
 		"{\n"
+		//"vec4 adjTarColor = texture(ourtexture1, TexCoords);\n"
+		//"float Y = adjTarColor.r * 0.229 + adjTarColor.g * 0.587 + adjTarColor.b * 0.114;\n"
+		//"vec3 cof = 1.0 + ((texture(adjCof, vec2(1.0, TexCoords.y)) - 1.0) * exploreWeight[int(255.0 * Y)]).rgb;\n"
+		//"adjTarColor = vec4(adjTarColor.rgb * cof, 1.0);\n"
+		//"color = mix(texture(ourtexture0, TexCoords), adjTarColor, 1.0 - texture(ourMask, TexCoords).r);\n"
 		"color = mix(texture(ourtexture0, TexCoords), texture(ourtexture1, TexCoords), 1.0 - texture(ourMask, TexCoords).r);\n"
 		"}";
 
 	pDescriptorGLES->shaderColorAdj.init(pDescriptorGLES->vertexShaderColorAdjSrc, pDescriptorGLES->fragmentShaderColorAdjSrc);
-
+	//std::cout << glGetError() << std::endl;
 	// Source Texture
 	glGenTextures(1, &pDescriptorGLES->texture);
 	glBindTexture(GL_TEXTURE_2D, pDescriptorGLES->texture);
@@ -567,6 +612,9 @@ int fisheyePanoStitcherComp::initWarpGLES(ImageWarper *pImageWarper, DescriptorG
 	glGetIntegerv(GL_MAX_COLOR_ATTACHMENTS, &maxAttachment);
 
 	glBindFramebuffer(GL_FRAMEBUFFER, 0);
+	//glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_RENDERBUFFER, pDescriptorGLES->textureColorBuffer);
+	//if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE)
+	//	std::cout << "ERROR::FRAMEBUFFER:: Framebuffer is not complete!" << std::endl;
 
 	glGenBuffers(4, pDescriptorGLES->pixelBuffer);
 	for (int i = 0; i != 4; ++i)
@@ -739,22 +787,24 @@ int fisheyePanoStitcherComp::warpImageGLES(ImageWarper *pImageWarper, Descriptor
 	return 0;
 }
 
-int fisheyePanoStitcherComp::initColAdjBlendGLES(DescriptorGLES *pDescriptorGLES)
+int fisheyePanoStitcherComp::initColAdjBlendGLES(ImageBlender *pImageBlender, DescriptorGLES *pDescriptorGLES)
 {
 	// texture Mask
 	glGenTextures(1, &pDescriptorGLES->textureMask);
 	glBindTexture(GL_TEXTURE_2D, pDescriptorGLES->textureMask);
-	glTexImage2D(GL_TEXTURE_2D, 0, GL_R8, pDescriptorGLES->widthDst, pDescriptorGLES->heightDst, 0, GL_RED, GL_UNSIGNED_BYTE, NULL);
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_R8, pImageBlender->mSizeW/*pDescriptorGLES->widthDst*/, pImageBlender->mSizeH/*pDescriptorGLES->heightDst*/, 0, GL_RED, GL_UNSIGNED_BYTE, NULL);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
 	glBindTexture(GL_TEXTURE_2D, 0);
 	// texture coefficient
-	glGenTextures(1, &pDescriptorGLES->textureAdjCoef);
+	/*glGenTextures(1, &pDescriptorGLES->textureAdjCoef);
 	glBindTexture(GL_TEXTURE_2D, pDescriptorGLES->textureAdjCoef);
 	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB32F, 1, pDescriptorGLES->heightDst, 0, GL_RGB, GL_FLOAT, NULL);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-	glBindTexture(GL_TEXTURE_2D, 0);
+	glBindTexture(GL_TEXTURE_2D, 0);*/
 
 	// vertex and Texture coordinate;
 	GLfloat vertices[] = {
@@ -783,8 +833,10 @@ int fisheyePanoStitcherComp::initColAdjBlendGLES(DescriptorGLES *pDescriptorGLES
 }
 
 int fisheyePanoStitcherComp::deInitColAdjBlendGLES(DescriptorGLES *pDescriptorGLES)
-{
-	//delete textures
+{//  delete textures
+	//glDeleteTextures(1, &pDescriptorGLES->texture);
+	//glDeleteTextures(1, &pDescriptorGLES->texture1);
+
 	glDeleteTextures(8, pDescriptorGLES->textureColorBuffers);
 	glDeleteTextures(1, &pDescriptorGLES->textureAdjCoef);
 	glDeleteTextures(1, &pDescriptorGLES->textureMask);
@@ -809,13 +861,39 @@ int fisheyePanoStitcherComp::deInitColAdjBlendGLES(DescriptorGLES *pDescriptorGL
 	return 0;
 }
 
+int fisheyePanoStitcherComp::initColorAdjCoefGLES(colorAdjustTarget *pColorAdjTarget, ImageBlender *pImageBlender, DescriptorGLES *pDescriptorGLES)
+{// initial data for color adjust and blend, include explore weight, color coefficient, blend mask;
+
+	//process the color coefficient;
+	int coefLen = pColorAdjTarget->coeffsLen[0];
+	pDescriptorGLES->coefRGB = new float[coefLen * 3]; // for R,G,B three channel;
+	float *coefR = pColorAdjTarget->coeffs[0];
+	float *coefG = pColorAdjTarget->coeffs[1];
+	float *coefB = pColorAdjTarget->coeffs[2];
+
+	for (int i = 0; i != coefLen; ++i)
+	{
+		pDescriptorGLES->coefRGB[3 * i + 0] = coefR[i];
+		pDescriptorGLES->coefRGB[3 * i + 1] = coefG[i];
+		pDescriptorGLES->coefRGB[3 * i + 2] = coefB[i];
+	}
+
+	return 0;
+}
+
+int fisheyePanoStitcherComp::deInitColorAdjCoefGLES(DescriptorGLES *pDescriptorGLES)
+{
+	delete[] pDescriptorGLES->coefRGB;
+	return 0;
+}
+
 int fisheyePanoStitcherComp::colorAdjustRGBChnScanlineGLES(/*imageFrame *pImageFrame, colorAdjustTarget *pColorAdjTarget, colorAdjusterPair *pColorAdjPair,*/ ImageBlender *pImageBlender, DescriptorGLES *pDescriptorGLES, int idx)
 {// adjust the image between borders using the coefficients which has same length of the image
  // and the weights is the exposure curbs
 
 	// texture Mask
 	glBindTexture(GL_TEXTURE_2D, pDescriptorGLES->textureMask);
-	glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, pDescriptorGLES->widthDst, pDescriptorGLES->heightDst,
+	glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, pImageBlender->mSizeW/*pDescriptorGLES->widthDst*/, pImageBlender->mSizeH/*pDescriptorGLES->heightDst*/,
 		GL_RED, GL_UNSIGNED_BYTE, pImageBlender->pMaskY);
 	glBindTexture(GL_TEXTURE_2D, 0);
 
@@ -879,14 +957,27 @@ int fisheyePanoStitcherComp::colorAdjustRGBChnScanlineGLES(/*imageFrame *pImageF
 
 int fisheyePanoStitcherComp::storePanoImagePBO(imageFrame *panoImage, DescriptorGLES *pDescirptorGL)
 {// NOT SAVE RGB BUT RGBA IN THE PANOIMAGE, BECAUSE RGBA2RGB IS TOO SLOW;
-	unsigned char *renderedImage[4] = { warpedImageB[4].plane[0], warpedImageB[5].plane[0], warpedImageB[6].plane[0], warpedImageB[7].plane[0] };
+//#define RGBA
+#ifdef RGBA
+	GLint strideQuaRGBA = pDescirptorGL->widthDst * 4; // stride of quarter image;
+	GLint stridePanoRGBA = panoImage->imageW * 4;
+	unsigned char *panoQuaImageRGBA[4]; // pointer to address of 4 quarter image;
+	panoQuaImageRGBA[0] = panoImage->plane[0];
+	panoQuaImageRGBA[1] = panoQuaImageRGBA[0] + stridePanoRGBA / 2;
+	panoQuaImageRGBA[2] = panoQuaImageRGBA[0] + stridePanoRGBA * panoImage->imageH / 2;
+	panoQuaImageRGBA[3] = panoQuaImageRGBA[2] + stridePanoRGBA / 2;
+	
+#else
+	unsigned char *tempBuffer = new unsigned char[pDescirptorGL->widthDst * pDescirptorGL->heightDst * 3];
+	unsigned char *renderedImage[4] = { tempBuffer, tempBuffer, tempBuffer, tempBuffer };
 	unsigned char *panoQuaImage[4]; // pointer to address of 4 quarter image;
 	panoQuaImage[0] = panoImage->plane[0];
 	panoQuaImage[1] = panoQuaImage[0] + panoImage->strides[0] / 2;
 	panoQuaImage[2] = panoQuaImage[0] + panoImage->strides[0] * panoImage->imageH / 2;
 	panoQuaImage[3] = panoQuaImage[2] + panoImage->strides[0] / 2;
 	GLint strideQuaRGB = pDescirptorGL->widthDst * 3; // stride of quarter image;
-
+#endif // RGBA
+	
 	GLubyte *pRGBQua[4] = { NULL };
 
 	for (int i = 0; i != 4; ++i)
@@ -895,6 +986,14 @@ int fisheyePanoStitcherComp::storePanoImagePBO(imageFrame *panoImage, Descriptor
 		pRGBQua[i] = (GLubyte*)glMapBufferRange(GL_PIXEL_PACK_BUFFER, NULL, pDescirptorGL->widthDst * pDescirptorGL->heightDst * sizeof(GLubyte) * 4, GL_MAP_READ_BIT);
 		if (pRGBQua[i] != NULL)
 		{
+#ifdef RGBA
+			for (int h = 0; h != pDescirptorGL->heightDst; ++h)
+			{
+				memcpy(panoQuaImageRGBA[i], pRGBQua[i], sizeof(unsigned char) * strideQuaRGBA);
+				pRGBQua[i] += strideQuaRGBA;
+				panoQuaImageRGBA[i] += stridePanoRGBA;
+			}
+#else
 			rgba2rgb(pRGBQua[i], renderedImage[i], pDescirptorGL->widthDst, pDescirptorGL->heightDst);
 			for (int h = 0; h != pDescirptorGL->heightDst; ++h)
 			{
@@ -902,26 +1001,29 @@ int fisheyePanoStitcherComp::storePanoImagePBO(imageFrame *panoImage, Descriptor
 				renderedImage[i] += strideQuaRGB;
 				panoQuaImage[i] += panoImage->strides[0];
 			}
-
-		} else
+#endif // RGBA
+			
+		}	
+		else
 		{
-			__android_log_print(ANDROID_LOG_ERROR,"libstitch","glMapBuffer failed");
+			std::cout << "glMapBuffer failed" << std::endl;
+			GLuint error = glGetError();
 		}
 		glUnmapBuffer(GL_PIXEL_PACK_BUFFER);
 	}
-	
+
+	delete[] tempBuffer;
 	return 0;
 }
 
-
 int fisheyePanoStitcherComp::imageStitch(imageFrame fisheyeImage[2], imageFrame panoImage)  // warping, color adjusting, blending, extra warping
 {
-    __android_log_print(ANDROID_LOG_ERROR,"libstitch","init warp gles");
+    unsigned char *ptrSeamL = NULL;
+    unsigned char *ptrSeamR = NULL;
+    int gap;
 
-    // image warping
+	// image warping
 	initWarpGLES(mImageWarperB, &mDescriptorGL);
-
-    __android_log_print(ANDROID_LOG_ERROR,"libstitch","warp image gles");
 
 	warpImageGLES(&mImageWarperB[0], &mDescriptorGL, &fisheyeImage[0], 0);
 	warpImageGLES(&mImageWarperB[1], &mDescriptorGL, &fisheyeImage[0], 1);
@@ -939,8 +1041,8 @@ int fisheyePanoStitcherComp::imageStitch(imageFrame fisheyeImage[2], imageFrame 
 
     __android_log_print(ANDROID_LOG_ERROR,"libstitch","init color adj blend gles");
 
-    // color adjust and blending;
-	initColAdjBlendGLES(&mDescriptorGL);
+	// color adjust and blending;
+	initColAdjBlendGLES(mImageBlender, &mDescriptorGL);
 
     __android_log_print(ANDROID_LOG_ERROR,"libstitch","color adjust rgb chn scanline gles");
 	colorAdjustRGBChnScanlineGLES(&mImageBlender[0], &mDescriptorGL, 4);

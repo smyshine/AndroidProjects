@@ -47,6 +47,11 @@ public class MainActivity extends AppCompatActivity {
     String inPath = "/storage/emulated/0/vrsmy/stich-in.jpg";
     String datPath = "/storage/emulated/0/vrsmy/normal_blend_mask.dat";
     private void prepareDatFile(String path, int rid){
+        File bigPath = new File("/storage/emulated/0/vrsmy/");
+        if (!bigPath.exists()){
+            bigPath.mkdir();
+        }
+
         File datFile = new File(path);
         if (datFile.exists()) {
             return;

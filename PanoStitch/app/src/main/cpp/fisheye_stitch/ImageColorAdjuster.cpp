@@ -77,7 +77,8 @@ int colorSummary1Target(colorSummaryTarget *pColorSummaryTarget)
     return 0;
 }
 
-    colorAdjuster::colorAdjuster()
+    colorAdjuster::colorAdjuster():
+		mAdjustTargets(NULL), mSummaryTargets(NULL)
     {
     }
 

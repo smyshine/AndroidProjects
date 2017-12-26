@@ -34,29 +34,21 @@ void transJparamToCparam(JNIEnv * env, jobject jparam, YiPanorama::fisheyePanoPa
     //fisheye pano params core
     cparam->stFisheyePanoParamsCore.fisheyeImgW = env->GetIntField(
             jparam, env->GetFieldID(jparamObject, "fish_eye_width", "I"));
-    LOGEE("fisheyeImgW: %d \n",cparam->stFisheyePanoParamsCore.fisheyeImgW);
     cparam->stFisheyePanoParamsCore.fisheyeImgH = env->GetIntField(
             jparam, env->GetFieldID(jparamObject, "fish_eye_height", "I"));
-    LOGEE("fisheyeImgH: %d \n",cparam->stFisheyePanoParamsCore.fisheyeImgH);
     cparam->stFisheyePanoParamsCore.panoImgW = env->GetIntField(
             jparam, env->GetFieldID(jparamObject, "out_width", "I"));
-    LOGEE("panoImgW: %d \n",cparam->stFisheyePanoParamsCore.panoImgW);
     cparam->stFisheyePanoParamsCore.panoImgH = env->GetIntField(
             jparam, env->GetFieldID(jparamObject, "out_height", "I"));
-    LOGEE("panoImgH: %d \n",cparam->stFisheyePanoParamsCore.panoImgH);
     cparam->stFisheyePanoParamsCore.sphereRadius = env->GetIntField(
             jparam, env->GetFieldID(jparamObject, "sphere_radius", "I"));
-    LOGEE("sphereRadius: %d \n",cparam->stFisheyePanoParamsCore.sphereRadius);
     cparam->stFisheyePanoParamsCore.maxFovAngle = 98.0f;
-    LOGEE("maxFovAngle: %d \n",98);
 
     //ocam model, front eye
-    LOGEE("front ocam \n");
     jfloatArray jarray = (jfloatArray) env->GetObjectField(
             jparam, env->GetFieldID(jparamObject, "front_pol", "[F"));
     jfloat *front_pol_points = env->GetFloatArrayElements(jarray, NULL);
     cparam->staOcamModels[0].length_pol = env->GetArrayLength(jarray);
-    LOGEE("length_pol: %d \n",cparam->staOcamModels[0].length_pol);
     for (int i = 0; i < cparam->staOcamModels[0].length_pol; ++i){
         cparam->staOcamModels[0].pol[i] = front_pol_points[i];
         LOGEE(" %lf \n",front_pol_points[i]);
@@ -67,7 +59,6 @@ void transJparamToCparam(JNIEnv * env, jobject jparam, YiPanorama::fisheyePanoPa
             jparam, env->GetFieldID(jparamObject, "front_invpol", "[F"));
     jfloat *front_invpol_points = env->GetFloatArrayElements(jarray, NULL);
     cparam->staOcamModels[0].length_invpol = env->GetArrayLength(jarray);
-    LOGEE("length_invpol: %d \n",cparam->staOcamModels[0].length_invpol);
     for (int i = 0; i < cparam->staOcamModels[0].length_invpol; ++i){
         cparam->staOcamModels[0].invpol[i] = front_invpol_points[i];
         LOGEE(" %lf \n",front_invpol_points[i]);
@@ -78,7 +69,6 @@ void transJparamToCparam(JNIEnv * env, jobject jparam, YiPanorama::fisheyePanoPa
             jparam, env->GetFieldID(jparamObject, "front_vcf_factors", "[F"));
     jfloat *front_vcf = env->GetFloatArrayElements(jarray, NULL);
     int length_front_vcf = env->GetArrayLength(jarray);
-    LOGEE("front_vcf: %d \n",length_front_vcf);
     for (int i = 0; i < length_front_vcf; ++i){
         cparam->staOcamModels[0].vcf_factors[i] = front_vcf[i];
         LOGEE(" %lf \n",front_vcf[i]);
@@ -90,7 +80,6 @@ void transJparamToCparam(JNIEnv * env, jobject jparam, YiPanorama::fisheyePanoPa
     jfloat *front_center_points = env->GetFloatArrayElements(jarray, NULL);
     cparam->staOcamModels[0].uc = front_center_points[0];
     cparam->staOcamModels[0].vc = front_center_points[1];
-    LOGEE("uc: %lf ,vc:%lf \n",cparam->staOcamModels[0].uc,cparam->staOcamModels[0].vc);
     env->ReleaseFloatArrayElements(jarray, front_center_points, 0);
 
     jarray = (jfloatArray) env->GetObjectField(
@@ -99,20 +88,16 @@ void transJparamToCparam(JNIEnv * env, jobject jparam, YiPanorama::fisheyePanoPa
     cparam->staOcamModels[0].c = front_affine_points[0];
     cparam->staOcamModels[0].d = front_affine_points[1];
     cparam->staOcamModels[0].e = front_affine_points[2];
-    LOGEE("c: %lf ,d:%lf ,e:%lf \n",cparam->staOcamModels[0].c,cparam->staOcamModels[0].d,cparam->staOcamModels[0].e);
     env->ReleaseFloatArrayElements(jarray, front_affine_points, 0);
 
     cparam->staOcamModels[0].width = cparam->stFisheyePanoParamsCore.fisheyeImgW;
     cparam->staOcamModels[0].height = cparam->stFisheyePanoParamsCore.fisheyeImgH;
-    LOGEE("width: %d ,height: %d \n",cparam->staOcamModels[0].width,cparam->staOcamModels[0].height);
 
     //ocam model, back eye
-    LOGEE("back ocam \n");
     jarray = (jfloatArray) env->GetObjectField(
             jparam, env->GetFieldID(jparamObject, "back_pol", "[F"));
     jfloat *back_pol_points = env->GetFloatArrayElements(jarray, NULL);
     cparam->staOcamModels[1].length_pol = env->GetArrayLength(jarray);
-    LOGEE("length_pol: %d \n",cparam->staOcamModels[1].length_pol);
     for (int i = 0; i < cparam->staOcamModels[1].length_pol; ++i){
         cparam->staOcamModels[1].pol[i] = back_pol_points[i];
         LOGEE(" %lf \n",back_pol_points[i]);
@@ -123,7 +108,6 @@ void transJparamToCparam(JNIEnv * env, jobject jparam, YiPanorama::fisheyePanoPa
             jparam, env->GetFieldID(jparamObject, "back_invpol", "[F"));
     jfloat *back_invpol_points = env->GetFloatArrayElements(jarray, NULL);
     cparam->staOcamModels[1].length_invpol = env->GetArrayLength(jarray);
-    LOGEE("length_invpol: %d \n",cparam->staOcamModels[1].length_invpol);
     for (int i = 0; i < cparam->staOcamModels[1].length_invpol; ++i){
         cparam->staOcamModels[1].invpol[i] = back_invpol_points[i];
         LOGEE(" %lf \n",back_invpol_points[i]);
@@ -134,7 +118,6 @@ void transJparamToCparam(JNIEnv * env, jobject jparam, YiPanorama::fisheyePanoPa
             jparam, env->GetFieldID(jparamObject, "back_vcf_factors", "[F"));
     jfloat *back_vcf = env->GetFloatArrayElements(jarray, NULL);
     int length_back_vcf = env->GetArrayLength(jarray);
-    LOGEE("back_vcf: %d \n",length_back_vcf);
     for (int i = 0; i < length_back_vcf; ++i){
         cparam->staOcamModels[1].vcf_factors[i] = back_vcf[i];
         LOGEE(" %lf \n",back_vcf[i]);
@@ -146,7 +129,6 @@ void transJparamToCparam(JNIEnv * env, jobject jparam, YiPanorama::fisheyePanoPa
     jfloat *back_center_points = env->GetFloatArrayElements(jarray, NULL);
     cparam->staOcamModels[1].uc = back_center_points[0];
     cparam->staOcamModels[1].vc = back_center_points[1];
-    LOGEE("uc: %lf ,vc:%lf \n",cparam->staOcamModels[1].uc,cparam->staOcamModels[1].vc);
     env->ReleaseFloatArrayElements(jarray, back_center_points, 0);
 
     jarray = (jfloatArray) env->GetObjectField(
@@ -155,15 +137,12 @@ void transJparamToCparam(JNIEnv * env, jobject jparam, YiPanorama::fisheyePanoPa
     cparam->staOcamModels[1].c = back_affine_points[0];
     cparam->staOcamModels[1].d = back_affine_points[1];
     cparam->staOcamModels[1].e = back_affine_points[2];
-    LOGEE("c: %lf ,d:%lf ,e:%lf \n",cparam->staOcamModels[1].c,cparam->staOcamModels[1].d,cparam->staOcamModels[1].e);
     env->ReleaseFloatArrayElements(jarray, back_affine_points, 0);
 
     cparam->staOcamModels[1].width = cparam->stFisheyePanoParamsCore.fisheyeImgW;
     cparam->staOcamModels[1].height = cparam->stFisheyePanoParamsCore.fisheyeImgH;
-    LOGEE("width: %d ,height: %d \n",cparam->staOcamModels[1].width,cparam->staOcamModels[1].height);
 
     //ext params, front
-    LOGEE("front ext");
     jarray = (jfloatArray) env->GetObjectField(
             jparam, env->GetFieldID(jparamObject, "front_camera_rotation", "[F"));
     jfloat *front_rotation_points = env->GetFloatArrayElements(jarray, NULL);
@@ -185,7 +164,6 @@ void transJparamToCparam(JNIEnv * env, jobject jparam, YiPanorama::fisheyePanoPa
     env->ReleaseFloatArrayElements(jarray, front_translate_points, 0);
 
     //ext params, back
-    LOGEE("back ext");
     jarray = (jfloatArray) env->GetObjectField(
             jparam, env->GetFieldID(jparamObject, "back_camera_rotation", "[F"));
     jfloat *back_rotation_points = env->GetFloatArrayElements(jarray, NULL);
