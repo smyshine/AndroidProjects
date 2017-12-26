@@ -30,6 +30,6 @@ public class Stitcher {
      */
     public native String stringFromJNI();
 
-    public native void imageStitch(String src, String dst, String params, String datPath);
+    public native void imageStitch(String src, String dst, CombineParams params, String datPath);
 
 }
