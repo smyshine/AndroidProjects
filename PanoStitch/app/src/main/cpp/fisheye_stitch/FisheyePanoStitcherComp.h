@@ -64,9 +64,10 @@ struct DescriptorGLES
 	GLchar *fragmentShaderBlenderSrc;
 	GLuint framebuffer;
 	GLuint curTexBuf;
-	GLenum attachmentpoints;
-	GLuint textureColorBuffer;
-	GLuint pixelBuffer;
+	GLenum attachmentpoints[4];
+	GLuint textureColorBuffers[8];
+	GLuint renderBuffers[4];
+	GLuint pixelBuffer[4];
 	GLuint texture;
 	GLuint texture1;
 	GLuint texture2;
@@ -137,14 +138,14 @@ private:
 	int initWarpVerticesGLES(ImageWarper *pImageWarper, DescriptorGLES *pDescriptorGLES); // produce vertices data and VAO / VBO / EBO
 	int deInitWarpVerticesGLES(DescriptorGLES *pDescriptorGLES);
 	int initWarpGLES(ImageWarper *pImageWarper, DescriptorGLES *pDescirptorGL);
-	int warpImageGLES(ImageWarper *pImageWarper, DescriptorGLES *pDescirptorGL, imageFrame *srcImage, imageFrame *proImage);
+	int warpImageGLES(ImageWarper *pImageWarper, DescriptorGLES *pDescirptorGL, imageFrame *srcImage, int idx);
 	int initColAdjBlendGLES(DescriptorGLES *pDescriptorGLES);
 	int deInitColAdjBlendGLES(DescriptorGLES *pDescriptorGLES);
 	int initColorAdjCoefGLES(colorAdjustTarget *pColorAdjTarget, ImageBlender *pImageBlender, DescriptorGLES *pDescriptorGLES);
 	int deInitColorAdjCoefGLES(DescriptorGLES *pDescriptorGLES);
-	int colorAdjustRGBChnScanlineGLES(imageFrame *pImageFrame, colorAdjustTarget *pColorAdjTarget, colorAdjusterPair *pColorAdjPair, ImageBlender *pImageBlender, DescriptorGLES *pDescriptorGLES);
+	int colorAdjustRGBChnScanlineGLES(/*imageFrame *pImageFrame, colorAdjustTarget *pColorAdjTarget, colorAdjusterPair *pColorAdjPair,*/ ImageBlender *pImageBlender, DescriptorGLES *pDescriptorGLES, int idx);
 	int deinitWarpGLES(DescriptorGLES *pDescirptorGL);
-	int storePanoImage(imageFrame *renderResult, imageFrame *panoImage);
+	int storePanoImagePBO(imageFrame *panoImage, DescriptorGLES *pDescirptorGL);
     // params from metadata
     fisheyePanoParams mFisheyePanoParams;   // this struct only for initialize from metadata/default file
                                             // should not be used at any other places
