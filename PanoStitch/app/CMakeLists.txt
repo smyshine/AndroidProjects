@@ -11,13 +11,13 @@ cmake_minimum_required(VERSION 3.4.1)
 # Gradle automatically packages shared libraries with your APK.
 
 add_library( # Sets the name of the library.
-             native-lib
+             imageStitch
 
              # Sets the library as a shared library.
              SHARED
 
              # Provides a relative path to your source file(s).
-             src/main/cpp/native-lib.cpp
+             src/main/cpp/imageStitch.cpp
              src/main/cpp/fisheye_stitch/FisheyePanoStitcherComp.cpp
              src/main/cpp/fisheye_stitch/CameraMetadata.cpp
              src/main/cpp/fisheye_stitch/ImageWarper.cpp
@@ -60,7 +60,7 @@ set_target_properties(opencv_java PROPERTIES
 # build script, prebuilt third-party libraries, or system libraries.
 
 target_link_libraries( # Specifies the target library.
-                       native-lib
+                       imageStitch
 
                        # Links the target library to the log library
                        # included in the NDK.

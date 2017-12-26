@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.Stitcher;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;

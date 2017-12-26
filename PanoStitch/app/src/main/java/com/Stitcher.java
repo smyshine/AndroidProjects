@@ -1,4 +1,6 @@
-package com.panostitch;
+package com;
+
+import com.panostitch.CombineParams;
 
 /**
  * Created by SMY on 2017/12/7.
@@ -7,7 +9,7 @@ package com.panostitch;
 public class Stitcher {
 
     static {
-        System.loadLibrary("native-lib");
+        System.loadLibrary("imageStitch");
     }
 
     private static Stitcher instance;
@@ -23,12 +25,6 @@ public class Stitcher {
         }
         return instance;
     }
-
-    /**
-     * A native method that is implemented by the 'native-lib' native library,
-     * which is packaged with this application.
-     */
-    public native String stringFromJNI();
 
     public native void imageStitch(String src, String dst, CombineParams params, String datPath);
 

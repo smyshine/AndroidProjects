@@ -16,17 +16,6 @@ using namespace YiPanorama;
 using namespace fisheyePano;
 
 extern "C"
-JNIEXPORT jstring
-
-JNICALL
-Java_com_panostitch_Stitcher_stringFromJNI(
-        JNIEnv *env,
-        jobject /* this */) {
-    std::string hello = "Hello from C++";
-    return env->NewStringUTF(hello.c_str());
-}
-
-extern "C"
 void saveRGBImage(const char* path, imageFrame panoImage){
     cv::Mat imageMat(panoImage.imageH, panoImage.imageW, CV_8UC3);
     memcpy(imageMat.data, panoImage.plane[0], sizeof(unsigned char) * panoImage.imageH * panoImage.imageW * 3);
@@ -221,7 +210,7 @@ void transJparamToCparam(JNIEnv * env, jobject jparam, YiPanorama::fisheyePanoPa
 
 extern "C"
 JNIEXPORT void JNICALL
-Java_com_panostitch_Stitcher_imageStitch(JNIEnv *env, jobject instance, jstring src_,
+Java_com_Stitcher_imageStitch(JNIEnv *env, jobject instance, jstring src_,
                                              jstring dst_, jobject params, jstring datPath_) {
     const char *src = env->GetStringUTFChars(src_, 0);
     const char *dst = env->GetStringUTFChars(dst_, 0);
