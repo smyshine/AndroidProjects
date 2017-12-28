@@ -1,22 +1,25 @@
 package smy.com.cameraframe;
 
+import android.annotation.SuppressLint;
+import android.graphics.ImageFormat;
 import android.hardware.Camera;
-import android.media.VolumeShaper;
+import android.media.MediaCodecInfo;
+import android.media.MediaCodecList;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
+import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
-import android.view.Window;
 import android.view.WindowManager;
-import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import java.io.IOException;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.concurrent.ArrayBlockingQueue;
 
 public class MainActivity extends AppCompatActivity implements SurfaceHolder.Callback, Camera.PreviewCallback{
 
@@ -32,6 +35,9 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
     private SurfaceView mSurfaceView;
     private SurfaceHolder mSurfaceHolder;
     private int mCameraId = Camera.CameraInfo.CAMERA_FACING_BACK;//默认前置或后置
+    int framerate = 30;
+
+    int biterate = 8500*1000;
     private int videoWidth, videoHeight;
 
 
@@ -51,6 +57,8 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
         });
 
         initView();
+
+        SupportAvcCodec();
     }
 
     @Override
@@ -68,6 +76,21 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
     protected void onPause() {
         super.onPause();
         releaseCamera();
+    }
+
+    @SuppressLint("NewApi")
+    private boolean SupportAvcCodec(){
+        for(int j = MediaCodecList.getCodecCount() - 1; j >= 0; j--){
+            MediaCodecInfo codecInfo = MediaCodecList.getCodecInfoAt(j);
+
+            String[] types = codecInfo.getSupportedTypes();
+            for (int i = 0; i < types.length; i++) {
+                if (types[i].equalsIgnoreCase("video/avc")) {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     public void switchCamera() {
@@ -90,6 +113,7 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
     }
 
     private void log(String msg) {
+        Log.d(TAG, "smy: " + msg);
         tvLog.append("\n" + msg);
     }
 
@@ -102,6 +126,8 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
         } catch (IOException e) {
             e.printStackTrace();
         }
+        avcCodec = new AvcEncoder(videoWidth, videoHeight, framerate, biterate);
+        avcCodec.startEncoderThread();
     }
 
     private void setupCamera(Camera camera) {
@@ -131,6 +157,14 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
 
             Camera.Size pictureSize = getPropPictureSize(parameters.getSupportedPictureSizes(), videoWidth);
             parameters.setPictureSize(pictureSize.width, pictureSize.height);
+
+            List<Integer> formats = parameters.getSupportedPreviewFormats();
+            for (Integer format : formats) {
+                log("support preview format: " + format);
+            }
+            //一般支持格式 NV21和YV12
+            parameters.setPreviewFormat(ImageFormat.NV21);
+
 
             camera.setParameters(parameters);
         }
@@ -221,6 +255,7 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
             mCamera.stopPreview();
             mCamera.release();
             mCamera = null;
+            avcCodec.stopThread();
         }
     }
 
@@ -239,13 +274,45 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
         releaseCamera();
     }
 
+    private static int yuvqueuesize = 10;
+
+    public static ArrayBlockingQueue<byte[]> YUVQueue = new ArrayBlockingQueue<>(yuvqueuesize);
+
+    private AvcEncoder avcCodec;
+
     @Override
     public void onPreviewFrame(byte[] data, Camera camera) {
        //在此拿到相机摄像头的每一帧数据
 //        log(data.toString());
-
+        putYUVData(data, data.length);
     }
 
+    public void putYUVData(byte[] buffer, int length) {
+        if (YUVQueue.size() >= 10) {
+            YUVQueue.poll();
+        }
+        YUVQueue.add(buffer);
+    }
+
+    /**
+     yyyy yyyy yyyy yyyy
+     vu vu vu vu
+     ->
+     yyyy yyyy yyyy yyyy
+     uu uu vv vv
+     */
+
+    /**
+     yyyy yyyy
+     uv    uv
+     ->
+     yyyy yyyy
+     uu
+     vv
+     */
+    private void nv21ToYUV420P(byte[] nv21) {
+
+    }
 
     /**
      * A native method that is implemented by the 'native-lib' native library,
