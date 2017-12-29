@@ -1,5 +1,6 @@
 package smy.com.cameraframe;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.graphics.ImageFormat;
 import android.hardware.Camera;
@@ -20,6 +21,9 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.concurrent.ArrayBlockingQueue;
+
+import smy.com.permissions.AfterPermissionGranted;
+import smy.com.permissions.EasyPermissions;
 
 public class MainActivity extends AppCompatActivity implements SurfaceHolder.Callback, Camera.PreviewCallback{
 
@@ -65,7 +69,7 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
     protected void onResume() {
         super.onResume();
         if (mCamera == null) {
-            mCamera = getCamera(mCameraId);
+            getCamera(mCameraId);
             if (mCamera != null && mSurfaceHolder != null) {
                 startPreview(mCamera, mSurfaceHolder);
             }
@@ -96,14 +100,25 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
     public void switchCamera() {
         releaseCamera();
         mCameraId = (mCameraId + 1) % mCamera.getNumberOfCameras();
-        mCamera = getCamera(mCameraId);
+        getCamera(mCameraId);
         if (mSurfaceHolder != null) {
             startPreview(mCamera, mSurfaceHolder);
         }
     }
 
-    private Camera getCamera(int id) {
-        return Camera.open(id);
+    @AfterPermissionGranted(EasyPermissions.PERMISSION_CAMERA)
+    private void getCamera(int id)  {
+        if (EasyPermissions.hasPermissions(this, Manifest.permission.CAMERA)) {
+            log("apply for camera permission");
+            getCameraInternal(id);
+        } else {
+            EasyPermissions.requestPermissions(this, "with out this permission, app may not work normally",
+                    EasyPermissions.PERMISSION_CAMERA, Manifest.permission.CAMERA);
+        }
+    }
+
+    private void getCameraInternal(int id) {
+        mCamera = Camera.open(id);
     }
 
     private void initView() {
@@ -117,8 +132,18 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
         tvLog.append("\n" + msg);
     }
 
+    @AfterPermissionGranted(EasyPermissions.PERMISSION_CAMERA)
+    private void startPreview(Camera camera, SurfaceHolder holder)  {
+        if (EasyPermissions.hasPermissions(this, Manifest.permission.CAMERA)) {
+            log("apply for camera permission");
+            startPreviewInternal(camera, holder);
+        } else {
+            EasyPermissions.requestPermissions(this, "with out this permission, app may not work normally",
+                    EasyPermissions.PERMISSION_CAMERA, Manifest.permission.CAMERA);
+        }
+    }
 
-    private void startPreview(Camera camera, SurfaceHolder holder) {
+    private void startPreviewInternal(Camera camera, SurfaceHolder holder) {
         try {
             setupCamera(camera);
             camera.setPreviewDisplay(holder);

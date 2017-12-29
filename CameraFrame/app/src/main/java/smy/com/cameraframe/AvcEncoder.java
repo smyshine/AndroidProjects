@@ -84,8 +84,10 @@ public class AvcEncoder {
         isRunning = false;
         try {
             StopEncoder();
-            outputStream.flush();
-            outputStream.close();
+            if (outputStream != null) {
+                outputStream.flush();
+                outputStream.close();
+            }
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
