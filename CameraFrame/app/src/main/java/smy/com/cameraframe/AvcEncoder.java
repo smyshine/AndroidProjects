@@ -18,14 +18,14 @@ import java.nio.ByteBuffer;
  */
 
 public class AvcEncoder {
-    private final static String TAG = "MeidaCodec";
+    private final static String TAG = "MediaCodec";
 
     private int TIMEOUT_USEC = 12000;
 
     private MediaCodec mediaCodec;
-    int m_width;
-    int m_height;
-    int m_framerate;
+    private int mWidth;
+    private int mHeight;
+    private int mFrameRate;
 
     public byte[] configbyte;
 
@@ -33,9 +33,9 @@ public class AvcEncoder {
     @SuppressLint("NewApi")
     public AvcEncoder(int width, int height, int framerate, int bitrate) {
 
-        m_width  = width;
-        m_height = height;
-        m_framerate = framerate;
+        mWidth = width;
+        mHeight = height;
+        mFrameRate = framerate;
 
         MediaFormat mediaFormat = MediaFormat.createVideoFormat("video/avc", width, height);
         mediaFormat.setInteger(MediaFormat.KEY_COLOR_FORMAT, MediaCodecInfo.CodecCapabilities.COLOR_FormatYUV420SemiPlanar);
@@ -50,7 +50,6 @@ public class AvcEncoder {
         }
         mediaCodec.configure(mediaFormat, null, null, MediaCodec.CONFIGURE_FLAG_ENCODE);
         mediaCodec.start();
-//        createFile();
     }
 
     private static String path = Environment.getExternalStorageDirectory().getAbsolutePath() + "/smy/";
@@ -79,10 +78,10 @@ public class AvcEncoder {
         }
     }
 
-    public boolean isRuning = false;
+    public boolean isRunning = false;
 
     public void stopThread(){
-        isRuning = false;
+        isRunning = false;
         try {
             StopEncoder();
             outputStream.flush();
@@ -93,23 +92,29 @@ public class AvcEncoder {
         }
     }
 
-    public void startEncoderThread(){
-        createFile();
+    public void startEncoderThread() {
+        startEncoderThread(false);
+    }
+
+    public void startEncoderThread(boolean save){
+        if (save) {
+            createFile();
+        }
         Log.d(TAG, "startEncoderThread: ");
         Thread EncoderThread = new Thread(new Runnable() {
             @SuppressLint("NewApi")
             @Override
             public void run() {
-                isRuning = true;
+                isRunning = true;
                 byte[] input = null;
                 long pts =  0;
                 long generateIndex = 0;
 
-                while (isRuning) {
+                while (isRunning) {
                     if (MainActivity.YUVQueue.size() >0){
                         input = MainActivity.YUVQueue.poll();
-                        byte[] yuv420sp = new byte[m_width*m_height*3/2];
-                        NV21ToNV12(input,yuv420sp,m_width,m_height);
+                        byte[] yuv420sp = new byte[mWidth * mHeight *3/2];
+                        NV21ToNV12(input,yuv420sp, mWidth, mHeight);
                         input = yuv420sp;
                     }
                     if (input != null) {
@@ -189,6 +194,6 @@ public class AvcEncoder {
      * Generates the presentation time for frame N, in microseconds.
      */
     private long computePresentationTime(long frameIndex) {
-        return 132 + frameIndex * 1000000 / m_framerate;
+        return 132 + frameIndex * 1000000 / mFrameRate;
     }
 }
