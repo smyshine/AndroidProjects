@@ -42,7 +42,8 @@ import java.util.List;
  */
 public class EasyPermissions {
 
-    public static final int PERMISSION_CAMERA = 1001;
+    public static final int REQUEST_PERMISSION_CAMERA = 1001;
+    public static final int REQUEST_PERMISSION_STORAGE = 1002;
 
     private static final String TAG = "EasyPermissions";
 

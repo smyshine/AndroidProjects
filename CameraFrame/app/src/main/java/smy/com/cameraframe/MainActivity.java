@@ -106,14 +106,14 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
         }
     }
 
-    @AfterPermissionGranted(EasyPermissions.PERMISSION_CAMERA)
+    @AfterPermissionGranted(EasyPermissions.REQUEST_PERMISSION_CAMERA)
     private void getCamera(int id)  {
         if (EasyPermissions.hasPermissions(this, Manifest.permission.CAMERA)) {
             log("apply for camera permission");
             getCameraInternal(id);
         } else {
             EasyPermissions.requestPermissions(this, "with out this permission, app may not work normally",
-                    EasyPermissions.PERMISSION_CAMERA, Manifest.permission.CAMERA);
+                    EasyPermissions.REQUEST_PERMISSION_CAMERA, Manifest.permission.CAMERA);
         }
     }
 
@@ -132,14 +132,14 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
         tvLog.append("\n" + msg);
     }
 
-    @AfterPermissionGranted(EasyPermissions.PERMISSION_CAMERA)
+    @AfterPermissionGranted(EasyPermissions.REQUEST_PERMISSION_CAMERA)
     private void startPreview(Camera camera, SurfaceHolder holder)  {
         if (EasyPermissions.hasPermissions(this, Manifest.permission.CAMERA)) {
             log("apply for camera permission");
             startPreviewInternal(camera, holder);
         } else {
             EasyPermissions.requestPermissions(this, "with out this permission, app may not work normally",
-                    EasyPermissions.PERMISSION_CAMERA, Manifest.permission.CAMERA);
+                    EasyPermissions.REQUEST_PERMISSION_CAMERA, Manifest.permission.CAMERA);
         }
     }
 
@@ -299,9 +299,9 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
         releaseCamera();
     }
 
-    private static int yuvqueuesize = 10;
+    private static int yuvQueueSize = 10;
 
-    public static ArrayBlockingQueue<byte[]> YUVQueue = new ArrayBlockingQueue<>(yuvqueuesize);
+    public static ArrayBlockingQueue<byte[]> YUVQueue = new ArrayBlockingQueue<>(yuvQueueSize);
 
     private AvcEncoder avcCodec;
 
