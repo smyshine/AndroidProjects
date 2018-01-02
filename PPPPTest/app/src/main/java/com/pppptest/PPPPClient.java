@@ -46,6 +46,14 @@ public class PPPPClient {
                 }
                 if (session > 0) {
                     Log.d(TAG, "run: connect success");
+                    byte[] buffer = new byte[256];
+                    int[] size = new int[1];
+                    size[0] = 5;
+                    int ret = PPPP_APIs.PPPP_Read(session, (byte) 0, buffer, size, 0xffffff);
+                    if (callback != null) {
+                        callback.onLog("read ret: " + ret + ", data: " + new String(buffer));
+                    }
+                    Log.d(TAG, "run: read: " + new String(buffer));
                     break;
                 } else {
                     try {

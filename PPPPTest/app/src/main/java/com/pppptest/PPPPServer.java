@@ -128,13 +128,14 @@ public class PPPPServer {
 
                 if (session >= 0) {
                     log("server session success");
-                    /*if (isRunning) {
+                    if (isRunning) {
                         synchronized (lock) {
                             if (isRunning) {
                                 //handle session
+                                handleSession(session);
                             }
                         }
-                    }*/
+                    }
                 } else {
                     ++retryCount;
                     if (retryCount >= 3) {
@@ -158,6 +159,13 @@ public class PPPPServer {
             }
             PPPP_APIs.PPPP_Listen_Break();
         }
+    }
+
+    private void handleSession(int session) {
+        log("handle session send hello ");
+        String message = "hello";
+        int ret = PPPP_APIs.PPPP_Write(session, (byte) 0, message.getBytes(), message.getBytes().length);
+        log("write ret: " + ret);
     }
 
 }
