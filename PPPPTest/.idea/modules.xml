@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/FastVideo/FastVideo.iml" filepath="$PROJECT_DIR$/FastVideo/FastVideo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/P2PSDK/P2PSDK.iml" filepath="$PROJECT_DIR$/P2PSDK/P2PSDK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PPPPTest.iml" filepath="$PROJECT_DIR$/PPPPTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+    </modules>
+  </component>
+</project>
