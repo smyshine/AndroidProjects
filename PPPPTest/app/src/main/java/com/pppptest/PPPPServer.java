@@ -166,6 +166,12 @@ public class PPPPServer {
         String message = "hello";
         int ret = PPPP_APIs.PPPP_Write(session, (byte) 0, message.getBytes(), message.getBytes().length);
         log("write ret: " + ret);
+
+        byte[] buffer = new byte[256];
+        int[] size = new int[1];
+        size[0] = 24;
+        ret = PPPP_APIs.PPPP_Read(session, (byte) 0, buffer, size, 0xffffff);
+        log("read ret: " + ret + ", data: " + new String(buffer));
     }
 
 }

@@ -50,10 +50,12 @@ public class PPPPClient {
                     int[] size = new int[1];
                     size[0] = 5;
                     int ret = PPPP_APIs.PPPP_Read(session, (byte) 0, buffer, size, 0xffffff);
-                    if (callback != null) {
-                        callback.onLog("read ret: " + ret + ", data: " + new String(buffer));
-                    }
-                    Log.d(TAG, "run: read: " + new String(buffer));
+                    log("read ret: " + ret + ", data: " + new String(buffer));
+
+                    String message = "Hello server, I'm client";
+                    log("write message: " + message);
+                    ret = PPPP_APIs.PPPP_Write(session, (byte) 0, message.getBytes(), message.getBytes().length);
+                    log("write ret: " + ret);
                     break;
                 } else {
                     try {
@@ -64,5 +66,12 @@ public class PPPPClient {
                 }
             }
         }
+    }
+
+    private void log(String message) {
+        if (callback != null) {
+            callback.onLog(message);
+        }
+        Log.d(TAG, message);
     }
 }
