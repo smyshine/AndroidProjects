@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CameraFrame.iml" filepath="$PROJECT_DIR$/CameraFrame.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FastVideo/FastVideo.iml" filepath="$PROJECT_DIR$/FastVideo/FastVideo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/YiCameraP2PSDK/YiCameraP2PSDK.iml" filepath="$PROJECT_DIR$/YiCameraP2PSDK/YiCameraP2PSDK.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

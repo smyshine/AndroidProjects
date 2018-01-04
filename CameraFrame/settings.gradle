@@ -1,1 +1,1 @@
-include ':app'
+include ':app', ':FastVideo', ':YiCameraP2PSDK'

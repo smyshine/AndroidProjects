@@ -1,33 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="smy.com.cameraframe.MainActivity">
-
-    <SurfaceView
-        android:id="@+id/surfaceView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+    android:orientation="vertical">
 
     <TextView
-        android:id="@+id/changeCamera"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="13sp"
-        android:text="Switch"
-        android:padding="10dp"
-        android:textColor="@color/colorPrimary"/>
-
-    <TextView
-        android:id="@+id/log"
+        android:id="@+id/server"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
+        android:text="I'm server"
+        android:textSize="20sp"
+        android:layout_margin="10dp"
+        android:gravity="center"
         android:textColor="@color/colorAccent"
-        android:textSize="13sp"
-        android:layout_gravity="bottom"
-        android:maxLines="10"
-        android:scrollbars="vertical"
-        android:gravity="bottom"/>
+        android:background="@color/colorPrimary"/>
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/client"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="I'm client"
+        android:textSize="20sp"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:textColor="@color/colorAccent"
+        android:background="@color/colorPrimary"/>
+
+</LinearLayout>
