@@ -1,0 +1,1115 @@
+{
+    "districts": [
+    {
+      "citycode": [],
+      "adcode": "430000",
+      "name": "湖南省",
+      "center": "112.982279,28.19409",
+      "level": "province",
+      "districts": [
+        {
+          "citycode": "0731",
+          "adcode": "430100",
+          "name": "长沙市",
+          "center": "112.982279,28.19409",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0731",
+              "adcode": "430102",
+              "name": "芙蓉区",
+              "center": "112.988094,28.193106",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0731",
+              "adcode": "430103",
+              "name": "天心区",
+              "center": "112.97307,28.192375",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0731",
+              "adcode": "430104",
+              "name": "岳麓区",
+              "center": "112.911591,28.213044",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0731",
+              "adcode": "430105",
+              "name": "开福区",
+              "center": "112.985525,28.201336",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0731",
+              "adcode": "430111",
+              "name": "雨花区",
+              "center": "113.016337,28.109937",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0731",
+              "adcode": "430112",
+              "name": "望城区",
+              "center": "112.819549,28.347458",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0731",
+              "adcode": "430121",
+              "name": "长沙县",
+              "center": "113.080098,28.237888",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0731",
+              "adcode": "430124",
+              "name": "宁乡县",
+              "center": "112.553182,28.253928",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0731",
+              "adcode": "430181",
+              "name": "浏阳市",
+              "center": "113.633301,28.141112",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0733",
+          "adcode": "430200",
+          "name": "株洲市",
+          "center": "113.151737,27.835806",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0733",
+              "adcode": "430202",
+              "name": "荷塘区",
+              "center": "113.162548,27.833036",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0733",
+              "adcode": "430203",
+              "name": "芦淞区",
+              "center": "113.155169,27.827246",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0733",
+              "adcode": "430204",
+              "name": "石峰区",
+              "center": "113.11295,27.871945",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0733",
+              "adcode": "430211",
+              "name": "天元区",
+              "center": "113.136252,27.826909",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0733",
+              "adcode": "430221",
+              "name": "株洲县",
+              "center": "113.146176,27.705844",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0733",
+              "adcode": "430223",
+              "name": "攸县",
+              "center": "113.345774,27.000071",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0733",
+              "adcode": "430224",
+              "name": "茶陵县",
+              "center": "113.546509,26.789534",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0733",
+              "adcode": "430225",
+              "name": "炎陵县",
+              "center": "113.776884,26.489459",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0733",
+              "adcode": "430281",
+              "name": "醴陵市",
+              "center": "113.507157,27.657873",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0732",
+          "adcode": "430300",
+          "name": "湘潭市",
+          "center": "112.944052,27.82973",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0732",
+              "adcode": "430302",
+              "name": "雨湖区",
+              "center": "112.907427,27.86077",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0732",
+              "adcode": "430304",
+              "name": "岳塘区",
+              "center": "112.927707,27.828854",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0732",
+              "adcode": "430321",
+              "name": "湘潭县",
+              "center": "112.952829,27.778601",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0732",
+              "adcode": "430381",
+              "name": "湘乡市",
+              "center": "112.525217,27.734918",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0732",
+              "adcode": "430382",
+              "name": "韶山市",
+              "center": "112.52848,27.922682",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0734",
+          "adcode": "430400",
+          "name": "衡阳市",
+          "center": "112.607693,26.900358",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0734",
+              "adcode": "430405",
+              "name": "珠晖区",
+              "center": "112.626324,26.891063",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0734",
+              "adcode": "430406",
+              "name": "雁峰区",
+              "center": "112.612241,26.893694",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0734",
+              "adcode": "430407",
+              "name": "石鼓区",
+              "center": "112.607635,26.903908",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0734",
+              "adcode": "430408",
+              "name": "蒸湘区",
+              "center": "112.570608,26.89087",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0734",
+              "adcode": "430412",
+              "name": "南岳区",
+              "center": "112.734147,27.240536",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0734",
+              "adcode": "430421",
+              "name": "衡阳县",
+              "center": "112.379643,26.962388",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0734",
+              "adcode": "430422",
+              "name": "衡南县",
+              "center": "112.677459,26.739973",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0734",
+              "adcode": "430423",
+              "name": "衡山县",
+              "center": "112.86971,27.234808",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0734",
+              "adcode": "430424",
+              "name": "衡东县",
+              "center": "112.950412,27.083531",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0734",
+              "adcode": "430426",
+              "name": "祁东县",
+              "center": "112.111192,26.787109",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0734",
+              "adcode": "430481",
+              "name": "耒阳市",
+              "center": "112.847215,26.414162",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0734",
+              "adcode": "430482",
+              "name": "常宁市",
+              "center": "112.396821,26.406773",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0739",
+          "adcode": "430500",
+          "name": "邵阳市",
+          "center": "111.46923,27.237842",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0739",
+              "adcode": "430502",
+              "name": "双清区",
+              "center": "111.479756,27.240001",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0739",
+              "adcode": "430503",
+              "name": "大祥区",
+              "center": "111.462968,27.233593",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0739",
+              "adcode": "430511",
+              "name": "北塔区",
+              "center": "111.452315,27.245688",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0739",
+              "adcode": "430521",
+              "name": "邵东县",
+              "center": "111.743168,27.257273",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0739",
+              "adcode": "430522",
+              "name": "新邵县",
+              "center": "111.459762,27.311429",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0739",
+              "adcode": "430523",
+              "name": "邵阳县",
+              "center": "111.2757,26.989713",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0739",
+              "adcode": "430524",
+              "name": "隆回县",
+              "center": "111.038785,27.116002",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0739",
+              "adcode": "430525",
+              "name": "洞口县",
+              "center": "110.579212,27.062286",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0739",
+              "adcode": "430527",
+              "name": "绥宁县",
+              "center": "110.155075,26.580622",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0739",
+              "adcode": "430528",
+              "name": "新宁县",
+              "center": "110.859115,26.438912",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0739",
+              "adcode": "430529",
+              "name": "城步苗族自治县",
+              "center": "110.313226,26.363575",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0739",
+              "adcode": "430581",
+              "name": "武冈市",
+              "center": "110.636804,26.732086",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0730",
+          "adcode": "430600",
+          "name": "岳阳市",
+          "center": "113.132855,29.37029",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0730",
+              "adcode": "430602",
+              "name": "岳阳楼区",
+              "center": "113.120751,29.366784",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0730",
+              "adcode": "430603",
+              "name": "云溪区",
+              "center": "113.27387,29.473395",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0730",
+              "adcode": "430611",
+              "name": "君山区",
+              "center": "113.004082,29.438062",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0730",
+              "adcode": "430621",
+              "name": "岳阳县",
+              "center": "113.116073,29.144843",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0730",
+              "adcode": "430623",
+              "name": "华容县",
+              "center": "112.559369,29.524107",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0730",
+              "adcode": "430624",
+              "name": "湘阴县",
+              "center": "112.889748,28.677498",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0730",
+              "adcode": "430626",
+              "name": "平江县",
+              "center": "113.593751,28.701523",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0730",
+              "adcode": "430681",
+              "name": "汨罗市",
+              "center": "113.079419,28.803149",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0730",
+              "adcode": "430682",
+              "name": "临湘市",
+              "center": "113.450809,29.471594",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0736",
+          "adcode": "430700",
+          "name": "常德市",
+          "center": "111.691347,29.040225",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0736",
+              "adcode": "430702",
+              "name": "武陵区",
+              "center": "111.690718,29.040477",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0736",
+              "adcode": "430703",
+              "name": "鼎城区",
+              "center": "111.685327,29.014426",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0736",
+              "adcode": "430721",
+              "name": "安乡县",
+              "center": "112.172289,29.414483",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0736",
+              "adcode": "430722",
+              "name": "汉寿县",
+              "center": "111.968506,28.907319",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0736",
+              "adcode": "430723",
+              "name": "澧县",
+              "center": "111.761682,29.64264",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0736",
+              "adcode": "430724",
+              "name": "临澧县",
+              "center": "111.645602,29.443217",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0736",
+              "adcode": "430725",
+              "name": "桃源县",
+              "center": "111.484503,28.902734",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0736",
+              "adcode": "430726",
+              "name": "石门县",
+              "center": "111.379087,29.584703",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0736",
+              "adcode": "430781",
+              "name": "津市市",
+              "center": "111.879609,29.630867",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0744",
+          "adcode": "430800",
+          "name": "张家界市",
+          "center": "110.479921,29.127401",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0744",
+              "adcode": "430802",
+              "name": "永定区",
+              "center": "110.484559,29.125961",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0744",
+              "adcode": "430811",
+              "name": "武陵源区",
+              "center": "110.54758,29.347827",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0744",
+              "adcode": "430821",
+              "name": "慈利县",
+              "center": "111.132702,29.423876",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0744",
+              "adcode": "430822",
+              "name": "桑植县",
+              "center": "110.164039,29.399939",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0737",
+          "adcode": "430900",
+          "name": "益阳市",
+          "center": "112.355042,28.570066",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0737",
+              "adcode": "430902",
+              "name": "资阳区",
+              "center": "112.33084,28.592771",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0737",
+              "adcode": "430903",
+              "name": "赫山区",
+              "center": "112.360946,28.568327",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0737",
+              "adcode": "430921",
+              "name": "南县",
+              "center": "112.410399,29.372181",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0737",
+              "adcode": "430922",
+              "name": "桃江县",
+              "center": "112.139732,28.520993",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0737",
+              "adcode": "430923",
+              "name": "安化县",
+              "center": "111.221824,28.377421",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0737",
+              "adcode": "430981",
+              "name": "沅江市",
+              "center": "112.361088,28.839713",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0735",
+          "adcode": "431000",
+          "name": "郴州市",
+          "center": "113.032067,25.793589",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0735",
+              "adcode": "431002",
+              "name": "北湖区",
+              "center": "113.032208,25.792628",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0735",
+              "adcode": "431003",
+              "name": "苏仙区",
+              "center": "113.038698,25.793157",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0735",
+              "adcode": "431021",
+              "name": "桂阳县",
+              "center": "112.734466,25.737447",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0735",
+              "adcode": "431022",
+              "name": "宜章县",
+              "center": "112.947884,25.394345",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0735",
+              "adcode": "431023",
+              "name": "永兴县",
+              "center": "113.114819,26.129392",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0735",
+              "adcode": "431024",
+              "name": "嘉禾县",
+              "center": "112.370618,25.587309",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0735",
+              "adcode": "431025",
+              "name": "临武县",
+              "center": "112.564589,25.279119",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0735",
+              "adcode": "431026",
+              "name": "汝城县",
+              "center": "113.685686,25.553759",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0735",
+              "adcode": "431027",
+              "name": "桂东县",
+              "center": "113.945879,26.073917",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0735",
+              "adcode": "431028",
+              "name": "安仁县",
+              "center": "113.27217,26.708625",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0735",
+              "adcode": "431081",
+              "name": "资兴市",
+              "center": "113.23682,25.974152",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0746",
+          "adcode": "431100",
+          "name": "永州市",
+          "center": "111.608019,26.434516",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0746",
+              "adcode": "431102",
+              "name": "零陵区",
+              "center": "111.626348,26.223347",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0746",
+              "adcode": "431103",
+              "name": "冷水滩区",
+              "center": "111.607156,26.434364",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0746",
+              "adcode": "431121",
+              "name": "祁阳县",
+              "center": "111.85734,26.585929",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0746",
+              "adcode": "431122",
+              "name": "东安县",
+              "center": "111.313035,26.397278",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0746",
+              "adcode": "431123",
+              "name": "双牌县",
+              "center": "111.662146,25.959397",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0746",
+              "adcode": "431124",
+              "name": "道县",
+              "center": "111.591614,25.518444",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0746",
+              "adcode": "431125",
+              "name": "江永县",
+              "center": "111.346803,25.268154",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0746",
+              "adcode": "431126",
+              "name": "宁远县",
+              "center": "111.944529,25.584112",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0746",
+              "adcode": "431127",
+              "name": "蓝山县",
+              "center": "112.194195,25.375255",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0746",
+              "adcode": "431128",
+              "name": "新田县",
+              "center": "112.220341,25.906927",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0746",
+              "adcode": "431129",
+              "name": "江华瑶族自治县",
+              "center": "111.577276,25.182596",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0745",
+          "adcode": "431200",
+          "name": "怀化市",
+          "center": "109.97824,27.550082",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0745",
+              "adcode": "431202",
+              "name": "鹤城区",
+              "center": "109.982242,27.548474",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0745",
+              "adcode": "431221",
+              "name": "中方县",
+              "center": "109.948061,27.43736",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0745",
+              "adcode": "431222",
+              "name": "沅陵县",
+              "center": "110.399161,28.455554",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0745",
+              "adcode": "431223",
+              "name": "辰溪县",
+              "center": "110.196953,28.005474",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0745",
+              "adcode": "431224",
+              "name": "溆浦县",
+              "center": "110.593373,27.903802",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0745",
+              "adcode": "431225",
+              "name": "会同县",
+              "center": "109.720785,26.870789",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0745",
+              "adcode": "431226",
+              "name": "麻阳苗族自治县",
+              "center": "109.802807,27.865991",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0745",
+              "adcode": "431227",
+              "name": "新晃侗族自治县",
+              "center": "109.174443,27.359897",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0745",
+              "adcode": "431228",
+              "name": "芷江侗族自治县",
+              "center": "109.687777,27.437996",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0745",
+              "adcode": "431229",
+              "name": "靖州苗族侗族自治县",
+              "center": "109.691159,26.573511",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0745",
+              "adcode": "431230",
+              "name": "通道侗族自治县",
+              "center": "109.783359,26.158349",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0745",
+              "adcode": "431281",
+              "name": "洪江市",
+              "center": "109.831765,27.201876",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0738",
+          "adcode": "431300",
+          "name": "娄底市",
+          "center": "112.008497,27.728136",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0738",
+              "adcode": "431302",
+              "name": "娄星区",
+              "center": "112.008486,27.726643",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0738",
+              "adcode": "431321",
+              "name": "双峰县",
+              "center": "112.198245,27.459126",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0738",
+              "adcode": "431322",
+              "name": "新化县",
+              "center": "111.306747,27.737456",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0738",
+              "adcode": "431381",
+              "name": "冷水江市",
+              "center": "111.434674,27.685759",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0738",
+              "adcode": "431382",
+              "name": "涟源市",
+              "center": "111.670847,27.692301",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0743",
+          "adcode": "433100",
+          "name": "湘西土家族苗族自治州",
+          "center": "109.739735,28.314296",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0743",
+              "adcode": "433101",
+              "name": "吉首市",
+              "center": "109.738273,28.314827",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0743",
+              "adcode": "433122",
+              "name": "泸溪县",
+              "center": "110.214428,28.214516",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0743",
+              "adcode": "433123",
+              "name": "凤凰县",
+              "center": "109.599191,27.948308",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0743",
+              "adcode": "433124",
+              "name": "花垣县",
+              "center": "109.479063,28.581352",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0743",
+              "adcode": "433125",
+              "name": "保靖县",
+              "center": "109.651445,28.709605",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0743",
+              "adcode": "433126",
+              "name": "古丈县",
+              "center": "109.949592,28.616973",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0743",
+              "adcode": "433127",
+              "name": "永顺县",
+              "center": "109.853292,28.998068",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0743",
+              "adcode": "433130",
+              "name": "龙山县",
+              "center": "109.441189,29.453438",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

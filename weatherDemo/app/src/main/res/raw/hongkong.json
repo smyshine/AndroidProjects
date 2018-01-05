@@ -1,0 +1,157 @@
+{
+    "districts": [
+    {
+      "citycode": ["1852"],
+      "adcode": "810000",
+      "name": "香港特别行政区",
+      "center": "114.173355,22.320048",
+      "level": "province",
+      "districts": [
+        {
+          "citycode": "1852",
+          "adcode": "810001",
+          "name": "中西区",
+          "center": "114.154334,22.281931",
+          "level": "district",
+          "districts": []
+        },
+        {
+          "citycode": "1852",
+          "adcode": "810002",
+          "name": "湾仔区",
+          "center": "114.18299,22.276345",
+          "level": "district",
+          "districts": []
+        },
+        {
+          "citycode": "1852",
+          "adcode": "810003",
+          "name": "东区",
+          "center": "114.225965,22.279779",
+          "level": "district",
+          "districts": []
+        },
+        {
+          "citycode": "1852",
+          "adcode": "810004",
+          "name": "南区",
+          "center": "114.160023,22.245811",
+          "level": "district",
+          "districts": []
+        },
+        {
+          "citycode": "1852",
+          "adcode": "810005",
+          "name": "油尖旺区",
+          "center": "114.173347,22.311632",
+          "level": "district",
+          "districts": []
+        },
+        {
+          "citycode": "1852",
+          "adcode": "810006",
+          "name": "深水埗区",
+          "center": "114.163349,22.333775",
+          "level": "district",
+          "districts": []
+        },
+        {
+          "citycode": "1852",
+          "adcode": "810007",
+          "name": "九龙城区",
+          "center": "114.193047,22.312373",
+          "level": "district",
+          "districts": []
+        },
+        {
+          "citycode": "1852",
+          "adcode": "810008",
+          "name": "黄大仙区",
+          "center": "114.203985,22.336112",
+          "level": "district",
+          "districts": []
+        },
+        {
+          "citycode": "1852",
+          "adcode": "810009",
+          "name": "观塘区",
+          "center": "114.214083,22.320679",
+          "level": "district",
+          "districts": []
+        },
+        {
+          "citycode": "1852",
+          "adcode": "810010",
+          "name": "荃湾区",
+          "center": "114.121234,22.368458",
+          "level": "district",
+          "districts": []
+        },
+        {
+          "citycode": "1852",
+          "adcode": "810011",
+          "name": "屯门区",
+          "center": "113.976308,22.393896",
+          "level": "district",
+          "districts": []
+        },
+        {
+          "citycode": "1852",
+          "adcode": "810012",
+          "name": "元朗区",
+          "center": "114.032528,22.44132",
+          "level": "district",
+          "districts": []
+        },
+        {
+          "citycode": "1852",
+          "adcode": "810013",
+          "name": "北区",
+          "center": "114.147404,22.496143",
+          "level": "district",
+          "districts": []
+        },
+        {
+          "citycode": "1852",
+          "adcode": "810014",
+          "name": "大埔区",
+          "center": "114.171713,22.44573",
+          "level": "district",
+          "districts": []
+        },
+        {
+          "citycode": "1852",
+          "adcode": "810015",
+          "name": "西贡区",
+          "center": "114.264813,22.314203",
+          "level": "district",
+          "districts": []
+        },
+        {
+          "citycode": "1852",
+          "adcode": "810016",
+          "name": "沙田区",
+          "center": "114.195126,22.379715",
+          "level": "district",
+          "districts": []
+        },
+        {
+          "citycode": "1852",
+          "adcode": "810017",
+          "name": "葵青区",
+          "center": "114.13918,22.363908",
+          "level": "district",
+          "districts": []
+        },
+        {
+          "citycode": "1852",
+          "adcode": "810018",
+          "name": "离岛区",
+          "center": "113.946059,22.286371",
+          "level": "district",
+          "districts": []
+        }
+      ]
+    }
+  ]
+}

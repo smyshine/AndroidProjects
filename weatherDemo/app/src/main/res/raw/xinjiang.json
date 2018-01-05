@@ -1,0 +1,979 @@
+{
+  "districts": [
+    {
+      "citycode": [],
+      "adcode": "650000",
+      "name": "新疆维吾尔自治区",
+      "center": "87.617733,43.792818",
+      "level": "province",
+      "districts": [
+        {
+          "citycode": "0991",
+          "adcode": "650100",
+          "name": "乌鲁木齐市",
+          "center": "87.617733,43.792818",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0991",
+              "adcode": "650102",
+              "name": "天山区",
+              "center": "87.620116,43.796428",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0991",
+              "adcode": "650103",
+              "name": "沙依巴克区",
+              "center": "87.596639,43.788872",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0991",
+              "adcode": "650104",
+              "name": "新市区",
+              "center": "87.560653,43.870882",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0991",
+              "adcode": "650105",
+              "name": "水磨沟区",
+              "center": "87.613093,43.816747",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0991",
+              "adcode": "650106",
+              "name": "头屯河区",
+              "center": "87.425823,43.876053",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0991",
+              "adcode": "650107",
+              "name": "达坂城区",
+              "center": "88.30994,43.36181",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0991",
+              "adcode": "650109",
+              "name": "米东区",
+              "center": "87.691801,43.960982",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0991",
+              "adcode": "650121",
+              "name": "乌鲁木齐县",
+              "center": "87.505603,43.982546",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0990",
+          "adcode": "650200",
+          "name": "克拉玛依市",
+          "center": "84.873946,45.595886",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0990",
+              "adcode": "650202",
+              "name": "独山子区",
+              "center": "84.882267,44.327207",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0990",
+              "adcode": "650203",
+              "name": "克拉玛依区",
+              "center": "84.868918,45.600477",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0990",
+              "adcode": "650204",
+              "name": "白碱滩区",
+              "center": "85.129882,45.689021",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0990",
+              "adcode": "650205",
+              "name": "乌尔禾区",
+              "center": "85.697767,46.08776",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0995",
+          "adcode": "650400",
+          "name": "吐鲁番市",
+          "center": "89.184078,42.947613",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0995",
+              "adcode": "650402",
+              "name": "高昌区",
+              "center": "89.182324,42.947627",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0995",
+              "adcode": "650421",
+              "name": "鄯善县",
+              "center": "90.212692,42.865503",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0995",
+              "adcode": "650422",
+              "name": "托克逊县",
+              "center": "88.655771,42.793536",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0902",
+          "adcode": "650500",
+          "name": "哈密市",
+          "center": "93.51316,42.833248",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0902",
+              "adcode": "650502",
+              "name": "伊州区",
+              "center": "93.509174,42.833888",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0902",
+              "adcode": "650521",
+              "name": "巴里坤哈萨克自治县",
+              "center": "93.021795,43.599032",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0902",
+              "adcode": "650522",
+              "name": "伊吾县",
+              "center": "94.692773,43.252012",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0994",
+          "adcode": "652300",
+          "name": "昌吉回族自治州",
+          "center": "87.304012,44.014577",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0994",
+              "adcode": "652301",
+              "name": "昌吉市",
+              "center": "87.304112,44.013183",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0994",
+              "adcode": "652302",
+              "name": "阜康市",
+              "center": "87.98384,44.152153",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0994",
+              "adcode": "652323",
+              "name": "呼图壁县",
+              "center": "86.888613,44.189342",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0994",
+              "adcode": "652324",
+              "name": "玛纳斯县",
+              "center": "86.217687,44.305625",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0994",
+              "adcode": "652325",
+              "name": "奇台县",
+              "center": "89.591437,44.021996",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0994",
+              "adcode": "652327",
+              "name": "吉木萨尔县",
+              "center": "89.181288,43.997162",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0994",
+              "adcode": "652328",
+              "name": "木垒哈萨克自治县",
+              "center": "90.282833,43.832442",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0909",
+          "adcode": "652700",
+          "name": "博尔塔拉蒙古自治州",
+          "center": "82.074778,44.903258",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0909",
+              "adcode": "652701",
+              "name": "博乐市",
+              "center": "82.072237,44.903087",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0909",
+              "adcode": "652702",
+              "name": "阿拉山口市",
+              "center": "82.569389,45.16777",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0909",
+              "adcode": "652722",
+              "name": "精河县",
+              "center": "82.892938,44.605645",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0909",
+              "adcode": "652723",
+              "name": "温泉县",
+              "center": "81.03099,44.973751",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0996",
+          "adcode": "652800",
+          "name": "巴音郭楞蒙古自治州",
+          "center": "86.150969,41.768552",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0996",
+              "adcode": "652801",
+              "name": "库尔勒市",
+              "center": "86.145948,41.763122",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0996",
+              "adcode": "652822",
+              "name": "轮台县",
+              "center": "84.248542,41.781266",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0996",
+              "adcode": "652823",
+              "name": "尉犁县",
+              "center": "86.263412,41.337428",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0996",
+              "adcode": "652824",
+              "name": "若羌县",
+              "center": "88.168807,39.023807",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0996",
+              "adcode": "652825",
+              "name": "且末县",
+              "center": "85.532629,38.138562",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0996",
+              "adcode": "652826",
+              "name": "焉耆回族自治县",
+              "center": "86.5698,42.064349",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0996",
+              "adcode": "652827",
+              "name": "和静县",
+              "center": "86.391067,42.31716",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0996",
+              "adcode": "652828",
+              "name": "和硕县",
+              "center": "86.864947,42.268863",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0996",
+              "adcode": "652829",
+              "name": "博湖县",
+              "center": "86.631576,41.980166",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0997",
+          "adcode": "652900",
+          "name": "阿克苏地区",
+          "center": "80.265068,41.170712",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0997",
+              "adcode": "652901",
+              "name": "阿克苏市",
+              "center": "80.2629,41.171272",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0997",
+              "adcode": "652922",
+              "name": "温宿县",
+              "center": "80.243273,41.272995",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0997",
+              "adcode": "652923",
+              "name": "库车县",
+              "center": "82.96304,41.717141",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0997",
+              "adcode": "652924",
+              "name": "沙雅县",
+              "center": "82.78077,41.226268",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0997",
+              "adcode": "652925",
+              "name": "新和县",
+              "center": "82.610828,41.551176",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0997",
+              "adcode": "652926",
+              "name": "拜城县",
+              "center": "81.869881,41.796101",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0997",
+              "adcode": "652927",
+              "name": "乌什县",
+              "center": "79.230805,41.21587",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0997",
+              "adcode": "652928",
+              "name": "阿瓦提县",
+              "center": "80.378426,40.638422",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0997",
+              "adcode": "652929",
+              "name": "柯坪县",
+              "center": "79.04785,40.50624",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0908",
+          "adcode": "653000",
+          "name": "克孜勒苏柯尔克孜自治州",
+          "center": "76.172825,39.713431",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0908",
+              "adcode": "653001",
+              "name": "阿图什市",
+              "center": "76.173939,39.712898",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0908",
+              "adcode": "653022",
+              "name": "阿克陶县",
+              "center": "75.945159,39.147079",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0908",
+              "adcode": "653023",
+              "name": "阿合奇县",
+              "center": "78.450164,40.937567",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0908",
+              "adcode": "653024",
+              "name": "乌恰县",
+              "center": "75.25969,39.716633",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0998",
+          "adcode": "653100",
+          "name": "喀什地区",
+          "center": "75.989138,39.467664",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0998",
+              "adcode": "653101",
+              "name": "喀什市",
+              "center": "75.98838,39.467861",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0998",
+              "adcode": "653121",
+              "name": "疏附县",
+              "center": "75.863075,39.378306",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0998",
+              "adcode": "653122",
+              "name": "疏勒县",
+              "center": "76.053653,39.399461",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0998",
+              "adcode": "653123",
+              "name": "英吉沙县",
+              "center": "76.174292,38.929839",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0998",
+              "adcode": "653124",
+              "name": "泽普县",
+              "center": "77.273593,38.191217",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0998",
+              "adcode": "653125",
+              "name": "莎车县",
+              "center": "77.248884,38.414499",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0998",
+              "adcode": "653126",
+              "name": "叶城县",
+              "center": "77.420353,37.884679",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0998",
+              "adcode": "653127",
+              "name": "麦盖提县",
+              "center": "77.651538,38.903384",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0998",
+              "adcode": "653128",
+              "name": "岳普湖县",
+              "center": "76.7724,39.235248",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0998",
+              "adcode": "653129",
+              "name": "伽师县",
+              "center": "76.741982,39.494325",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0998",
+              "adcode": "653130",
+              "name": "巴楚县",
+              "center": "78.55041,39.783479",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0998",
+              "adcode": "653131",
+              "name": "塔什库尔干塔吉克自治县",
+              "center": "75.228068,37.775437",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0903",
+          "adcode": "653200",
+          "name": "和田地区",
+          "center": "79.92533,37.110687",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0903",
+              "adcode": "653201",
+              "name": "和田市",
+              "center": "79.927542,37.108944",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0903",
+              "adcode": "653221",
+              "name": "和田县",
+              "center": "79.81907,37.120031",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0903",
+              "adcode": "653222",
+              "name": "墨玉县",
+              "center": "79.736629,37.271511",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0903",
+              "adcode": "653223",
+              "name": "皮山县",
+              "center": "78.282301,37.616332",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0903",
+              "adcode": "653224",
+              "name": "洛浦县",
+              "center": "80.184038,37.074377",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0903",
+              "adcode": "653225",
+              "name": "策勒县",
+              "center": "80.803572,37.001672",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0903",
+              "adcode": "653226",
+              "name": "于田县",
+              "center": "81.667845,36.854628",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0903",
+              "adcode": "653227",
+              "name": "民丰县",
+              "center": "82.692354,37.064909",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0999",
+          "adcode": "654000",
+          "name": "伊犁哈萨克自治州",
+          "center": "81.317946,43.92186",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0999",
+              "adcode": "654002",
+              "name": "伊宁市",
+              "center": "81.316343,43.922209",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0999",
+              "adcode": "654003",
+              "name": "奎屯市",
+              "center": "84.901602,44.423445",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0999",
+              "adcode": "654004",
+              "name": "霍尔果斯市",
+              "center": "80.420759,44.201669",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0999",
+              "adcode": "654021",
+              "name": "伊宁县",
+              "center": "81.524671,43.977876",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0999",
+              "adcode": "654022",
+              "name": "察布查尔锡伯自治县",
+              "center": "81.150874,43.838883",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0999",
+              "adcode": "654023",
+              "name": "霍城县",
+              "center": "80.872508,44.049912",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0999",
+              "adcode": "654024",
+              "name": "巩留县",
+              "center": "82.227044,43.481618",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0999",
+              "adcode": "654025",
+              "name": "新源县",
+              "center": "83.258493,43.434249",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0999",
+              "adcode": "654026",
+              "name": "昭苏县",
+              "center": "81.126029,43.157765",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0999",
+              "adcode": "654027",
+              "name": "特克斯县",
+              "center": "81.840058,43.214861",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0999",
+              "adcode": "654028",
+              "name": "尼勒克县",
+              "center": "82.504119,43.789737",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0901",
+          "adcode": "654200",
+          "name": "塔城地区",
+          "center": "82.985732,46.746301",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0901",
+              "adcode": "654201",
+              "name": "塔城市",
+              "center": "82.983988,46.746281",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0901",
+              "adcode": "654202",
+              "name": "乌苏市",
+              "center": "84.677624,44.430115",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0901",
+              "adcode": "654221",
+              "name": "额敏县",
+              "center": "83.622118,46.522555",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0901",
+              "adcode": "654223",
+              "name": "沙湾县",
+              "center": "85.622508,44.329544",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0901",
+              "adcode": "654224",
+              "name": "托里县",
+              "center": "83.60469,45.935863",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0901",
+              "adcode": "654225",
+              "name": "裕民县",
+              "center": "82.982157,46.202781",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0901",
+              "adcode": "654226",
+              "name": "和布克赛尔蒙古自治县",
+              "center": "85.733551,46.793001",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0906",
+          "adcode": "654300",
+          "name": "阿勒泰地区",
+          "center": "88.13963,47.848393",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0906",
+              "adcode": "654301",
+              "name": "阿勒泰市",
+              "center": "88.138743,47.848911",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0906",
+              "adcode": "654321",
+              "name": "布尔津县",
+              "center": "86.86186,47.70453",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0906",
+              "adcode": "654322",
+              "name": "富蕴县",
+              "center": "89.524993,46.993106",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0906",
+              "adcode": "654323",
+              "name": "福海县",
+              "center": "87.494569,47.113128",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0906",
+              "adcode": "654324",
+              "name": "哈巴河县",
+              "center": "86.418964,48.059284",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0906",
+              "adcode": "654325",
+              "name": "青河县",
+              "center": "90.381561,46.672446",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0906",
+              "adcode": "654326",
+              "name": "吉木乃县",
+              "center": "85.876064,47.434633",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0993",
+          "adcode": "659001",
+          "name": "石河子市",
+          "center": "86.041075,44.305886",
+          "level": "city",
+          "districts": []
+        },
+        {
+          "citycode": "1997",
+          "adcode": "659002",
+          "name": "阿拉尔市",
+          "center": "81.285884,40.541914",
+          "level": "city",
+          "districts": []
+        },
+        {
+          "citycode": "1998",
+          "adcode": "659003",
+          "name": "图木舒克市",
+          "center": "79.077978,39.867316",
+          "level": "city",
+          "districts": []
+        },
+        {
+          "citycode": "1994",
+          "adcode": "659004",
+          "name": "五家渠市",
+          "center": "87.526884,44.167401",
+          "level": "city",
+          "districts": []
+        },
+        {
+          "citycode": "1906",
+          "adcode": "659005",
+          "name": "北屯市",
+          "center": "87.824932,47.353177",
+          "level": "city",
+          "districts": []
+        },
+        {
+          "citycode": "1996",
+          "adcode": "659006",
+          "name": "铁门关市",
+          "center": "85.501218,41.827251",
+          "level": "city",
+          "districts": []
+        },
+        {
+          "citycode": "1909",
+          "adcode": "659007",
+          "name": "双河市",
+          "center": "82.353656,44.840524",
+          "level": "city",
+          "districts": []
+        },
+        {
+          "citycode": "1999",
+          "adcode": "659008",
+          "name": "可克达拉市",
+          "center": "80.63579,43.6832",
+          "level": "city",
+          "districts": []
+        },
+        {
+          "citycode": "1903",
+          "adcode": "659009",
+          "name": "昆玉市",
+          "center": "79.287372,37.207994",
+          "level": "city",
+          "districts": []
+        }
+      ]
+    }
+  ]
+}

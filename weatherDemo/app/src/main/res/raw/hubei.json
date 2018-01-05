@@ -1,0 +1,954 @@
+{
+    "districts": [
+    {
+      "citycode": [],
+      "adcode": "420000",
+      "name": "湖北省",
+      "center": "114.298572,30.584355",
+      "level": "province",
+      "districts": [
+        {
+          "citycode": "027",
+          "adcode": "420100",
+          "name": "武汉市",
+          "center": "114.298572,30.584355",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "027",
+              "adcode": "420102",
+              "name": "江岸区",
+              "center": "114.30304,30.594911",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "027",
+              "adcode": "420103",
+              "name": "江汉区",
+              "center": "114.283109,30.578771",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "027",
+              "adcode": "420104",
+              "name": "硚口区",
+              "center": "114.264568,30.57061",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "027",
+              "adcode": "420105",
+              "name": "汉阳区",
+              "center": "114.265807,30.549326",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "027",
+              "adcode": "420106",
+              "name": "武昌区",
+              "center": "114.307344,30.546536",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "027",
+              "adcode": "420107",
+              "name": "青山区",
+              "center": "114.39707,30.634215",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "027",
+              "adcode": "420111",
+              "name": "洪山区",
+              "center": "114.400718,30.504259",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "027",
+              "adcode": "420112",
+              "name": "东西湖区",
+              "center": "114.142483,30.622467",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "027",
+              "adcode": "420113",
+              "name": "汉南区",
+              "center": "114.08124,30.309637",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "027",
+              "adcode": "420114",
+              "name": "蔡甸区",
+              "center": "114.029341,30.582186",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "027",
+              "adcode": "420115",
+              "name": "江夏区",
+              "center": "114.313961,30.349045",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "027",
+              "adcode": "420116",
+              "name": "黄陂区",
+              "center": "114.374025,30.874155",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "027",
+              "adcode": "420117",
+              "name": "新洲区",
+              "center": "114.802108,30.842149",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0714",
+          "adcode": "420200",
+          "name": "黄石市",
+          "center": "115.077048,30.220074",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0714",
+              "adcode": "420202",
+              "name": "黄石港区",
+              "center": "115.090164,30.212086",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0714",
+              "adcode": "420203",
+              "name": "西塞山区",
+              "center": "115.093354,30.205365",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0714",
+              "adcode": "420204",
+              "name": "下陆区",
+              "center": "114.975755,30.177845",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0714",
+              "adcode": "420205",
+              "name": "铁山区",
+              "center": "114.901366,30.20601",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0714",
+              "adcode": "420222",
+              "name": "阳新县",
+              "center": "115.212883,29.841572",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0714",
+              "adcode": "420281",
+              "name": "大冶市",
+              "center": "114.974842,30.098804",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0719",
+          "adcode": "420300",
+          "name": "十堰市",
+          "center": "110.787916,32.646907",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0719",
+              "adcode": "420302",
+              "name": "茅箭区",
+              "center": "110.78621,32.644463",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0719",
+              "adcode": "420303",
+              "name": "张湾区",
+              "center": "110.772365,32.652516",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0719",
+              "adcode": "420304",
+              "name": "郧阳区",
+              "center": "110.812099,32.838267",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0719",
+              "adcode": "420322",
+              "name": "郧西县",
+              "center": "110.426472,32.991457",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0719",
+              "adcode": "420323",
+              "name": "竹山县",
+              "center": "110.2296,32.22586",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0719",
+              "adcode": "420324",
+              "name": "竹溪县",
+              "center": "109.717196,32.315342",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0719",
+              "adcode": "420325",
+              "name": "房县",
+              "center": "110.741966,32.055002",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0719",
+              "adcode": "420381",
+              "name": "丹江口市",
+              "center": "111.513793,32.538839",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0717",
+          "adcode": "420500",
+          "name": "宜昌市",
+          "center": "111.290843,30.702636",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0717",
+              "adcode": "420502",
+              "name": "西陵区",
+              "center": "111.295468,30.702476",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0717",
+              "adcode": "420503",
+              "name": "伍家岗区",
+              "center": "111.307215,30.679053",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0717",
+              "adcode": "420504",
+              "name": "点军区",
+              "center": "111.268163,30.692322",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0717",
+              "adcode": "420505",
+              "name": "猇亭区",
+              "center": "111.427642,30.530744",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0717",
+              "adcode": "420506",
+              "name": "夷陵区",
+              "center": "111.326747,30.770199",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0717",
+              "adcode": "420525",
+              "name": "远安县",
+              "center": "111.64331,31.059626",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0717",
+              "adcode": "420526",
+              "name": "兴山县",
+              "center": "110.754499,31.34795",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0717",
+              "adcode": "420527",
+              "name": "秭归县",
+              "center": "110.976785,30.823908",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0717",
+              "adcode": "420528",
+              "name": "长阳土家族自治县",
+              "center": "111.198475,30.466534",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0717",
+              "adcode": "420529",
+              "name": "五峰土家族自治县",
+              "center": "110.674938,30.199252",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0717",
+              "adcode": "420581",
+              "name": "宜都市",
+              "center": "111.454367,30.387234",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0717",
+              "adcode": "420582",
+              "name": "当阳市",
+              "center": "111.793419,30.824492",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0717",
+              "adcode": "420583",
+              "name": "枝江市",
+              "center": "111.751799,30.425364",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0710",
+          "adcode": "420600",
+          "name": "襄阳市",
+          "center": "112.144146,32.042426",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0710",
+              "adcode": "420602",
+              "name": "襄城区",
+              "center": "112.150327,32.015088",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0710",
+              "adcode": "420606",
+              "name": "樊城区",
+              "center": "112.13957,32.058589",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0710",
+              "adcode": "420607",
+              "name": "襄州区",
+              "center": "112.197378,32.085517",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0710",
+              "adcode": "420624",
+              "name": "南漳县",
+              "center": "111.844424,31.77692",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0710",
+              "adcode": "420625",
+              "name": "谷城县",
+              "center": "111.640147,32.262676",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0710",
+              "adcode": "420626",
+              "name": "保康县",
+              "center": "111.262235,31.873507",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0710",
+              "adcode": "420682",
+              "name": "老河口市",
+              "center": "111.675732,32.385438",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0710",
+              "adcode": "420683",
+              "name": "枣阳市",
+              "center": "112.765268,32.123083",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0710",
+              "adcode": "420684",
+              "name": "宜城市",
+              "center": "112.261441,31.709203",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0711",
+          "adcode": "420700",
+          "name": "鄂州市",
+          "center": "114.890593,30.396536",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0711",
+              "adcode": "420702",
+              "name": "梁子湖区",
+              "center": "114.681967,30.098191",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0711",
+              "adcode": "420703",
+              "name": "华容区",
+              "center": "114.74148,30.534468",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0711",
+              "adcode": "420704",
+              "name": "鄂城区",
+              "center": "114.890012,30.39669",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0724",
+          "adcode": "420800",
+          "name": "荆门市",
+          "center": "112.204251,31.03542",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0724",
+              "adcode": "420802",
+              "name": "东宝区",
+              "center": "112.204804,31.033461",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0724",
+              "adcode": "420804",
+              "name": "掇刀区",
+              "center": "112.198413,30.980798",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0724",
+              "adcode": "420821",
+              "name": "京山县",
+              "center": "113.114595,31.022458",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0724",
+              "adcode": "420822",
+              "name": "沙洋县",
+              "center": "112.595218,30.70359",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0724",
+              "adcode": "420881",
+              "name": "钟祥市",
+              "center": "112.587267,31.165573",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0712",
+          "adcode": "420900",
+          "name": "孝感市",
+          "center": "113.926655,30.926423",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0712",
+              "adcode": "420902",
+              "name": "孝南区",
+              "center": "113.925849,30.925966",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0712",
+              "adcode": "420921",
+              "name": "孝昌县",
+              "center": "113.988964,31.251618",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0712",
+              "adcode": "420922",
+              "name": "大悟县",
+              "center": "114.126249,31.565483",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0712",
+              "adcode": "420923",
+              "name": "云梦县",
+              "center": "113.750616,31.021691",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0712",
+              "adcode": "420981",
+              "name": "应城市",
+              "center": "113.573842,30.939038",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0712",
+              "adcode": "420982",
+              "name": "安陆市",
+              "center": "113.690401,31.26174",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0712",
+              "adcode": "420984",
+              "name": "汉川市",
+              "center": "113.835301,30.652165",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0716",
+          "adcode": "421000",
+          "name": "荆州市",
+          "center": "112.23813,30.326857",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0716",
+              "adcode": "421002",
+              "name": "沙市区",
+              "center": "112.257433,30.315895",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0716",
+              "adcode": "421003",
+              "name": "荆州区",
+              "center": "112.195354,30.350674",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0716",
+              "adcode": "421022",
+              "name": "公安县",
+              "center": "112.230179,30.059065",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0716",
+              "adcode": "421023",
+              "name": "监利县",
+              "center": "112.904344,29.820079",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0716",
+              "adcode": "421024",
+              "name": "江陵县",
+              "center": "112.41735,30.033919",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0716",
+              "adcode": "421081",
+              "name": "石首市",
+              "center": "112.40887,29.716437",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0716",
+              "adcode": "421083",
+              "name": "洪湖市",
+              "center": "113.470304,29.81297",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0716",
+              "adcode": "421087",
+              "name": "松滋市",
+              "center": "111.77818,30.176037",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0713",
+          "adcode": "421100",
+          "name": "黄冈市",
+          "center": "114.879365,30.447711",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0713",
+              "adcode": "421102",
+              "name": "黄州区",
+              "center": "114.878934,30.447435",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0713",
+              "adcode": "421121",
+              "name": "团风县",
+              "center": "114.872029,30.63569",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0713",
+              "adcode": "421122",
+              "name": "红安县",
+              "center": "114.615095,31.284777",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0713",
+              "adcode": "421123",
+              "name": "罗田县",
+              "center": "115.398984,30.781679",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0713",
+              "adcode": "421124",
+              "name": "英山县",
+              "center": "115.67753,30.735794",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0713",
+              "adcode": "421125",
+              "name": "浠水县",
+              "center": "115.26344,30.454837",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0713",
+              "adcode": "421126",
+              "name": "蕲春县",
+              "center": "115.433964,30.234927",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0713",
+              "adcode": "421127",
+              "name": "黄梅县",
+              "center": "115.942548,30.075113",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0713",
+              "adcode": "421181",
+              "name": "麻城市",
+              "center": "115.02541,31.177906",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0713",
+              "adcode": "421182",
+              "name": "武穴市",
+              "center": "115.56242,29.849342",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0715",
+          "adcode": "421200",
+          "name": "咸宁市",
+          "center": "114.328963,29.832798",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0715",
+              "adcode": "421202",
+              "name": "咸安区",
+              "center": "114.333894,29.824716",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0715",
+              "adcode": "421221",
+              "name": "嘉鱼县",
+              "center": "113.921547,29.973363",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0715",
+              "adcode": "421222",
+              "name": "通城县",
+              "center": "113.814131,29.246076",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0715",
+              "adcode": "421223",
+              "name": "崇阳县",
+              "center": "114.049958,29.54101",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0715",
+              "adcode": "421224",
+              "name": "通山县",
+              "center": "114.493163,29.604455",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0715",
+              "adcode": "421281",
+              "name": "赤壁市",
+              "center": "113.88366,29.716879",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0722",
+          "adcode": "421300",
+          "name": "随州市",
+          "center": "113.37377,31.717497",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0722",
+              "adcode": "421303",
+              "name": "曾都区",
+              "center": "113.374519,31.717521",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0722",
+              "adcode": "421321",
+              "name": "随县",
+              "center": "113.301384,31.854246",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0722",
+              "adcode": "421381",
+              "name": "广水市",
+              "center": "113.826601,31.617731",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0718",
+          "adcode": "422800",
+          "name": "恩施土家族苗族自治州",
+          "center": "109.48699,30.283114",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0718",
+              "adcode": "422801",
+              "name": "恩施市",
+              "center": "109.486761,30.282406",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0718",
+              "adcode": "422802",
+              "name": "利川市",
+              "center": "108.943491,30.294247",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0718",
+              "adcode": "422822",
+              "name": "建始县",
+              "center": "109.723822,30.601632",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0718",
+              "adcode": "422823",
+              "name": "巴东县",
+              "center": "110.336665,31.041403",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0718",
+              "adcode": "422825",
+              "name": "宣恩县",
+              "center": "109.482819,29.98867",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0718",
+              "adcode": "422826",
+              "name": "咸丰县",
+              "center": "109.15041,29.678967",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0718",
+              "adcode": "422827",
+              "name": "来凤县",
+              "center": "109.408328,29.506945",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0718",
+              "adcode": "422828",
+              "name": "鹤峰县",
+              "center": "110.033699,29.887298",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0728",
+          "adcode": "429004",
+          "name": "仙桃市",
+          "center": "113.453974,30.364953",
+          "level": "city",
+          "districts": []
+        },
+        {
+          "citycode": "2728",
+          "adcode": "429005",
+          "name": "潜江市",
+          "center": "112.896866,30.421215",
+          "level": "city",
+          "districts": []
+        },
+        {
+          "citycode": "1728",
+          "adcode": "429006",
+          "name": "天门市",
+          "center": "113.165862,30.653061",
+          "level": "city",
+          "districts": []
+        },
+        {
+          "citycode": "1719",
+          "adcode": "429021",
+          "name": "神农架林区",
+          "center": "110.671525,31.744449",
+          "level": "city",
+          "districts": []
+        }
+      ]
+    }
+  ]
+}

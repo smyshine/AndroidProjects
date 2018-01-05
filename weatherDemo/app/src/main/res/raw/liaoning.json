@@ -1,0 +1,939 @@
+{
+    "districts": [
+    {
+      "citycode": [],
+      "adcode": "210000",
+      "name": "辽宁省",
+      "center": "123.429096,41.796767",
+      "level": "province",
+      "districts": [
+        {
+          "citycode": "024",
+          "adcode": "210100",
+          "name": "沈阳市",
+          "center": "123.429096,41.796767",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "024",
+              "adcode": "210102",
+              "name": "和平区",
+              "center": "123.406664,41.788074",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "024",
+              "adcode": "210103",
+              "name": "沈河区",
+              "center": "123.445696,41.795591",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "024",
+              "adcode": "210104",
+              "name": "大东区",
+              "center": "123.469956,41.808503",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "024",
+              "adcode": "210105",
+              "name": "皇姑区",
+              "center": "123.405677,41.822336",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "024",
+              "adcode": "210106",
+              "name": "铁西区",
+              "center": "123.350664,41.787808",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "024",
+              "adcode": "210111",
+              "name": "苏家屯区",
+              "center": "123.341604,41.665904",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "024",
+              "adcode": "210112",
+              "name": "浑南区",
+              "center": "123.458981,41.741946",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "024",
+              "adcode": "210113",
+              "name": "沈北新区",
+              "center": "123.521471,42.052312",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "024",
+              "adcode": "210114",
+              "name": "于洪区",
+              "center": "123.310829,41.795833",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "024",
+              "adcode": "210115",
+              "name": "辽中区",
+              "center": "122.731269,41.512725",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "024",
+              "adcode": "210123",
+              "name": "康平县",
+              "center": "123.352703,42.741533",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "024",
+              "adcode": "210124",
+              "name": "法库县",
+              "center": "123.416722,42.507045",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "024",
+              "adcode": "210181",
+              "name": "新民市",
+              "center": "122.828868,41.996508",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0411",
+          "adcode": "210200",
+          "name": "大连市",
+          "center": "121.618622,38.91459",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0411",
+              "adcode": "210202",
+              "name": "中山区",
+              "center": "121.64376,38.921553",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0411",
+              "adcode": "210203",
+              "name": "西岗区",
+              "center": "121.616112,38.914266",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0411",
+              "adcode": "210204",
+              "name": "沙河口区",
+              "center": "121.593702,38.912859",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0411",
+              "adcode": "210211",
+              "name": "甘井子区",
+              "center": "121.582614,38.975148",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0411",
+              "adcode": "210212",
+              "name": "旅顺口区",
+              "center": "121.26713,38.812043",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0411",
+              "adcode": "210213",
+              "name": "金州区",
+              "center": "121.789413,39.052745",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0411",
+              "adcode": "210224",
+              "name": "长海县",
+              "center": "122.587824,39.272399",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0411",
+              "adcode": "210281",
+              "name": "瓦房店市",
+              "center": "122.002656,39.63065",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0411",
+              "adcode": "210214",
+              "name": "普兰店区",
+              "center": "121.9705,39.401555",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0411",
+              "adcode": "210283",
+              "name": "庄河市",
+              "center": "122.970612,39.69829",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0412",
+          "adcode": "210300",
+          "name": "鞍山市",
+          "center": "122.995632,41.110626",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0412",
+              "adcode": "210302",
+              "name": "铁东区",
+              "center": "122.994475,41.110344",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0412",
+              "adcode": "210303",
+              "name": "铁西区",
+              "center": "122.971834,41.11069",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0412",
+              "adcode": "210304",
+              "name": "立山区",
+              "center": "123.024806,41.150622",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0412",
+              "adcode": "210311",
+              "name": "千山区",
+              "center": "122.949298,41.068909",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0412",
+              "adcode": "210321",
+              "name": "台安县",
+              "center": "122.429736,41.38686",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0412",
+              "adcode": "210323",
+              "name": "岫岩满族自治县",
+              "center": "123.28833,40.281509",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0412",
+              "adcode": "210381",
+              "name": "海城市",
+              "center": "122.752199,40.852533",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0413",
+          "adcode": "210400",
+          "name": "抚顺市",
+          "center": "123.921109,41.875956",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0413",
+              "adcode": "210402",
+              "name": "新抚区",
+              "center": "123.902858,41.86082",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0413",
+              "adcode": "210403",
+              "name": "东洲区",
+              "center": "124.047219,41.866829",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0413",
+              "adcode": "210404",
+              "name": "望花区",
+              "center": "123.801509,41.851803",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0413",
+              "adcode": "210411",
+              "name": "顺城区",
+              "center": "123.917165,41.881132",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0413",
+              "adcode": "210421",
+              "name": "抚顺县",
+              "center": "124.097979,41.922644",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0413",
+              "adcode": "210422",
+              "name": "新宾满族自治县",
+              "center": "125.037547,41.732456",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0413",
+              "adcode": "210423",
+              "name": "清原满族自治县",
+              "center": "124.927192,42.10135",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0414",
+          "adcode": "210500",
+          "name": "本溪市",
+          "center": "123.770519,41.297909",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0414",
+              "adcode": "210502",
+              "name": "平山区",
+              "center": "123.761231,41.291581",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0414",
+              "adcode": "210503",
+              "name": "溪湖区",
+              "center": "123.765226,41.330056",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0414",
+              "adcode": "210504",
+              "name": "明山区",
+              "center": "123.763288,41.302429",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0414",
+              "adcode": "210505",
+              "name": "南芬区",
+              "center": "123.748381,41.104093",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0414",
+              "adcode": "210521",
+              "name": "本溪满族自治县",
+              "center": "124.126156,41.300344",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0414",
+              "adcode": "210522",
+              "name": "桓仁满族自治县",
+              "center": "125.359195,41.268997",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0415",
+          "adcode": "210600",
+          "name": "丹东市",
+          "center": "124.383044,40.124296",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0415",
+              "adcode": "210602",
+              "name": "元宝区",
+              "center": "124.397814,40.136483",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0415",
+              "adcode": "210603",
+              "name": "振兴区",
+              "center": "124.361153,40.102801",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0415",
+              "adcode": "210604",
+              "name": "振安区",
+              "center": "124.427709,40.158557",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0415",
+              "adcode": "210624",
+              "name": "宽甸满族自治县",
+              "center": "124.784867,40.730412",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0415",
+              "adcode": "210681",
+              "name": "东港市",
+              "center": "124.149437,39.883467",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0415",
+              "adcode": "210682",
+              "name": "凤城市",
+              "center": "124.071067,40.457567",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0416",
+          "adcode": "210700",
+          "name": "锦州市",
+          "center": "121.135742,41.119269",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0416",
+              "adcode": "210702",
+              "name": "古塔区",
+              "center": "121.130085,41.115719",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0416",
+              "adcode": "210703",
+              "name": "凌河区",
+              "center": "121.151304,41.114662",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0416",
+              "adcode": "210711",
+              "name": "太和区",
+              "center": "121.107297,41.105378",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0416",
+              "adcode": "210726",
+              "name": "黑山县",
+              "center": "122.117915,41.691804",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0416",
+              "adcode": "210727",
+              "name": "义县",
+              "center": "121.242831,41.537224",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0416",
+              "adcode": "210781",
+              "name": "凌海市",
+              "center": "121.364236,41.171738",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0416",
+              "adcode": "210782",
+              "name": "北镇市",
+              "center": "121.795962,41.598764",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0417",
+          "adcode": "210800",
+          "name": "营口市",
+          "center": "122.235151,40.667432",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0417",
+              "adcode": "210802",
+              "name": "站前区",
+              "center": "122.253235,40.669949",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0417",
+              "adcode": "210803",
+              "name": "西市区",
+              "center": "122.210067,40.663086",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0417",
+              "adcode": "210804",
+              "name": "鲅鱼圈区",
+              "center": "122.127242,40.263646",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0417",
+              "adcode": "210811",
+              "name": "老边区",
+              "center": "122.382584,40.682723",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0417",
+              "adcode": "210881",
+              "name": "盖州市",
+              "center": "122.355534,40.405234",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0417",
+              "adcode": "210882",
+              "name": "大石桥市",
+              "center": "122.505894,40.633973",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0418",
+          "adcode": "210900",
+          "name": "阜新市",
+          "center": "121.648962,42.011796",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0418",
+              "adcode": "210902",
+              "name": "海州区",
+              "center": "121.657639,42.011162",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0418",
+              "adcode": "210903",
+              "name": "新邱区",
+              "center": "121.790541,42.086603",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0418",
+              "adcode": "210904",
+              "name": "太平区",
+              "center": "121.677575,42.011145",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0418",
+              "adcode": "210905",
+              "name": "清河门区",
+              "center": "121.42018,41.780477",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0418",
+              "adcode": "210911",
+              "name": "细河区",
+              "center": "121.654791,42.019218",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0418",
+              "adcode": "210921",
+              "name": "阜新蒙古族自治县",
+              "center": "121.743125,42.058607",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0418",
+              "adcode": "210922",
+              "name": "彰武县",
+              "center": "122.537444,42.384823",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0419",
+          "adcode": "211000",
+          "name": "辽阳市",
+          "center": "123.18152,41.269402",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0419",
+              "adcode": "211002",
+              "name": "白塔区",
+              "center": "123.172611,41.26745",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0419",
+              "adcode": "211003",
+              "name": "文圣区",
+              "center": "123.188227,41.266765",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0419",
+              "adcode": "211004",
+              "name": "宏伟区",
+              "center": "123.200461,41.205747",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0419",
+              "adcode": "211005",
+              "name": "弓长岭区",
+              "center": "123.431633,41.157831",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0419",
+              "adcode": "211011",
+              "name": "太子河区",
+              "center": "123.185336,41.251682",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0419",
+              "adcode": "211021",
+              "name": "辽阳县",
+              "center": "123.079674,41.216479",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0419",
+              "adcode": "211081",
+              "name": "灯塔市",
+              "center": "123.325864,41.427836",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0427",
+          "adcode": "211100",
+          "name": "盘锦市",
+          "center": "122.06957,41.124484",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0427",
+              "adcode": "211102",
+              "name": "双台子区",
+              "center": "122.055733,41.190365",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0427",
+              "adcode": "211103",
+              "name": "兴隆台区",
+              "center": "122.071624,41.122423",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0427",
+              "adcode": "211104",
+              "name": "大洼区",
+              "center": "122.071708,40.994428",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0427",
+              "adcode": "211122",
+              "name": "盘山县",
+              "center": "121.98528,41.240701",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0410",
+          "adcode": "211200",
+          "name": "铁岭市",
+          "center": "123.844279,42.290585",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0410",
+              "adcode": "211202",
+              "name": "银州区",
+              "center": "123.844877,42.292278",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0410",
+              "adcode": "211204",
+              "name": "清河区",
+              "center": "124.14896,42.542978",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0410",
+              "adcode": "211221",
+              "name": "铁岭县",
+              "center": "123.725669,42.223316",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0410",
+              "adcode": "211223",
+              "name": "西丰县",
+              "center": "124.72332,42.738091",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0410",
+              "adcode": "211224",
+              "name": "昌图县",
+              "center": "124.11017,42.784441",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0410",
+              "adcode": "211281",
+              "name": "调兵山市",
+              "center": "123.545366,42.450734",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0410",
+              "adcode": "211282",
+              "name": "开原市",
+              "center": "124.045551,42.542141",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0421",
+          "adcode": "211300",
+          "name": "朝阳市",
+          "center": "120.451176,41.576758",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0421",
+              "adcode": "211302",
+              "name": "双塔区",
+              "center": "120.44877,41.579389",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0421",
+              "adcode": "211303",
+              "name": "龙城区",
+              "center": "120.413376,41.576749",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0421",
+              "adcode": "211321",
+              "name": "朝阳县",
+              "center": "120.404217,41.526342",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0421",
+              "adcode": "211322",
+              "name": "建平县",
+              "center": "119.642363,41.402576",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0421",
+              "adcode": "211324",
+              "name": "喀喇沁左翼蒙古族自治县",
+              "center": "119.744883,41.125428",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0421",
+              "adcode": "211381",
+              "name": "北票市",
+              "center": "120.766951,41.803286",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0421",
+              "adcode": "211382",
+              "name": "凌源市",
+              "center": "119.404789,41.243086",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0429",
+          "adcode": "211400",
+          "name": "葫芦岛市",
+          "center": "120.856394,40.755572",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0429",
+              "adcode": "211402",
+              "name": "连山区",
+              "center": "120.85937,40.755143",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0429",
+              "adcode": "211403",
+              "name": "龙港区",
+              "center": "120.838569,40.709991",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0429",
+              "adcode": "211404",
+              "name": "南票区",
+              "center": "120.752314,41.098813",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0429",
+              "adcode": "211421",
+              "name": "绥中县",
+              "center": "120.342112,40.328407",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0429",
+              "adcode": "211422",
+              "name": "建昌县",
+              "center": "119.807776,40.812871",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0429",
+              "adcode": "211481",
+              "name": "兴城市",
+              "center": "120.729365,40.619413",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

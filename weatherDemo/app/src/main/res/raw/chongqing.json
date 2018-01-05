@@ -1,0 +1,334 @@
+{
+  "districts": [
+    {
+      "citycode": ["023"],
+      "adcode": "500000",
+      "name": "重庆市",
+      "center": "106.504962,29.533155",
+      "level": "province",
+      "districts": [
+        {
+          "citycode": "023",
+          "adcode": "500100",
+          "name": "重庆市市辖区",
+          "center": "106.504962,29.533155",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "023",
+              "adcode": "500101",
+              "name": "万州区",
+              "center": "108.380246,30.807807",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "023",
+              "adcode": "500102",
+              "name": "涪陵区",
+              "center": "107.394905,29.703652",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "023",
+              "adcode": "500103",
+              "name": "渝中区",
+              "center": "106.56288,29.556742",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "023",
+              "adcode": "500104",
+              "name": "大渡口区",
+              "center": "106.48613,29.481002",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "023",
+              "adcode": "500105",
+              "name": "江北区",
+              "center": "106.532844,29.575352",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "023",
+              "adcode": "500106",
+              "name": "沙坪坝区",
+              "center": "106.4542,29.541224",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "023",
+              "adcode": "500107",
+              "name": "九龙坡区",
+              "center": "106.480989,29.523492",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "023",
+              "adcode": "500108",
+              "name": "南岸区",
+              "center": "106.560813,29.523992",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "023",
+              "adcode": "500109",
+              "name": "北碚区",
+              "center": "106.437868,29.82543",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "023",
+              "adcode": "500110",
+              "name": "綦江区",
+              "center": "106.651417,29.028091",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "023",
+              "adcode": "500111",
+              "name": "大足区",
+              "center": "105.715319,29.700498",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "023",
+              "adcode": "500112",
+              "name": "渝北区",
+              "center": "106.512851,29.601451",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "023",
+              "adcode": "500113",
+              "name": "巴南区",
+              "center": "106.519423,29.381919",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "023",
+              "adcode": "500114",
+              "name": "黔江区",
+              "center": "108.782577,29.527548",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "023",
+              "adcode": "500115",
+              "name": "长寿区",
+              "center": "107.074854,29.833671",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "023",
+              "adcode": "500116",
+              "name": "江津区",
+              "center": "106.253156,29.283387",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "023",
+              "adcode": "500117",
+              "name": "合川区",
+              "center": "106.265554,29.990993",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "023",
+              "adcode": "500118",
+              "name": "永川区",
+              "center": "105.894714,29.348748",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "023",
+              "adcode": "500119",
+              "name": "南川区",
+              "center": "107.098153,29.156646",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "023",
+              "adcode": "500120",
+              "name": "璧山区",
+              "center": "106.231126,29.593581",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "023",
+              "adcode": "500151",
+              "name": "铜梁区",
+              "center": "106.054948,29.839944",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "023",
+              "adcode": "500152",
+              "name": "潼南区",
+              "center": "105.841818,30.189554",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "023",
+              "adcode": "500153",
+              "name": "荣昌区",
+              "center": "105.594061,29.403627",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "023",
+              "adcode": "500154",
+              "name": "开州区",
+              "center": "108.413317,31.167735",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "023",
+              "adcode": "500228",
+              "name": "梁平区",
+              "center": "107.800034,30.672168",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "023",
+              "adcode": "500229",
+              "name": "城口县",
+              "center": "108.6649,31.946293",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "023",
+              "adcode": "500230",
+              "name": "丰都县",
+              "center": "107.73248,29.866424",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "023",
+              "adcode": "500231",
+              "name": "垫江县",
+              "center": "107.348692,30.330012",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "023",
+              "adcode": "500232",
+              "name": "武隆区",
+              "center": "107.75655,29.32376",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "023",
+              "adcode": "500233",
+              "name": "忠县",
+              "center": "108.037518,30.291537",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "023",
+              "adcode": "500235",
+              "name": "云阳县",
+              "center": "108.697698,30.930529",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "023",
+              "adcode": "500236",
+              "name": "奉节县",
+              "center": "109.465774,31.019967",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "023",
+              "adcode": "500237",
+              "name": "巫山县",
+              "center": "109.878928,31.074843",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "023",
+              "adcode": "500238",
+              "name": "巫溪县",
+              "center": "109.628912,31.3966",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "023",
+              "adcode": "500240",
+              "name": "石柱土家族自治县",
+              "center": "108.112448,29.99853",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "023",
+              "adcode": "500241",
+              "name": "秀山土家族苗族自治县",
+              "center": "108.996043,28.444772",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "023",
+              "adcode": "500242",
+              "name": "酉阳土家族苗族自治县",
+              "center": "108.767201,28.839828",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "023",
+              "adcode": "500243",
+              "name": "彭水苗族土家族自治县",
+              "center": "108.166551,29.293856",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "023",
+          "adcode": "500200",
+          "name": "重庆市郊县",
+          "center": "108.170255,29.291965",
+          "level": "city",
+          "districts": []
+        }
+      ]
+    }
+  ]
+}

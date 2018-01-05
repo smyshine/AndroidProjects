@@ -1,0 +1,150 @@
+{
+    "districts": [
+    {
+      "citycode": ["022"],
+      "adcode": "120000",
+      "name": "天津市",
+      "center": "117.190182,39.125596",
+      "level": "province",
+      "districts": [
+        {
+          "citycode": "022",
+          "adcode": "120100",
+          "name": "天津市市辖区",
+          "center": "117.190182,39.125596",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "022",
+              "adcode": "120101",
+              "name": "和平区",
+              "center": "117.195907,39.118327",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "022",
+              "adcode": "120102",
+              "name": "河东区",
+              "center": "117.226568,39.122125",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "022",
+              "adcode": "120103",
+              "name": "河西区",
+              "center": "117.217536,39.101897",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "022",
+              "adcode": "120104",
+              "name": "南开区",
+              "center": "117.164143,39.120474",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "022",
+              "adcode": "120105",
+              "name": "河北区",
+              "center": "117.201569,39.156632",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "022",
+              "adcode": "120106",
+              "name": "红桥区",
+              "center": "117.163301,39.175066",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "022",
+              "adcode": "120110",
+              "name": "东丽区",
+              "center": "117.313967,39.087764",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "022",
+              "adcode": "120111",
+              "name": "西青区",
+              "center": "117.012247,39.139446",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "022",
+              "adcode": "120112",
+              "name": "津南区",
+              "center": "117.382549,38.989577",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "022",
+              "adcode": "120113",
+              "name": "北辰区",
+              "center": "117.13482,39.225555",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "022",
+              "adcode": "120114",
+              "name": "武清区",
+              "center": "117.057959,39.376925",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "022",
+              "adcode": "120115",
+              "name": "宝坻区",
+              "center": "117.308094,39.716965",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "022",
+              "adcode": "120116",
+              "name": "滨海新区",
+              "center": "117.654173,39.032846",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "022",
+              "adcode": "120117",
+              "name": "宁河区",
+              "center": "117.82828,39.328886",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "022",
+              "adcode": "120118",
+              "name": "静海区",
+              "center": "116.925304,38.935671",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "022",
+              "adcode": "120119",
+              "name": "蓟州区",
+              "center": "117.407449,40.045342",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

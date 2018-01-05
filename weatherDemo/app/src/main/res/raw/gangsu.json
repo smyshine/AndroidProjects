@@ -1,0 +1,826 @@
+{
+    "districts": [
+    {
+      "citycode": [],
+      "adcode": "620000",
+      "name": "甘肃省",
+      "center": "103.823557,36.058039",
+      "level": "province",
+      "districts": [
+        {
+          "citycode": "0931",
+          "adcode": "620100",
+          "name": "兰州市",
+          "center": "103.823557,36.058039",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0931",
+              "adcode": "620102",
+              "name": "城关区",
+              "center": "103.841032,36.049115",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0931",
+              "adcode": "620103",
+              "name": "七里河区",
+              "center": "103.784326,36.06673",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0931",
+              "adcode": "620104",
+              "name": "西固区",
+              "center": "103.622331,36.100369",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0931",
+              "adcode": "620105",
+              "name": "安宁区",
+              "center": "103.724038,36.10329",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0931",
+              "adcode": "620111",
+              "name": "红古区",
+              "center": "102.861814,36.344177",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0931",
+              "adcode": "620121",
+              "name": "永登县",
+              "center": "103.262203,36.734428",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0931",
+              "adcode": "620122",
+              "name": "皋兰县",
+              "center": "103.94933,36.331254",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0931",
+              "adcode": "620123",
+              "name": "榆中县",
+              "center": "104.114975,35.84443",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "1937",
+          "adcode": "620200",
+          "name": "嘉峪关市",
+          "center": "98.277304,39.786529",
+          "level": "city",
+          "districts": []
+        },
+        {
+          "citycode": "0935",
+          "adcode": "620300",
+          "name": "金昌市",
+          "center": "102.187888,38.514238",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0935",
+              "adcode": "620302",
+              "name": "金川区",
+              "center": "102.187683,38.513793",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0935",
+              "adcode": "620321",
+              "name": "永昌县",
+              "center": "101.971957,38.247354",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0943",
+          "adcode": "620400",
+          "name": "白银市",
+          "center": "104.173606,36.54568",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0943",
+              "adcode": "620402",
+              "name": "白银区",
+              "center": "104.17425,36.545649",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0943",
+              "adcode": "620403",
+              "name": "平川区",
+              "center": "104.819207,36.72921",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0943",
+              "adcode": "620421",
+              "name": "靖远县",
+              "center": "104.686972,36.561424",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0943",
+              "adcode": "620422",
+              "name": "会宁县",
+              "center": "105.054337,35.692486",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0943",
+              "adcode": "620423",
+              "name": "景泰县",
+              "center": "104.066394,37.193519",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0938",
+          "adcode": "620500",
+          "name": "天水市",
+          "center": "105.724998,34.578529",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0938",
+              "adcode": "620502",
+              "name": "秦州区",
+              "center": "105.724477,34.578645",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0938",
+              "adcode": "620503",
+              "name": "麦积区",
+              "center": "105.897631,34.563504",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0938",
+              "adcode": "620521",
+              "name": "清水县",
+              "center": "106.139878,34.75287",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0938",
+              "adcode": "620522",
+              "name": "秦安县",
+              "center": "105.6733,34.862354",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0938",
+              "adcode": "620523",
+              "name": "甘谷县",
+              "center": "105.332347,34.747327",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0938",
+              "adcode": "620524",
+              "name": "武山县",
+              "center": "104.891696,34.721955",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0938",
+              "adcode": "620525",
+              "name": "张家川回族自治县",
+              "center": "106.212416,34.993237",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "1935",
+          "adcode": "620600",
+          "name": "武威市",
+          "center": "102.634697,37.929996",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "1935",
+              "adcode": "620602",
+              "name": "凉州区",
+              "center": "102.634492,37.93025",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "1935",
+              "adcode": "620621",
+              "name": "民勤县",
+              "center": "103.090654,38.624621",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "1935",
+              "adcode": "620622",
+              "name": "古浪县",
+              "center": "102.898047,37.470571",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "1935",
+              "adcode": "620623",
+              "name": "天祝藏族自治县",
+              "center": "103.142034,36.971678",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0936",
+          "adcode": "620700",
+          "name": "张掖市",
+          "center": "100.455472,38.932897",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0936",
+              "adcode": "620702",
+              "name": "甘州区",
+              "center": "100.454862,38.931774",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0936",
+              "adcode": "620721",
+              "name": "肃南裕固族自治县",
+              "center": "99.617086,38.837269",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0936",
+              "adcode": "620722",
+              "name": "民乐县",
+              "center": "100.816623,38.434454",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0936",
+              "adcode": "620723",
+              "name": "临泽县",
+              "center": "100.166333,39.152151",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0936",
+              "adcode": "620724",
+              "name": "高台县",
+              "center": "99.81665,39.376308",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0936",
+              "adcode": "620725",
+              "name": "山丹县",
+              "center": "101.088442,38.784839",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0933",
+          "adcode": "620800",
+          "name": "平凉市",
+          "center": "106.684691,35.54279",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0933",
+              "adcode": "620802",
+              "name": "崆峒区",
+              "center": "106.684223,35.54173",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0933",
+              "adcode": "620821",
+              "name": "泾川县",
+              "center": "107.365218,35.335283",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0933",
+              "adcode": "620822",
+              "name": "灵台县",
+              "center": "107.620587,35.064009",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0933",
+              "adcode": "620823",
+              "name": "崇信县",
+              "center": "107.031253,35.304533",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0933",
+              "adcode": "620824",
+              "name": "华亭县",
+              "center": "106.649308,35.215342",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0933",
+              "adcode": "620825",
+              "name": "庄浪县",
+              "center": "106.041979,35.203428",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0933",
+              "adcode": "620826",
+              "name": "静宁县",
+              "center": "105.733489,35.525243",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0937",
+          "adcode": "620900",
+          "name": "酒泉市",
+          "center": "98.510795,39.744023",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0937",
+              "adcode": "620902",
+              "name": "肃州区",
+              "center": "98.511155,39.743858",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0937",
+              "adcode": "620921",
+              "name": "金塔县",
+              "center": "98.902959,39.983036",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0937",
+              "adcode": "620922",
+              "name": "瓜州县",
+              "center": "95.780591,40.516525",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0937",
+              "adcode": "620923",
+              "name": "肃北蒙古族自治县",
+              "center": "94.87728,39.51224",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0937",
+              "adcode": "620924",
+              "name": "阿克塞哈萨克族自治县",
+              "center": "94.337642,39.631642",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0937",
+              "adcode": "620981",
+              "name": "玉门市",
+              "center": "97.037206,40.28682",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0937",
+              "adcode": "620982",
+              "name": "敦煌市",
+              "center": "94.664279,40.141119",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0934",
+          "adcode": "621000",
+          "name": "庆阳市",
+          "center": "107.638372,35.734218",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0934",
+              "adcode": "621002",
+              "name": "西峰区",
+              "center": "107.638824,35.733713",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0934",
+              "adcode": "621021",
+              "name": "庆城县",
+              "center": "107.885664,36.013504",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0934",
+              "adcode": "621022",
+              "name": "环县",
+              "center": "107.308754,36.569322",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0934",
+              "adcode": "621023",
+              "name": "华池县",
+              "center": "107.986288,36.457304",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0934",
+              "adcode": "621024",
+              "name": "合水县",
+              "center": "108.019865,35.819005",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0934",
+              "adcode": "621025",
+              "name": "正宁县",
+              "center": "108.361068,35.490642",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0934",
+              "adcode": "621026",
+              "name": "宁县",
+              "center": "107.921182,35.50201",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0934",
+              "adcode": "621027",
+              "name": "镇原县",
+              "center": "107.195706,35.677806",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0932",
+          "adcode": "621100",
+          "name": "定西市",
+          "center": "104.626294,35.579578",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0932",
+              "adcode": "621102",
+              "name": "安定区",
+              "center": "104.62577,35.579764",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0932",
+              "adcode": "621121",
+              "name": "通渭县",
+              "center": "105.250102,35.208922",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0932",
+              "adcode": "621122",
+              "name": "陇西县",
+              "center": "104.637554,35.003409",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0932",
+              "adcode": "621123",
+              "name": "渭源县",
+              "center": "104.211742,35.133023",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0932",
+              "adcode": "621124",
+              "name": "临洮县",
+              "center": "103.862186,35.376233",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0932",
+              "adcode": "621125",
+              "name": "漳县",
+              "center": "104.466756,34.848642",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0932",
+              "adcode": "621126",
+              "name": "岷县",
+              "center": "104.039882,34.439105",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "2935",
+          "adcode": "621200",
+          "name": "陇南市",
+          "center": "104.929379,33.388598",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "2935",
+              "adcode": "621202",
+              "name": "武都区",
+              "center": "104.929866,33.388155",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "2935",
+              "adcode": "621221",
+              "name": "成县",
+              "center": "105.734434,33.739863",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "2935",
+              "adcode": "621222",
+              "name": "文县",
+              "center": "104.682448,32.942171",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "2935",
+              "adcode": "621223",
+              "name": "宕昌县",
+              "center": "104.394475,34.042655",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "2935",
+              "adcode": "621224",
+              "name": "康县",
+              "center": "105.609534,33.328266",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "2935",
+              "adcode": "621225",
+              "name": "西和县",
+              "center": "105.299737,34.013718",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "2935",
+              "adcode": "621226",
+              "name": "礼县",
+              "center": "105.181616,34.189387",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "2935",
+              "adcode": "621227",
+              "name": "徽县",
+              "center": "106.085632,33.767785",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "2935",
+              "adcode": "621228",
+              "name": "两当县",
+              "center": "106.306959,33.910729",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0930",
+          "adcode": "622900",
+          "name": "临夏回族自治州",
+          "center": "103.212006,35.599446",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0930",
+              "adcode": "622901",
+              "name": "临夏市",
+              "center": "103.211634,35.59941",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0930",
+              "adcode": "622921",
+              "name": "临夏县",
+              "center": "102.993873,35.49236",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0930",
+              "adcode": "622922",
+              "name": "康乐县",
+              "center": "103.709852,35.371906",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0930",
+              "adcode": "622923",
+              "name": "永靖县",
+              "center": "103.319871,35.938933",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0930",
+              "adcode": "622924",
+              "name": "广河县",
+              "center": "103.576188,35.481688",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0930",
+              "adcode": "622925",
+              "name": "和政县",
+              "center": "103.350357,35.425971",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0930",
+              "adcode": "622926",
+              "name": "东乡族自治县",
+              "center": "103.389568,35.66383",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0930",
+              "adcode": "622927",
+              "name": "积石山保安族东乡族撒拉族自治县",
+              "center": "102.877473,35.712906",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0941",
+          "adcode": "623000",
+          "name": "甘南藏族自治州",
+          "center": "102.911008,34.986354",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0941",
+              "adcode": "623001",
+              "name": "合作市",
+              "center": "102.91149,34.985973",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0941",
+              "adcode": "623021",
+              "name": "临潭县",
+              "center": "103.353054,34.69164",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0941",
+              "adcode": "623022",
+              "name": "卓尼县",
+              "center": "103.508508,34.588165",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0941",
+              "adcode": "623023",
+              "name": "舟曲县",
+              "center": "104.370271,33.782964",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0941",
+              "adcode": "623024",
+              "name": "迭部县",
+              "center": "103.221009,34.055348",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0941",
+              "adcode": "623025",
+              "name": "玛曲县",
+              "center": "102.075767,33.998068",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0941",
+              "adcode": "623026",
+              "name": "碌曲县",
+              "center": "102.488495,34.589591",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0941",
+              "adcode": "623027",
+              "name": "夏河县",
+              "center": "102.520743,35.200853",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

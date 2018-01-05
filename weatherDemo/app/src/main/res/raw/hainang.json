@@ -1,0 +1,319 @@
+{
+    "districts": [
+    {
+      "citycode": [],
+      "adcode": "460000",
+      "name": "海南省",
+      "center": "110.33119,20.031971",
+      "level": "province",
+      "districts": [
+        {
+          "citycode": "0898",
+          "adcode": "460100",
+          "name": "海口市",
+          "center": "110.33119,20.031971",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0898",
+              "adcode": "460105",
+              "name": "秀英区",
+              "center": "110.282393,20.008145",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0898",
+              "adcode": "460106",
+              "name": "龙华区",
+              "center": "110.330373,20.031026",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0898",
+              "adcode": "460107",
+              "name": "琼山区",
+              "center": "110.354722,20.001051",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0898",
+              "adcode": "460108",
+              "name": "美兰区",
+              "center": "110.356566,20.03074",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0899",
+          "adcode": "460200",
+          "name": "三亚市",
+          "center": "109.508268,18.247872",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0899",
+              "adcode": "460202",
+              "name": "海棠区",
+              "center": "109.760778,18.407516",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0899",
+              "adcode": "460203",
+              "name": "吉阳区",
+              "center": "109.512081,18.247436",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0899",
+              "adcode": "460204",
+              "name": "天涯区",
+              "center": "109.506357,18.24734",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0899",
+              "adcode": "460205",
+              "name": "崖州区",
+              "center": "109.174306,18.352192",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0899",
+              "adcode": "460200",
+              "name": "解放路",
+              "center": "109.502708,18.252975",
+              "level": "biz_area",
+              "areacode": "13540",
+              "districts": []
+            },
+            {
+              "citycode": "0899",
+              "adcode": "460200",
+              "name": "迎宾路",
+              "center": "109.508522,18.271621",
+              "level": "biz_area",
+              "areacode": "13542",
+              "districts": []
+            },
+            {
+              "citycode": "0899",
+              "adcode": "460200",
+              "name": "河西",
+              "center": "109.506615,18.249369",
+              "level": "biz_area",
+              "areacode": "13543",
+              "districts": []
+            },
+            {
+              "citycode": "0899",
+              "adcode": "460200",
+              "name": "河东",
+              "center": "109.508325,18.254612",
+              "level": "biz_area",
+              "areacode": "13544",
+              "districts": []
+            },
+            {
+              "citycode": "0899",
+              "adcode": "460200",
+              "name": "亚龙湾",
+              "center": "109.633321,18.240776",
+              "level": "biz_area",
+              "areacode": "13552",
+              "districts": []
+            },
+            {
+              "citycode": "0899",
+              "adcode": "460200",
+              "name": "大东海",
+              "center": "109.522470,18.222966",
+              "level": "biz_area",
+              "areacode": "13553",
+              "districts": []
+            },
+            {
+              "citycode": "0899",
+              "adcode": "460200",
+              "name": "三亚湾",
+              "center": "109.461155,18.276978",
+              "level": "biz_area",
+              "areacode": "13554",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "2898",
+          "adcode": "460300",
+          "name": "三沙市",
+          "center": "112.34882,16.831039",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "1895",
+              "adcode": "460321",
+              "name": "西沙群岛",
+              "center": "111.792944,16.204546",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "1891",
+              "adcode": "460322",
+              "name": "南沙群岛",
+              "center": "116.749998,11.471888",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "2801",
+              "adcode": "460323",
+              "name": "中沙群岛的岛礁及其海域",
+              "center": "117.740071,15.112856",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0805",
+          "adcode": "460400",
+          "name": "儋州市",
+          "center": "109.576782,19.517486",
+          "level": "city",
+          "districts": []
+        },
+        {
+          "citycode": "1897",
+          "adcode": "469001",
+          "name": "五指山市",
+          "center": "109.516662,18.776921",
+          "level": "city",
+          "districts": []
+        },
+        {
+          "citycode": "1894",
+          "adcode": "469002",
+          "name": "琼海市",
+          "center": "110.466785,19.246011",
+          "level": "city",
+          "districts": []
+        },
+        {
+          "citycode": "1893",
+          "adcode": "469005",
+          "name": "文昌市",
+          "center": "110.753975,19.612986",
+          "level": "city",
+          "districts": []
+        },
+        {
+          "citycode": "1898",
+          "adcode": "469006",
+          "name": "万宁市",
+          "center": "110.388793,18.796216",
+          "level": "city",
+          "districts": []
+        },
+        {
+          "citycode": "0807",
+          "adcode": "469007",
+          "name": "东方市",
+          "center": "108.653789,19.10198",
+          "level": "city",
+          "districts": []
+        },
+        {
+          "citycode": "0806",
+          "adcode": "469021",
+          "name": "定安县",
+          "center": "110.349235,19.684966",
+          "level": "city",
+          "districts": []
+        },
+        {
+          "citycode": "1892",
+          "adcode": "469022",
+          "name": "屯昌县",
+          "center": "110.102773,19.362916",
+          "level": "city",
+          "districts": []
+        },
+        {
+          "citycode": "0804",
+          "adcode": "469023",
+          "name": "澄迈县",
+          "center": "110.007147,19.737095",
+          "level": "city",
+          "districts": []
+        },
+        {
+          "citycode": "1896",
+          "adcode": "469024",
+          "name": "临高县",
+          "center": "109.687697,19.908293",
+          "level": "city",
+          "districts": []
+        },
+        {
+          "citycode": "0802",
+          "adcode": "469025",
+          "name": "白沙黎族自治县",
+          "center": "109.452606,19.224584",
+          "level": "city",
+          "districts": []
+        },
+        {
+          "citycode": "0803",
+          "adcode": "469026",
+          "name": "昌江黎族自治县",
+          "center": "109.053351,19.260968",
+          "level": "city",
+          "districts": []
+        },
+        {
+          "citycode": "2802",
+          "adcode": "469027",
+          "name": "乐东黎族自治县",
+          "center": "109.175444,18.74758",
+          "level": "city",
+          "districts": []
+        },
+        {
+          "citycode": "0809",
+          "adcode": "469028",
+          "name": "陵水黎族自治县",
+          "center": "110.037218,18.505006",
+          "level": "city",
+          "districts": []
+        },
+        {
+          "citycode": "0801",
+          "adcode": "469029",
+          "name": "保亭黎族苗族自治县",
+          "center": "109.70245,18.636371",
+          "level": "city",
+          "districts": []
+        },
+        {
+          "citycode": "1899",
+          "adcode": "469030",
+          "name": "琼中黎族苗族自治县",
+          "center": "109.839996,19.03557",
+          "level": "city",
+          "districts": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,774 @@
+{
+    "districts": [
+    {
+      "citycode": [],
+      "adcode": "350000",
+      "name": "福建省",
+      "center": "119.306239,26.075302",
+      "level": "province",
+      "districts": [
+        {
+          "citycode": "0591",
+          "adcode": "350100",
+          "name": "福州市",
+          "center": "119.306239,26.075302",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0591",
+              "adcode": "350102",
+              "name": "鼓楼区",
+              "center": "119.29929,26.082284",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0591",
+              "adcode": "350103",
+              "name": "台江区",
+              "center": "119.310156,26.058616",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0591",
+              "adcode": "350104",
+              "name": "仓山区",
+              "center": "119.320988,26.038912",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0591",
+              "adcode": "350105",
+              "name": "马尾区",
+              "center": "119.458725,25.991975",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0591",
+              "adcode": "350111",
+              "name": "晋安区",
+              "center": "119.328597,26.078837",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0591",
+              "adcode": "350121",
+              "name": "闽侯县",
+              "center": "119.145117,26.148567",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0591",
+              "adcode": "350122",
+              "name": "连江县",
+              "center": "119.538365,26.202109",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0591",
+              "adcode": "350123",
+              "name": "罗源县",
+              "center": "119.552645,26.487234",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0591",
+              "adcode": "350124",
+              "name": "闽清县",
+              "center": "118.868416,26.223793",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0591",
+              "adcode": "350125",
+              "name": "永泰县",
+              "center": "118.939089,25.864825",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0591",
+              "adcode": "350128",
+              "name": "平潭县",
+              "center": "119.791197,25.503672",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0591",
+              "adcode": "350181",
+              "name": "福清市",
+              "center": "119.376992,25.720402",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0591",
+              "adcode": "350182",
+              "name": "长乐市",
+              "center": "119.510849,25.960583",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0592",
+          "adcode": "350200",
+          "name": "厦门市",
+          "center": "118.11022,24.490474",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0592",
+              "adcode": "350203",
+              "name": "思明区",
+              "center": "118.087828,24.462059",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0592",
+              "adcode": "350205",
+              "name": "海沧区",
+              "center": "118.036364,24.492512",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0592",
+              "adcode": "350206",
+              "name": "湖里区",
+              "center": "118.10943,24.512764",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0592",
+              "adcode": "350211",
+              "name": "集美区",
+              "center": "118.100869,24.572874",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0592",
+              "adcode": "350212",
+              "name": "同安区",
+              "center": "118.150455,24.729333",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0592",
+              "adcode": "350213",
+              "name": "翔安区",
+              "center": "118.242811,24.637479",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0594",
+          "adcode": "350300",
+          "name": "莆田市",
+          "center": "119.007558,25.431011",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0594",
+              "adcode": "350302",
+              "name": "城厢区",
+              "center": "119.001028,25.433737",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0594",
+              "adcode": "350303",
+              "name": "涵江区",
+              "center": "119.119102,25.459273",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0594",
+              "adcode": "350304",
+              "name": "荔城区",
+              "center": "119.020047,25.430047",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0594",
+              "adcode": "350305",
+              "name": "秀屿区",
+              "center": "119.092607,25.316141",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0594",
+              "adcode": "350322",
+              "name": "仙游县",
+              "center": "118.694331,25.356529",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0598",
+          "adcode": "350400",
+          "name": "三明市",
+          "center": "117.635001,26.265444",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0598",
+              "adcode": "350402",
+              "name": "梅列区",
+              "center": "117.63687,26.269208",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0598",
+              "adcode": "350403",
+              "name": "三元区",
+              "center": "117.607418,26.234191",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0598",
+              "adcode": "350421",
+              "name": "明溪县",
+              "center": "117.201845,26.357375",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0598",
+              "adcode": "350423",
+              "name": "清流县",
+              "center": "116.815821,26.17761",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0598",
+              "adcode": "350424",
+              "name": "宁化县",
+              "center": "116.659725,26.259932",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0598",
+              "adcode": "350425",
+              "name": "大田县",
+              "center": "117.849355,25.690803",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0598",
+              "adcode": "350426",
+              "name": "尤溪县",
+              "center": "118.188577,26.169261",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0598",
+              "adcode": "350427",
+              "name": "沙县",
+              "center": "117.789095,26.397361",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0598",
+              "adcode": "350428",
+              "name": "将乐县",
+              "center": "117.473558,26.728667",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0598",
+              "adcode": "350429",
+              "name": "泰宁县",
+              "center": "117.177522,26.897995",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0598",
+              "adcode": "350430",
+              "name": "建宁县",
+              "center": "116.845832,26.831398",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0598",
+              "adcode": "350481",
+              "name": "永安市",
+              "center": "117.364447,25.974075",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0595",
+          "adcode": "350500",
+          "name": "泉州市",
+          "center": "118.589421,24.908853",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0595",
+              "adcode": "350502",
+              "name": "鲤城区",
+              "center": "118.588929,24.907645",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0595",
+              "adcode": "350503",
+              "name": "丰泽区",
+              "center": "118.605147,24.896041",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0595",
+              "adcode": "350504",
+              "name": "洛江区",
+              "center": "118.670312,24.941153",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0595",
+              "adcode": "350505",
+              "name": "泉港区",
+              "center": "118.912285,25.126859",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0595",
+              "adcode": "350521",
+              "name": "惠安县",
+              "center": "118.798954,25.028718",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0595",
+              "adcode": "350524",
+              "name": "安溪县",
+              "center": "118.186014,25.056824",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0595",
+              "adcode": "350525",
+              "name": "永春县",
+              "center": "118.29503,25.320721",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0595",
+              "adcode": "350526",
+              "name": "德化县",
+              "center": "118.242986,25.489004",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0595",
+              "adcode": "350527",
+              "name": "金门县",
+              "center": "118.323221,24.436417",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0595",
+              "adcode": "350581",
+              "name": "石狮市",
+              "center": "118.628402,24.731978",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0595",
+              "adcode": "350582",
+              "name": "晋江市",
+              "center": "118.577338,24.807322",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0595",
+              "adcode": "350583",
+              "name": "南安市",
+              "center": "118.387031,24.959494",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0596",
+          "adcode": "350600",
+          "name": "漳州市",
+          "center": "117.661801,24.510897",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0596",
+              "adcode": "350602",
+              "name": "芗城区",
+              "center": "117.656461,24.509955",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0596",
+              "adcode": "350603",
+              "name": "龙文区",
+              "center": "117.671387,24.515656",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0596",
+              "adcode": "350622",
+              "name": "云霄县",
+              "center": "117.340946,23.950486",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0596",
+              "adcode": "350623",
+              "name": "漳浦县",
+              "center": "117.614023,24.117907",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0596",
+              "adcode": "350624",
+              "name": "诏安县",
+              "center": "117.176083,23.710834",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0596",
+              "adcode": "350625",
+              "name": "长泰县",
+              "center": "117.755913,24.621475",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0596",
+              "adcode": "350626",
+              "name": "东山县",
+              "center": "117.427679,23.702845",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0596",
+              "adcode": "350627",
+              "name": "南靖县",
+              "center": "117.365462,24.516425",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0596",
+              "adcode": "350628",
+              "name": "平和县",
+              "center": "117.313549,24.366158",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0596",
+              "adcode": "350629",
+              "name": "华安县",
+              "center": "117.53631,25.001416",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0596",
+              "adcode": "350681",
+              "name": "龙海市",
+              "center": "117.817292,24.445341",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0599",
+          "adcode": "350700",
+          "name": "南平市",
+          "center": "118.178459,26.635627",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0599",
+              "adcode": "350702",
+              "name": "延平区",
+              "center": "118.178918,26.636079",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0599",
+              "adcode": "350703",
+              "name": "建阳区",
+              "center": "118.12267,27.332067",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0599",
+              "adcode": "350721",
+              "name": "顺昌县",
+              "center": "117.80771,26.792851",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0599",
+              "adcode": "350722",
+              "name": "浦城县",
+              "center": "118.536822,27.920412",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0599",
+              "adcode": "350723",
+              "name": "光泽县",
+              "center": "117.337897,27.542803",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0599",
+              "adcode": "350724",
+              "name": "松溪县",
+              "center": "118.783491,27.525785",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0599",
+              "adcode": "350725",
+              "name": "政和县",
+              "center": "118.858661,27.365398",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0599",
+              "adcode": "350781",
+              "name": "邵武市",
+              "center": "117.491544,27.337952",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0599",
+              "adcode": "350782",
+              "name": "武夷山市",
+              "center": "118.032796,27.751733",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0599",
+              "adcode": "350783",
+              "name": "建瓯市",
+              "center": "118.321765,27.03502",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0597",
+          "adcode": "350800",
+          "name": "龙岩市",
+          "center": "117.02978,25.091603",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0597",
+              "adcode": "350802",
+              "name": "新罗区",
+              "center": "117.030721,25.0918",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0597",
+              "adcode": "350803",
+              "name": "永定区",
+              "center": "116.732691,24.720442",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0597",
+              "adcode": "350821",
+              "name": "长汀县",
+              "center": "116.361007,25.842278",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0597",
+              "adcode": "350823",
+              "name": "上杭县",
+              "center": "116.424774,25.050019",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0597",
+              "adcode": "350824",
+              "name": "武平县",
+              "center": "116.100928,25.08865",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0597",
+              "adcode": "350825",
+              "name": "连城县",
+              "center": "116.756687,25.708506",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0597",
+              "adcode": "350881",
+              "name": "漳平市",
+              "center": "117.42073,25.291597",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0593",
+          "adcode": "350900",
+          "name": "宁德市",
+          "center": "119.527082,26.65924",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0593",
+              "adcode": "350902",
+              "name": "蕉城区",
+              "center": "119.527225,26.659253",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0593",
+              "adcode": "350921",
+              "name": "霞浦县",
+              "center": "120.005214,26.882068",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0593",
+              "adcode": "350922",
+              "name": "古田县",
+              "center": "118.743156,26.577491",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0593",
+              "adcode": "350923",
+              "name": "屏南县",
+              "center": "118.987544,26.910826",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0593",
+              "adcode": "350924",
+              "name": "寿宁县",
+              "center": "119.506733,27.457798",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0593",
+              "adcode": "350925",
+              "name": "周宁县",
+              "center": "119.338239,27.103106",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0593",
+              "adcode": "350926",
+              "name": "柘荣县",
+              "center": "119.898226,27.236163",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0593",
+              "adcode": "350981",
+              "name": "福安市",
+              "center": "119.650798,27.084246",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0593",
+              "adcode": "350982",
+              "name": "福鼎市",
+              "center": "120.219761,27.318884",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

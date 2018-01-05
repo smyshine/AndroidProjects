@@ -1,0 +1,1666 @@
+{
+    "districts": [
+    {
+      "citycode": [],
+      "adcode": "510000",
+      "name": "四川省",
+      "center": "104.065735,30.659462",
+      "level": "province",
+      "districts": [
+        {
+          "citycode": "028",
+          "adcode": "510100",
+          "name": "成都市",
+          "center": "104.065735,30.659462",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "028",
+              "adcode": "510104",
+              "name": "锦江区",
+              "center": "104.080989,30.657689",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "028",
+              "adcode": "510105",
+              "name": "青羊区",
+              "center": "104.055731,30.667648",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "028",
+              "adcode": "510106",
+              "name": "金牛区",
+              "center": "104.043487,30.692058",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "028",
+              "adcode": "510107",
+              "name": "武侯区",
+              "center": "104.05167,30.630862",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "028",
+              "adcode": "510108",
+              "name": "成华区",
+              "center": "104.103077,30.660275",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "028",
+              "adcode": "510112",
+              "name": "龙泉驿区",
+              "center": "104.269181,30.56065",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "028",
+              "adcode": "510113",
+              "name": "青白江区",
+              "center": "104.25494,30.883438",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "028",
+              "adcode": "510114",
+              "name": "新都区",
+              "center": "104.16022,30.824223",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "028",
+              "adcode": "510115",
+              "name": "温江区",
+              "center": "103.836776,30.697996",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "028",
+              "adcode": "510121",
+              "name": "金堂县",
+              "center": "104.415604,30.858417",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "028",
+              "adcode": "510116",
+              "name": "双流区",
+              "center": "103.922706,30.573243",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "028",
+              "adcode": "510124",
+              "name": "郫都区",
+              "center": "103.887842,30.808752",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "028",
+              "adcode": "510129",
+              "name": "大邑县",
+              "center": "103.522397,30.586602",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "028",
+              "adcode": "510131",
+              "name": "蒲江县",
+              "center": "103.511541,30.194359",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "028",
+              "adcode": "510132",
+              "name": "新津县",
+              "center": "103.812449,30.414284",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "028",
+              "adcode": "510180",
+              "name": "简阳市",
+              "center": "104.550339,30.390666",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "028",
+              "adcode": "510181",
+              "name": "都江堰市",
+              "center": "103.627898,30.99114",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "028",
+              "adcode": "510182",
+              "name": "彭州市",
+              "center": "103.941173,30.985161",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "028",
+              "adcode": "510183",
+              "name": "邛崃市",
+              "center": "103.46143,30.413271",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "028",
+              "adcode": "510184",
+              "name": "崇州市",
+              "center": "103.671049,30.631478",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0813",
+          "adcode": "510300",
+          "name": "自贡市",
+          "center": "104.773447,29.352765",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0813",
+              "adcode": "510302",
+              "name": "自流井区",
+              "center": "104.778188,29.343231",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0813",
+              "adcode": "510303",
+              "name": "贡井区",
+              "center": "104.714372,29.345675",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0813",
+              "adcode": "510304",
+              "name": "大安区",
+              "center": "104.783229,29.367136",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0813",
+              "adcode": "510311",
+              "name": "沿滩区",
+              "center": "104.876417,29.272521",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0813",
+              "adcode": "510321",
+              "name": "荣县",
+              "center": "104.423932,29.454851",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0813",
+              "adcode": "510322",
+              "name": "富顺县",
+              "center": "104.984256,29.181282",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0812",
+          "adcode": "510400",
+          "name": "攀枝花市",
+          "center": "101.716007,26.580446",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0812",
+              "adcode": "510402",
+              "name": "东区",
+              "center": "101.715134,26.580887",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0812",
+              "adcode": "510403",
+              "name": "西区",
+              "center": "101.637969,26.596776",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0812",
+              "adcode": "510411",
+              "name": "仁和区",
+              "center": "101.737916,26.497185",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0812",
+              "adcode": "510421",
+              "name": "米易县",
+              "center": "102.109877,26.887474",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0812",
+              "adcode": "510422",
+              "name": "盐边县",
+              "center": "101.851848,26.677619",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0830",
+          "adcode": "510500",
+          "name": "泸州市",
+          "center": "105.443348,28.889138",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0830",
+              "adcode": "510502",
+              "name": "江阳区",
+              "center": "105.445131,28.882889",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0830",
+              "adcode": "510503",
+              "name": "纳溪区",
+              "center": "105.37721,28.77631",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0830",
+              "adcode": "510504",
+              "name": "龙马潭区",
+              "center": "105.435228,28.897572",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0830",
+              "adcode": "510521",
+              "name": "泸县",
+              "center": "105.376335,29.151288",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0830",
+              "adcode": "510522",
+              "name": "合江县",
+              "center": "105.834098,28.810325",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0830",
+              "adcode": "510524",
+              "name": "叙永县",
+              "center": "105.437775,28.167919",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0830",
+              "adcode": "510525",
+              "name": "古蔺县",
+              "center": "105.813359,28.03948",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0838",
+          "adcode": "510600",
+          "name": "德阳市",
+          "center": "104.398651,31.127991",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0838",
+              "adcode": "510603",
+              "name": "旌阳区",
+              "center": "104.389648,31.130428",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0838",
+              "adcode": "510623",
+              "name": "中江县",
+              "center": "104.677831,31.03681",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0838",
+              "adcode": "510626",
+              "name": "罗江县",
+              "center": "104.507126,31.303281",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0838",
+              "adcode": "510681",
+              "name": "广汉市",
+              "center": "104.281903,30.97715",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0838",
+              "adcode": "510682",
+              "name": "什邡市",
+              "center": "104.173653,31.126881",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0838",
+              "adcode": "510683",
+              "name": "绵竹市",
+              "center": "104.200162,31.343084",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0816",
+          "adcode": "510700",
+          "name": "绵阳市",
+          "center": "104.741722,31.46402",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0816",
+              "adcode": "510703",
+              "name": "涪城区",
+              "center": "104.740971,31.463557",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0816",
+              "adcode": "510704",
+              "name": "游仙区",
+              "center": "104.770006,31.484772",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0816",
+              "adcode": "510722",
+              "name": "三台县",
+              "center": "105.090316,31.090909",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0816",
+              "adcode": "510723",
+              "name": "盐亭县",
+              "center": "105.391991,31.22318",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0816",
+              "adcode": "510705",
+              "name": "安州区",
+              "center": "104.560341,31.53894",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0816",
+              "adcode": "510725",
+              "name": "梓潼县",
+              "center": "105.16353,31.635225",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0816",
+              "adcode": "510726",
+              "name": "北川羌族自治县",
+              "center": "104.468069,31.615863",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0816",
+              "adcode": "510727",
+              "name": "平武县",
+              "center": "104.530555,32.407588",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0816",
+              "adcode": "510781",
+              "name": "江油市",
+              "center": "104.744431,31.776386",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0839",
+          "adcode": "510800",
+          "name": "广元市",
+          "center": "105.829757,32.433668",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0839",
+              "adcode": "510802",
+              "name": "利州区",
+              "center": "105.826194,32.432276",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0839",
+              "adcode": "510811",
+              "name": "昭化区",
+              "center": "105.964121,32.322788",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0839",
+              "adcode": "510812",
+              "name": "朝天区",
+              "center": "105.88917,32.642632",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0839",
+              "adcode": "510821",
+              "name": "旺苍县",
+              "center": "106.290426,32.22833",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0839",
+              "adcode": "510822",
+              "name": "青川县",
+              "center": "105.238847,32.585655",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0839",
+              "adcode": "510823",
+              "name": "剑阁县",
+              "center": "105.527035,32.286517",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0839",
+              "adcode": "510824",
+              "name": "苍溪县",
+              "center": "105.939706,31.732251",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0825",
+          "adcode": "510900",
+          "name": "遂宁市",
+          "center": "105.571331,30.513311",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0825",
+              "adcode": "510903",
+              "name": "船山区",
+              "center": "105.582215,30.502647",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0825",
+              "adcode": "510904",
+              "name": "安居区",
+              "center": "105.459383,30.346121",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0825",
+              "adcode": "510921",
+              "name": "蓬溪县",
+              "center": "105.713699,30.774883",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0825",
+              "adcode": "510922",
+              "name": "射洪县",
+              "center": "105.381849,30.868752",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0825",
+              "adcode": "510923",
+              "name": "大英县",
+              "center": "105.252187,30.581571",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "1832",
+          "adcode": "511000",
+          "name": "内江市",
+          "center": "105.066138,29.58708",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "1832",
+              "adcode": "511002",
+              "name": "市中区",
+              "center": "105.065467,29.585265",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "1832",
+              "adcode": "511011",
+              "name": "东兴区",
+              "center": "105.067203,29.600107",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "1832",
+              "adcode": "511024",
+              "name": "威远县",
+              "center": "104.668327,29.52686",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "1832",
+              "adcode": "511025",
+              "name": "资中县",
+              "center": "104.852463,29.775295",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "1832",
+              "adcode": "511028",
+              "name": "隆昌县",
+              "center": "105.288074,29.338162",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0833",
+          "adcode": "511100",
+          "name": "乐山市",
+          "center": "103.761263,29.582024",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0833",
+              "adcode": "511102",
+              "name": "市中区",
+              "center": "103.75539,29.588327",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0833",
+              "adcode": "511111",
+              "name": "沙湾区",
+              "center": "103.549961,29.416536",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0833",
+              "adcode": "511112",
+              "name": "五通桥区",
+              "center": "103.816837,29.406186",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0833",
+              "adcode": "511113",
+              "name": "金口河区",
+              "center": "103.077831,29.24602",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0833",
+              "adcode": "511123",
+              "name": "犍为县",
+              "center": "103.944266,29.209782",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0833",
+              "adcode": "511124",
+              "name": "井研县",
+              "center": "104.06885,29.651645",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0833",
+              "adcode": "511126",
+              "name": "夹江县",
+              "center": "103.578862,29.741019",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0833",
+              "adcode": "511129",
+              "name": "沐川县",
+              "center": "103.90211,28.956338",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0833",
+              "adcode": "511132",
+              "name": "峨边彝族自治县",
+              "center": "103.262148,29.230271",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0833",
+              "adcode": "511133",
+              "name": "马边彝族自治县",
+              "center": "103.546851,28.838933",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0833",
+              "adcode": "511181",
+              "name": "峨眉山市",
+              "center": "103.492488,29.597478",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0817",
+          "adcode": "511300",
+          "name": "南充市",
+          "center": "106.082974,30.795281",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0817",
+              "adcode": "511302",
+              "name": "顺庆区",
+              "center": "106.084091,30.795572",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0817",
+              "adcode": "511303",
+              "name": "高坪区",
+              "center": "106.108996,30.781809",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0817",
+              "adcode": "511304",
+              "name": "嘉陵区",
+              "center": "106.067027,30.762976",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0817",
+              "adcode": "511321",
+              "name": "南部县",
+              "center": "106.061138,31.349407",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0817",
+              "adcode": "511322",
+              "name": "营山县",
+              "center": "106.564893,31.075907",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0817",
+              "adcode": "511323",
+              "name": "蓬安县",
+              "center": "106.413488,31.027978",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0817",
+              "adcode": "511324",
+              "name": "仪陇县",
+              "center": "106.297083,31.271261",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0817",
+              "adcode": "511325",
+              "name": "西充县",
+              "center": "105.893021,30.994616",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0817",
+              "adcode": "511381",
+              "name": "阆中市",
+              "center": "105.975266,31.580466",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "1833",
+          "adcode": "511400",
+          "name": "眉山市",
+          "center": "103.831788,30.048318",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "1833",
+              "adcode": "511402",
+              "name": "东坡区",
+              "center": "103.831553,30.048128",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "1833",
+              "adcode": "511403",
+              "name": "彭山区",
+              "center": "103.8701,30.192298",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "1833",
+              "adcode": "511421",
+              "name": "仁寿县",
+              "center": "104.147646,29.996721",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "1833",
+              "adcode": "511423",
+              "name": "洪雅县",
+              "center": "103.375006,29.904867",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "1833",
+              "adcode": "511424",
+              "name": "丹棱县",
+              "center": "103.518333,30.012751",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "1833",
+              "adcode": "511425",
+              "name": "青神县",
+              "center": "103.846131,29.831469",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0831",
+          "adcode": "511500",
+          "name": "宜宾市",
+          "center": "104.630825,28.760189",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0831",
+              "adcode": "511502",
+              "name": "翠屏区",
+              "center": "104.630231,28.760179",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0831",
+              "adcode": "511503",
+              "name": "南溪区",
+              "center": "104.981133,28.839806",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0831",
+              "adcode": "511521",
+              "name": "宜宾县",
+              "center": "104.541489,28.695678",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0831",
+              "adcode": "511523",
+              "name": "江安县",
+              "center": "105.068697,28.728102",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0831",
+              "adcode": "511524",
+              "name": "长宁县",
+              "center": "104.921116,28.577271",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0831",
+              "adcode": "511525",
+              "name": "高县",
+              "center": "104.519187,28.435676",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0831",
+              "adcode": "511526",
+              "name": "珙县",
+              "center": "104.712268,28.449041",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0831",
+              "adcode": "511527",
+              "name": "筠连县",
+              "center": "104.507848,28.162017",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0831",
+              "adcode": "511528",
+              "name": "兴文县",
+              "center": "105.236549,28.302988",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0831",
+              "adcode": "511529",
+              "name": "屏山县",
+              "center": "104.162617,28.64237",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0826",
+          "adcode": "511600",
+          "name": "广安市",
+          "center": "106.633369,30.456398",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0826",
+              "adcode": "511602",
+              "name": "广安区",
+              "center": "106.632907,30.456462",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0826",
+              "adcode": "511603",
+              "name": "前锋区",
+              "center": "106.893277,30.4963",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0826",
+              "adcode": "511621",
+              "name": "岳池县",
+              "center": "106.444451,30.533538",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0826",
+              "adcode": "511622",
+              "name": "武胜县",
+              "center": "106.292473,30.344291",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0826",
+              "adcode": "511623",
+              "name": "邻水县",
+              "center": "106.934968,30.334323",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0826",
+              "adcode": "511681",
+              "name": "华蓥市",
+              "center": "106.777882,30.380574",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0818",
+          "adcode": "511700",
+          "name": "达州市",
+          "center": "107.502262,31.209484",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0818",
+              "adcode": "511702",
+              "name": "通川区",
+              "center": "107.501062,31.213522",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0818",
+              "adcode": "511703",
+              "name": "达川区",
+              "center": "107.507926,31.199062",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0818",
+              "adcode": "511722",
+              "name": "宣汉县",
+              "center": "107.722254,31.355025",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0818",
+              "adcode": "511723",
+              "name": "开江县",
+              "center": "107.864135,31.085537",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0818",
+              "adcode": "511724",
+              "name": "大竹县",
+              "center": "107.20742,30.736289",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0818",
+              "adcode": "511725",
+              "name": "渠县",
+              "center": "106.970746,30.836348",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0818",
+              "adcode": "511781",
+              "name": "万源市",
+              "center": "108.037548,32.06777",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0835",
+          "adcode": "511800",
+          "name": "雅安市",
+          "center": "103.001033,29.987722",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0835",
+              "adcode": "511802",
+              "name": "雨城区",
+              "center": "103.003398,29.981831",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0835",
+              "adcode": "511803",
+              "name": "名山区",
+              "center": "103.112214,30.084718",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0835",
+              "adcode": "511822",
+              "name": "荥经县",
+              "center": "102.844674,29.795529",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0835",
+              "adcode": "511823",
+              "name": "汉源县",
+              "center": "102.677145,29.349915",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0835",
+              "adcode": "511824",
+              "name": "石棉县",
+              "center": "102.35962,29.234063",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0835",
+              "adcode": "511825",
+              "name": "天全县",
+              "center": "102.763462,30.059955",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0835",
+              "adcode": "511826",
+              "name": "芦山县",
+              "center": "102.924016,30.152907",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0835",
+              "adcode": "511827",
+              "name": "宝兴县",
+              "center": "102.813377,30.369026",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0827",
+          "adcode": "511900",
+          "name": "巴中市",
+          "center": "106.753669,31.858809",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0827",
+              "adcode": "511902",
+              "name": "巴州区",
+              "center": "106.753671,31.858366",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0827",
+              "adcode": "511903",
+              "name": "恩阳区",
+              "center": "106.486515,31.816336",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0827",
+              "adcode": "511921",
+              "name": "通江县",
+              "center": "107.247621,31.91212",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0827",
+              "adcode": "511922",
+              "name": "南江县",
+              "center": "106.843418,32.353164",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0827",
+              "adcode": "511923",
+              "name": "平昌县",
+              "center": "107.101937,31.562814",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0832",
+          "adcode": "512000",
+          "name": "资阳市",
+          "center": "104.641917,30.122211",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0832",
+              "adcode": "512002",
+              "name": "雁江区",
+              "center": "104.642338,30.121686",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0832",
+              "adcode": "512021",
+              "name": "安岳县",
+              "center": "105.336764,30.099206",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0832",
+              "adcode": "512022",
+              "name": "乐至县",
+              "center": "105.031142,30.275619",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0837",
+          "adcode": "513200",
+          "name": "阿坝藏族羌族自治州",
+          "center": "102.221374,31.899792",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0837",
+              "adcode": "513221",
+              "name": "汶川县",
+              "center": "103.580675,31.47463",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0837",
+              "adcode": "513222",
+              "name": "理县",
+              "center": "103.165486,31.436764",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0837",
+              "adcode": "513223",
+              "name": "茂县",
+              "center": "103.850684,31.680407",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0837",
+              "adcode": "513224",
+              "name": "松潘县",
+              "center": "103.599177,32.63838",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0837",
+              "adcode": "513225",
+              "name": "九寨沟县",
+              "center": "104.236344,33.262097",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0837",
+              "adcode": "513226",
+              "name": "金川县",
+              "center": "102.064647,31.476356",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0837",
+              "adcode": "513227",
+              "name": "小金县",
+              "center": "102.363193,30.999016",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0837",
+              "adcode": "513228",
+              "name": "黑水县",
+              "center": "102.990805,32.061721",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0837",
+              "adcode": "513201",
+              "name": "马尔康市",
+              "center": "102.221187,31.899761",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0837",
+              "adcode": "513230",
+              "name": "壤塘县",
+              "center": "100.979136,32.264887",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0837",
+              "adcode": "513231",
+              "name": "阿坝县",
+              "center": "101.700985,32.904223",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0837",
+              "adcode": "513232",
+              "name": "若尔盖县",
+              "center": "102.963726,33.575934",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0837",
+              "adcode": "513233",
+              "name": "红原县",
+              "center": "102.544906,32.793902",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0836",
+          "adcode": "513300",
+          "name": "甘孜藏族自治州",
+          "center": "101.963815,30.050663",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0836",
+              "adcode": "513301",
+              "name": "康定市",
+              "center": "101.964057,30.050738",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0836",
+              "adcode": "513322",
+              "name": "泸定县",
+              "center": "102.233225,29.912482",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0836",
+              "adcode": "513323",
+              "name": "丹巴县",
+              "center": "101.886125,30.877083",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0836",
+              "adcode": "513324",
+              "name": "九龙县",
+              "center": "101.506942,29.001975",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0836",
+              "adcode": "513325",
+              "name": "雅江县",
+              "center": "101.015735,30.03225",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0836",
+              "adcode": "513326",
+              "name": "道孚县",
+              "center": "101.123327,30.978767",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0836",
+              "adcode": "513327",
+              "name": "炉霍县",
+              "center": "100.679495,31.392674",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0836",
+              "adcode": "513328",
+              "name": "甘孜县",
+              "center": "99.991753,31.61975",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0836",
+              "adcode": "513329",
+              "name": "新龙县",
+              "center": "100.312094,30.93896",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0836",
+              "adcode": "513330",
+              "name": "德格县",
+              "center": "98.57999,31.806729",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0836",
+              "adcode": "513331",
+              "name": "白玉县",
+              "center": "98.824343,31.208805",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0836",
+              "adcode": "513332",
+              "name": "石渠县",
+              "center": "98.100887,32.975302",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0836",
+              "adcode": "513333",
+              "name": "色达县",
+              "center": "100.331657,32.268777",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0836",
+              "adcode": "513334",
+              "name": "理塘县",
+              "center": "100.269862,29.991807",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0836",
+              "adcode": "513335",
+              "name": "巴塘县",
+              "center": "99.109037,30.005723",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0836",
+              "adcode": "513336",
+              "name": "乡城县",
+              "center": "99.799943,28.930855",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0836",
+              "adcode": "513337",
+              "name": "稻城县",
+              "center": "100.296689,29.037544",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0836",
+              "adcode": "513338",
+              "name": "得荣县",
+              "center": "99.288036,28.71134",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0834",
+          "adcode": "513400",
+          "name": "凉山彝族自治州",
+          "center": "102.258746,27.886762",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0834",
+              "adcode": "513401",
+              "name": "西昌市",
+              "center": "102.258758,27.885786",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0834",
+              "adcode": "513422",
+              "name": "木里藏族自治县",
+              "center": "101.280184,27.926859",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0834",
+              "adcode": "513423",
+              "name": "盐源县",
+              "center": "101.508909,27.423415",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0834",
+              "adcode": "513424",
+              "name": "德昌县",
+              "center": "102.178845,27.403827",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0834",
+              "adcode": "513425",
+              "name": "会理县",
+              "center": "102.249548,26.658702",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0834",
+              "adcode": "513426",
+              "name": "会东县",
+              "center": "102.578985,26.630713",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0834",
+              "adcode": "513427",
+              "name": "宁南县",
+              "center": "102.757374,27.065205",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0834",
+              "adcode": "513428",
+              "name": "普格县",
+              "center": "102.541082,27.376828",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0834",
+              "adcode": "513429",
+              "name": "布拖县",
+              "center": "102.808801,27.709062",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0834",
+              "adcode": "513430",
+              "name": "金阳县",
+              "center": "103.248704,27.695916",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0834",
+              "adcode": "513431",
+              "name": "昭觉县",
+              "center": "102.843991,28.010554",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0834",
+              "adcode": "513432",
+              "name": "喜德县",
+              "center": "102.412342,28.305486",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0834",
+              "adcode": "513433",
+              "name": "冕宁县",
+              "center": "102.170046,28.550844",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0834",
+              "adcode": "513434",
+              "name": "越西县",
+              "center": "102.508875,28.639632",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0834",
+              "adcode": "513435",
+              "name": "甘洛县",
+              "center": "102.775924,28.977094",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0834",
+              "adcode": "513436",
+              "name": "美姑县",
+              "center": "103.132007,28.327946",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0834",
+              "adcode": "513437",
+              "name": "雷波县",
+              "center": "103.571584,28.262946",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

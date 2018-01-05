@@ -1,0 +1,234 @@
+{
+    "districts": [
+    {
+      "citycode": [],
+      "adcode": "640000",
+      "name": "宁夏回族自治区",
+      "center": "106.278179,38.46637",
+      "level": "province",
+      "districts": [
+        {
+          "citycode": "0951",
+          "adcode": "640100",
+          "name": "银川市",
+          "center": "106.278179,38.46637",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0951",
+              "adcode": "640104",
+              "name": "兴庆区",
+              "center": "106.278393,38.46747",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0951",
+              "adcode": "640105",
+              "name": "西夏区",
+              "center": "106.132116,38.492424",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0951",
+              "adcode": "640106",
+              "name": "金凤区",
+              "center": "106.228486,38.477353",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0951",
+              "adcode": "640121",
+              "name": "永宁县",
+              "center": "106.253781,38.28043",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0951",
+              "adcode": "640122",
+              "name": "贺兰县",
+              "center": "106.345904,38.554563",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0951",
+              "adcode": "640181",
+              "name": "灵武市",
+              "center": "106.334701,38.094058",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0952",
+          "adcode": "640200",
+          "name": "石嘴山市",
+          "center": "106.376173,39.01333",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0952",
+              "adcode": "640202",
+              "name": "大武口区",
+              "center": "106.376651,39.014158",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0952",
+              "adcode": "640205",
+              "name": "惠农区",
+              "center": "106.775513,39.230094",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0952",
+              "adcode": "640221",
+              "name": "平罗县",
+              "center": "106.54489,38.90674",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0953",
+          "adcode": "640300",
+          "name": "吴忠市",
+          "center": "106.199409,37.986165",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0953",
+              "adcode": "640302",
+              "name": "利通区",
+              "center": "106.199419,37.985967",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0953",
+              "adcode": "640303",
+              "name": "红寺堡区",
+              "center": "106.067315,37.421616",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0953",
+              "adcode": "640323",
+              "name": "盐池县",
+              "center": "107.40541,37.784222",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0953",
+              "adcode": "640324",
+              "name": "同心县",
+              "center": "105.914764,36.9829",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0953",
+              "adcode": "640381",
+              "name": "青铜峡市",
+              "center": "106.075395,38.021509",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0954",
+          "adcode": "640400",
+          "name": "固原市",
+          "center": "106.285241,36.004561",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0954",
+              "adcode": "640402",
+              "name": "原州区",
+              "center": "106.28477,36.005337",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0954",
+              "adcode": "640422",
+              "name": "西吉县",
+              "center": "105.731801,35.965384",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0954",
+              "adcode": "640423",
+              "name": "隆德县",
+              "center": "106.12344,35.618234",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0954",
+              "adcode": "640424",
+              "name": "泾源县",
+              "center": "106.338674,35.49344",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0954",
+              "adcode": "640425",
+              "name": "彭阳县",
+              "center": "106.641512,35.849975",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "1953",
+          "adcode": "640500",
+          "name": "中卫市",
+          "center": "105.189568,37.514951",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "1953",
+              "adcode": "640502",
+              "name": "沙坡头区",
+              "center": "105.190536,37.514564",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "1953",
+              "adcode": "640521",
+              "name": "中宁县",
+              "center": "105.675784,37.489736",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "1953",
+              "adcode": "640522",
+              "name": "海原县",
+              "center": "105.647323,36.562007",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

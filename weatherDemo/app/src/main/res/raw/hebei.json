@@ -1,0 +1,1456 @@
+{
+    "districts": [
+    {
+      "citycode": [],
+      "adcode": "130000",
+      "name": "河北省",
+      "center": "114.502461,38.045474",
+      "level": "province",
+      "districts": [
+        {
+          "citycode": "0311",
+          "adcode": "130100",
+          "name": "石家庄市",
+          "center": "114.502461,38.045474",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0311",
+              "adcode": "130102",
+              "name": "长安区",
+              "center": "114.548151,38.047501",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0311",
+              "adcode": "130104",
+              "name": "桥西区",
+              "center": "114.462931,38.028383",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0311",
+              "adcode": "130105",
+              "name": "新华区",
+              "center": "114.465974,38.067142",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0311",
+              "adcode": "130107",
+              "name": "井陉矿区",
+              "center": "114.058178,38.069748",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0311",
+              "adcode": "130108",
+              "name": "裕华区",
+              "center": "114.533257,38.027696",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0311",
+              "adcode": "130109",
+              "name": "藁城区",
+              "center": "114.849647,38.033767",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0311",
+              "adcode": "130110",
+              "name": "鹿泉区",
+              "center": "114.321023,38.093994",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0311",
+              "adcode": "130111",
+              "name": "栾城区",
+              "center": "114.654281,37.886911",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0311",
+              "adcode": "130121",
+              "name": "井陉县",
+              "center": "114.144488,38.033614",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0311",
+              "adcode": "130123",
+              "name": "正定县",
+              "center": "114.569887,38.147835",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0311",
+              "adcode": "130125",
+              "name": "行唐县",
+              "center": "114.552734,38.437422",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0311",
+              "adcode": "130126",
+              "name": "灵寿县",
+              "center": "114.37946,38.306546",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0311",
+              "adcode": "130127",
+              "name": "高邑县",
+              "center": "114.610699,37.605714",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0311",
+              "adcode": "130128",
+              "name": "深泽县",
+              "center": "115.200207,38.18454",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0311",
+              "adcode": "130129",
+              "name": "赞皇县",
+              "center": "114.387756,37.660199",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0311",
+              "adcode": "130130",
+              "name": "无极县",
+              "center": "114.977845,38.176376",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0311",
+              "adcode": "130131",
+              "name": "平山县",
+              "center": "114.184144,38.259311",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0311",
+              "adcode": "130132",
+              "name": "元氏县",
+              "center": "114.52618,37.762514",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0311",
+              "adcode": "130133",
+              "name": "赵县",
+              "center": "114.775362,37.754341",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0311",
+              "adcode": "130181",
+              "name": "辛集市",
+              "center": "115.217451,37.92904",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0311",
+              "adcode": "130183",
+              "name": "晋州市",
+              "center": "115.044886,38.027478",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0311",
+              "adcode": "130184",
+              "name": "新乐市",
+              "center": "114.68578,38.344768",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0315",
+          "adcode": "130200",
+          "name": "唐山市",
+          "center": "118.175393,39.635113",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0315",
+              "adcode": "130202",
+              "name": "路南区",
+              "center": "118.210821,39.615162",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0315",
+              "adcode": "130203",
+              "name": "路北区",
+              "center": "118.174736,39.628538",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0315",
+              "adcode": "130204",
+              "name": "古冶区",
+              "center": "118.45429,39.715736",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0315",
+              "adcode": "130205",
+              "name": "开平区",
+              "center": "118.264425,39.676171",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0315",
+              "adcode": "130207",
+              "name": "丰南区",
+              "center": "118.110793,39.56303",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0315",
+              "adcode": "130208",
+              "name": "丰润区",
+              "center": "118.155779,39.831363",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0315",
+              "adcode": "130209",
+              "name": "曹妃甸区",
+              "center": "118.446585,39.278277",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0315",
+              "adcode": "130223",
+              "name": "滦县",
+              "center": "118.699547,39.744851",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0315",
+              "adcode": "130224",
+              "name": "滦南县",
+              "center": "118.681552,39.506201",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0315",
+              "adcode": "130225",
+              "name": "乐亭县",
+              "center": "118.905341,39.42813",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0315",
+              "adcode": "130227",
+              "name": "迁西县",
+              "center": "118.305139,40.146238",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0315",
+              "adcode": "130229",
+              "name": "玉田县",
+              "center": "117.753665,39.887323",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0315",
+              "adcode": "130281",
+              "name": "遵化市",
+              "center": "117.965875,40.188616",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0315",
+              "adcode": "130283",
+              "name": "迁安市",
+              "center": "118.701933,40.012108",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0335",
+          "adcode": "130300",
+          "name": "秦皇岛市",
+          "center": "119.586579,39.942531",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0335",
+              "adcode": "130302",
+              "name": "海港区",
+              "center": "119.596224,39.943458",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0335",
+              "adcode": "130303",
+              "name": "山海关区",
+              "center": "119.753591,39.998023",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0335",
+              "adcode": "130304",
+              "name": "北戴河区",
+              "center": "119.486286,39.825121",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0335",
+              "adcode": "130321",
+              "name": "青龙满族自治县",
+              "center": "118.954555,40.406023",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0335",
+              "adcode": "130322",
+              "name": "昌黎县",
+              "center": "119.164541,39.709729",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0335",
+              "adcode": "130306",
+              "name": "抚宁区",
+              "center": "119.240651,39.887053",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0335",
+              "adcode": "130324",
+              "name": "卢龙县",
+              "center": "118.881809,39.891639",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0310",
+          "adcode": "130400",
+          "name": "邯郸市",
+          "center": "114.490686,36.612273",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0310",
+              "adcode": "130402",
+              "name": "邯山区",
+              "center": "114.484989,36.603196",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0310",
+              "adcode": "130403",
+              "name": "丛台区",
+              "center": "114.494703,36.611082",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0310",
+              "adcode": "130404",
+              "name": "复兴区",
+              "center": "114.458242,36.615484",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0310",
+              "adcode": "130406",
+              "name": "峰峰矿区",
+              "center": "114.209936,36.420487",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0310",
+              "adcode": "130423",
+              "name": "临漳县",
+              "center": "114.610703,36.337604",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0310",
+              "adcode": "130424",
+              "name": "成安县",
+              "center": "114.680356,36.443832",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0310",
+              "adcode": "130425",
+              "name": "大名县",
+              "center": "115.152586,36.283316",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0310",
+              "adcode": "130426",
+              "name": "涉县",
+              "center": "113.673297,36.563143",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0310",
+              "adcode": "130427",
+              "name": "磁县",
+              "center": "114.38208,36.367673",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0310",
+              "adcode": "130428",
+              "name": "肥乡区",
+              "center": "114.805154,36.555778",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0310",
+              "adcode": "130429",
+              "name": "永年区",
+              "center": "114.496162,36.776413",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0310",
+              "adcode": "130430",
+              "name": "邱县",
+              "center": "115.168584,36.81325",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0310",
+              "adcode": "130431",
+              "name": "鸡泽县",
+              "center": "114.878517,36.914908",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0310",
+              "adcode": "130432",
+              "name": "广平县",
+              "center": "114.950859,36.483603",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0310",
+              "adcode": "130433",
+              "name": "馆陶县",
+              "center": "115.289057,36.539461",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0310",
+              "adcode": "130434",
+              "name": "魏县",
+              "center": "114.93411,36.354248",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0310",
+              "adcode": "130435",
+              "name": "曲周县",
+              "center": "114.957588,36.773398",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0310",
+              "adcode": "130481",
+              "name": "武安市",
+              "center": "114.194581,36.696115",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0319",
+          "adcode": "130500",
+          "name": "邢台市",
+          "center": "114.508851,37.0682",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0319",
+              "adcode": "130502",
+              "name": "桥东区",
+              "center": "114.507131,37.064125",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0319",
+              "adcode": "130503",
+              "name": "桥西区",
+              "center": "114.473687,37.068009",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0319",
+              "adcode": "130521",
+              "name": "邢台县",
+              "center": "114.561132,37.05073",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0319",
+              "adcode": "130522",
+              "name": "临城县",
+              "center": "114.506873,37.444009",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0319",
+              "adcode": "130523",
+              "name": "内丘县",
+              "center": "114.511523,37.287663",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0319",
+              "adcode": "130524",
+              "name": "柏乡县",
+              "center": "114.693382,37.483596",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0319",
+              "adcode": "130525",
+              "name": "隆尧县",
+              "center": "114.776348,37.350925",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0319",
+              "adcode": "130526",
+              "name": "任县",
+              "center": "114.684469,37.129952",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0319",
+              "adcode": "130527",
+              "name": "南和县",
+              "center": "114.691377,37.003812",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0319",
+              "adcode": "130528",
+              "name": "宁晋县",
+              "center": "114.921027,37.618956",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0319",
+              "adcode": "130529",
+              "name": "巨鹿县",
+              "center": "115.038782,37.21768",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0319",
+              "adcode": "130530",
+              "name": "新河县",
+              "center": "115.247537,37.526216",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0319",
+              "adcode": "130531",
+              "name": "广宗县",
+              "center": "115.142797,37.075548",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0319",
+              "adcode": "130532",
+              "name": "平乡县",
+              "center": "115.029218,37.069404",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0319",
+              "adcode": "130533",
+              "name": "威县",
+              "center": "115.272749,36.983272",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0319",
+              "adcode": "130534",
+              "name": "清河县",
+              "center": "115.668999,37.059991",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0319",
+              "adcode": "130535",
+              "name": "临西县",
+              "center": "115.498684,36.8642",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0319",
+              "adcode": "130581",
+              "name": "南宫市",
+              "center": "115.398102,37.359668",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0319",
+              "adcode": "130582",
+              "name": "沙河市",
+              "center": "114.504902,36.861903",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0312",
+          "adcode": "130600",
+          "name": "保定市",
+          "center": "115.482331,38.867657",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0312",
+              "adcode": "130602",
+              "name": "竞秀区",
+              "center": "115.470659,38.88662",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0312",
+              "adcode": "130606",
+              "name": "莲池区",
+              "center": "115.500934,38.865005",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0312",
+              "adcode": "130607",
+              "name": "满城区",
+              "center": "115.32442,38.95138",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0312",
+              "adcode": "130608",
+              "name": "清苑区",
+              "center": "115.492221,38.771012",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0312",
+              "adcode": "130623",
+              "name": "涞水县",
+              "center": "115.711985,39.393148",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0312",
+              "adcode": "130624",
+              "name": "阜平县",
+              "center": "114.198801,38.847276",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0312",
+              "adcode": "130609",
+              "name": "徐水区",
+              "center": "115.64941,39.020395",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0312",
+              "adcode": "130626",
+              "name": "定兴县",
+              "center": "115.796895,39.266195",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0312",
+              "adcode": "130627",
+              "name": "唐县",
+              "center": "114.981241,38.748542",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0312",
+              "adcode": "130628",
+              "name": "高阳县",
+              "center": "115.778878,38.690092",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0312",
+              "adcode": "130629",
+              "name": "容城县",
+              "center": "115.866247,39.05282",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0312",
+              "adcode": "130630",
+              "name": "涞源县",
+              "center": "114.692567,39.35755",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0312",
+              "adcode": "130631",
+              "name": "望都县",
+              "center": "115.154009,38.707448",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0312",
+              "adcode": "130632",
+              "name": "安新县",
+              "center": "115.931979,38.929912",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0312",
+              "adcode": "130633",
+              "name": "易县",
+              "center": "115.501146,39.35297",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0312",
+              "adcode": "130634",
+              "name": "曲阳县",
+              "center": "114.704055,38.619992",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0312",
+              "adcode": "130635",
+              "name": "蠡县",
+              "center": "115.583631,38.496429",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0312",
+              "adcode": "130636",
+              "name": "顺平县",
+              "center": "115.132749,38.845127",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0312",
+              "adcode": "130637",
+              "name": "博野县",
+              "center": "115.461798,38.458271",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0312",
+              "adcode": "130638",
+              "name": "雄县",
+              "center": "116.107474,38.990819",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0312",
+              "adcode": "130681",
+              "name": "涿州市",
+              "center": "115.973409,39.485765",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0312",
+              "adcode": "130682",
+              "name": "定州市",
+              "center": "114.991389,38.517602",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0312",
+              "adcode": "130683",
+              "name": "安国市",
+              "center": "115.33141,38.421367",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0312",
+              "adcode": "130684",
+              "name": "高碑店市",
+              "center": "115.882704,39.327689",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0313",
+          "adcode": "130700",
+          "name": "张家口市",
+          "center": "114.884091,40.811901",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0313",
+              "adcode": "130702",
+              "name": "桥东区",
+              "center": "114.885658,40.813875",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0313",
+              "adcode": "130703",
+              "name": "桥西区",
+              "center": "114.882127,40.824385",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0313",
+              "adcode": "130705",
+              "name": "宣化区",
+              "center": "115.0632,40.609368",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0313",
+              "adcode": "130706",
+              "name": "下花园区",
+              "center": "115.281002,40.488645",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0313",
+              "adcode": "130722",
+              "name": "张北县",
+              "center": "114.715951,41.151713",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0313",
+              "adcode": "130723",
+              "name": "康保县",
+              "center": "114.615809,41.850046",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0313",
+              "adcode": "130724",
+              "name": "沽源县",
+              "center": "115.684836,41.667419",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0313",
+              "adcode": "130725",
+              "name": "尚义县",
+              "center": "113.977713,41.080091",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0313",
+              "adcode": "130726",
+              "name": "蔚县",
+              "center": "114.582695,39.837181",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0313",
+              "adcode": "130727",
+              "name": "阳原县",
+              "center": "114.167343,40.113419",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0313",
+              "adcode": "130728",
+              "name": "怀安县",
+              "center": "114.422364,40.671274",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0313",
+              "adcode": "130708",
+              "name": "万全区",
+              "center": "114.736131,40.765136",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0313",
+              "adcode": "130730",
+              "name": "怀来县",
+              "center": "115.520846,40.405405",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0313",
+              "adcode": "130731",
+              "name": "涿鹿县",
+              "center": "115.219246,40.378701",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0313",
+              "adcode": "130732",
+              "name": "赤城县",
+              "center": "115.832708,40.912081",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0313",
+              "adcode": "130709",
+              "name": "崇礼区",
+              "center": "115.281652,40.971302",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0314",
+          "adcode": "130800",
+          "name": "承德市",
+          "center": "117.939152,40.976204",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0314",
+              "adcode": "130802",
+              "name": "双桥区",
+              "center": "117.939152,40.976204",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0314",
+              "adcode": "130803",
+              "name": "双滦区",
+              "center": "117.797485,40.959756",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0314",
+              "adcode": "130804",
+              "name": "鹰手营子矿区",
+              "center": "117.661154,40.546956",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0314",
+              "adcode": "130821",
+              "name": "承德县",
+              "center": "118.172496,40.768637",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0314",
+              "adcode": "130822",
+              "name": "兴隆县",
+              "center": "117.507098,40.418525",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0314",
+              "adcode": "130823",
+              "name": "平泉县",
+              "center": "118.690238,41.00561",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0314",
+              "adcode": "130824",
+              "name": "滦平县",
+              "center": "117.337124,40.936644",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0314",
+              "adcode": "130825",
+              "name": "隆化县",
+              "center": "117.736343,41.316667",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0314",
+              "adcode": "130826",
+              "name": "丰宁满族自治县",
+              "center": "116.65121,41.209903",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0314",
+              "adcode": "130827",
+              "name": "宽城满族自治县",
+              "center": "118.488642,40.607981",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0314",
+              "adcode": "130828",
+              "name": "围场满族蒙古族自治县",
+              "center": "117.764086,41.949404",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0317",
+          "adcode": "130900",
+          "name": "沧州市",
+          "center": "116.857461,38.310582",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0317",
+              "adcode": "130902",
+              "name": "新华区",
+              "center": "116.873049,38.308273",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0317",
+              "adcode": "130903",
+              "name": "运河区",
+              "center": "116.840063,38.307405",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0317",
+              "adcode": "130921",
+              "name": "沧县",
+              "center": "117.007478,38.219856",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0317",
+              "adcode": "130922",
+              "name": "青县",
+              "center": "116.838384,38.569646",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0317",
+              "adcode": "130923",
+              "name": "东光县",
+              "center": "116.542062,37.88655",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0317",
+              "adcode": "130924",
+              "name": "海兴县",
+              "center": "117.496606,38.141582",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0317",
+              "adcode": "130925",
+              "name": "盐山县",
+              "center": "117.229814,38.056141",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0317",
+              "adcode": "130926",
+              "name": "肃宁县",
+              "center": "115.835856,38.427102",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0317",
+              "adcode": "130927",
+              "name": "南皮县",
+              "center": "116.709171,38.042439",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0317",
+              "adcode": "130928",
+              "name": "吴桥县",
+              "center": "116.391512,37.628182",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0317",
+              "adcode": "130929",
+              "name": "献县",
+              "center": "116.123844,38.189661",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0317",
+              "adcode": "130930",
+              "name": "孟村回族自治县",
+              "center": "117.105104,38.057953",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0317",
+              "adcode": "130981",
+              "name": "泊头市",
+              "center": "116.570163,38.073479",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0317",
+              "adcode": "130982",
+              "name": "任丘市",
+              "center": "116.106764,38.706513",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0317",
+              "adcode": "130983",
+              "name": "黄骅市",
+              "center": "117.343803,38.369238",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0317",
+              "adcode": "130984",
+              "name": "河间市",
+              "center": "116.089452,38.44149",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0316",
+          "adcode": "131000",
+          "name": "廊坊市",
+          "center": "116.704441,39.523927",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0316",
+              "adcode": "131002",
+              "name": "安次区",
+              "center": "116.694544,39.502569",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0316",
+              "adcode": "131003",
+              "name": "广阳区",
+              "center": "116.713708,39.521931",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0316",
+              "adcode": "131022",
+              "name": "固安县",
+              "center": "116.299894,39.436468",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0316",
+              "adcode": "131023",
+              "name": "永清县",
+              "center": "116.498089,39.319717",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0316",
+              "adcode": "131024",
+              "name": "香河县",
+              "center": "117.007161,39.757212",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0316",
+              "adcode": "131025",
+              "name": "大城县",
+              "center": "116.640735,38.699215",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0316",
+              "adcode": "131026",
+              "name": "文安县",
+              "center": "116.460107,38.866801",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0316",
+              "adcode": "131028",
+              "name": "大厂回族自治县",
+              "center": "116.986501,39.889266",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0316",
+              "adcode": "131081",
+              "name": "霸州市",
+              "center": "116.392021,39.117331",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0316",
+              "adcode": "131082",
+              "name": "三河市",
+              "center": "117.077018,39.982778",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0318",
+          "adcode": "131100",
+          "name": "衡水市",
+          "center": "115.665993,37.735097",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0318",
+              "adcode": "131102",
+              "name": "桃城区",
+              "center": "115.694945,37.732237",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0318",
+              "adcode": "131121",
+              "name": "枣强县",
+              "center": "115.726499,37.511512",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0318",
+              "adcode": "131122",
+              "name": "武邑县",
+              "center": "115.892415,37.803774",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0318",
+              "adcode": "131123",
+              "name": "武强县",
+              "center": "115.970236,38.03698",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0318",
+              "adcode": "131124",
+              "name": "饶阳县",
+              "center": "115.726577,38.232671",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0318",
+              "adcode": "131125",
+              "name": "安平县",
+              "center": "115.519627,38.233511",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0318",
+              "adcode": "131126",
+              "name": "故城县",
+              "center": "115.966747,37.350981",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0318",
+              "adcode": "131127",
+              "name": "景县",
+              "center": "116.258446,37.686622",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0318",
+              "adcode": "131128",
+              "name": "阜城县",
+              "center": "116.164727,37.869945",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0318",
+              "adcode": "131103",
+              "name": "冀州区",
+              "center": "115.579173,37.542788",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0318",
+              "adcode": "131182",
+              "name": "深州市",
+              "center": "115.554596,38.00347",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

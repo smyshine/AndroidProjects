@@ -1,0 +1,437 @@
+{
+    "districts": [
+    {
+      "citycode": [],
+      "adcode": "630000",
+      "name": "青海省",
+      "center": "101.778916,36.623178",
+      "level": "province",
+      "districts": [
+        {
+          "citycode": "0971",
+          "adcode": "630100",
+          "name": "西宁市",
+          "center": "101.778916,36.623178",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0971",
+              "adcode": "630102",
+              "name": "城东区",
+              "center": "101.796095,36.616043",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0971",
+              "adcode": "630103",
+              "name": "城中区",
+              "center": "101.784554,36.621181",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0971",
+              "adcode": "630104",
+              "name": "城西区",
+              "center": "101.763649,36.628323",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0971",
+              "adcode": "630105",
+              "name": "城北区",
+              "center": "101.761297,36.648448",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0971",
+              "adcode": "630121",
+              "name": "大通回族土族自治县",
+              "center": "101.684183,36.931343",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0971",
+              "adcode": "630122",
+              "name": "湟中县",
+              "center": "101.569475,36.500419",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0971",
+              "adcode": "630123",
+              "name": "湟源县",
+              "center": "101.263435,36.684818",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0972",
+          "adcode": "630200",
+          "name": "海东市",
+          "center": "102.10327,36.502916",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0972",
+              "adcode": "630202",
+              "name": "乐都区",
+              "center": "102.402431,36.480291",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0972",
+              "adcode": "630203",
+              "name": "平安区",
+              "center": "102.104295,36.502714",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0972",
+              "adcode": "630222",
+              "name": "民和回族土族自治县",
+              "center": "102.804209,36.329451",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0972",
+              "adcode": "630223",
+              "name": "互助土族自治县",
+              "center": "101.956734,36.83994",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0972",
+              "adcode": "630224",
+              "name": "化隆回族自治县",
+              "center": "102.262329,36.098322",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0972",
+              "adcode": "630225",
+              "name": "循化撒拉族自治县",
+              "center": "102.486534,35.847247",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0970",
+          "adcode": "632200",
+          "name": "海北藏族自治州",
+          "center": "100.901059,36.959435",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0970",
+              "adcode": "632221",
+              "name": "门源回族自治县",
+              "center": "101.618461,37.376627",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0970",
+              "adcode": "632222",
+              "name": "祁连县",
+              "center": "100.249778,38.175409",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0970",
+              "adcode": "632223",
+              "name": "海晏县",
+              "center": "100.90049,36.959542",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0970",
+              "adcode": "632224",
+              "name": "刚察县",
+              "center": "100.138417,37.326263",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0973",
+          "adcode": "632300",
+          "name": "黄南藏族自治州",
+          "center": "102.019988,35.517744",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0973",
+              "adcode": "632321",
+              "name": "同仁县",
+              "center": "102.017604,35.516337",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0973",
+              "adcode": "632322",
+              "name": "尖扎县",
+              "center": "102.031953,35.938205",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0973",
+              "adcode": "632323",
+              "name": "泽库县",
+              "center": "101.469343,35.036842",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0973",
+              "adcode": "632324",
+              "name": "河南蒙古族自治县",
+              "center": "101.611877,34.734522",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0974",
+          "adcode": "632500",
+          "name": "海南藏族自治州",
+          "center": "100.619542,36.280353",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0974",
+              "adcode": "632521",
+              "name": "共和县",
+              "center": "100.619597,36.280286",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0974",
+              "adcode": "632522",
+              "name": "同德县",
+              "center": "100.579465,35.254492",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0974",
+              "adcode": "632523",
+              "name": "贵德县",
+              "center": "101.431856,36.040456",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0974",
+              "adcode": "632524",
+              "name": "兴海县",
+              "center": "99.986963,35.58909",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0974",
+              "adcode": "632525",
+              "name": "贵南县",
+              "center": "100.74792,35.587085",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0975",
+          "adcode": "632600",
+          "name": "果洛藏族自治州",
+          "center": "100.242143,34.4736",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0975",
+              "adcode": "632621",
+              "name": "玛沁县",
+              "center": "100.243531,34.473386",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0975",
+              "adcode": "632622",
+              "name": "班玛县",
+              "center": "100.737955,32.931589",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0975",
+              "adcode": "632623",
+              "name": "甘德县",
+              "center": "99.902589,33.966987",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0975",
+              "adcode": "632624",
+              "name": "达日县",
+              "center": "99.651715,33.753259",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0975",
+              "adcode": "632625",
+              "name": "久治县",
+              "center": "101.484884,33.430217",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0975",
+              "adcode": "632626",
+              "name": "玛多县",
+              "center": "98.211343,34.91528",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0976",
+          "adcode": "632700",
+          "name": "玉树藏族自治州",
+          "center": "97.008522,33.004049",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0976",
+              "adcode": "632701",
+              "name": "玉树市",
+              "center": "97.008762,33.00393",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0976",
+              "adcode": "632722",
+              "name": "杂多县",
+              "center": "95.293423,32.891886",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0976",
+              "adcode": "632723",
+              "name": "称多县",
+              "center": "97.110893,33.367884",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0976",
+              "adcode": "632724",
+              "name": "治多县",
+              "center": "95.616843,33.852322",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0976",
+              "adcode": "632725",
+              "name": "囊谦县",
+              "center": "96.479797,32.203206",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0976",
+              "adcode": "632726",
+              "name": "曲麻莱县",
+              "center": "95.800674,34.12654",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0977",
+          "adcode": "632800",
+          "name": "海西蒙古族藏族自治州",
+          "center": "97.370785,37.374663",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0977",
+              "adcode": "632801",
+              "name": "格尔木市",
+              "center": "94.905777,36.401541",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0977",
+              "adcode": "632802",
+              "name": "德令哈市",
+              "center": "97.370143,37.374555",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0977",
+              "adcode": "632821",
+              "name": "乌兰县",
+              "center": "98.479852,36.930389",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0977",
+              "adcode": "632822",
+              "name": "都兰县",
+              "center": "98.089161,36.298553",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0977",
+              "adcode": "632823",
+              "name": "天峻县",
+              "center": "99.02078,37.29906",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0977",
+              "adcode": "632825",
+              "name": "海西蒙古族藏族自治州直辖",
+              "center": "95.357233,37.853631",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

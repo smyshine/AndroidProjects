@@ -1,0 +1,944 @@
+{"districts": [
+    {
+      "citycode": [],
+      "adcode": "150000",
+      "name": "内蒙古自治区",
+      "center": "111.670801,40.818311",
+      "level": "province",
+      "districts": [
+        {
+          "citycode": "0471",
+          "adcode": "150100",
+          "name": "呼和浩特市",
+          "center": "111.670801,40.818311",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0471",
+              "adcode": "150102",
+              "name": "新城区",
+              "center": "111.685964,40.826225",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0471",
+              "adcode": "150103",
+              "name": "回民区",
+              "center": "111.662162,40.815149",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0471",
+              "adcode": "150104",
+              "name": "玉泉区",
+              "center": "111.66543,40.799421",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0471",
+              "adcode": "150105",
+              "name": "赛罕区",
+              "center": "111.698463,40.807834",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0471",
+              "adcode": "150121",
+              "name": "土默特左旗",
+              "center": "111.133615,40.720416",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0471",
+              "adcode": "150122",
+              "name": "托克托县",
+              "center": "111.197317,40.276729",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0471",
+              "adcode": "150123",
+              "name": "和林格尔县",
+              "center": "111.824143,40.380288",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0471",
+              "adcode": "150124",
+              "name": "清水河县",
+              "center": "111.67222,39.912479",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0471",
+              "adcode": "150125",
+              "name": "武川县",
+              "center": "111.456563,41.094483",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0472",
+          "adcode": "150200",
+          "name": "包头市",
+          "center": "109.840405,40.658168",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0472",
+              "adcode": "150202",
+              "name": "东河区",
+              "center": "110.026895,40.587056",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0472",
+              "adcode": "150203",
+              "name": "昆都仑区",
+              "center": "109.822932,40.661345",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0472",
+              "adcode": "150204",
+              "name": "青山区",
+              "center": "109.880049,40.668558",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0472",
+              "adcode": "150205",
+              "name": "石拐区",
+              "center": "110.272565,40.672094",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0472",
+              "adcode": "150206",
+              "name": "白云鄂博矿区",
+              "center": "109.97016,41.769246",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0472",
+              "adcode": "150207",
+              "name": "九原区",
+              "center": "109.968122,40.600581",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0472",
+              "adcode": "150221",
+              "name": "土默特右旗",
+              "center": "110.526766,40.566434",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0472",
+              "adcode": "150222",
+              "name": "固阳县",
+              "center": "110.063421,41.030004",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0472",
+              "adcode": "150223",
+              "name": "达尔罕茂明安联合旗",
+              "center": "110.438452,41.702836",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0473",
+          "adcode": "150300",
+          "name": "乌海市",
+          "center": "106.825563,39.673734",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0473",
+              "adcode": "150302",
+              "name": "海勃湾区",
+              "center": "106.817762,39.673527",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0473",
+              "adcode": "150303",
+              "name": "海南区",
+              "center": "106.884789,39.44153",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0473",
+              "adcode": "150304",
+              "name": "乌达区",
+              "center": "106.722711,39.502288",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0476",
+          "adcode": "150400",
+          "name": "赤峰市",
+          "center": "118.956806,42.275317",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0476",
+              "adcode": "150402",
+              "name": "红山区",
+              "center": "118.961087,42.269732",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0476",
+              "adcode": "150403",
+              "name": "元宝山区",
+              "center": "119.289877,42.041168",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0476",
+              "adcode": "150404",
+              "name": "松山区",
+              "center": "118.938958,42.281046",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0476",
+              "adcode": "150421",
+              "name": "阿鲁科尔沁旗",
+              "center": "120.094969,43.87877",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0476",
+              "adcode": "150422",
+              "name": "巴林左旗",
+              "center": "119.391737,43.980715",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0476",
+              "adcode": "150423",
+              "name": "巴林右旗",
+              "center": "118.678347,43.528963",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0476",
+              "adcode": "150424",
+              "name": "林西县",
+              "center": "118.05775,43.605326",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0476",
+              "adcode": "150425",
+              "name": "克什克腾旗",
+              "center": "117.542465,43.256233",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0476",
+              "adcode": "150426",
+              "name": "翁牛特旗",
+              "center": "119.022619,42.937128",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0476",
+              "adcode": "150428",
+              "name": "喀喇沁旗",
+              "center": "118.708572,41.92778",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0476",
+              "adcode": "150429",
+              "name": "宁城县",
+              "center": "119.339242,41.598692",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0476",
+              "adcode": "150430",
+              "name": "敖汉旗",
+              "center": "119.906486,42.287012",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0475",
+          "adcode": "150500",
+          "name": "通辽市",
+          "center": "122.263119,43.617429",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0475",
+              "adcode": "150502",
+              "name": "科尔沁区",
+              "center": "122.264042,43.617422",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0475",
+              "adcode": "150521",
+              "name": "科尔沁左翼中旗",
+              "center": "123.313873,44.127166",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0475",
+              "adcode": "150522",
+              "name": "科尔沁左翼后旗",
+              "center": "122.355155,42.954564",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0475",
+              "adcode": "150523",
+              "name": "开鲁县",
+              "center": "121.308797,43.602432",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0475",
+              "adcode": "150524",
+              "name": "库伦旗",
+              "center": "121.774886,42.734692",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0475",
+              "adcode": "150525",
+              "name": "奈曼旗",
+              "center": "120.662543,42.84685",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0475",
+              "adcode": "150526",
+              "name": "扎鲁特旗",
+              "center": "120.905275,44.555294",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0475",
+              "adcode": "150581",
+              "name": "霍林郭勒市",
+              "center": "119.657862,45.532361",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0477",
+          "adcode": "150600",
+          "name": "鄂尔多斯市",
+          "center": "109.99029,39.817179",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0477",
+              "adcode": "150602",
+              "name": "东胜区",
+              "center": "109.98945,39.81788",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0477",
+              "adcode": "150603",
+              "name": "康巴什区",
+              "center": "109.790076,39.607472",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0477",
+              "adcode": "150621",
+              "name": "达拉特旗",
+              "center": "110.040281,40.404076",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0477",
+              "adcode": "150622",
+              "name": "准格尔旗",
+              "center": "111.238332,39.865221",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0477",
+              "adcode": "150623",
+              "name": "鄂托克前旗",
+              "center": "107.48172,38.183257",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0477",
+              "adcode": "150624",
+              "name": "鄂托克旗",
+              "center": "107.982604,39.095752",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0477",
+              "adcode": "150625",
+              "name": "杭锦旗",
+              "center": "108.736324,39.831789",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0477",
+              "adcode": "150626",
+              "name": "乌审旗",
+              "center": "108.842454,38.596611",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0477",
+              "adcode": "150627",
+              "name": "伊金霍洛旗",
+              "center": "109.787402,39.604312",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0470",
+          "adcode": "150700",
+          "name": "呼伦贝尔市",
+          "center": "119.758168,49.215333",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0470",
+              "adcode": "150702",
+              "name": "海拉尔区",
+              "center": "119.764923,49.213889",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0470",
+              "adcode": "150703",
+              "name": "扎赉诺尔区",
+              "center": "117.716373,49.456567",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0470",
+              "adcode": "150721",
+              "name": "阿荣旗",
+              "center": "123.464615,48.130503",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0470",
+              "adcode": "150722",
+              "name": "莫力达瓦达斡尔族自治旗",
+              "center": "124.507401,48.478385",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0470",
+              "adcode": "150723",
+              "name": "鄂伦春自治旗",
+              "center": "123.725684,50.590177",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0470",
+              "adcode": "150724",
+              "name": "鄂温克族自治旗",
+              "center": "119.754041,49.143293",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0470",
+              "adcode": "150725",
+              "name": "陈巴尔虎旗",
+              "center": "119.437609,49.328422",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0470",
+              "adcode": "150726",
+              "name": "新巴尔虎左旗",
+              "center": "118.267454,48.216571",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0470",
+              "adcode": "150727",
+              "name": "新巴尔虎右旗",
+              "center": "116.825991,48.669134",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0470",
+              "adcode": "150781",
+              "name": "满洲里市",
+              "center": "117.455561,49.590788",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0470",
+              "adcode": "150782",
+              "name": "牙克石市",
+              "center": "120.729005,49.287024",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0470",
+              "adcode": "150783",
+              "name": "扎兰屯市",
+              "center": "122.744401,48.007412",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0470",
+              "adcode": "150784",
+              "name": "额尔古纳市",
+              "center": "120.178636,50.2439",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0470",
+              "adcode": "150785",
+              "name": "根河市",
+              "center": "121.532724,50.780454",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0478",
+          "adcode": "150800",
+          "name": "巴彦淖尔市",
+          "center": "107.416959,40.757402",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0478",
+              "adcode": "150802",
+              "name": "临河区",
+              "center": "107.417018,40.757092",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0478",
+              "adcode": "150821",
+              "name": "五原县",
+              "center": "108.270658,41.097639",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0478",
+              "adcode": "150822",
+              "name": "磴口县",
+              "center": "107.006056,40.330479",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0478",
+              "adcode": "150823",
+              "name": "乌拉特前旗",
+              "center": "108.656816,40.725209",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0478",
+              "adcode": "150824",
+              "name": "乌拉特中旗",
+              "center": "108.515255,41.57254",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0478",
+              "adcode": "150825",
+              "name": "乌拉特后旗",
+              "center": "107.074941,41.084307",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0478",
+              "adcode": "150826",
+              "name": "杭锦后旗",
+              "center": "107.147682,40.888797",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0474",
+          "adcode": "150900",
+          "name": "乌兰察布市",
+          "center": "113.114543,41.034126",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0474",
+              "adcode": "150902",
+              "name": "集宁区",
+              "center": "113.116453,41.034134",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0474",
+              "adcode": "150921",
+              "name": "卓资县",
+              "center": "112.577702,40.89576",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0474",
+              "adcode": "150922",
+              "name": "化德县",
+              "center": "114.01008,41.899335",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0474",
+              "adcode": "150923",
+              "name": "商都县",
+              "center": "113.560643,41.560163",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0474",
+              "adcode": "150924",
+              "name": "兴和县",
+              "center": "113.834009,40.872437",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0474",
+              "adcode": "150925",
+              "name": "凉城县",
+              "center": "112.500911,40.531627",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0474",
+              "adcode": "150926",
+              "name": "察哈尔右翼前旗",
+              "center": "113.211958,40.786859",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0474",
+              "adcode": "150927",
+              "name": "察哈尔右翼中旗",
+              "center": "112.633563,41.274212",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0474",
+              "adcode": "150928",
+              "name": "察哈尔右翼后旗",
+              "center": "113.1906,41.447213",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0474",
+              "adcode": "150929",
+              "name": "四子王旗",
+              "center": "111.70123,41.528114",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0474",
+              "adcode": "150981",
+              "name": "丰镇市",
+              "center": "113.163462,40.437534",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0482",
+          "adcode": "152200",
+          "name": "兴安盟",
+          "center": "122.070317,46.076268",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0482",
+              "adcode": "152201",
+              "name": "乌兰浩特市",
+              "center": "122.068975,46.077238",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0482",
+              "adcode": "152202",
+              "name": "阿尔山市",
+              "center": "119.943656,47.177",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0482",
+              "adcode": "152221",
+              "name": "科尔沁右翼前旗",
+              "center": "121.957544,46.076497",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0482",
+              "adcode": "152222",
+              "name": "科尔沁右翼中旗",
+              "center": "121.472818,45.059645",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0482",
+              "adcode": "152223",
+              "name": "扎赉特旗",
+              "center": "122.909332,46.725136",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0482",
+              "adcode": "152224",
+              "name": "突泉县",
+              "center": "121.564856,45.380986",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0479",
+          "adcode": "152500",
+          "name": "锡林郭勒盟",
+          "center": "116.090996,43.944018",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0479",
+              "adcode": "152501",
+              "name": "二连浩特市",
+              "center": "111.97981,43.652895",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0479",
+              "adcode": "152502",
+              "name": "锡林浩特市",
+              "center": "116.091903,43.944301",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0479",
+              "adcode": "152522",
+              "name": "阿巴嘎旗",
+              "center": "114.970618,44.022728",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0479",
+              "adcode": "152523",
+              "name": "苏尼特左旗",
+              "center": "113.653412,43.854108",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0479",
+              "adcode": "152524",
+              "name": "苏尼特右旗",
+              "center": "112.65539,42.746662",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0479",
+              "adcode": "152525",
+              "name": "东乌珠穆沁旗",
+              "center": "116.980022,45.510307",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0479",
+              "adcode": "152526",
+              "name": "西乌珠穆沁旗",
+              "center": "117.615249,44.586147",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0479",
+              "adcode": "152527",
+              "name": "太仆寺旗",
+              "center": "115.28728,41.895199",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0479",
+              "adcode": "152528",
+              "name": "镶黄旗",
+              "center": "113.843869,42.239229",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0479",
+              "adcode": "152529",
+              "name": "正镶白旗",
+              "center": "115.031423,42.286807",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0479",
+              "adcode": "152530",
+              "name": "正蓝旗",
+              "center": "116.003311,42.245895",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0479",
+              "adcode": "152531",
+              "name": "多伦县",
+              "center": "116.477288,42.197962",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0483",
+          "adcode": "152900",
+          "name": "阿拉善盟",
+          "center": "105.706422,38.844814",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0483",
+              "adcode": "152921",
+              "name": "阿拉善左旗",
+              "center": "105.70192,38.847241",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0483",
+              "adcode": "152922",
+              "name": "阿拉善右旗",
+              "center": "101.671984,39.21159",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0483",
+              "adcode": "152923",
+              "name": "额济纳旗",
+              "center": "101.06944,41.958813",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

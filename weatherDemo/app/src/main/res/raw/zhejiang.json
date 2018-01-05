@@ -1,0 +1,824 @@
+{
+    "districts": [
+    {
+      "citycode": [],
+      "adcode": "330000",
+      "name": "浙江省",
+      "center": "120.153576,30.287459",
+      "level": "province",
+      "districts": [
+        {
+          "citycode": "0571",
+          "adcode": "330100",
+          "name": "杭州市",
+          "center": "120.153576,30.287459",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0571",
+              "adcode": "330102",
+              "name": "上城区",
+              "center": "120.171465,30.250236",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0571",
+              "adcode": "330103",
+              "name": "下城区",
+              "center": "120.172763,30.276271",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0571",
+              "adcode": "330104",
+              "name": "江干区",
+              "center": "120.202633,30.266603",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0571",
+              "adcode": "330105",
+              "name": "拱墅区",
+              "center": "120.150053,30.314697",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0571",
+              "adcode": "330106",
+              "name": "西湖区",
+              "center": "120.147376,30.272934",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0571",
+              "adcode": "330108",
+              "name": "滨江区",
+              "center": "120.21062,30.206615",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0571",
+              "adcode": "330109",
+              "name": "萧山区",
+              "center": "120.27069,30.162932",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0571",
+              "adcode": "330110",
+              "name": "余杭区",
+              "center": "120.301737,30.421187",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0571",
+              "adcode": "330111",
+              "name": "富阳区",
+              "center": "119.949869,30.049871",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0571",
+              "adcode": "330122",
+              "name": "桐庐县",
+              "center": "119.685045,29.797437",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0571",
+              "adcode": "330127",
+              "name": "淳安县",
+              "center": "119.044276,29.604177",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0571",
+              "adcode": "330182",
+              "name": "建德市",
+              "center": "119.279089,29.472284",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0571",
+              "adcode": "330185",
+              "name": "临安市",
+              "center": "119.715101,30.231153",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0574",
+          "adcode": "330200",
+          "name": "宁波市",
+          "center": "121.549792,29.868388",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0574",
+              "adcode": "330203",
+              "name": "海曙区",
+              "center": "121.539698,29.874452",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0574",
+              "adcode": "330205",
+              "name": "江北区",
+              "center": "121.559282,29.888361",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0574",
+              "adcode": "330206",
+              "name": "北仑区",
+              "center": "121.831303,29.90944",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0574",
+              "adcode": "330211",
+              "name": "镇海区",
+              "center": "121.713162,29.952107",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0574",
+              "adcode": "330212",
+              "name": "鄞州区",
+              "center": "121.558436,29.831662",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0574",
+              "adcode": "330225",
+              "name": "象山县",
+              "center": "121.877091,29.470206",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0574",
+              "adcode": "330226",
+              "name": "宁海县",
+              "center": "121.432606,29.299836",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0574",
+              "adcode": "330281",
+              "name": "余姚市",
+              "center": "121.156294,30.045404",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0574",
+              "adcode": "330282",
+              "name": "慈溪市",
+              "center": "121.248052,30.177142",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0574",
+              "adcode": "330283",
+              "name": "奉化区",
+              "center": "121.41089,29.662348",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0577",
+          "adcode": "330300",
+          "name": "温州市",
+          "center": "120.672111,28.000575",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0577",
+              "adcode": "330302",
+              "name": "鹿城区",
+              "center": "120.674231,28.003352",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0577",
+              "adcode": "330303",
+              "name": "龙湾区",
+              "center": "120.763469,27.970254",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0577",
+              "adcode": "330304",
+              "name": "瓯海区",
+              "center": "120.637145,28.006444",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0577",
+              "adcode": "330305",
+              "name": "洞头区",
+              "center": "121.156181,27.836057",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0577",
+              "adcode": "330324",
+              "name": "永嘉县",
+              "center": "120.690968,28.153886",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0577",
+              "adcode": "330326",
+              "name": "平阳县",
+              "center": "120.564387,27.6693",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0577",
+              "adcode": "330327",
+              "name": "苍南县",
+              "center": "120.406256,27.507743",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0577",
+              "adcode": "330328",
+              "name": "文成县",
+              "center": "120.09245,27.789133",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0577",
+              "adcode": "330329",
+              "name": "泰顺县",
+              "center": "119.71624,27.557309",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0577",
+              "adcode": "330381",
+              "name": "瑞安市",
+              "center": "120.646171,27.779321",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0577",
+              "adcode": "330382",
+              "name": "乐清市",
+              "center": "120.967147,28.116083",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0573",
+          "adcode": "330400",
+          "name": "嘉兴市",
+          "center": "120.750865,30.762653",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0573",
+              "adcode": "330402",
+              "name": "南湖区",
+              "center": "120.749953,30.764652",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0573",
+              "adcode": "330411",
+              "name": "秀洲区",
+              "center": "120.720431,30.763323",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0573",
+              "adcode": "330421",
+              "name": "嘉善县",
+              "center": "120.921871,30.841352",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0573",
+              "adcode": "330424",
+              "name": "海盐县",
+              "center": "120.942017,30.522223",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0573",
+              "adcode": "330481",
+              "name": "海宁市",
+              "center": "120.688821,30.525544",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0573",
+              "adcode": "330482",
+              "name": "平湖市",
+              "center": "121.014666,30.698921",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0573",
+              "adcode": "330483",
+              "name": "桐乡市",
+              "center": "120.551085,30.629065",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0572",
+          "adcode": "330500",
+          "name": "湖州市",
+          "center": "120.102398,30.867198",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0572",
+              "adcode": "330502",
+              "name": "吴兴区",
+              "center": "120.101416,30.867252",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0572",
+              "adcode": "330503",
+              "name": "南浔区",
+              "center": "120.417195,30.872742",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0572",
+              "adcode": "330521",
+              "name": "德清县",
+              "center": "119.967662,30.534927",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0572",
+              "adcode": "330522",
+              "name": "长兴县",
+              "center": "119.910122,31.00475",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0572",
+              "adcode": "330523",
+              "name": "安吉县",
+              "center": "119.687891,30.631974",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0575",
+          "adcode": "330600",
+          "name": "绍兴市",
+          "center": "120.582112,29.997117",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0575",
+              "adcode": "330602",
+              "name": "越城区",
+              "center": "120.585315,29.996993",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0575",
+              "adcode": "330603",
+              "name": "柯桥区",
+              "center": "120.476075,30.078038",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0575",
+              "adcode": "330604",
+              "name": "上虞区",
+              "center": "120.874185,30.016769",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0575",
+              "adcode": "330624",
+              "name": "新昌县",
+              "center": "120.905665,29.501205",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0575",
+              "adcode": "330681",
+              "name": "诸暨市",
+              "center": "120.244326,29.713662",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0575",
+              "adcode": "330683",
+              "name": "嵊州市",
+              "center": "120.82888,29.586606",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0579",
+          "adcode": "330700",
+          "name": "金华市",
+          "center": "119.649506,29.089524",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0579",
+              "adcode": "330702",
+              "name": "婺城区",
+              "center": "119.652579,29.082607",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0579",
+              "adcode": "330703",
+              "name": "金东区",
+              "center": "119.681264,29.095835",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0579",
+              "adcode": "330723",
+              "name": "武义县",
+              "center": "119.819159,28.896563",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0579",
+              "adcode": "330726",
+              "name": "浦江县",
+              "center": "119.893363,29.451254",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0579",
+              "adcode": "330727",
+              "name": "磐安县",
+              "center": "120.44513,29.052627",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0579",
+              "adcode": "330781",
+              "name": "兰溪市",
+              "center": "119.460521,29.210065",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0579",
+              "adcode": "330782",
+              "name": "义乌市",
+              "center": "120.074911,29.306863",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0579",
+              "adcode": "330783",
+              "name": "东阳市",
+              "center": "120.23334,29.262546",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0579",
+              "adcode": "330784",
+              "name": "永康市",
+              "center": "120.036328,28.895293",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0570",
+          "adcode": "330800",
+          "name": "衢州市",
+          "center": "118.87263,28.941708",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0570",
+              "adcode": "330802",
+              "name": "柯城区",
+              "center": "118.873041,28.944539",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0570",
+              "adcode": "330803",
+              "name": "衢江区",
+              "center": "118.957683,28.973195",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0570",
+              "adcode": "330822",
+              "name": "常山县",
+              "center": "118.521654,28.900039",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0570",
+              "adcode": "330824",
+              "name": "开化县",
+              "center": "118.414435,29.136503",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0570",
+              "adcode": "330825",
+              "name": "龙游县",
+              "center": "119.172525,29.031364",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0570",
+              "adcode": "330881",
+              "name": "江山市",
+              "center": "118.627879,28.734674",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0580",
+          "adcode": "330900",
+          "name": "舟山市",
+          "center": "122.106863,30.016028",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0580",
+              "adcode": "330902",
+              "name": "定海区",
+              "center": "122.108496,30.016423",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0580",
+              "adcode": "330903",
+              "name": "普陀区",
+              "center": "122.301953,29.945614",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0580",
+              "adcode": "330921",
+              "name": "岱山县",
+              "center": "122.201132,30.242865",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0580",
+              "adcode": "330922",
+              "name": "嵊泗县",
+              "center": "122.457809,30.727166",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0576",
+          "adcode": "331000",
+          "name": "台州市",
+          "center": "121.428599,28.661378",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0576",
+              "adcode": "331002",
+              "name": "椒江区",
+              "center": "121.431049,28.67615",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0576",
+              "adcode": "331003",
+              "name": "黄岩区",
+              "center": "121.262138,28.64488",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0576",
+              "adcode": "331004",
+              "name": "路桥区",
+              "center": "121.37292,28.581799",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0576",
+              "adcode": "331021",
+              "name": "玉环县",
+              "center": "121.232337,28.12842",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0576",
+              "adcode": "331022",
+              "name": "三门县",
+              "center": "121.376429,29.118955",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0576",
+              "adcode": "331023",
+              "name": "天台县",
+              "center": "121.031227,29.141126",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0576",
+              "adcode": "331024",
+              "name": "仙居县",
+              "center": "120.735074,28.849213",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0576",
+              "adcode": "331081",
+              "name": "温岭市",
+              "center": "121.373611,28.368781",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0576",
+              "adcode": "331082",
+              "name": "临海市",
+              "center": "121.131229,28.845441",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        },
+        {
+          "citycode": "0578",
+          "adcode": "331100",
+          "name": "丽水市",
+          "center": "119.921786,28.451993",
+          "level": "city",
+          "districts": [
+            {
+              "citycode": "0578",
+              "adcode": "331102",
+              "name": "莲都区",
+              "center": "119.922293,28.451103",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0578",
+              "adcode": "331121",
+              "name": "青田县",
+              "center": "120.291939,28.135247",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0578",
+              "adcode": "331122",
+              "name": "缙云县",
+              "center": "120.078965,28.654208",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0578",
+              "adcode": "331123",
+              "name": "遂昌县",
+              "center": "119.27589,28.5924",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0578",
+              "adcode": "331124",
+              "name": "松阳县",
+              "center": "119.485292,28.449937",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0578",
+              "adcode": "331125",
+              "name": "云和县",
+              "center": "119.569458,28.111077",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0578",
+              "adcode": "331126",
+              "name": "庆元县",
+              "center": "119.067233,27.618231",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0578",
+              "adcode": "331127",
+              "name": "景宁畲族自治县",
+              "center": "119.634669,27.977247",
+              "level": "district",
+              "districts": []
+            },
+            {
+              "citycode": "0578",
+              "adcode": "331181",
+              "name": "龙泉市",
+              "center": "119.132319,28.069177",
+              "level": "district",
+              "districts": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
