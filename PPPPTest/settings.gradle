@@ -1,1 +1,1 @@
-include ':app', ':P2PSDK', ':FastVideo'
+include ':app', ':P2PSDK'
