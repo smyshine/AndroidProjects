@@ -1,20 +1,13 @@
 package com.frp.demo;
 
-import android.content.Intent;
-import android.support.annotation.IntDef;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
-import org.intellij.lang.annotations.Flow;
-import org.reactivestreams.Publisher;
-import org.reactivestreams.Subscriber;
 import org.reactivestreams.Subscription;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.concurrent.Callable;
 import java.util.concurrent.TimeUnit;
 
 import io.reactivex.BackpressureStrategy;
@@ -32,11 +25,8 @@ import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
-import io.reactivex.functions.Action;
-import io.reactivex.functions.BiConsumer;
 import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
-import io.reactivex.functions.Predicate;
 import io.reactivex.schedulers.Schedulers;
 
 
@@ -52,7 +42,37 @@ public class Main2Activity extends AppCompatActivity {
 
 //        testWithCreate();
 
-        testOperation();
+//        testOperation();
+
+        testPrediction();
+
+    }
+
+
+    private void testPrediction() {
+        //all, for all elements
+//        Flowable.just(1, 2, 3, 4)
+//                .all(integer -> integer >= 2)
+//                .subscribe(integer -> Log.e(TAG, "testPrediction: " + integer));
+        //>=1--true, >=2--false
+
+        //ambArray, choose the first element shooter to handle and abandon others
+//        Flowable.ambArray(
+//                Flowable.timer(1, TimeUnit.SECONDS),
+//                Flowable.just(3, 4, 5))
+//                .subscribe(integer -> Log.e(TAG, "testPrediction: " + integer));
+        //3,4,5
+
+        //scan
+        Flowable.just(1, 2, 3)
+                .scan((last, item) -> {
+                    Log.e(TAG, "last:" + String.valueOf(last));
+                    Log.e(TAG, "item:" + String.valueOf(item));
+                    return item + 1;
+                })
+                .subscribe(ele -> Log.e(TAG, String.valueOf(ele)));
+
+
     }
 
     private void testOperation() {
@@ -126,12 +146,11 @@ public class Main2Activity extends AppCompatActivity {
         //3
 
         //collect
-        Flowable.just(1, 2, 3, 4)
-                .collect(ArrayList::new,
-                        (BiConsumer<ArrayList<Integer>, Integer>) ArrayList::add)
-                .subscribe(integers -> Log.e(TAG, "accept: " + integers));
+//        Flowable.just(1, 2, 3, 4)
+//                .collect(ArrayList::new,
+//                        (BiConsumer<ArrayList<Integer>, Integer>) ArrayList::add)
+//                .subscribe(integers -> Log.e(TAG, "accept: " + integers));
         //[1,2,3,4]
-
     }
 
     private void testWithCreate() {
