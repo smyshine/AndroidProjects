@@ -6,11 +6,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
+import org.intellij.lang.annotations.Flow;
+import org.reactivestreams.Publisher;
 import org.reactivestreams.Subscriber;
 import org.reactivestreams.Subscription;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.concurrent.Callable;
+import java.util.concurrent.TimeUnit;
 
 import io.reactivex.BackpressureStrategy;
 import io.reactivex.Flowable;
@@ -31,6 +36,7 @@ import io.reactivex.functions.Action;
 import io.reactivex.functions.BiConsumer;
 import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
+import io.reactivex.functions.Predicate;
 import io.reactivex.schedulers.Schedulers;
 
 
@@ -44,7 +50,87 @@ public class Main2Activity extends AppCompatActivity {
 
 //        testWithFrom();
 
-        testWithCreate();
+//        testWithCreate();
+
+        testOperation();
+    }
+
+    private void testOperation() {
+        //just, simply create observable/flowable/etc..
+//        Flowable.just("hello", "how", "are", "you")
+//                .subscribe(str-> Log.e(TAG, "testOperation: just " + str));
+        //hello how are you
+
+        //fromArray, similar as just, difference is that fromArray can pass in any number of source stream
+
+        //empty, directly call complete fun of subscriber
+
+        //error, directly call error fun of subscriber
+
+        //never, invoke nothing, mostly used in test
+
+        //fromIterable, if pass in a list to fromArray, it will be considered as a param, but fromIterable can iterate a list
+
+        //timer, invoke data send on a pointed time lapse
+
+        //interval, invoke data send every pointed time lapse, and will not stop
+
+        //intervalRange, invoke data send every period from pointed x to y and immediately stop
+
+        //range/rangeLong, invoke data send without delay
+
+        //defer, evey observable will create observers again when observed
+//        Flowable<String> flowable = Flowable.defer(() -> Flowable.just("hello", "smy"));
+//        flowable.subscribe(str -> Log.e(TAG, "testOperation: " + str));
+//        flowable.subscribe(str -> Log.e(TAG, "testOperation: " + str));
+        //hello smy hello smy
+
+
+        //filter, set predictor to filter
+//        Flowable.just("hello", "world", "smy", "andsmy")
+//                .filter(s -> s.length() > 3)
+//                .subscribe(s -> Log.e(TAG, "testOperation: " + s));
+
+        //concat/concatArray, invoke by order
+//        Flowable.concat(Flowable.intervalRange(0, 3, 1, 1, TimeUnit.SECONDS),
+//                Flowable.intervalRange(3, 3, 1, 1, TimeUnit.SECONDS))
+//                .subscribe(aLong -> Log.e(TAG, "accept: " + aLong));
+        //0,1,2,3,4,5    6s
+
+
+        //merge/mergeArray, invoke in time-serial order
+//        Flowable.merge(Flowable.intervalRange(0, 3, 1, 1, TimeUnit.SECONDS),
+//                Flowable.intervalRange(3, 3, 1, 1, TimeUnit.SECONDS))
+//                .subscribe(aLong -> Log.e(TAG, "accept: " + aLong));
+        //0,3,1,4,2,5   3s
+
+        //zip,
+//        Flowable.zip(Flowable.just(1, 2, 3),
+//                Flowable.just(4, 5),
+//                (int1, int2) -> int1 + int2)
+//                .subscribe(integer -> Log.e(TAG, "testOperation: " + integer));
+        //5, 7
+
+        //reduce, compose all into single
+//        Flowable.just(1, 2, 3)
+//        .reduce((last, item) -> {
+//            Log.e(TAG, "testOperation: " + last + " , " + item);
+//            return last + item;
+//        }).subscribe(integer -> Log.e(TAG, "testOperation: "  + integer));
+        //1,2; 3,3; 6
+
+        //count
+//        Flowable.just("1", "a", "b")
+//                .count()
+//                .subscribe(aLong -> Log.e(TAG, "testOperation: " + aLong));
+        //3
+
+        //collect
+        Flowable.just(1, 2, 3, 4)
+                .collect(ArrayList::new,
+                        (BiConsumer<ArrayList<Integer>, Integer>) ArrayList::add)
+                .subscribe(integers -> Log.e(TAG, "accept: " + integers));
+        //[1,2,3,4]
 
     }
 
