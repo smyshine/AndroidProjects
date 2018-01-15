@@ -37,7 +37,10 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+import retrofit2.http.Field;
+import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
+import retrofit2.http.POST;
 import retrofit2.http.Query;
 
 
@@ -100,30 +103,125 @@ public class Main2Activity extends AppCompatActivity {
         private int errNo;
     }
 
+    class YouDaoTranslation {
+        private String type;
+        private int errorCode;
+        private int elapsedTime;
+        private List<List<TranslateResultBean>> translateResult;
+
+        String show() {
+            return "time:" + elapsedTime +
+                    ", content:from=" + translateResult.get(0).get(0).getSrc() +
+                    ", to=" + translateResult.get(0).get(0).getTgt();
+        }
+
+        public String getType() {
+            return type;
+        }
+
+        public void setType(String type) {
+            this.type = type;
+        }
+
+        public int getErrorCode() {
+            return errorCode;
+        }
+
+        public void setErrorCode(int errorCode) {
+            this.errorCode = errorCode;
+        }
+
+        public int getElapsedTime() {
+            return elapsedTime;
+        }
+
+        public void setElapsedTime(int elapsedTime) {
+            this.elapsedTime = elapsedTime;
+        }
+
+        public List<List<TranslateResultBean>> getTranslateResult() {
+            return translateResult;
+        }
+
+        public void setTranslateResult(List<List<TranslateResultBean>> translateResult) {
+            this.translateResult = translateResult;
+        }
+
+    }
+    public static class TranslateResultBean {
+        /**
+         * src : merry me
+         * tgt : 我快乐
+         */
+
+        public String src;
+        public String tgt;
+
+        public String getSrc() {
+            return src;
+        }
+
+        public void setSrc(String src) {
+            this.src = src;
+        }
+
+        public String getTgt() {
+            return tgt;
+        }
+
+        public void setTgt(String tgt) {
+            this.tgt = tgt;
+        }
+    }
+
+    interface YouDaoService {
+        @POST("translate?doctype=json&jsonversion=&type=&keyfrom=&model=&mid=&imei=&vendor=&screen=&ssid=&network=&abtest=")
+        @FormUrlEncoded
+        Call<YouDaoTranslation> translate(@Field("i") String target);
+    }
+
     private void testRetrofitWithTranslate() {
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://fy.iciba.com/")  //baseUrl must end in /
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-        TranslateService service = retrofit.create(TranslateService.class);
-        Call<CibaTranslation> call = service.translate();
-
-        call.enqueue(new Callback<CibaTranslation>() {
-            @Override
-            public void onResponse(Call<CibaTranslation> call, retrofit2.Response<CibaTranslation> response) {
-                Log.e(TAG, "onResponse: " + response.body().show());
-            }
-
-            @Override
-            public void onFailure(Call<CibaTranslation> call, Throwable t) {
-
-            }
-        });
+//        Retrofit retrofit = new Retrofit.Builder()
+//                .baseUrl("http://fy.iciba.com/")  //baseUrl must end in /
+//                .addConverterFactory(GsonConverterFactory.create())
+//                .build();
+//        TranslateService service = retrofit.create(TranslateService.class);
+//        Call<CibaTranslation> call = service.translate();
+//
+//        call.enqueue(new Callback<CibaTranslation>() {
+//            @Override
+//            public void onResponse(Call<CibaTranslation> call, retrofit2.Response<CibaTranslation> response) {
+//                Log.e(TAG, "onResponse: " + response.body().show());
+//            }
+//
+//            @Override
+//            public void onFailure(Call<CibaTranslation> call, Throwable t) {
+//
+//            }
+//        });
         // use ResponseBody as result: onResponse: {"status":1,"content":{"from":"en-EU","to":"zh-CN","out":"\u793a\u4f8b","vendor":"ciba","err_no":0}}
         // use CibaTranslation as result:  onResponse: status:1, content:from=en-EU, to=zh-CN, out=示例, err=0
         //          change hello to love:  onResponse: status:1, content:from=en-EU, to=zh-CN, out=爱的世界<br/>, err=0
 
 
+        new Retrofit.Builder()
+                .baseUrl("http://fanyi.youdao.com/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build()
+                .create(YouDaoService.class)
+                .translate("Happy New Year")
+                .enqueue(new Callback<YouDaoTranslation>() {
+                    @Override
+                    public void onResponse(Call<YouDaoTranslation> call, retrofit2.Response<YouDaoTranslation> response) {
+                        Log.e(TAG, "onResponse: " + response.body().show());
+                    }
+
+                    @Override
+                    public void onFailure(Call<YouDaoTranslation> call, Throwable t) {
+
+                    }
+                });
+        //onResponse: time:1, content:from=Happy New Year, to=新年快乐
 
     }
 
