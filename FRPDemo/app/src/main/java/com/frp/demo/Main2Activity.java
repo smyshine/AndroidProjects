@@ -6,6 +6,7 @@ import android.util.Log;
 
 import org.reactivestreams.Subscription;
 
+import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -28,6 +29,13 @@ import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
 import io.reactivex.schedulers.Schedulers;
+import okhttp3.Response;
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Retrofit;
+import retrofit2.http.GET;
+import retrofit2.http.Query;
 
 
 public class Main2Activity extends AppCompatActivity {
@@ -44,7 +52,65 @@ public class Main2Activity extends AppCompatActivity {
 
 //        testOperation();
 
-        testPrediction();
+//        testPrediction();
+
+        testRetrofit();
+
+    }
+
+    interface BlueService {
+        @GET("book/search")
+        Call<ResponseBody> getSearchBooks(@Query("q")String name,
+                                          @Query("tag")String tag,
+                                          @Query("start")int start,
+                                          @Query("count")int count);
+    }
+
+
+    private void testRetrofit() {
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("https://api.douban.com/v2/")
+                .build();
+
+        BlueService service = retrofit.create(BlueService.class);
+
+        Call<ResponseBody> call = service.getSearchBooks("长安十二时辰", "", 0, 3);
+
+        //sync request
+//        new Thread(() -> {
+//            try {
+//                Log.e(TAG, "testRetrofit: " + call.execute().body().string());
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//        }, "retrofit").start();
+        //testRetrofit: {"count":3,"start":0,"total":30,"books":[{"rating":{"max":10,"numRaters":6027,"average":"8.0","min":0},
+        // "subtitle":"","author":["马伯庸"],"pubdate":"2017-1-1","tags":[{"count":1682,"name":"马伯庸","title":"马伯庸"},
+        // {"count":1016,"name":"小说","title":"小说"},{"count":770,"name":"历史","title":"历史"},
+        // {"count":741,"name":"唐朝","title":"唐朝"},{"count":551,"name":"长安十二时辰","title":"长安十二时辰"},
+        // {"count":509,"name":"鬼才之思","title":"鬼才之思"},{"count":504,"name":"悬疑","title":"悬疑"},
+        // {"count":419,"name":"架空小说","title":"架空小说"}],"origin_title":"","image":"https://img3.doubanio.com\/mpic\/s29247343.jpg",
+        // "binding":"平装","translator":[],"catalog":"上册\n001\n第一章 巳正\n无数黑骑在远处来回驰骋。
+        // 远处长河之上，一轮浑圆的血色落日；孤城城中，狼烟正直直刺向昏黄的天空。\n〈10 点〉\n02........
+
+        //async request
+//        call.enqueue(new Callback<ResponseBody>() {
+//            @Override
+//            public void onResponse(Call<ResponseBody> call, retrofit2.Response<ResponseBody> response) {
+//                try {
+//                    Log.e(TAG, "onResponse: " + response.body().string());
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//
+//            @Override
+//            public void onFailure(Call<ResponseBody> call, Throwable t) {
+//                Log.e(TAG, "onFailure: " + t.toString());
+//            }
+//        });
+        // same as above sync request
+
 
     }
 
