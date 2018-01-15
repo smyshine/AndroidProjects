@@ -4,6 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.google.gson.Gson;
+
 import org.reactivestreams.Subscription;
 
 import java.io.IOException;
@@ -34,6 +36,7 @@ import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 
@@ -54,7 +57,73 @@ public class Main2Activity extends AppCompatActivity {
 
 //        testPrediction();
 
-        testRetrofit();
+//        testRetrofit();
+
+        testRetrofitWithTranslate();
+
+    }
+
+    interface TranslateService {
+        //金山
+        // URL模板
+//        http://fy.iciba.com/ajax.php
+        // URL实例
+//        http://fy.iciba.com/ajax.php?a=fy&f=auto&t=auto&w=hello%20world
+
+        // 参数说明：
+        // a：固定值 fy
+        // f：原文内容类型，日语取 ja，中文取 zh，英语取 en，韩语取 ko，德语取 de，西班牙语取 es，法语取 fr，自动则取 auto
+        // t：译文内容类型，日语取 ja，中文取 zh，英语取 en，韩语取 ko，德语取 de，西班牙语取 es，法语取 fr，自动则取 auto
+        // w：查询内容
+        @GET("ajax.php?a=fy&f=auto&t=auto&w=hello%20world")
+        Call<CibaTranslation> translate();
+    }
+
+    class CibaTranslation {
+        private int status;
+        content content;
+
+        String show() {
+            return "status:" + status +
+                    ", content:from=" + content.from +
+                    ", to=" + content.to +
+                    ", out=" + content.out +
+                    ", err=" + content.errNo;
+        }
+    }
+
+    private static class content {
+        private String from;
+        private String to;
+        private String vendor;
+        private String out;
+        private int errNo;
+    }
+
+    private void testRetrofitWithTranslate() {
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://fy.iciba.com/")  //baseUrl must end in /
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+        TranslateService service = retrofit.create(TranslateService.class);
+        Call<CibaTranslation> call = service.translate();
+
+        call.enqueue(new Callback<CibaTranslation>() {
+            @Override
+            public void onResponse(Call<CibaTranslation> call, retrofit2.Response<CibaTranslation> response) {
+                Log.e(TAG, "onResponse: " + response.body().show());
+            }
+
+            @Override
+            public void onFailure(Call<CibaTranslation> call, Throwable t) {
+
+            }
+        });
+        // use ResponseBody as result: onResponse: {"status":1,"content":{"from":"en-EU","to":"zh-CN","out":"\u793a\u4f8b","vendor":"ciba","err_no":0}}
+        // use CibaTranslation as result:  onResponse: status:1, content:from=en-EU, to=zh-CN, out=示例, err=0
+        //          change hello to love:  onResponse: status:1, content:from=en-EU, to=zh-CN, out=爱的世界<br/>, err=0
+
+
 
     }
 
@@ -94,21 +163,21 @@ public class Main2Activity extends AppCompatActivity {
         // 远处长河之上，一轮浑圆的血色落日；孤城城中，狼烟正直直刺向昏黄的天空。\n〈10 点〉\n02........
 
         //async request
-//        call.enqueue(new Callback<ResponseBody>() {
-//            @Override
-//            public void onResponse(Call<ResponseBody> call, retrofit2.Response<ResponseBody> response) {
-//                try {
-//                    Log.e(TAG, "onResponse: " + response.body().string());
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//
-//            @Override
-//            public void onFailure(Call<ResponseBody> call, Throwable t) {
-//                Log.e(TAG, "onFailure: " + t.toString());
-//            }
-//        });
+        call.enqueue(new Callback<ResponseBody>() {
+            @Override
+            public void onResponse(Call<ResponseBody> call, retrofit2.Response<ResponseBody> response) {
+                try {
+                    Log.e(TAG, "onResponse: " + response.body().string());
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponseBody> call, Throwable t) {
+                Log.e(TAG, "onFailure: " + t.toString());
+            }
+        });
         // same as above sync request
 
 
